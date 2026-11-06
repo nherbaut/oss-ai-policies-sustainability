@@ -1,0 +1,6419 @@
+[
+  {
+    "document_id": "D0001",
+    "entity": "ratatui/ratatui",
+    "csv_row": 2,
+    "path": "data/281/policies/ratatui/ratatui/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ratatui/ratatui/blob/506bedbf157eaaf1e9d5df77f9a5f380203112bc/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5caa8fd8288fbd6a705dfe5206ff1bb782fb7b2d19224d827b325ad6b7b7819f",
+    "lines": 368,
+    "ai_ranges": [
+      [
+        8,
+        25
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0002",
+    "entity": "leptos-rs/leptos",
+    "csv_row": 3,
+    "path": "data/281/policies/leptos-rs/leptos/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/leptos-rs/leptos/blob/f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "4404ca7665638d9cb9624321ab6c6efc17ee2dff2089e0fce4a4d7bca2767717",
+    "lines": 27,
+    "ai_ranges": [
+      [
+        0,
+        27
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0003",
+    "entity": "keycloak/keycloak",
+    "csv_row": 4,
+    "path": "data/281/policies/keycloak/keycloak/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/keycloak/keycloak/blob/def10975b737ccc7eb08f12c44187ee922448563/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b809671b4d263cc272df01639438ca89837e2f485d92194aedda06ca2c75ce5f",
+    "lines": 193,
+    "ai_ranges": [
+      [
+        113,
+        125
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0004",
+    "entity": "storybookjs/storybook",
+    "csv_row": 5,
+    "path": "data/281/policies/storybookjs/storybook/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/storybookjs/storybook/blob/5073688f5836ec16575855550ffbeb3e81ab1cf1/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ecb33f29c1eccb5796ed13513010ad110cc987b00668df063e643de7c014f5ba",
+    "lines": 255,
+    "ai_ranges": [
+      [
+        22,
+        34
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0005",
+    "entity": "bitcoin/bitcoin",
+    "csv_row": 6,
+    "path": "data/281/policies/bitcoin/bitcoin/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/bitcoin/bitcoin/blob/70d9ec7f3d452789d04dce81dc02db0b3b778bb5/doc/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "9227f96b487a882d86ad6c40248bee99f0f3757da45350fcb72b5a85e64c85ca",
+    "lines": 37,
+    "ai_ranges": [
+      [
+        0,
+        37
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0006",
+    "entity": "mastodon/mastodon",
+    "csv_row": 7,
+    "path": "data/281/policies/mastodon/mastodon/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/mastodon/mastodon/blob/52e9ec7814fc971598696ba4bf33d06ac1a51938/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e6ae29fc137802f0a1ee163c6575fb787f5afced84110132a1103a2c3142da90",
+    "lines": 94,
+    "ai_ranges": [
+      [
+        11,
+        17
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        91,
+        94
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0007",
+    "entity": "mastodon/mastodon",
+    "csv_row": 7,
+    "path": "data/281/policies/mastodon/mastodon/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/mastodon/.github/blob/main/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "9a047aa0b7dc04260061c863f889d02a0a62d86b8d1c58663a4045a88d5c1889",
+    "lines": 80,
+    "ai_ranges": [
+      [
+        0,
+        80
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0008",
+    "entity": "rust-lang/rust-analyzer",
+    "csv_row": 8,
+    "path": "data/281/policies/rust-lang/rust-analyzer/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/rust-lang/rust-analyzer/blob/7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "9982d5097c733497d1850c7cd5722513b671979a26804ddb95467afd76e2dbf1",
+    "lines": 35,
+    "ai_ranges": [
+      [
+        0,
+        35
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0009",
+    "entity": "scala/scala",
+    "csv_row": 9,
+    "path": "data/281/policies/scala/scala/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/scala/scala/blob/e2bf3551286f729b4f2bec78b36e3f890fccfd80/LLM_POLICY.md",
+    "source_id": null,
+    "sha256": "0a3ac382ed3395d15182886ef77bf81616899f790ec6785d80881b41181ce93a",
+    "lines": 4,
+    "ai_ranges": [
+      [
+        0,
+        4
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0010",
+    "entity": "scala/scala",
+    "csv_row": 9,
+    "path": "data/281/policies/scala/scala/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/scala/scala3/blob/266b5b3afe48c0a57c6867fd59c7cb5b9029f610/LLM_POLICY.md",
+    "source_id": null,
+    "sha256": "62d24c9fc22de5422f9aca2ef5ff444659998049194321111f377b23e126d66f",
+    "lines": 85,
+    "ai_ranges": [
+      [
+        0,
+        85
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0011",
+    "entity": "SunPy",
+    "csv_row": 10,
+    "path": "data/281/policies/SunPy/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://docs.sunpy.org/en/latest/dev_guide/contents/ai_usage.html",
+    "source_id": null,
+    "sha256": "83cb0fb94cd34df5c0281c28153f9a170a27d7c8dc25039c5f97c44bc17413ea",
+    "lines": 288,
+    "ai_ranges": [
+      [
+        36,
+        219
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0012",
+    "entity": "Forgejo",
+    "csv_row": 11,
+    "path": "data/281/policies/Forgejo/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://codeberg.org/forgejo/governance/src/branch/main/AIAgreement.md",
+    "source_id": null,
+    "sha256": "ee33ff8ac41d73a4e09336620ece17e8b89d67b8b9694b9627e2cf99878dc115",
+    "lines": 28,
+    "ai_ranges": [
+      [
+        0,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0013",
+    "entity": "Forgejo",
+    "csv_row": 11,
+    "path": "data/281/policies/Forgejo/contributing.md",
+    "kind": "contributing",
+    "source_url": "",
+    "source_id": null,
+    "sha256": "adbb3bb795b1c9d2e75fe1412434d4f707ea4f05fbead2bce5f2aad7e02e6378",
+    "lines": 17,
+    "ai_ranges": [
+      [
+        4,
+        8
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0014",
+    "entity": "posthog/posthog",
+    "csv_row": 12,
+    "path": "data/281/policies/posthog/posthog/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/posthog/posthog/blob/e8858fdabe15cce244324d360f067c814bfebc56/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "ad31900be8d2868b4149343f98f2477ba6eb9adf8a379e838fb94ecbfc96c659",
+    "lines": 44,
+    "ai_ranges": [
+      [
+        0,
+        44
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0015",
+    "entity": "nixos/nix",
+    "csv_row": 13,
+    "path": "data/281/policies/nixos/nix/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/nixos/nix/blob/55cc1cab880a60cd204e36e9398fee536371f06e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "51386d2b69dd3f3b85e53fdfa8d689d47ea5f7936293f11d3e6b21a7d3d703f1",
+    "lines": 163,
+    "ai_ranges": [
+      [
+        90,
+        150
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0016",
+    "entity": "W3C",
+    "csv_row": 14,
+    "path": "data/281/policies/W3C/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.w3.org/TR/2026/NOTE-llms-standards-20260324/",
+    "source_id": null,
+    "sha256": "6113476ec2fbb8a095c290e50881cb02d01245a4711a158cbc9ed29fc92203b3",
+    "lines": 291,
+    "ai_ranges": [
+      [
+        0,
+        291
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0017",
+    "entity": "nextcloud/server",
+    "csv_row": 15,
+    "path": "data/281/policies/nextcloud/server/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/nextcloud/server/blob/795b12252df8c7f863544716f2c80292bde5ed52/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a73f29506a12ee00f5887609e4e024ac397c26676acd538131a7312c34296934",
+    "lines": 99,
+    "ai_ranges": [
+      [
+        37,
+        53
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0018",
+    "entity": "nextcloud/server",
+    "csv_row": 15,
+    "path": "data/281/policies/nextcloud/server/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/nextcloud/.github/blob/master/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "1e4b71f830ddbdd968ca28eaed4b93a343c5b1ca02b4e71974c2a7a0d385992c",
+    "lines": 99,
+    "ai_ranges": [
+      [
+        0,
+        99
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0019",
+    "entity": "k3s-io/k3s",
+    "csv_row": 16,
+    "path": "data/281/policies/k3s-io/k3s/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/k3s-io/k3s/blob/0cd872ed9b8d8da005d3b4cc87f84b31f99bec2d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4011b1a0fc73272ddb545af9a0ead1e92d2a45b6a36a7169434784e7f84499c9",
+    "lines": 143,
+    "ai_ranges": [
+      [
+        16,
+        34
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0020",
+    "entity": "diesel-rs/diesel",
+    "csv_row": 17,
+    "path": "data/281/policies/diesel-rs/diesel/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/diesel-rs/diesel/blob/d4378b5012ff44d870f6f75bd50c1e44779203a0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c736f184b225e042f757239ec5fbf8bff7e870f50bdd2c31b52b74779306a3c0",
+    "lines": 208,
+    "ai_ranges": [
+      [
+        154,
+        175
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0021",
+    "entity": "diesel-rs/diesel",
+    "csv_row": 17,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": null,
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0022",
+    "entity": "diesel-rs/diesel",
+    "csv_row": 17,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": "corpus-016-followup",
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0023",
+    "entity": "diesel-rs/diesel",
+    "csv_row": 17,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": "corpus-016-other_policy-1",
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0024",
+    "entity": "Kubernetes",
+    "csv_row": 18,
+    "path": "data/281/policies/Kubernetes/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.kubernetes.dev/docs/guide/pull-requests/#ai-guidance",
+    "source_id": null,
+    "sha256": "5fef46bda6c22c4b429e66cdea975d68067d15027cce8fc120c8cdc4ce60bc57",
+    "lines": 1129,
+    "ai_ranges": [
+      [
+        0,
+        1129
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0025",
+    "entity": "Jellyfin",
+    "csv_row": 19,
+    "path": "data/281/policies/Jellyfin/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://jellyfin.org/docs/general/contributing/llm-policies/",
+    "source_id": null,
+    "sha256": "5eeb4c6fdef0f72228c3999887af99371fe841d5bcee39657528c740fa2c1d1a",
+    "lines": 262,
+    "ai_ranges": [
+      [
+        0,
+        262
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0026",
+    "entity": "vectordotdev/vector",
+    "csv_row": 20,
+    "path": "data/281/policies/vectordotdev/vector/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/vectordotdev/vector/blob/b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "91a38ce21c05d2d48fe6f43efc6266951b437d84647331cfb7b8155b50302f2c",
+    "lines": 41,
+    "ai_ranges": [
+      [
+        0,
+        41
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0027",
+    "entity": "sharkdp/fd",
+    "csv_row": 21,
+    "path": "data/281/policies/sharkdp/fd/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/sharkdp/fd/blob/1bfeea237a48c9545211e5c21d623d398fa712c6/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5a6e0673bd6ff92e2ff804a6d7c8555a3ef36f32ccb93d3c8df7c3bd3674977b",
+    "lines": 54,
+    "ai_ranges": [
+      [
+        13,
+        19
+      ],
+      [
+        19,
+        25
+      ],
+      [
+        21,
+        27
+      ],
+      [
+        22,
+        28
+      ],
+      [
+        23,
+        29
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0028",
+    "entity": "keras-team/keras",
+    "csv_row": 22,
+    "path": "data/281/policies/keras-team/keras/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/keras-team/keras/blob/8ec790152e67f170e88876a61dd6cb685e7d53b4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "25ce9cdcf84a501cfc227721ce88d70388463ca8045f471aad5a49ea399ae0de",
+    "lines": 284,
+    "ai_ranges": [
+      [
+        225,
+        284
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0029",
+    "entity": "iina/iina",
+    "csv_row": 23,
+    "path": "data/281/policies/iina/iina/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/iina/iina/blob/c987089efcced9e3088f907551fb8032e191ac32/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4e13522688d5d2a3033197c99534e2e0cbbe527b37eb434cd094477668bdd45b",
+    "lines": 76,
+    "ai_ranges": [
+      [
+        39,
+        49
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0030",
+    "entity": "seleniumhq/selenium",
+    "csv_row": 24,
+    "path": "data/281/policies/seleniumhq/selenium/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/seleniumhq/selenium/blob/9bc87cfd3b410b5cdd7f02850d5e6619f1f7e0ed/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "722db3e2d06d5d181fdf03674a45af5f97740171e06809d781e1a95e687d431f",
+    "lines": 391,
+    "ai_ranges": [
+      [
+        61,
+        89
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0031",
+    "entity": "carbon-language/carbon-lang",
+    "csv_row": 25,
+    "path": "data/281/policies/carbon-language/carbon-lang/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/carbon-language/carbon-lang/blob/cda1f256bb717356688e59e31681949e170c7e69/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c224b6ffa88c6ceb55b123c7608916a39db0759100aa4b1a109151ec4c9595f9",
+    "lines": 485,
+    "ai_ranges": [
+      [
+        232,
+        278
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0032",
+    "entity": "apache/kafka",
+    "csv_row": 26,
+    "path": "data/281/policies/apache/kafka/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/apache/kafka/blob/75e66426bf533b97898e7c558bd96712dd61c440/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "11a2edd95d71808a257f035604f0d7070f02204db53665c6666a11c5f03eea89",
+    "lines": 30,
+    "ai_ranges": [
+      [
+        14,
+        30
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0033",
+    "entity": "apache/kafka",
+    "csv_row": 26,
+    "path": "data/281/policies/apache/kafka/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://www.apache.org/legal/generative-tooling.html",
+    "source_id": null,
+    "sha256": "cac558a6c188150e18778123e5145f33a05646a8b28187cc216626454ede91cf",
+    "lines": 220,
+    "ai_ranges": [
+      [
+        31,
+        163
+      ],
+      [
+        186,
+        192
+      ],
+      [
+        192,
+        199
+      ],
+      [
+        199,
+        220
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0034",
+    "entity": "apache/flink",
+    "csv_row": 27,
+    "path": "data/281/policies/apache/flink/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/apache/flink/blob/5004b5bee5e7ee4e6ce931ea61b98006addbf6ea/AGENTS.md",
+    "source_id": null,
+    "sha256": "bfe212d6f5c0e60414af66e3a41519b1700651dbf564e3cb6610fd58a04a29d4",
+    "lines": 340,
+    "ai_ranges": [
+      [
+        19,
+        340
+      ],
+      [
+        299,
+        307
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0035",
+    "entity": "simple-icons/simple-icons",
+    "csv_row": 28,
+    "path": "data/281/policies/simple-icons/simple-icons/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/simple-icons/simple-icons/blob/0f9fa549da00e9aa6e3ef8d3d2171f481360e638/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "7aadb7fd5dd9f4ee0598aaa4b95295e7664311e1f950a191682cd58280e1bb3a",
+    "lines": 559,
+    "ai_ranges": [
+      [
+        504,
+        514
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0036",
+    "entity": "oracle/graal",
+    "csv_row": 29,
+    "path": "data/281/policies/oracle/graal/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/oracle/graal/blob/be9330615b04b742baa98e503f32b1d169a99129/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6ba1acc1b9b91a09fd43d63806902a6aaa27bdc862e7068ab78ff4e4a32279cc",
+    "lines": 82,
+    "ai_ranges": [
+      [
+        5,
+        9
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0037",
+    "entity": "oracle/graal",
+    "csv_row": 29,
+    "path": "data/281/policies/oracle/graal/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/oracle/graal/blob/be9330615b04b742baa98e503f32b1d169a99129/CODING_ASSISTANTS.md",
+    "source_id": null,
+    "sha256": "8f53a842fbafa48b4dfddd64a0a3d2208b0b72f7cf78841b1a044b7599cb174e",
+    "lines": 35,
+    "ai_ranges": [
+      [
+        0,
+        35
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0038",
+    "entity": "wled/WLED",
+    "csv_row": 30,
+    "path": "data/281/policies/wled/WLED/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/wled/WLED/blob/e39118333d3d5a9c93286243b3aa227e5ee4a713/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "bcf75dac99ec48a324714de2153240fe0c3dc531d0f4c58dd244b2a9a90d689a",
+    "lines": 255,
+    "ai_ranges": [
+      [
+        151,
+        171
+      ],
+      [
+        162,
+        171
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0039",
+    "entity": "lynx-family/lynx",
+    "csv_row": 31,
+    "path": "data/281/policies/lynx-family/lynx/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/lynx-family/lynx/blob/659f2180e16e62e1eba9ec18d448e767d53d4abb/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a340805927e422c6cee42b3ab0a8d1bc2c1494dabe3b4b0f5f6e0f0e7c3d55c0",
+    "lines": 226,
+    "ai_ranges": [
+      [
+        106,
+        129
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0040",
+    "entity": "meilisearch/meilisearch",
+    "csv_row": 32,
+    "path": "data/281/policies/meilisearch/meilisearch/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/meilisearch/meilisearch/blob/016d04564525ef68ca5ab8b9cee834c33e0e150a/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1ef9bb1153690015a28f41842ec28791bbcfbc5b48a608318eae9af89140b02d",
+    "lines": 278,
+    "ai_ranges": [
+      [
+        19,
+        33
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0041",
+    "entity": "hashicorp/terraform",
+    "csv_row": 33,
+    "path": "data/281/policies/hashicorp/terraform/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/hashicorp/terraform/blob/0c717ce992cf424ae09e1c3feed5dd5eaa078f0f/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "8a8d6cf9b82b68c45fed527347b2649aa56ee81abb44013167e6d8c42c407425",
+    "lines": 339,
+    "ai_ranges": [
+      [
+        313,
+        339
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0042",
+    "entity": "mudler/LocalAI",
+    "csv_row": 34,
+    "path": "data/281/policies/mudler/LocalAI/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/mudler/LocalAI/blob/a23fcc90c36b49439a1a3bd785f8854c1816021e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1787a9587dbe0da4483a172636c74ae4166140c90ca3ff441b4400b893b83f6a",
+    "lines": 318,
+    "ai_ranges": [
+      [
+        215,
+        235
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0043",
+    "entity": "mudler/LocalAI",
+    "csv_row": 34,
+    "path": "data/281/policies/mudler/LocalAI/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/mudler/LocalAI/blob/a23fcc90c36b49439a1a3bd785f8854c1816021e/.agents/ai-coding-assistants.md",
+    "source_id": null,
+    "sha256": "cc52a502b11a8d374acd48c701602180cdbd97c9f30188de8f31c9cd2ce4eb12",
+    "lines": 101,
+    "ai_ranges": [
+      [
+        0,
+        101
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0044",
+    "entity": "stanfordnlp/dspy",
+    "csv_row": 35,
+    "path": "data/281/policies/stanfordnlp/dspy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/stanfordnlp/dspy/blob/027d9f45f4d60aedadee3fd587d1f4f3584567df/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9",
+    "lines": 178,
+    "ai_ranges": [
+      [
+        153,
+        178
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0045",
+    "entity": "huggingface/peft",
+    "csv_row": 36,
+    "path": "data/281/policies/huggingface/peft/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/huggingface/peft/blob/cea8213158c8b682acc0839405c2062d57fdf867/AGENTS.md",
+    "source_id": null,
+    "sha256": "13285a5fd29ed8e73d122d3630397ada4bcda9971d5dd88d968ac9156114d762",
+    "lines": 1,
+    "ai_ranges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0046",
+    "entity": "huggingface/peft",
+    "csv_row": 36,
+    "path": "data/281/policies/huggingface/peft/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://huggingface.co/docs/peft/main/en/developer_guides/contributing",
+    "source_id": null,
+    "sha256": "75ecdf82b17b313853d2e19c6929b5a5aaa4c1b74ea266267e3654bd29f2223f",
+    "lines": 1231,
+    "ai_ranges": [
+      [
+        0,
+        1231
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0047",
+    "entity": "huggingface/peft",
+    "csv_row": 36,
+    "path": "analysis/corpus-assessment/sources/corpus-035-agent-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/huggingface/peft/blob/cea8213158c8b682acc0839405c2062d57fdf867/.ai/AGENTS.md",
+    "source_id": "corpus-035-agent-1",
+    "sha256": "6e49c08311bed5b886233e399f66149f00d422af5a74cd7a8b42435127334bb1",
+    "lines": 83,
+    "ai_ranges": [
+      [
+        10,
+        19
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0048",
+    "entity": "verl-project/verl",
+    "csv_row": 37,
+    "path": "data/281/policies/verl-project/verl/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/verl-project/verl/blob/6f2aa24abfc01cc72811b376aeb3936503885096/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e14c78c285fd7b83f6108d86ee1a02b2d88234bc26374a169106b084b33965bd",
+    "lines": 101,
+    "ai_ranges": [
+      [
+        87,
+        94
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0049",
+    "entity": "verl-project/verl",
+    "csv_row": 37,
+    "path": "data/281/policies/verl-project/verl/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/verl-project/verl/blob/6f2aa24abfc01cc72811b376aeb3936503885096/AGENTS.md",
+    "source_id": null,
+    "sha256": "5fdec7a5182a29335088b200caf43c59a8fb5226de228915126a54bfbaa8739f",
+    "lines": 87,
+    "ai_ranges": [
+      [
+        0,
+        87
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0050",
+    "entity": "NLnet",
+    "csv_row": 38,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": null,
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0051",
+    "entity": "NLnet",
+    "csv_row": 38,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": "corpus-037-ai_policy-1",
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0052",
+    "entity": "NLnet",
+    "csv_row": 38,
+    "path": "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://nlnet.nl/foundation/policies/generativeAI/2.0/",
+    "source_id": "corpus-037-followup",
+    "sha256": "a24c10bef250894fafdc505ca3b1a359c4a2b71144cd7e32d0b91435d2019d0e",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0053",
+    "entity": "OpenInfra Foundation",
+    "csv_row": 39,
+    "path": "data/281/policies/OpenInfra Foundation/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://openinfra.org/legal/ai-policy",
+    "source_id": null,
+    "sha256": "8cea8ee9a3a706bb9822dcf1ed053e981eb5f2d16db93561cc969da6404869b3",
+    "lines": 280,
+    "ai_ranges": [
+      [
+        0,
+        280
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0054",
+    "entity": "Linux Kernel",
+    "csv_row": 40,
+    "path": "analysis/corpus-assessment/sources/corpus-039-ai_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst",
+    "source_id": "corpus-039-ai_policy-1",
+    "sha256": "09a0dd2f7391b6f3229ca573c6891f92b7e50da476459c7a655025540c1cd2b0",
+    "lines": 44,
+    "ai_ranges": [
+      [
+        0,
+        44
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0055",
+    "entity": "Linux Kernel",
+    "csv_row": 40,
+    "path": "analysis/corpus-assessment/sources/corpus-039-followup.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/torvalds/linux/blob/master/Documentation/process/generated-content.rst",
+    "source_id": "corpus-039-followup",
+    "sha256": "d12bf54d0d0f00314cc37ad17faf4bd6ffadf7bbef5996885fc0ad2ff64d4f02",
+    "lines": 67,
+    "ai_ranges": [
+      [
+        0,
+        67
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0056",
+    "entity": "OpenSSL",
+    "csv_row": 41,
+    "path": "data/281/policies/OpenSSL/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://openssl-library.org/policies/general/ai-policy/",
+    "source_id": null,
+    "sha256": "fe9710ff88c146422dcd9d13b5b3dfc4bbfea3ece7701fc16bdbc86a1a7e8b0a",
+    "lines": 198,
+    "ai_ranges": [
+      [
+        0,
+        198
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0057",
+    "entity": "OpenSSL",
+    "csv_row": 41,
+    "path": "analysis/corpus-assessment/sources/corpus-040-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://openssl-library.org/policies/cla/",
+    "source_id": "corpus-040-other_policy-1",
+    "sha256": "edd7ba359adc3768f774711550ca3683a0bd0689ad24e93f5aab34173ebbcdc4",
+    "lines": 93,
+    "ai_ranges": [
+      [
+        0,
+        93
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0058",
+    "entity": "microsoft/typescript",
+    "csv_row": 42,
+    "path": "data/281/policies/microsoft/typescript/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/microsoft/typescript/blob/637d5746b70257028fb95aad32ddec6b26ab0a14/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6e518e7802d4e2d1c381f02dac0539da3b88ef2975b92ba5c2b2efd9b7215c8b",
+    "lines": 303,
+    "ai_ranges": [
+      [
+        6,
+        30
+      ],
+      [
+        18,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0059",
+    "entity": "facebook/docusaurus",
+    "csv_row": 43,
+    "path": "data/281/policies/facebook/docusaurus/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/facebook/docusaurus/blob/80319585a49a2bce46cd2e157b2d13a8b691b8e0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ab58674ccb5e7c8622b780874b87c9dc2e6eb224d82ff8e64d0e7fac026a0dcd",
+    "lines": 246,
+    "ai_ranges": [
+      [
+        216,
+        226
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0060",
+    "entity": "huggingface/transformers",
+    "csv_row": 44,
+    "path": "data/281/policies/huggingface/transformers/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/huggingface/transformers/blob/28596623762cb409bb1c9234f04bfb1269b1ece1/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6",
+    "lines": 228,
+    "ai_ranges": [
+      [
+        217,
+        223
+      ],
+      [
+        220,
+        226
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0061",
+    "entity": "huggingface/transformers",
+    "csv_row": 44,
+    "path": "data/281/policies/huggingface/transformers/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/huggingface/transformers/blob/28596623762cb409bb1c9234f04bfb1269b1ece1/.ai/AGENTS.md",
+    "source_id": null,
+    "sha256": "036cfe8c90c3aafb50566b40134924069d56dc7838f92e1773599d591ab3d9d8",
+    "lines": 49,
+    "ai_ranges": [
+      [
+        38,
+        43
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0062",
+    "entity": "webpack/webpack",
+    "csv_row": 45,
+    "path": "data/281/policies/webpack/webpack/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/webpack/webpack/blob/805ae584b87f12e773d477e6984c60ccdd179975/AGENTS.md",
+    "source_id": null,
+    "sha256": "fe7893d17ba265844aa606706e8568569cecc110e6ac77a6dbf31abe63eefb8d",
+    "lines": 319,
+    "ai_ranges": [
+      [
+        0,
+        319
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0063",
+    "entity": "webpack/webpack",
+    "csv_row": 45,
+    "path": "data/281/policies/webpack/webpack/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/webpack/governance/blob/main/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "a8efe454b62ecc644e85f850044a616e308fce612d69b5edda8211ba213c0a94",
+    "lines": 57,
+    "ai_ranges": [
+      [
+        0,
+        57
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0064",
+    "entity": "freqtrade/freqtrade",
+    "csv_row": 46,
+    "path": "data/281/policies/freqtrade/freqtrade/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/freqtrade/freqtrade/blob/25dc85994eff344314e950464ad35f318fab299f/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ef5a6961517f0975262159c05f5e6ed50dab3aaa345d4f4e31e3cfa9fdb8d3b4",
+    "lines": 137,
+    "ai_ranges": [
+      [
+        12,
+        18
+      ],
+      [
+        13,
+        19
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0065",
+    "entity": "run-llama/llama_index",
+    "csv_row": 47,
+    "path": "data/281/policies/run-llama/llama_index/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/run-llama/llama_index/blob/67514f63410c6d4c2344e7ca14b3ea7214d0bb84/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d051c3797b18e8499880cdcaae76731dec82f3046afdec2065dba73a0c76625a",
+    "lines": 157,
+    "ai_ranges": [
+      [
+        113,
+        144
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0066",
+    "entity": "bytedance/deer-flow",
+    "csv_row": 48,
+    "path": "data/281/policies/bytedance/deer-flow/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/bytedance/deer-flow/blob/de55982c5acd6edf5ccaa1a3a1d20a65185325ee/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "97f4d8aabd157aa02d7f23c9960ac63f9de3e37a2e928b6914427c5f7c093523",
+    "lines": 381,
+    "ai_ranges": [
+      [
+        289,
+        304
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0067",
+    "entity": "utmapp/utm",
+    "csv_row": 49,
+    "path": "data/281/policies/utmapp/utm/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/utmapp/utm/blob/fb61bfe86a2cc39bb3bc884636fa55414f317acb/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "36fce6f43ec96e3d3941fa070b277beab7615055947d3734afb8d897861fa9c7",
+    "lines": 58,
+    "ai_ranges": [
+      [
+        25,
+        58
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0068",
+    "entity": "comet-ml/opik",
+    "csv_row": 50,
+    "path": "data/281/policies/comet-ml/opik/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/comet-ml/opik/blob/38ccfe7ac810d548e57d6ed980f0130b3d9c15e1/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "895fd59b35262437769ba7a0b2c4fef102ae87b8f4e446dd6361bd4fcef11b6c",
+    "lines": 107,
+    "ai_ranges": [
+      [
+        77,
+        90
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0069",
+    "entity": "suitenumerique/docs",
+    "csv_row": 51,
+    "path": "data/281/policies/suitenumerique/docs/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/suitenumerique/docs/blob/8d2dd5b565396c42e3526bd71e0c4fc20acc6393/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f5c65a53c4fc45b15421ce6fddaa27edd40e2336e7c0a366fdc9197aac4cb023",
+    "lines": 190,
+    "ai_ranges": [
+      [
+        147,
+        190
+      ],
+      [
+        159,
+        175
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0070",
+    "entity": "halo-dev/halo",
+    "csv_row": 52,
+    "path": "data/281/policies/halo-dev/halo/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/halo-dev/halo/blob/883f778980068f6ddd6ff7bac144e7c600a40f6d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3873449af76392e1564c8c25cf7a6bfd80a3015290663a4c320f8ad5d6c6ae5f",
+    "lines": 162,
+    "ai_ranges": [
+      [
+        100,
+        132
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0071",
+    "entity": "sipeed/picoclaw",
+    "csv_row": 53,
+    "path": "data/281/policies/sipeed/picoclaw/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/sipeed/picoclaw/blob/85dcfccad66dd0dca0ec9765976b665d8ebf7191/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6004b15b01982e9e157838b8db9cf8df64db2ab398f955fdff44293bee3202e3",
+    "lines": 308,
+    "ai_ranges": [
+      [
+        129,
+        178
+      ],
+      [
+        156,
+        165
+      ],
+      [
+        301,
+        308
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0072",
+    "entity": "envoyproxy/envoy",
+    "csv_row": 54,
+    "path": "data/281/policies/envoyproxy/envoy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/envoyproxy/envoy/blob/03e2d9765658c375f749212c9f6c813a5f524674/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4596f34c97a24d85c01063c06915068742a540f32a8b744be20a64a3f9694c97",
+    "lines": 465,
+    "ai_ranges": [
+      [
+        40,
+        81
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0073",
+    "entity": "caddyserver/caddy",
+    "csv_row": 55,
+    "path": "data/281/policies/caddyserver/caddy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/caddyserver/caddy/blob/986753a7c6ec25bb676997a5a0ea2356406cb9aa/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "cd2921c2c7d2ee17b4091aab05ed48adb9446548d739b43c2ffa4f7a5654604a",
+    "lines": 203,
+    "ai_ranges": [
+      [
+        25,
+        31
+      ],
+      [
+        53,
+        59
+      ],
+      [
+        59,
+        65
+      ],
+      [
+        61,
+        67
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0074",
+    "entity": "wagtail/wagtail",
+    "csv_row": 56,
+    "path": "data/281/policies/wagtail/wagtail/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/wagtail/wagtail/blob/af68909d2ee1408c1035ac028e7d552d51a605fd/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "903a068bfec03714445d3753ce5168233bc79239a8e9665b74dfb4b2773dd4bd",
+    "lines": 31,
+    "ai_ranges": [
+      [
+        10,
+        16
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0075",
+    "entity": "wagtail/wagtail",
+    "csv_row": 56,
+    "path": "data/281/policies/wagtail/wagtail/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://docs.wagtail.org/en/latest/contributing/general_guidelines.html#use-of-generative-ai",
+    "source_id": null,
+    "sha256": "b8e0f24b481f254d085dda81e70cbe1827757c530954f4f939eec0343e7853df",
+    "lines": 245,
+    "ai_ranges": [
+      [
+        11,
+        80
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0076",
+    "entity": "elixir-lang/elixir",
+    "csv_row": 57,
+    "path": "data/281/policies/elixir-lang/elixir/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/elixir-lang/elixir/blob/84f3ed66c9432a0adc0d3a1a0791f0492a3eb9ed/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f32fd09b3380a47bce7fc926918f946c45085d8e4c9f7f6c4dc99fd45482700c",
+    "lines": 248,
+    "ai_ranges": [
+      [
+        202,
+        248
+      ],
+      [
+        232,
+        248
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0077",
+    "entity": "go-gitea/gitea",
+    "csv_row": 58,
+    "path": "data/281/policies/go-gitea/gitea/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/go-gitea/gitea/blob/11363e2f0cd61ce79965ccded3dcfe2f0324270a/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1184919a0fc7ceee5e61498441f9a4023a5edd41f8cf95066007e9090e6be0df",
+    "lines": 293,
+    "ai_ranges": [
+      [
+        52,
+        67
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0078",
+    "entity": "actualbudget/actual",
+    "csv_row": 59,
+    "path": "data/281/policies/actualbudget/actual/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/actualbudget/actual/blob/566ee382906af9b20b66c3fbcb063bb2348f4aa1/packages/docs/docs/contributing/ai-usage-policy.md",
+    "source_id": null,
+    "sha256": "95e478b1823810ffd2ee7673e4304415122d1823f84913ee474a9f6ae5124bb3",
+    "lines": 58,
+    "ai_ranges": [
+      [
+        0,
+        58
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0079",
+    "entity": "actualbudget/actual",
+    "csv_row": 59,
+    "path": "analysis/corpus-assessment/sources/corpus-058-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/actualbudget/actual/blob/master/AGENTS.md",
+    "source_id": "corpus-058-other_policy-1",
+    "sha256": "57c791a2530773f0c26369402ac46d1e33cd4795b5dd6115457e4d2ce392ace4",
+    "lines": 608,
+    "ai_ranges": [
+      [
+        0,
+        608
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0080",
+    "entity": "actualbudget/actual",
+    "csv_row": 59,
+    "path": "analysis/corpus-assessment/sources/corpus-058-other_policy-2.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/actualbudget/actual/blob/master/.github/agents/pr-and-commit-rules.md",
+    "source_id": "corpus-058-other_policy-2",
+    "sha256": "7870e658dc9cc0c31931016d200b2791934fff53dd6d084ffa301a5ab779a3ae",
+    "lines": 48,
+    "ai_ranges": [
+      [
+        0,
+        48
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0081",
+    "entity": "modelcontextprotocol/python-sdk",
+    "csv_row": 60,
+    "path": "data/281/policies/modelcontextprotocol/python-sdk/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/modelcontextprotocol/python-sdk/blob/2713b53b127afc094dc97d6067df9f69b647661c/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3a628af704aeaa19223f00e074df0b8a8b9957d01b70fc7f105c350e979d768c",
+    "lines": 160,
+    "ai_ranges": [
+      [
+        14,
+        27
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0082",
+    "entity": "wg-easy/wg-easy",
+    "csv_row": 61,
+    "path": "data/281/policies/wg-easy/wg-easy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/wg-easy/wg-easy/blob/78b283849895b35ad45c6f83fa01228c0f1a6774/contributing.md",
+    "source_id": null,
+    "sha256": "85537da165fd2bb20fea5b717ec2723a5f32122ea3cfe7091af2ac99c2b75011",
+    "lines": 110,
+    "ai_ranges": [
+      [
+        33,
+        48
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0083",
+    "entity": "go-task/task",
+    "csv_row": 62,
+    "path": "data/281/policies/go-task/task/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/go-task/task/blob/81c4291803169106d53775e56e9d2e90d2a64f42/website/src/docs/contributing.md",
+    "source_id": null,
+    "sha256": "67cd3d417f9a40c8d7374826aa6357301bac666ffb75d485b438a2760258a46e",
+    "lines": 226,
+    "ai_ranges": [
+      [
+        25,
+        49
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0084",
+    "entity": "homebrew/brew",
+    "csv_row": 63,
+    "path": "data/281/policies/homebrew/brew/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/homebrew/brew/blob/f9e050ff085346db38abdab99fac279aa08b6b93/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "70430046eb4bbf33f3255e7e5dc6085340ff36803dae2f80f2cea106c543c16b",
+    "lines": 35,
+    "ai_ranges": [
+      [
+        24,
+        35
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0085",
+    "entity": "homebrew/brew",
+    "csv_row": 63,
+    "path": "data/281/policies/homebrew/brew/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://docs.brew.sh/Responsible-AI-Usage",
+    "source_id": null,
+    "sha256": "eab99d6b214810cfcc2f30c55066ab808f62fe9de59b76ca578cca6e30bd1e8a",
+    "lines": 101,
+    "ai_ranges": [
+      [
+        0,
+        101
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0086",
+    "entity": "eslint/eslint",
+    "csv_row": 64,
+    "path": "data/281/policies/eslint/eslint/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/eslint/eslint/blob/bf3eda049bd690f1e9a5a0c4520a6329b3e4ec85/docs/src/contribute/ai-policy.md",
+    "source_id": null,
+    "sha256": "ec3afb16dff0632dec213f2b584c864156c1af6218a488c71c373b42be3464f7",
+    "lines": 39,
+    "ai_ranges": [
+      [
+        0,
+        39
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0087",
+    "entity": "oxc-project/oxc",
+    "csv_row": 65,
+    "path": "data/281/policies/oxc-project/oxc/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/oxc-project/oxc/blob/589415c2b8754aa3c40524a178f10afcb0a74c6c/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "280befb3e18756d2ae3785f7c0cb1a346e54e3c7db08850539a2edcf57a1dcf5",
+    "lines": 21,
+    "ai_ranges": [
+      [
+        11,
+        21
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0088",
+    "entity": "google/gvisor",
+    "csv_row": 66,
+    "path": "data/281/policies/google/gvisor/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/google/gvisor/blob/c30a6d1b6f26b353ca5d6ff5a288d96ed820e89c/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ae53094400b9a306df4089547413bb55db551e58784d7900a230424090f3ff8b",
+    "lines": 194,
+    "ai_ranges": [
+      [
+        16,
+        53
+      ],
+      [
+        36,
+        53
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0089",
+    "entity": "PROJ (OSGeo)",
+    "csv_row": 67,
+    "path": "analysis/corpus-assessment/sources/corpus-066-ai_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/OSGeo/PROJ/blob/master/docs/source/community/ai_tool_policy.rst",
+    "source_id": "corpus-066-ai_policy-1",
+    "sha256": "d9a95b35ea6fd3670103bd40662a336e26578f00442131393f46acd3e1c6ad54",
+    "lines": 68,
+    "ai_ranges": [
+      [
+        0,
+        68
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0090",
+    "entity": "ory/hydra",
+    "csv_row": 68,
+    "path": "data/281/policies/ory/hydra/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ory/hydra/blob/6b3ddb43f3b977c6d70c78166b0bba0b8f74fae8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c76c0004271bef82d7cc72fde49a3b94338d9f19f1dfeccc3a386f7c8f8bb264",
+    "lines": 293,
+    "ai_ranges": [
+      [
+        211,
+        239
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0091",
+    "entity": "LLVM",
+    "csv_row": 69,
+    "path": "data/281/policies/LLVM/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://llvm.org/docs/AIToolPolicy.html",
+    "source_id": null,
+    "sha256": "e3bd4b4c15133e0619a3c9be4359cca7159e96a900c88bf797d4dab11eb7cd02",
+    "lines": 1377,
+    "ai_ranges": [
+      [
+        0,
+        1377
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0092",
+    "entity": "pytorch/pytorch",
+    "csv_row": 70,
+    "path": "data/281/policies/pytorch/pytorch/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/pytorch/pytorch/blob/17c69925f67b564d6d50c32a2cf4036f483e0e1a/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "523c18b995f8c908230dd452d46dca16d07829057e5c9b3342afdf794acb51ad",
+    "lines": 30,
+    "ai_ranges": [
+      [
+        0,
+        30
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0093",
+    "entity": "huggingface/lerobot",
+    "csv_row": 71,
+    "path": "data/281/policies/huggingface/lerobot/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/huggingface/lerobot/blob/3f2179f3b69708b6ad009b2e7685dd9d05269ee1/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "87d384fca42a50ada93b392ac4037667b2586153a2c46e6927d946fc23e38d1d",
+    "lines": 25,
+    "ai_ranges": [
+      [
+        0,
+        25
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0094",
+    "entity": "NLnet Labs",
+    "csv_row": 72,
+    "path": "data/281/policies/NLnet Labs/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://nlnetlabs.nl/llm-policy/",
+    "source_id": null,
+    "sha256": "263ecc4b2cfa398a4b428a42d6cb8ba5cd0488605f88a2db99c42de67bccfb0d",
+    "lines": 365,
+    "ai_ranges": [
+      [
+        0,
+        365
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0095",
+    "entity": "simdjson/simdjson",
+    "csv_row": 73,
+    "path": "data/281/policies/simdjson/simdjson/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/simdjson/simdjson/blob/8e6bac94877f2d3d026000d36ce81e0aaf38d26f/AI_USAGE_POLICY.md",
+    "source_id": null,
+    "sha256": "782b6407cd0db6b08f5052c742666d6965a64d20bb5254f665a80836f131bdd3",
+    "lines": 56,
+    "ai_ranges": [
+      [
+        0,
+        56
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0096",
+    "entity": "containers/podman",
+    "csv_row": 74,
+    "path": "data/281/policies/containers/podman/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/containers/podman/blob/e19275f788aac690aa37476b33a38fca2e1c970b/LLM_POLICY.md",
+    "source_id": null,
+    "sha256": "a11f6a74e2052903438e0e7e7e1b862912dce776415847c6d72c8f7ddda8f16e",
+    "lines": 81,
+    "ai_ranges": [
+      [
+        0,
+        81
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0097",
+    "entity": "python/mypy",
+    "csv_row": 75,
+    "path": "data/281/policies/python/mypy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/python/mypy/blob/82e8498c19494edebee08dd615470443ec53fffc/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3ee67e86c4ee553fe5b3453b4a51b46ea1508881f9905a6a019ab69c0a60de62",
+    "lines": 224,
+    "ai_ranges": [
+      [
+        125,
+        137
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0098",
+    "entity": "apache/pulsar",
+    "csv_row": 76,
+    "path": "data/281/policies/apache/pulsar/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/apache/pulsar/blob/8576283da4ad3f3742168fc4bf4a527f31923297/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e2963a522beb4cc81c6afa5810e8f40b9fad3f8775713346892a52e18fd34dd5",
+    "lines": 239,
+    "ai_ranges": [
+      [
+        233,
+        239
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0099",
+    "entity": "apache/pulsar",
+    "csv_row": 76,
+    "path": "analysis/corpus-assessment/sources/corpus-075-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/apache/pulsar/blob/8576283da4ad3f3742168fc4bf4a527f31923297/AGENTS.md",
+    "source_id": "corpus-075-other_policy-1",
+    "sha256": "1883b22f54c53f19de1b29331e3b5099901490b63ad504dc761f81b5bcc5517d",
+    "lines": 87,
+    "ai_ranges": [
+      [
+        0,
+        87
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0100",
+    "entity": "apache/pulsar",
+    "csv_row": 76,
+    "path": "analysis/corpus-assessment/sources/corpus-075-other_policy-2.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://www.apache.org/legal/generative-tooling.html",
+    "source_id": "corpus-075-other_policy-2",
+    "sha256": "08639c86d4a36c7165db4f602f55fdc39257f1324dfd499347e6246ba0dcf691",
+    "lines": 90,
+    "ai_ranges": [
+      [
+        16,
+        59
+      ],
+      [
+        71,
+        75
+      ],
+      [
+        75,
+        79
+      ],
+      [
+        79,
+        90
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0101",
+    "entity": "burntsushi/ripgrep",
+    "csv_row": 77,
+    "path": "data/281/policies/burntsushi/ripgrep/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/burntsushi/ripgrep/blob/5e16a5c9e57e81f6031a23faa2ace52205fa8242/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "b9ff6c7a33185f2331e1e333db35d594edc2f142521d8e2c9c40b0405104a12c",
+    "lines": 38,
+    "ai_ranges": [
+      [
+        0,
+        38
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0102",
+    "entity": "duckdb/duckdb",
+    "csv_row": 78,
+    "path": "data/281/policies/duckdb/duckdb/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/duckdb/duckdb/blob/7c0fa265df67f4d8ed5cc4f94910c5677d127afd/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "e15f3f7eb6efd9eafc462fc256a3d614641801cbc2fae6aabf628a43a1b243c1",
+    "lines": 48,
+    "ai_ranges": [
+      [
+        0,
+        48
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0103",
+    "entity": "vapor/vapor",
+    "csv_row": 79,
+    "path": "data/281/policies/vapor/vapor/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/vapor/vapor/blob/059b578bde8a037a42543914b8e14041fbec01e7/AGENTS.md",
+    "source_id": null,
+    "sha256": "294c18adcb7fd9efc5c139ecf572b1f070ade15679a46058a1a332483eac66e6",
+    "lines": 42,
+    "ai_ranges": [
+      [
+        0,
+        42
+      ],
+      [
+        27,
+        39
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0104",
+    "entity": "pip-tools",
+    "csv_row": 80,
+    "path": "data/281/policies/pip-tools/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://pip-tools.readthedocs.io/en/latest/contributing/",
+    "source_id": null,
+    "sha256": "f75bde0b9dbb94f16cb6ec98781cd29a6521df3ef08c3c855c7f8e5f334507a4",
+    "lines": 766,
+    "ai_ranges": [
+      [
+        0,
+        766
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0105",
+    "entity": "Matplotlib",
+    "csv_row": 81,
+    "path": "data/281/policies/Matplotlib/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://matplotlib.org/devdocs/devel/contribute.html#use-of-generative-ai",
+    "source_id": null,
+    "sha256": "53fd8733fa29a9527fb6d8a74a8f717854952bc362cb677ba85a63929b214e5b",
+    "lines": 763,
+    "ai_ranges": [
+      [
+        0,
+        763
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0106",
+    "entity": "tauri-apps/tauri",
+    "csv_row": 82,
+    "path": "data/281/policies/tauri-apps/tauri/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/tauri-apps/tauri/blob/5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5c4558ff1d99558db4b14fef884a75476b75c095b73de0877dbafd2d80d975d8",
+    "lines": 120,
+    "ai_ranges": [
+      [
+        107,
+        117
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0107",
+    "entity": "astral-sh/uv",
+    "csv_row": 83,
+    "path": "data/281/policies/astral-sh/uv/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/astral-sh/uv/blob/b0298f97b5efd7fcea536fb486df4d5e9516870f/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2ba74ac4a5e977a8972f47d1d825ece376a5f898f1fbbf396d859e305bc37604",
+    "lines": 356,
+    "ai_ranges": [
+      [
+        32,
+        39
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0108",
+    "entity": "astral-sh/uv",
+    "csv_row": 83,
+    "path": "data/281/policies/astral-sh/uv/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/astral-sh/.github/blob/main/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "ff8f09bc9fa48c76d7317d5fe4a80e2b3e3afd0ebf260f628bf1e82618b111f4",
+    "lines": 33,
+    "ai_ranges": [
+      [
+        0,
+        33
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0109",
+    "entity": "astral-sh/ruff",
+    "csv_row": 84,
+    "path": "data/281/policies/astral-sh/ruff/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/astral-sh/ruff/blob/29344141c46abeb9fa0c01f3159f8b8b45bff58e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a03a4ebf8e8fe60b7d36ffcba25a019f5acde2f37badfcb9d90f1c0a61b2cbe5",
+    "lines": 1128,
+    "ai_ranges": [
+      [
+        39,
+        60
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0110",
+    "entity": "astral-sh/ruff",
+    "csv_row": 84,
+    "path": "data/281/policies/astral-sh/ruff/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/astral-sh/.github/blob/main/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "ff8f09bc9fa48c76d7317d5fe4a80e2b3e3afd0ebf260f628bf1e82618b111f4",
+    "lines": 33,
+    "ai_ranges": [
+      [
+        0,
+        33
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0111",
+    "entity": "Astropy",
+    "csv_row": 85,
+    "path": "data/281/policies/Astropy/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/astropy/astropy-project/blob/main/policies/ai-policy.md",
+    "source_id": null,
+    "sha256": "695b3ccddcabd4420a062a5f54f08840994b6e9db541af5a6a625c1c27e7cc06",
+    "lines": 19,
+    "ai_ranges": [
+      [
+        0,
+        19
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0112",
+    "entity": "dolphin-emu/dolphin",
+    "csv_row": 86,
+    "path": "data/281/policies/dolphin-emu/dolphin/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/dolphin-emu/dolphin/blob/b6d8bc299ee7d03496d624b2e6b9a18d70522435/Contributing.md",
+    "source_id": null,
+    "sha256": "0e3a17caaf47070a9d854094173422e689a182952fa1350422c520fc038c55e5",
+    "lines": 309,
+    "ai_ranges": [
+      [
+        25,
+        31
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0113",
+    "entity": "reactivex/rxjava",
+    "csv_row": 87,
+    "path": "data/281/policies/reactivex/rxjava/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/reactivex/rxjava/blob/6915226894f46c3dc1bdcd6bc3734c7c95af9536/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "76af0460ee1273f27696b924ee33af011bb72a498b7abcbee5e072596543b8af",
+    "lines": 44,
+    "ai_ranges": [
+      [
+        6,
+        22
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0114",
+    "entity": "mochajs/mocha",
+    "csv_row": 88,
+    "path": "data/281/policies/mochajs/mocha/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/mochajs/mocha/blob/a017f08f4d784489949e2b9744716a4f1e705b6d/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f0fb3d6bdc0c8ab8f6da09d87c148bbb4897da20d18e0b02e4786c9c7f2e266a",
+    "lines": 243,
+    "ai_ranges": [
+      [
+        132,
+        146
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0115",
+    "entity": "qbittorrent/qbittorrent",
+    "csv_row": 89,
+    "path": "data/281/policies/qbittorrent/qbittorrent/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/qbittorrent/qbittorrent/blob/5a07050da1ced1f3a03280b4270c448c2d0f2344/AGENTS.md",
+    "source_id": null,
+    "sha256": "456acae52e683687c099355a100acb77db0bbfc696085ac88f847293ffd4d1b0",
+    "lines": 51,
+    "ai_ranges": [
+      [
+        0,
+        51
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0116",
+    "entity": "pulumi/pulumi",
+    "csv_row": 90,
+    "path": "data/281/policies/pulumi/pulumi/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/pulumi/pulumi/blob/54a4545731075fdf29c827012a4e82f9cd289a04/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "18424ec6dd14c92ed1a899b2b85b0d58109c8da220c4285d7c011dc75ae049b5",
+    "lines": 142,
+    "ai_ranges": [
+      [
+        111,
+        124
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0117",
+    "entity": "uutils/coreutils",
+    "csv_row": 91,
+    "path": "data/281/policies/uutils/coreutils/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/uutils/coreutils/blob/65957d99716e8701806ffefa181509e83781b158/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5696a3dd83c8b0d056e1b93338644c97f4b729961f388a46c5b85c7029966936",
+    "lines": 380,
+    "ai_ranges": [
+      [
+        217,
+        230
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0118",
+    "entity": "timescale/timescaledb",
+    "csv_row": 92,
+    "path": "data/281/policies/timescale/timescaledb/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/timescale/timescaledb/blob/9b1d8e68a27e1ea56911f798f994a108ed49cc6b/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "fa605c3d1a2f7e3f47a69d817b7313dd4bcd9859fa52b19d99ea1e9b089415ea",
+    "lines": 180,
+    "ai_ranges": [
+      [
+        147,
+        153
+      ],
+      [
+        148,
+        154
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0119",
+    "entity": "gfx-rs/wgpu",
+    "csv_row": 93,
+    "path": "data/281/policies/gfx-rs/wgpu/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gfx-rs/wgpu/blob/4e58833072840a236becf1b199cd05d81f139ef6/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a513f62c57be6b39aca1e80716690b31d1d7fa5541faf12e2149a96d0f4d1acb",
+    "lines": 254,
+    "ai_ranges": [
+      [
+        174,
+        181
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0120",
+    "entity": "apache/arrow",
+    "csv_row": 94,
+    "path": "data/281/policies/apache/arrow/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/apache/arrow/blob/c1f1954ad306fd14054a894a01e56843e0227cbb/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "0a881beb748116c65a0361d0023320b191baa0328d286fded06bf7739e72e4f7",
+    "lines": 75,
+    "ai_ranges": [
+      [
+        66,
+        71
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0121",
+    "entity": "apache/arrow",
+    "csv_row": 94,
+    "path": "data/281/policies/apache/arrow/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://arrow.apache.org/docs/dev/developers/overview.html#ai-generated-code",
+    "source_id": null,
+    "sha256": "d42e2f8d2be18036a7c5fba814d66e0627650c9411e2bffcc8c1224111f649e1",
+    "lines": 531,
+    "ai_ranges": [
+      [
+        249,
+        301
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0122",
+    "entity": "systemd/systemd",
+    "csv_row": 95,
+    "path": "data/281/policies/systemd/systemd/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/systemd/systemd/blob/afff448cf47659a91a8b2ba74e26449dead48f32/docs/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6ae35053f2f4bf6a556ae9ce71090504062cda2cf85f6170d955426dcc7d2cbe",
+    "lines": 142,
+    "ai_ranges": [
+      [
+        52,
+        77
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0123",
+    "entity": "tracel-ai/burn",
+    "csv_row": 96,
+    "path": "data/281/policies/tracel-ai/burn/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/tracel-ai/burn/blob/bd6e8fa2f23c2ecea1044af149bdc9e698a0848d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1e6722664dcbecb673acd4e908804d32df2aba14d7c1797c83c891c2838ea30d",
+    "lines": 97,
+    "ai_ranges": [
+      [
+        39,
+        53
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0124",
+    "entity": "farion1231/cc-switch",
+    "csv_row": 97,
+    "path": "data/281/policies/farion1231/cc-switch/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/farion1231/cc-switch/blob/f6e37ed99443890a865669e28bf1caf5e85d466d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4850070e77b79cf57b328842e3ba81399de6d11805e5fd3bcddd4832b6d6ee82",
+    "lines": 253,
+    "ai_ranges": [
+      [
+        96,
+        110
+      ],
+      [
+        224,
+        238
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0125",
+    "entity": "rclone/rclone",
+    "csv_row": 98,
+    "path": "data/281/policies/rclone/rclone/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rclone/rclone/blob/2eb6f6d961ec6a2c2eedc00f547a084bd812814c/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f85dafb73da4a3886e2b54310beee6508ae14d9c63897f84ceb9bf975b82de92",
+    "lines": 750,
+    "ai_ranges": [
+      [
+        115,
+        145
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0126",
+    "entity": "cloudreve/cloudreve",
+    "csv_row": 99,
+    "path": "data/281/policies/cloudreve/cloudreve/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/cloudreve/cloudreve/blob/0bb0ab833571d380153edd3529e01a7957b8b4ce/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "bb5d86c2644f1cf2af760ca10656a60a18f14848413708a135b56ce684aefd56",
+    "lines": 26,
+    "ai_ranges": [
+      [
+        3,
+        9
+      ],
+      [
+        18,
+        24
+      ],
+      [
+        20,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0127",
+    "entity": "cloudreve/cloudreve",
+    "csv_row": 99,
+    "path": "data/281/policies/cloudreve/cloudreve/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://docs.cloudreve.org/en/api/contributing#aigc-guidelines",
+    "source_id": null,
+    "sha256": "ee02549fea6329bfae523e8f07045952db2416ce76b046fd70b1185bec4449e2",
+    "lines": 216,
+    "ai_ranges": [
+      [
+        0,
+        216
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0128",
+    "entity": "jhipster/generator-jhipster",
+    "csv_row": 100,
+    "path": "data/281/policies/jhipster/generator-jhipster/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/jhipster/generator-jhipster/blob/b05bced40c5fe6596145340ba233e262e6865881/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "def82c6d42e5448183c2d08f187768e01ad73536d92a96ee5bd901abeeef6c94",
+    "lines": 198,
+    "ai_ranges": [
+      [
+        165,
+        175
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0129",
+    "entity": "caldis/mos",
+    "csv_row": 101,
+    "path": "data/281/policies/caldis/mos/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/caldis/mos/blob/5dfb2363331cf63f529fdafa27962c41f91feff4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5fb60396807056e519fc60295b69c93a83c1a97e68496c2041d33f622106da0e",
+    "lines": 78,
+    "ai_ranges": [
+      [
+        23,
+        29
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0130",
+    "entity": "Kilo-Org/kilocode",
+    "csv_row": 102,
+    "path": "data/281/policies/Kilo-Org/kilocode/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/Kilo-Org/kilocode/blob/abd24c7223df8cd8df203d9b457e5a7bcd9147d2/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4573bcfbaaf0fcc4b2eb72902c90ae96001c50ed1a79517eacc9cf2d09e9b1c8",
+    "lines": 342,
+    "ai_ranges": [
+      [
+        257,
+        265
+      ],
+      [
+        265,
+        275
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0131",
+    "entity": "HeyPuter/puter",
+    "csv_row": 103,
+    "path": "data/281/policies/HeyPuter/puter/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/HeyPuter/puter/blob/c237e2433f88afd29e4429ef21132c901aed3e00/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4ed39d265d14c4c309150b38f934c47b5f033511ce72b60267c6edd2ae23e553",
+    "lines": 50,
+    "ai_ranges": [
+      [
+        24,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0132",
+    "entity": "reflex-dev/reflex",
+    "csv_row": 104,
+    "path": "data/281/policies/reflex-dev/reflex/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/reflex-dev/reflex/blob/34ee005724befc79b6593d240342d952a8fcc6f9/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "84792ba8e7afe666c04c8fc89cfae359a87076b5659dcd2cef13f06020fc3625",
+    "lines": 191,
+    "ai_ranges": [
+      [
+        139,
+        151
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0133",
+    "entity": "SillyTavern/SillyTavern",
+    "csv_row": 105,
+    "path": "data/281/policies/SillyTavern/SillyTavern/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/SillyTavern/SillyTavern/blob/8172dcd0ee672d3cd9a5e5f7af134f91a45cd2b8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b32a000743ac08e1c9753b2c4405c71f102004c0282f6003d066c89a0ea38fb0",
+    "lines": 85,
+    "ai_ranges": [
+      [
+        72,
+        81
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0134",
+    "entity": "agentscope-ai/agentscope",
+    "csv_row": 106,
+    "path": "data/281/policies/agentscope-ai/agentscope/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/agentscope-ai/agentscope/blob/89ce2cf6666ec6f699d55f3e930e7582e85bc8a9/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "0bce7e06d00d865bf9460e81b7c1f77b136ff306fbd74d812ea677b83c3d3f4d",
+    "lines": 420,
+    "ai_ranges": [
+      [
+        45,
+        78
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0135",
+    "entity": "processing/p5.js",
+    "csv_row": 107,
+    "path": "data/281/policies/processing/p5.js/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/processing/p5.js/blob/5743cb5ba5aef0e1cbe01259dd1d4c17910164c4/AI_USAGE_POLICY.md",
+    "source_id": null,
+    "sha256": "a78a23320292e2743f38827b49b717746abc37d8be37917890de66a3f61590a9",
+    "lines": 90,
+    "ai_ranges": [
+      [
+        0,
+        90
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0136",
+    "entity": "Oxide Computer (RFD 576)",
+    "csv_row": 108,
+    "path": "data/281/policies/Oxide Computer (RFD 576)/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://rfd.shared.oxide.computer/rfd/0576",
+    "source_id": null,
+    "sha256": "eb97187908972754a0c1d979cfc8213a0b9609218a7f5bb9c8e880c8496185a5",
+    "lines": 964,
+    "ai_ranges": [
+      [
+        0,
+        964
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0137",
+    "entity": "containerd/containerd",
+    "csv_row": 109,
+    "path": "data/281/policies/containerd/containerd/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/containerd/containerd/blob/1ab181cb645ad156606a68d3fca83dd59ebf7fd8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3cf8bd3965f3c72f0b117d88c38c9b985dc8f683ba00bf34d5e5af93e602c033",
+    "lines": 84,
+    "ai_ranges": [
+      [
+        27,
+        39
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0138",
+    "entity": "Castle Game Engine",
+    "csv_row": 110,
+    "path": "data/281/policies/Castle Game Engine/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://castle-engine.io/ai",
+    "source_id": null,
+    "sha256": "e1c4a94d308551ffd88590f54968a4279062aac5664d04abfba86bb10df441c8",
+    "lines": 1195,
+    "ai_ranges": [
+      [
+        0,
+        1195
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0139",
+    "entity": "quarkusio/quarkus",
+    "csv_row": 111,
+    "path": "data/281/policies/quarkusio/quarkus/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/quarkusio/quarkus/blob/491751a318b917dee4e927392e29c1f2cdfbdd1c/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "2d92df5b54b288ce37b87ecb2c7f6e0dd5916d5b6e820c68adfaf7a7ae7b6ebd",
+    "lines": 37,
+    "ai_ranges": [
+      [
+        0,
+        37
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0140",
+    "entity": "rust-lang/rust",
+    "csv_row": 112,
+    "path": "data/281/policies/rust-lang/rust/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/rust-lang/rust/blob/d0babd8b6b05ef9bb65d42f928cef4129d64cf65/src/tools/rust-analyzer/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "78adc06fcee6427e2c687244ba2a95da67c4549edeca60f42e96608b41fef408",
+    "lines": 34,
+    "ai_ranges": [
+      [
+        0,
+        34
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0141",
+    "entity": "psf/requests",
+    "csv_row": 113,
+    "path": "data/281/policies/psf/requests/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/psf/requests/blob/f361ead047be5cb873174218582f7d8b9fcd9f49/.github/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "4f663ef74cbff605bc64948424b7d8d188c097f2b169870515892feda5e67afe",
+    "lines": 81,
+    "ai_ranges": [
+      [
+        0,
+        81
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0142",
+    "entity": "Python (devguide)",
+    "csv_row": 114,
+    "path": "data/281/policies/Python (devguide)/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://devguide.python.org/getting-started/ai-tools/",
+    "source_id": null,
+    "sha256": "1b51608663a83eff8e4339f757b24e10011e9157728303404ed7d1640ed13971",
+    "lines": 514,
+    "ai_ranges": [
+      [
+        0,
+        514
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0143",
+    "entity": "python-attrs",
+    "csv_row": 115,
+    "path": "data/281/policies/python-attrs/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/python-attrs/attrs/blob/main/.github/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "945a1e597aacbfb5a3f20db985abba02288445439ef7ee4696af3467611ba960",
+    "lines": 77,
+    "ai_ranges": [
+      [
+        0,
+        77
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0144",
+    "entity": "clickhouse/clickhouse",
+    "csv_row": 116,
+    "path": "data/281/policies/clickhouse/clickhouse/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/clickhouse/clickhouse/blob/fbe8cc8ffada1a7e28d419909a1c723f317f21f1/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "0a78762e4eb64911d408cfc1f06cb30c477e275e7d7dec4527ba9825c36f31ca",
+    "lines": 13,
+    "ai_ranges": [
+      [
+        0,
+        13
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0145",
+    "entity": "cypress-io/cypress",
+    "csv_row": 117,
+    "path": "data/281/policies/cypress-io/cypress/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/cypress-io/cypress/blob/b2ea7e5c15a152ebe6f2218bb2961e5c8e08e8d4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2934e1ae3c5cb11fb367d667f1e5d8ad883ab93dfe9e40cbb4a5be61e37d6ab9",
+    "lines": 704,
+    "ai_ranges": [
+      [
+        471,
+        500
+      ],
+      [
+        478,
+        486
+      ],
+      [
+        563,
+        587
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0146",
+    "entity": "wasp-lang/wasp",
+    "csv_row": 118,
+    "path": "data/281/policies/wasp-lang/wasp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/wasp-lang/wasp/blob/6525ba109dd49a51c9591001b37b08bcd7aa590a/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "fe8f3a7be5a0514a2d9f095385fdc5599fe5f96bc06517c8cd20e5caff56c8a4",
+    "lines": 69,
+    "ai_ranges": [
+      [
+        64,
+        69
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0147",
+    "entity": "alibaba/page-agent",
+    "csv_row": 119,
+    "path": "data/281/policies/alibaba/page-agent/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/alibaba/page-agent/blob/e053d55a1428ac280d952596811f44ebefd89b07/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "33b34be07fecc9f754e20d1d6d7419d4405d654ca9d887ac6104283bccbddb15",
+    "lines": 47,
+    "ai_ranges": [
+      [
+        26,
+        33
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0148",
+    "entity": "bytecodealliance/wasmtime",
+    "csv_row": 120,
+    "path": "data/281/policies/bytecodealliance/wasmtime/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/bytecodealliance/wasmtime/blob/fb2282d641a3b5b3a66a27f3bd5df50fd79d6ecf/AGENTS.md",
+    "source_id": null,
+    "sha256": "7e7080ef127369c9081a4b417118fc474af6dfbd00f3bd4596d4e8f88ba67411",
+    "lines": 17,
+    "ai_ranges": [
+      [
+        0,
+        17
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0149",
+    "entity": "bytecodealliance/wasmtime",
+    "csv_row": 120,
+    "path": "data/281/policies/bytecodealliance/wasmtime/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/bytecodealliance/governance/blob/main/AI_TOOL_POLICY.md",
+    "source_id": null,
+    "sha256": "6cc42ba649d18c137b5d65b366c4b9586ae0f72f612a3e47b902de85b5f43c39",
+    "lines": 67,
+    "ai_ranges": [
+      [
+        0,
+        67
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0150",
+    "entity": "block/goose",
+    "csv_row": 121,
+    "path": "data/281/policies/block/goose/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/block/goose/blob/e7c33077cd2be15413a084a4896f91210a496ed4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a5330ac0acea9940740c3dbd3eff560ca0dea5e8ac893a091ca8f7afcd45e313",
+    "lines": 363,
+    "ai_ranges": [
+      [
+        62,
+        71
+      ],
+      [
+        71,
+        96
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0151",
+    "entity": "directus/directus",
+    "csv_row": 122,
+    "path": "data/281/policies/directus/directus/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/directus/directus/blob/240b801568b4cd99676dc69adc22682800215654/ai_policy.md",
+    "source_id": null,
+    "sha256": "4e1a6d72e6ddf946dac383d060b9dfdc2d9a308fa00a902b26931c8d648ede41",
+    "lines": 44,
+    "ai_ranges": [
+      [
+        0,
+        44
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0152",
+    "entity": "ggml-org/whisper.cpp",
+    "csv_row": 123,
+    "path": "data/281/policies/ggml-org/whisper.cpp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ggml-org/whisper.cpp/blob/080bbbe85230f624f0b52127f1ae1218247989f9/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ce7f9dac8abfc77f73e734836f195325a6e84f6e20ce45e9e1ba5a23b33efd27",
+    "lines": 176,
+    "ai_ranges": [
+      [
+        8,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0153",
+    "entity": "ggml-org/whisper.cpp",
+    "csv_row": 123,
+    "path": "data/281/policies/ggml-org/whisper.cpp/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/ggml-org/whisper.cpp/blob/080bbbe85230f624f0b52127f1ae1218247989f9/AGENTS.md",
+    "source_id": null,
+    "sha256": "9bd8f8354c50c834fc5363e9152fc6beb7bd0d42add014674a7ebef6e388149e",
+    "lines": 102,
+    "ai_ranges": [
+      [
+        0,
+        102
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0154",
+    "entity": "github/spec-kit",
+    "csv_row": 124,
+    "path": "data/281/policies/github/spec-kit/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/github/spec-kit/blob/fd101d531eaec8a1e709db2f37632bc93b6ce4d6/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2001ec9aab1f41b8938308373a76050dfaf5f69cd5dcb45049cd3354138b7505",
+    "lines": 269,
+    "ai_ranges": [
+      [
+        206,
+        263
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0155",
+    "entity": "agentskills/agentskills",
+    "csv_row": 125,
+    "path": "data/281/policies/agentskills/agentskills/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/agentskills/agentskills/blob/38a2ff82958afee88dadf4831509e6f7e9d8ef4e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a8faf08b23696760d5682145c8746dfc0dbd8ca065c7f506eb80f9fb8e13155b",
+    "lines": 114,
+    "ai_ranges": [
+      [
+        75,
+        111
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0156",
+    "entity": "ghostty-org/ghostty",
+    "csv_row": 126,
+    "path": "data/281/policies/ghostty-org/ghostty/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/ghostty-org/ghostty/blob/b0947378349eff70f7030dda0e6d022fae1e6fbd/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "86a40f7eb792844bb5939b71cc9729356e2cd3c0a6519945138e05397506b886",
+    "lines": 65,
+    "ai_ranges": [
+      [
+        0,
+        65
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0157",
+    "entity": "sxyazi/yazi",
+    "csv_row": 127,
+    "path": "data/281/policies/sxyazi/yazi/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/sxyazi/yazi/blob/b25ae9f82d415da7fbd4d4e4b09397a194540a09/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ffe30fd197081ea4c964ca5b31abf153bc7034a35e4be6d35c4092f30e8eff47",
+    "lines": 174,
+    "ai_ranges": [
+      [
+        168,
+        174
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0158",
+    "entity": "microsoft/typescript-go",
+    "csv_row": 128,
+    "path": "data/281/policies/microsoft/typescript-go/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/microsoft/typescript-go/blob/9ea7f6b36e9a56987d078a8fd33e63a033121683/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "021145e4425884b8a52cef301e95cb7a98d18b2240085d2730af2916daa9b5bf",
+    "lines": 121,
+    "ai_ranges": [
+      [
+        2,
+        25
+      ],
+      [
+        14,
+        22
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0159",
+    "entity": "vitest-dev/vitest",
+    "csv_row": 129,
+    "path": "data/281/policies/vitest-dev/vitest/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/vitest-dev/vitest/blob/3923cab3d98cd0063377ffd8e4c98b73d2f28db9/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e699f4a54e697581d7a9636ddf4fbe37a672bac878a2da0aa4438d4bea1a5cbd",
+    "lines": 266,
+    "ai_ranges": [
+      [
+        104,
+        116
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0160",
+    "entity": "sebastianbergmann/phpunit",
+    "csv_row": 130,
+    "path": "data/281/policies/sebastianbergmann/phpunit/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/sebastianbergmann/phpunit/blob/465debb2a3bc265e0a0c5a5995daa037c919438b/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "fec1c39615fc940be4f77aca1d0b035ef524aeffb3de5c310d22a87ce15aa2f8",
+    "lines": 134,
+    "ai_ranges": [
+      [
+        56,
+        62
+      ],
+      [
+        58,
+        64
+      ],
+      [
+        77,
+        83
+      ],
+      [
+        79,
+        85
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0161",
+    "entity": "EFF",
+    "csv_row": 131,
+    "path": "data/281/policies/EFF/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.eff.org/deeplinks/2026/02/effs-policy-llm-assisted-contributions-our-open-source-projects",
+    "source_id": null,
+    "sha256": "4419fa567e332ffcdc1be743b3ad5a1f09b0a03e3a747a45ee62869e88ff932e",
+    "lines": 1437,
+    "ai_ranges": [
+      [
+        350,
+        419
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0162",
+    "entity": "udecode/plate",
+    "csv_row": 132,
+    "path": "data/281/policies/udecode/plate/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/udecode/plate/blob/8abee2ba6db46e486ace3e9908d9550e3c05db13/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f152ac9d6f09ca9b10ecb2cb28e7bf5ba42340ce3fcb56c1dc1c7b5d41543798",
+    "lines": 115,
+    "ai_ranges": [
+      [
+        90,
+        105
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0163",
+    "entity": "freecad/freecad",
+    "csv_row": 133,
+    "path": "data/281/policies/freecad/freecad/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/freecad/freecad/blob/02173427c469a27f28db0434decc1177225fa9d9/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "a7eccda58eb2e0d5306085c21170bc20fd0023dafddc41bd58ed0e76a7b9fcc8",
+    "lines": 59,
+    "ai_ranges": [
+      [
+        0,
+        59
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0164",
+    "entity": "electron/electron",
+    "csv_row": 134,
+    "path": "data/281/policies/electron/electron/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/electron/electron/blob/349e1a6c9f508f3e5a68a44831bb0f1cd722fd66/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "bf1e727c2c567e15b97ce13db4aadf4e1aaffd290907a3c6024732da15944681",
+    "lines": 82,
+    "ai_ranges": [
+      [
+        66,
+        74
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0165",
+    "entity": "electron/electron",
+    "csv_row": 134,
+    "path": "data/281/policies/electron/electron/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/electron/governance/blob/97e7e6f4ec5c36b5fc9a7ef42a924c9622871414/policy/ai.md",
+    "source_id": null,
+    "sha256": "9a600edd8d765faea5c1c0154dac8673862646c7549056b4e8afd3d0b2857015",
+    "lines": 90,
+    "ai_ranges": [
+      [
+        0,
+        90
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0166",
+    "entity": "zed-industries/zed",
+    "csv_row": 135,
+    "path": "data/281/policies/zed-industries/zed/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/zed-industries/zed/blob/1a246efd7e1b83ab568ec5e3e6c1a43a42e1abba/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3f2eb56d5cdcf4a05bc2e5c65fe47c0c40f6c1e85fe5b0f0f19cc1741394f327",
+    "lines": 179,
+    "ai_ranges": [
+      [
+        78,
+        88
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0167",
+    "entity": "x64dbg/x64dbg",
+    "csv_row": 136,
+    "path": "data/281/policies/x64dbg/x64dbg/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/x64dbg/x64dbg/blob/77a7ed00b81e0d614c53712ff2f0236920949c2e/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "fbcd3bab1d8bc9cd762cc06a36d3e9402ffab9bfb9ef5c5dc8183cb1e3e54a69",
+    "lines": 115,
+    "ai_ranges": [
+      [
+        16,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0168",
+    "entity": "graphiteeditor/graphite",
+    "csv_row": 137,
+    "path": "data/281/policies/graphiteeditor/graphite/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/graphiteeditor/graphite/blob/a040362d4a56a7ffac08c57697e409dc427a2694/website/content/volunteer/guide/starting-a-task/ai-contribution-policy.md",
+    "source_id": null,
+    "sha256": "bbcb13ea22aa33eb88e055e3b98d7b5ffc2225f99f2457e2cdeb5f6aa1f143f2",
+    "lines": 23,
+    "ai_ranges": [
+      [
+        0,
+        23
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0169",
+    "entity": "biomejs/biome",
+    "csv_row": 138,
+    "path": "data/281/policies/biomejs/biome/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/biomejs/biome/blob/b3b12b3fe390feabbd9ba097922d6c7e56823406/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "81d2a474fe6eed18d2809022d7f6fd23b63d289dc5b2aa80111b624c4568f97d",
+    "lines": 589,
+    "ai_ranges": [
+      [
+        46,
+        74
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0170",
+    "entity": "scikit-learn",
+    "csv_row": 139,
+    "path": "data/281/policies/scikit-learn/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://scikit-learn.org/stable/developers/contributing.html#automated-contributions-policy",
+    "source_id": null,
+    "sha256": "e2e88126568ed4432be0f9a97a7c59f4ff91f6dda7827944b97c331c5f6a736f",
+    "lines": 2754,
+    "ai_ranges": [
+      [
+        0,
+        2754
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0171",
+    "entity": "blakeblackshear/frigate",
+    "csv_row": 140,
+    "path": "data/281/policies/blakeblackshear/frigate/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/blakeblackshear/frigate/blob/a8eca68438579aef3326029080d911c89dd3e907/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "97ee302f59d05f49d793f77298b3d46fefc53e4bcdd4c930b6173f860d0496ce",
+    "lines": 145,
+    "ai_ranges": [
+      [
+        21,
+        46
+      ],
+      [
+        25,
+        34
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0172",
+    "entity": "winapps-org/winapps",
+    "csv_row": 141,
+    "path": "data/281/policies/winapps-org/winapps/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/winapps-org/winapps/blob/7f6b6abf575e3f93614aeeacb75b609372e7f1a6/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e1f164196caa6e4eaecc6e213f39ea8f1729b987eef8982a488e20790bb2d511",
+    "lines": 80,
+    "ai_ranges": [
+      [
+        14,
+        20
+      ],
+      [
+        20,
+        25
+      ],
+      [
+        25,
+        30
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0173",
+    "entity": "ggml-org/llama.cpp",
+    "csv_row": 142,
+    "path": "data/281/policies/ggml-org/llama.cpp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ggml-org/llama.cpp/blob/505b1ed15ca80e2a19f12ff4ac365e40fb374053/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "92a79123fb0e29ead074275a53a5c23996d61e2bf172c12018b93f576d540fb7",
+    "lines": 198,
+    "ai_ranges": [
+      [
+        8,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0174",
+    "entity": "ggml-org/llama.cpp",
+    "csv_row": 142,
+    "path": "data/281/policies/ggml-org/llama.cpp/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/ggml-org/llama.cpp/blob/505b1ed15ca80e2a19f12ff4ac365e40fb374053/AGENTS.md",
+    "source_id": null,
+    "sha256": "83d8bdadef7f6d5f39487dff1774bfe43eef0bbd242e79c3b499bf87abcf09df",
+    "lines": 200,
+    "ai_ranges": [
+      [
+        0,
+        200
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0175",
+    "entity": "alamofire/alamofire",
+    "csv_row": 143,
+    "path": "data/281/policies/alamofire/alamofire/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/alamofire/alamofire/blob/903c53c710d1cbbac0b4b9c2527aefb791e1fee3/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "38686bece3138924fec55cee8f0c03b3eaf7ff86a8a8fecf9ffce972ed36582e",
+    "lines": 90,
+    "ai_ranges": [
+      [
+        38,
+        44
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0176",
+    "entity": "gethomepage/homepage",
+    "csv_row": 144,
+    "path": "data/281/policies/gethomepage/homepage/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gethomepage/homepage/blob/e6bd74e986d1a903199e5f02d86c33f506f1fe36/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "42469f03015865831248a6fa82a49bafed8a20b16d14ae32d320fee752c46ddf",
+    "lines": 71,
+    "ai_ranges": [
+      [
+        50,
+        54
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0177",
+    "entity": "OpenListTeam/OpenList",
+    "csv_row": 145,
+    "path": "data/281/policies/OpenListTeam/OpenList/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/OpenListTeam/OpenList/blob/6b702afc0f18bbae81d14ceadb58c7a3cb276380/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "0d051e9eeead8ff6198ed8acfdc210998fa6ba21a4c34266e4d04d44ea0c9c8d",
+    "lines": 110,
+    "ai_ranges": [
+      [
+        84,
+        110
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0178",
+    "entity": "cjpais/Handy",
+    "csv_row": 146,
+    "path": "data/281/policies/cjpais/Handy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/cjpais/Handy/blob/b9925d01972a933544d0344a2e62360580368f18/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "38654c868b81c677d15949864f72aa1d1cce4ae444671fde3804894d9349eba0",
+    "lines": 322,
+    "ai_ranges": [
+      [
+        230,
+        240
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0179",
+    "entity": "denoland/deno",
+    "csv_row": 147,
+    "path": "data/281/policies/denoland/deno/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/denoland/deno/blob/f8a17c8171569fa2870d740030aaa59c91fdf9ee/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d76dcf350d4607c08d4b86abd6cffd97fa5b10d17cb1fed81ac63c35728ef766",
+    "lines": 333,
+    "ai_ranges": [
+      [
+        0,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0180",
+    "entity": "textualize/rich",
+    "csv_row": 148,
+    "path": "data/281/policies/textualize/rich/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/textualize/rich/blob/9d8f9a372cc5916fd4781fec207ced7ddac2f08f/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "e7ab52eb093e0bc2ffe1a71758128b5231c5894fc38e04ae3deb34a881e36a10",
+    "lines": 7,
+    "ai_ranges": [
+      [
+        0,
+        7
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0181",
+    "entity": "starship/starship",
+    "csv_row": 149,
+    "path": "data/281/policies/starship/starship/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/starship/starship/blob/8eb25b8130d1b7bf0c98c71d6f978224814b5208/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "b6e7c649a084df4540af44e3a7a617e81e7bb84b18ac80658c0074965fe44695",
+    "lines": 41,
+    "ai_ranges": [
+      [
+        0,
+        41
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0182",
+    "entity": "aristocratos/btop",
+    "csv_row": 150,
+    "path": "data/281/policies/aristocratos/btop/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/aristocratos/btop/blob/34831e7095f83f4d4de4693377a03a7493aae7e8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "52fb840189077366446ff562f14d23a236f1c8c2471d14624644712be1bad23a",
+    "lines": 68,
+    "ai_ranges": [
+      [
+        14,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0183",
+    "entity": "keepassxreboot/keepassxc",
+    "csv_row": 151,
+    "path": "data/281/policies/keepassxreboot/keepassxc/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/keepassxreboot/keepassxc/blob/6a534f38c61295d60b0e937739a12511e76dbfeb/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e4c96ad11405c9aad9943d5b3785f434be1c19cbda26dd3e2b8edb0d3900b0c1",
+    "lines": 238,
+    "ai_ranges": [
+      [
+        77,
+        81
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0184",
+    "entity": "shap/shap",
+    "csv_row": 152,
+    "path": "data/281/policies/shap/shap/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/shap/shap/blob/846f28c79ad0ca40044bc31703a4fccbe8fcaf17/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "805c81a36fc6e2fa88b5d2fded7ff4815dac1557816b4f5471263385c8337396",
+    "lines": 431,
+    "ai_ranges": [
+      [
+        211,
+        222
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0185",
+    "entity": "rizinorg/cutter",
+    "csv_row": 153,
+    "path": "data/281/policies/rizinorg/cutter/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rizinorg/cutter/blob/e01d86b5fa12542b7eed9e35ce7d597b6b0a31ee/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a28f9c452fb4eb43fe028c6b8d3bbbbe5c4ac1adc93c7a5cdfba79130f22bc0a",
+    "lines": 59,
+    "ai_ranges": [
+      [
+        26,
+        48
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0186",
+    "entity": "Software Freedom Conservancy (recommandations LLM)",
+    "csv_row": 154,
+    "path": "data/281/policies/Software Freedom Conservancy (recommandations LLM)/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://sfconservancy.org/llm-gen-ai/llm-backed-generative-ai-recommendations.html",
+    "source_id": null,
+    "sha256": "be25a338eaae7346585e1da18dcf9379812aea612d92a48eb93b16d5a5901ddd",
+    "lines": 764,
+    "ai_ranges": [
+      [
+        335,
+        620
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0187",
+    "entity": "ohmyzsh/ohmyzsh",
+    "csv_row": 155,
+    "path": "data/281/policies/ohmyzsh/ohmyzsh/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ohmyzsh/ohmyzsh/blob/677a4592b18c08ddea737f8aca70bac0e9fc9313/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "30a832eb029461d7d3160fbd0578ba7c573d3493bdb1bbcb12f39e085cc76038",
+    "lines": 270,
+    "ai_ranges": [
+      [
+        128,
+        154
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0188",
+    "entity": "gohugoio/hugo",
+    "csv_row": 156,
+    "path": "data/281/policies/gohugoio/hugo/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gohugoio/hugo/blob/89b8c322008f5285b81d4b357887292e3b61f708/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b4249999d81af32fd34743b063b13a15135ac1bd2932e337ee18b7a49a3ef7b0",
+    "lines": 212,
+    "ai_ranges": [
+      [
+        81,
+        212
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0189",
+    "entity": "ueberdosis/tiptap",
+    "csv_row": 157,
+    "path": "data/281/policies/ueberdosis/tiptap/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ueberdosis/tiptap/blob/c9d37e1ee5c2982fbffa78aeac9f8cfb67c701ff/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "258af56445576edd13cf6c8d44ed4dd10f4afaf347578f2aaec954940e8a720a",
+    "lines": 112,
+    "ai_ranges": [
+      [
+        103,
+        109
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0190",
+    "entity": "TecharoHQ/anubis",
+    "csv_row": 158,
+    "path": "data/281/policies/TecharoHQ/anubis/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/TecharoHQ/anubis/blob/59bd4f6eea08919494ec567bccc7d1a8f51e8de4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c0b076bd06c4b1d273132197c1203fa3fa0e68fbf23a3a43f7332614225af1f6",
+    "lines": 144,
+    "ai_ranges": [
+      [
+        0,
+        6
+      ],
+      [
+        115,
+        121
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0191",
+    "entity": "textualize/textual",
+    "csv_row": 159,
+    "path": "data/281/policies/textualize/textual/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/textualize/textual/blob/06dbeef4bb70fb718236aa418ed658ef4667a126/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "e7ab52eb093e0bc2ffe1a71758128b5231c5894fc38e04ae3deb34a881e36a10",
+    "lines": 7,
+    "ai_ranges": [
+      [
+        0,
+        7
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0192",
+    "entity": "vllm-project/vllm",
+    "csv_row": 160,
+    "path": "data/281/policies/vllm-project/vllm/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/vllm-project/vllm/blob/2dab187f756f2c4549fd5e57019413f3415365a4/AGENTS.md",
+    "source_id": null,
+    "sha256": "9405571019fcc06d8ceae4cd5da0c3c8f08959dbfecfe43138cbb1b9b3dbd575",
+    "lines": 157,
+    "ai_ranges": [
+      [
+        0,
+        157
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0193",
+    "entity": "agno-agi/agno",
+    "csv_row": 161,
+    "path": "data/281/policies/agno-agi/agno/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/agno-agi/agno/blob/f6b475995a5fdb9114959e771d93423ac6e7d3a0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2ea749cb8e8f2660621b50224976702575a8a863bf2b3c202b19e6326dffc55f",
+    "lines": 151,
+    "ai_ranges": [
+      [
+        24,
+        30
+      ],
+      [
+        91,
+        97
+      ],
+      [
+        96,
+        102
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0194",
+    "entity": "paperless-ngx/paperless-ngx",
+    "csv_row": 162,
+    "path": "data/281/policies/paperless-ngx/paperless-ngx/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/paperless-ngx/paperless-ngx/blob/0addb448f5b9fc3579b4285f779871ec2823e7a6/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a34fc0e4b99bb35139bec4d329e184d8c480f093519e2bdac4cf2ee8a25e3bcd",
+    "lines": 145,
+    "ai_ranges": [
+      [
+        66,
+        73
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0195",
+    "entity": "wilfred/difftastic",
+    "csv_row": 163,
+    "path": "data/281/policies/wilfred/difftastic/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/wilfred/difftastic/blob/3310f2bc4d15f44576b8c35731497766663e4f01/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "7c51c8f02390fff6496d287f42081975325e49aa05aaaa2a49763607f3f6e036",
+    "lines": 9,
+    "ai_ranges": [
+      [
+        0,
+        9
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0196",
+    "entity": "TibixDev/winboat",
+    "csv_row": 164,
+    "path": "data/281/policies/TibixDev/winboat/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/TibixDev/winboat/blob/c6af4a5030ca036489f8851fee06f463ff1dd163/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "8e9ec2e046e56f06d32d9a2e7b58d287daffa94e608b27d7760533478baffd94",
+    "lines": 43,
+    "ai_ranges": [
+      [
+        10,
+        16
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0197",
+    "entity": "volcengine/verl",
+    "csv_row": 165,
+    "path": "data/281/policies/volcengine/verl/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/volcengine/verl/blob/6f2aa24abfc01cc72811b376aeb3936503885096/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e14c78c285fd7b83f6108d86ee1a02b2d88234bc26374a169106b084b33965bd",
+    "lines": 101,
+    "ai_ranges": [
+      [
+        87,
+        94
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0198",
+    "entity": "volcengine/verl",
+    "csv_row": 165,
+    "path": "data/281/policies/volcengine/verl/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/verl-project/verl/blob/6f2aa24abfc01cc72811b376aeb3936503885096/AGENTS.md",
+    "source_id": null,
+    "sha256": "5fdec7a5182a29335088b200caf43c59a8fb5226de228915126a54bfbaa8739f",
+    "lines": 87,
+    "ai_ranges": [
+      [
+        0,
+        87
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0199",
+    "entity": "zauberzeug/nicegui",
+    "csv_row": 166,
+    "path": "data/281/policies/zauberzeug/nicegui/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/zauberzeug/nicegui/blob/265ca104632ec2f2f833c00464fff84ebb3873c0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "075d14bc61fa4296661949f1f5d83fdcf8611065bd7ebe973b7642a5f1e2b4a6",
+    "lines": 312,
+    "ai_ranges": [
+      [
+        255,
+        261
+      ],
+      [
+        262,
+        268
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0200",
+    "entity": "Apache Software Foundation",
+    "csv_row": 167,
+    "path": "data/281/policies/Apache Software Foundation/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.apache.org/legal/generative-tooling.html",
+    "source_id": null,
+    "sha256": "cac558a6c188150e18778123e5145f33a05646a8b28187cc216626454ede91cf",
+    "lines": 220,
+    "ai_ranges": [
+      [
+        0,
+        220
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0201",
+    "entity": "paperclipai/paperclip",
+    "csv_row": 168,
+    "path": "data/281/policies/paperclipai/paperclip/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/paperclipai/paperclip/blob/3ae2c30f2f48a53fec87c3da05ab63f1964785f1/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f247f3b8eafb445191a2cc16e1cc9a07a126e3ad2f61b87b521c9807ccae90ab",
+    "lines": 188,
+    "ai_ranges": [
+      [
+        96,
+        102
+      ],
+      [
+        161,
+        167
+      ],
+      [
+        162,
+        168
+      ],
+      [
+        163,
+        169
+      ],
+      [
+        170,
+        176
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0202",
+    "entity": "aws/aws-cli",
+    "csv_row": 169,
+    "path": "data/281/policies/aws/aws-cli/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/aws/aws-cli/blob/5546a54273478f464fa399309fc74d1938155688/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b74cd207ea44b702cb9cb7950b8c73d08889c3e2d0a5b445184f0063cee499ec",
+    "lines": 129,
+    "ai_ranges": [
+      [
+        111,
+        117
+      ],
+      [
+        116,
+        122
+      ],
+      [
+        117,
+        123
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0203",
+    "entity": "renovatebot/renovate",
+    "csv_row": 170,
+    "path": "data/281/policies/renovatebot/renovate/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/renovatebot/renovate/blob/170b972320cd4a6de644992586f5156eb20d9de5/.github/contributing.md",
+    "source_id": null,
+    "sha256": "df7d9f36ae047dc6fca7616f11bbc4eccac685f0dadaf9ca5ee0136aee7a8a47",
+    "lines": 174,
+    "ai_ranges": [
+      [
+        41,
+        65
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0204",
+    "entity": "openclaw/openclaw",
+    "csv_row": 171,
+    "path": "data/281/policies/openclaw/openclaw/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/openclaw/openclaw/blob/94b27740985a4b6a270c95207501afe13ba20cf0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "893c3f8435c9a4e6bb405cc340332cc716f914f10add95c64de239876bc63123",
+    "lines": 182,
+    "ai_ranges": [
+      [
+        108,
+        123
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0205",
+    "entity": "php/php-src",
+    "csv_row": 172,
+    "path": "data/281/policies/php/php-src/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/php/php-src/blob/6441f89857b3528e6b71a5f9ce6fa1ade3e67d7e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9ae535d31bc8ded6a9c43fa559d9c99ccd39425676008aaa148a792b0077a0c6",
+    "lines": 537,
+    "ai_ranges": [
+      [
+        528,
+        534
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0206",
+    "entity": "backstage/backstage",
+    "csv_row": 173,
+    "path": "data/281/policies/backstage/backstage/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/backstage/backstage/blob/88b91a6b143f6fdb42fc401e445969988c0ef53e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b09602ee9d79500c0be0ae6d8abaae563d641c8c53eda487e53eeea02f396d54",
+    "lines": 466,
+    "ai_ranges": [
+      [
+        131,
+        162
+      ],
+      [
+        139,
+        145
+      ],
+      [
+        145,
+        162
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0207",
+    "entity": "nuitka/nuitka",
+    "csv_row": 174,
+    "path": "data/281/policies/nuitka/nuitka/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/nuitka/nuitka/blob/8b0d96cf424fbc3902a3d93cce4fdcb855d347f4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f5f65794852960c27687e4ee83e22c45c1483013f7a637726af16584ffe3c49f",
+    "lines": 86,
+    "ai_ranges": [
+      [
+        11,
+        17
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        30,
+        36
+      ],
+      [
+        82,
+        86
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0208",
+    "entity": "nuitka/nuitka",
+    "csv_row": 174,
+    "path": "analysis/corpus-assessment/sources/corpus-173-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/Nuitka/Nuitka/blob/develop/.github/PULL_REQUEST_TEMPLATE.md",
+    "source_id": "corpus-173-other_policy-1",
+    "sha256": "d381f128d6636871ffee3c7a5ed93df6c389192b7c79490d1b05e4c6b3fe9602",
+    "lines": 53,
+    "ai_ranges": [
+      [
+        36,
+        53
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0209",
+    "entity": "owasp/cheatsheetseries",
+    "csv_row": 175,
+    "path": "data/281/policies/owasp/cheatsheetseries/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/owasp/cheatsheetseries/blob/ae0b3f22f5b24381455f742af9b5fa84063ad770/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f449da788ce322ad6e2ecc8083f000f4af6e8c00ba0ba97f152a420f550085f2",
+    "lines": 145,
+    "ai_ranges": [
+      [
+        133,
+        145
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0210",
+    "entity": "gradle/gradle",
+    "csv_row": 176,
+    "path": "data/281/policies/gradle/gradle/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/gradle/gradle/blob/e2d9eb0ed14d7e13990cfb2aae2254fed2389eae/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "cc20237becb23e46b163e7d5a1d39e1ecc2fe9bfa2097d490043c578ac38aff2",
+    "lines": 29,
+    "ai_ranges": [
+      [
+        0,
+        29
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0211",
+    "entity": "vscodium/vscodium",
+    "csv_row": 177,
+    "path": "data/281/policies/vscodium/vscodium/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/vscodium/vscodium/blob/12b08023848522f884b04173ac0894849dd9fa05/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6ada4aeb585e7cc3751541466f89c8f7d87754f86704e705af0a817642d2647e",
+    "lines": 52,
+    "ai_ranges": [
+      [
+        14,
+        24
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0212",
+    "entity": "rustpython/rustpython",
+    "csv_row": 178,
+    "path": "data/281/policies/rustpython/rustpython/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rustpython/rustpython/blob/c1bc99afbd16d71451d5f5abd1ebf15596df670a/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "490feec1ee3f3e281b866df92fcf956574dc0253f36a6ed2b8dfe1f1c6e64c2a",
+    "lines": 262,
+    "ai_ranges": [
+      [
+        17,
+        24
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0213",
+    "entity": "rustpython/rustpython",
+    "csv_row": 178,
+    "path": "data/281/policies/rustpython/rustpython/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/RustPython/.github/blob/main/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "bc0c7de190a17e8b7467b71328693fe295cba1a8b768560acd92b8cd2ba6b482",
+    "lines": 111,
+    "ai_ranges": [
+      [
+        0,
+        111
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0214",
+    "entity": "goreleaser/goreleaser",
+    "csv_row": 179,
+    "path": "data/281/policies/goreleaser/goreleaser/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/goreleaser/goreleaser/blob/ae4debbe4383dcc565f9251df2ea719501b8d9ea/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5c01a2b6ea8b1788db88e7c46fad20c1554b9976dedabdf1547c576a97a36bb3",
+    "lines": 127,
+    "ai_ranges": [
+      [
+        100,
+        119
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0215",
+    "entity": "JuliaLang/julia",
+    "csv_row": 180,
+    "path": "data/281/policies/JuliaLang/julia/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/JuliaLang/julia/blob/4f31ca4e7aeae318ce98a7c320d715976861f88d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2726ca0624272d39df37964562a169c2fe5082dac9309682cfdb4a24b864f83f",
+    "lines": 105,
+    "ai_ranges": [
+      [
+        5,
+        11
+      ],
+      [
+        53,
+        59
+      ],
+      [
+        69,
+        75
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0216",
+    "entity": "crewAIInc/crewAI",
+    "csv_row": 181,
+    "path": "data/281/policies/crewAIInc/crewAI/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/crewAIInc/crewAI/blob/da9902da4f366a2abd048b5dc2a4b38c721f72b8/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "83531928bc6fd394a7d7bb701beb7bec3cd0ed080a85bd1fcd7f500746ade7f1",
+    "lines": 173,
+    "ai_ranges": [
+      [
+        2,
+        12
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0217",
+    "entity": "go-delve/delve",
+    "csv_row": 182,
+    "path": "data/281/policies/go-delve/delve/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/go-delve/delve/blob/a1a708f3dc4a53946f44871c8629ad86b75bceac/Documentation/AI/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "8a96fd46a2d19b2a4fe91e60f4ae38fc44a5e5506ef9b884585f4e819a707e7d",
+    "lines": 65,
+    "ai_ranges": [
+      [
+        0,
+        65
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0218",
+    "entity": "Godot",
+    "csv_row": 183,
+    "path": "analysis/corpus-assessment/sources/corpus-182-followup.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://contributing.godotengine.org/en/latest/development/contribution_rules.html#ai-assisted-contributions",
+    "source_id": "corpus-182-followup",
+    "sha256": "700dcefcef8a9f54139ae12fda91261a7d7e7d5cbb59c3c96fe567efbc0de620",
+    "lines": 205,
+    "ai_ranges": [
+      [
+        128,
+        205
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0219",
+    "entity": "badlogic/pi-mono",
+    "csv_row": 184,
+    "path": "data/281/policies/badlogic/pi-mono/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/badlogic/pi-mono/blob/c6d8371521fc8357958bb21fd43552c15f46c7f4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b48ebae0b80a2279312b634f3b5b81af97f6c3d20688a0cb19e3ef314165ea5c",
+    "lines": 102,
+    "ai_ranges": [
+      [
+        90,
+        94
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0220",
+    "entity": "badlogic/pi-mono",
+    "csv_row": 184,
+    "path": "data/281/policies/badlogic/pi-mono/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/earendil-works/pi/blob/c6d8371521fc8357958bb21fd43552c15f46c7f4/AGENTS.md",
+    "source_id": null,
+    "sha256": "9aa976721907c0e705333516969abe57163c8ac1895e920883380367a86af12e",
+    "lines": 162,
+    "ai_ranges": [
+      [
+        0,
+        162
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0221",
+    "entity": "letta-ai/letta",
+    "csv_row": 185,
+    "path": "data/281/policies/letta-ai/letta/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/letta-ai/letta/blob/b76da9092518cbaa2d09042e52fdcbde69243e18/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "b0ecd1dbf21b71800301e2dc1257787373ca26ce90e50d68e724c9296c8124d2",
+    "lines": 63,
+    "ai_ranges": [
+      [
+        0,
+        63
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0222",
+    "entity": "lichess-org/lila",
+    "csv_row": 186,
+    "path": "data/281/policies/lichess-org/lila/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/lichess-org/lila/blob/cdad1c52a8fee807a94d914c5704b122abcebaed/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "45ac3c00a62a2746b61f411e0d1bb9b31d78cfa826495ccb9bd3d381c52bb36b",
+    "lines": 57,
+    "ai_ranges": [
+      [
+        0,
+        57
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0223",
+    "entity": "pola-rs/polars",
+    "csv_row": 187,
+    "path": "data/281/policies/pola-rs/polars/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/pola-rs/polars/blob/9c223540d8c6fffec1c9cdf532d11fca619c6e98/AI_POLICY.md",
+    "source_id": null,
+    "sha256": "99f335fa88c68e189f00cdcd9253ce92fc0853881324bdc0e587177c844390cb",
+    "lines": 40,
+    "ai_ranges": [
+      [
+        0,
+        40
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0224",
+    "entity": "nuxt/nuxt",
+    "csv_row": 188,
+    "path": "data/281/policies/nuxt/nuxt/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/nuxt/nuxt/blob/b437b50f5049e2ad1b438dd53fb410410e8b8db5/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "0a72d2ca1bcad5dd7733807487bd81b81ece121724c5a9dc40b81d3b7608bc17",
+    "lines": 57,
+    "ai_ranges": [
+      [
+        46,
+        57
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0225",
+    "entity": "nuxt/nuxt",
+    "csv_row": 188,
+    "path": "data/281/policies/nuxt/nuxt/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://nuxt.com/docs/community/contribution#ai-assisted-contributions",
+    "source_id": null,
+    "sha256": "d674694af209eb5128ecb84aa2051a2d5efa800ee52e73386c541eaf99d6c14f",
+    "lines": 1273,
+    "ai_ranges": [
+      [
+        315,
+        345
+      ],
+      [
+        327,
+        335
+      ],
+      [
+        335,
+        345
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0226",
+    "entity": "coollabsio/coolify",
+    "csv_row": 189,
+    "path": "data/281/policies/coollabsio/coolify/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/coollabsio/coolify/blob/e7dff30b7c998c301fd91bd169727b90c59ec291/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d91656ed6db574e84ef76683d832c59fde545bf09c07ae2d355f853261ccd318",
+    "lines": 289,
+    "ai_ranges": [
+      [
+        185,
+        191
+      ],
+      [
+        198,
+        204
+      ],
+      [
+        218,
+        224
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0227",
+    "entity": "huggingface/diffusers",
+    "csv_row": 190,
+    "path": "data/281/policies/huggingface/diffusers/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/huggingface/diffusers/blob/612036aa14e416902fc38c3f3ef30fe8357acf7f/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "bb6a96a5e4665e2fb57dd9b245b91aef68112ea66d0df9cfe186df28ff4445b4",
+    "lines": 1,
+    "ai_ranges": [],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0228",
+    "entity": "huggingface/diffusers",
+    "csv_row": 190,
+    "path": "data/281/policies/huggingface/diffusers/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/huggingface/diffusers/blob/612036aa14e416902fc38c3f3ef30fe8357acf7f/docs/source/en/conceptual/contribution.md#ai-assisted-and-agentic-contributions",
+    "source_id": null,
+    "sha256": "5ea8e64faf105797317c2f835ed00ee453343c79b8c2debb315b39cd8343503b",
+    "lines": 601,
+    "ai_ranges": [
+      [
+        570,
+        601
+      ],
+      [
+        589,
+        601
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0229",
+    "entity": "huggingface/diffusers",
+    "csv_row": 190,
+    "path": "analysis/corpus-assessment/sources/corpus-189-contributing-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/huggingface/diffusers/blob/612036aa14e416902fc38c3f3ef30fe8357acf7f/docs/source/en/conceptual/contribution.md",
+    "source_id": "corpus-189-contributing-1",
+    "sha256": "5ea8e64faf105797317c2f835ed00ee453343c79b8c2debb315b39cd8343503b",
+    "lines": 601,
+    "ai_ranges": [
+      [
+        570,
+        601
+      ],
+      [
+        589,
+        601
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0230",
+    "entity": "icsharpcode/ilspy",
+    "csv_row": 191,
+    "path": "data/281/policies/icsharpcode/ilspy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/icsharpcode/ilspy/blob/b888153f24357e4a0b475819bfb05c8c6c06cd0a/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "cebe7b96357a3ecad75c6d060bfd6ed212d482dd42b1b0de59be6eaac0945ce6",
+    "lines": 22,
+    "ai_ranges": [
+      [
+        0,
+        6
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        8,
+        14
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0231",
+    "entity": "twpayne/chezmoi",
+    "csv_row": 192,
+    "path": "data/281/policies/twpayne/chezmoi/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/twpayne/chezmoi/blob/320bb1d424836eb7cb42d191e4989c2c181167b9/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e9bebad065e69fc9937c1a7ab10f4af10a6a6da6797e23e66bb438241a0b8fa9",
+    "lines": 13,
+    "ai_ranges": [
+      [
+        2,
+        8
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0232",
+    "entity": "twpayne/chezmoi",
+    "csv_row": 192,
+    "path": "data/281/policies/twpayne/chezmoi/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://www.chezmoi.io/developer-guide/contributing-changes/",
+    "source_id": null,
+    "sha256": "252bf850c1f56f84c389b0c6e838dd52e180d1f8ec071b932fb47c48d4f2fe8a",
+    "lines": 1158,
+    "ai_ranges": [
+      [
+        0,
+        1158
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0233",
+    "entity": "yt-dlp/yt-dlp",
+    "csv_row": 193,
+    "path": "data/281/policies/yt-dlp/yt-dlp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/yt-dlp/yt-dlp/blob/aefce1eea4d0b6bab1ec2bd3beff09bff91a39c8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2589610263d8729fc5722a04b5e49ccd528b186bae12d301a1caf239315f582b",
+    "lines": 799,
+    "ai_ranges": [
+      [
+        32,
+        56
+      ],
+      [
+        51,
+        56
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0234",
+    "entity": "bevyengine/bevy",
+    "csv_row": 194,
+    "path": "data/281/policies/bevyengine/bevy/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/bevyengine/bevy/blob/19b25aec163a7defb4b8d1c6e987f9dcce46f8bc/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e325c2274026f56d1a73ce584e800c39e24c0a21ceb824ca1b06968f310d56e0",
+    "lines": 4,
+    "ai_ranges": [
+      [
+        1,
+        4
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0235",
+    "entity": "bevyengine/bevy",
+    "csv_row": 194,
+    "path": "data/281/policies/bevyengine/bevy/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://bevy.org/learn/contribute/policies/ai/",
+    "source_id": null,
+    "sha256": "ebf99f58754387c7644540ea4cd56c25324ddc6e3894128535a643091c7b8844",
+    "lines": 440,
+    "ai_ranges": [
+      [
+        174,
+        440
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0236",
+    "entity": "apache/pouchdb",
+    "csv_row": 195,
+    "path": "data/281/policies/apache/pouchdb/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/apache/pouchdb/blob/70b9de3c2072fa97e4b5b97cb74faa712ac184e0/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "386b00625f13af448d193299f806ace34bdedc421a99fddac418da2e27a33378",
+    "lines": 180,
+    "ai_ranges": [
+      [
+        165,
+        171
+      ],
+      [
+        169,
+        175
+      ],
+      [
+        174,
+        180
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0237",
+    "entity": "redox-os/redox",
+    "csv_row": 196,
+    "path": "data/281/policies/redox-os/redox/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/redox-os/redox/blob/b0ade5b4d2afa36ca7f9186f656618f2f50c3dd9/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "7008018476c0e495bdb5cf5169ed1ce0736248eb584418cb090b732c037871de",
+    "lines": 286,
+    "ai_ranges": [
+      [
+        27,
+        31
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0238",
+    "entity": "Servo",
+    "csv_row": 197,
+    "path": "data/281/policies/Servo/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://book.servo.org/contributing/getting-started.html#ai-contributions",
+    "source_id": null,
+    "sha256": "6e67a8eeed94d68a90e2ead1fc72a3f26efed94b64be054e7580829b27da7654",
+    "lines": 44,
+    "ai_ranges": [
+      [
+        0,
+        44
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0239",
+    "entity": "Servo",
+    "csv_row": 197,
+    "path": "analysis/corpus-assessment/sources/corpus-196-followup.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://book.servo.org/policy/ai-usage.html",
+    "source_id": "corpus-196-followup",
+    "sha256": "c2c04bbd199fb08f1589eacd2e3bcf6384a68a5d320c45c5c58b8b50fcff2730",
+    "lines": 55,
+    "ai_ranges": [
+      [
+        0,
+        55
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0240",
+    "entity": "Teamtype",
+    "csv_row": 198,
+    "path": "data/281/policies/Teamtype/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/teamtype/teamtype/blob/main/CONTRIBUTING.md#generative-aillm-policy",
+    "source_id": null,
+    "sha256": "3c915784bec206dfb195b7362b2943e0f4debb86cf59cbc8e4cc93c8b0111e3b",
+    "lines": 52,
+    "ai_ranges": [
+      [
+        0,
+        52
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0241",
+    "entity": "Zig",
+    "csv_row": 199,
+    "path": "data/281/policies/Zig/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://ziglang.org/code-of-conduct/#strict-no-llm-no-ai-policy",
+    "source_id": null,
+    "sha256": "a6abea11e07cd406acc7ffd2b5085f8347ce1ad2a25db3b9c4f5150392e556b1",
+    "lines": 139,
+    "ai_ranges": [
+      [
+        0,
+        139
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0242",
+    "entity": "danielmiessler/seclists",
+    "csv_row": 200,
+    "path": "data/281/policies/danielmiessler/seclists/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/danielmiessler/seclists/blob/4d994b5a1fefd3c128e334031ef7cb4cc77f98d7/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6cca5931fc5c5505990f44342b9d0ce50b80e0cbe075768bc6597eeb1d9d5906",
+    "lines": 154,
+    "ai_ranges": [
+      [
+        3,
+        7
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0243",
+    "entity": "obsproject/obs-studio",
+    "csv_row": 201,
+    "path": "data/281/policies/obsproject/obs-studio/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/obsproject/obs-studio/blob/9d38a938318aa32906e3727be30a972a3ecd0d94/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4fba00e8a4e895d44f1302991de5215e88fb00fedff8ab329875444715b47aac",
+    "lines": 123,
+    "ai_ranges": [
+      [
+        110,
+        123
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0244",
+    "entity": "alacritty/alacritty",
+    "csv_row": 202,
+    "path": "data/281/policies/alacritty/alacritty/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/alacritty/alacritty/blob/852e971cddfabe222d2d5bcda466e130f53af207/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "37ab3c68696ce0c3ab465044d0bb2c49722ee434ceeedd3543193808de50181d",
+    "lines": 172,
+    "ai_ranges": [
+      [
+        159,
+        165
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0245",
+    "entity": "pocketbase/pocketbase",
+    "csv_row": 203,
+    "path": "data/281/policies/pocketbase/pocketbase/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/pocketbase/pocketbase/blob/089ca8ae412a1dbe29d2ae90d74f3866429d9c52/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "87be025ee2ff0cf1c5ab791319a0cb48c21d48dffa0118c8220b0248b6f57492",
+    "lines": 85,
+    "ai_ranges": [
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0246",
+    "entity": "Gentoo",
+    "csv_row": 204,
+    "path": "data/281/policies/Gentoo/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://wiki.gentoo.org/wiki/Project:Council/AI_policy",
+    "source_id": null,
+    "sha256": "9f69c92cb7b763b7d08f2ac4a8e42219975b5c8141e8004c0fee5861b9f45756",
+    "lines": 116,
+    "ai_ranges": [
+      [
+        0,
+        116
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0247",
+    "entity": "budibase/budibase",
+    "csv_row": 205,
+    "path": "data/281/policies/budibase/budibase/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/budibase/budibase/blob/5bcc04c35b6d3e3f95619b4c3dc37fd01be22b63/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a1ae22c8ef8dea846da849cbdc37c8f0925aae62037c701c6294cbba71732b38",
+    "lines": 1,
+    "ai_ranges": [],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0248",
+    "entity": "budibase/budibase",
+    "csv_row": 205,
+    "path": "analysis/corpus-assessment/sources/corpus-204-contributing-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/budibase/budibase/blob/5bcc04c35b6d3e3f95619b4c3dc37fd01be22b63/docs/CONTRIBUTING.md",
+    "source_id": "corpus-204-contributing-1",
+    "sha256": "760f04f96a8c7b78f70236e92d1198764b0cb24cf4df6faa62e0afc5a181e313",
+    "lines": 292,
+    "ai_ranges": [
+      [
+        105,
+        109
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0249",
+    "entity": "budibase/budibase",
+    "csv_row": 205,
+    "path": "analysis/corpus-assessment/sources/corpus-204-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/Budibase/budibase/blob/5bcc04c35b6d3e3f95619b4c3dc37fd01be22b63/docs/CONTRIBUTING.md",
+    "source_id": "corpus-204-other_policy-1",
+    "sha256": "760f04f96a8c7b78f70236e92d1198764b0cb24cf4df6faa62e0afc5a181e313",
+    "lines": 292,
+    "ai_ranges": [
+      [
+        105,
+        109
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0250",
+    "entity": "budibase/budibase",
+    "csv_row": 205,
+    "path": "analysis/corpus-assessment/sources/corpus-204-other_policy-2.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/mitchellh/vouch/blob/main/CONTRIBUTING.md",
+    "source_id": "corpus-204-other_policy-2",
+    "sha256": "16b25cad4bccae5ae78af00179c978753a7a54df5f45592f7d262d64568e9e98",
+    "lines": 31,
+    "ai_ranges": [
+      [
+        0,
+        31
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0251",
+    "entity": "lint-staged/lint-staged",
+    "csv_row": 206,
+    "path": "data/281/policies/lint-staged/lint-staged/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/lint-staged/lint-staged/blob/8289e6031230f46aa228f2d2d650aff0b98131bf/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "28f4ad9570537b854856907c629642236bd3ce0530a81e1cef0ccb2692bed62e",
+    "lines": 5,
+    "ai_ranges": [
+      [
+        2,
+        5
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0252",
+    "entity": "netbox-community/netbox",
+    "csv_row": 207,
+    "path": "data/281/policies/netbox-community/netbox/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/netbox-community/netbox/blob/6c501413ee403613817c01709d3004cf243c9880/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "de0dcdb4d4ac59674b447adebd1dd902f5c9c00ee8b2bf93484403770e9481d1",
+    "lines": 126,
+    "ai_ranges": [
+      [
+        38,
+        44
+      ],
+      [
+        115,
+        121
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0253",
+    "entity": "ppy/osu",
+    "csv_row": 208,
+    "path": "data/281/policies/ppy/osu/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ppy/osu/blob/8a942790906a37930a0f55c5d27e498159835885/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2bf132f0f16cb9c603704fb7ce44c122861a1d21533e11d8d6277ace2df06367",
+    "lines": 94,
+    "ai_ranges": [
+      [
+        4,
+        8
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0254",
+    "entity": "nothings/stb",
+    "csv_row": 209,
+    "path": "data/281/policies/nothings/stb/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/nothings/stb/blob/31c1ad37456438565541f4919958214b6e762fb4/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d3555dcb416fabf42e82f58c266dc63c67a11593b661da035e37f0bfea555df5",
+    "lines": 54,
+    "ai_ranges": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        8,
+        14
+      ],
+      [
+        11,
+        17
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0255",
+    "entity": "gleam-lang/gleam",
+    "csv_row": 210,
+    "path": "data/281/policies/gleam-lang/gleam/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gleam-lang/gleam/blob/e8eb002a2c01ce3685acfd9108492c62ba5a7fa2/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ca60e26558695c028ebccb255a3b4c44be266d43c2b92e9f49b19403fcaa16c8",
+    "lines": 130,
+    "ai_ranges": [
+      [
+        48,
+        54
+      ],
+      [
+        55,
+        61
+      ],
+      [
+        56,
+        62
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0256",
+    "entity": "darkreader/darkreader",
+    "csv_row": 211,
+    "path": "data/281/policies/darkreader/darkreader/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/darkreader/darkreader/blob/385af067213a3482ffa62ecb87d3a337f1adab0e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "40dc26cb9fc95f6c8f7c4ae560c94587aded796b91a6a67f41974b0b459cc8d8",
+    "lines": 262,
+    "ai_ranges": [
+      [
+        245,
+        251
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0257",
+    "entity": "teamnewpipe/newpipe",
+    "csv_row": 212,
+    "path": "data/281/policies/teamnewpipe/newpipe/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/teamnewpipe/newpipe/blob/903cf9ece040d2d04f5c6352288e3d94b554160c/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "4cbe4421a445a4a7bff861fe70222ccb3b6d107de4524ae28b0a6b4e55e8696b",
+    "lines": 97,
+    "ai_ranges": [
+      [
+        5,
+        18
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0258",
+    "entity": "zulip/zulip",
+    "csv_row": 213,
+    "path": "data/281/policies/zulip/zulip/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/zulip/zulip/blob/41480799c379715d6248e8282f040b99ebae3f33/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e048a3679f484edff421d1e1d7a735bc9f5fe2d8d2ff8f2d94a3030978eb263f",
+    "lines": 612,
+    "ai_ranges": [
+      [
+        114,
+        201
+      ],
+      [
+        135,
+        153
+      ],
+      [
+        153,
+        201
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0259",
+    "entity": "KDE (page GSoC)",
+    "csv_row": 214,
+    "path": "data/281/policies/KDE (page GSoC)/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://community.kde.org/GSoC#Regarding_AI_usage",
+    "source_id": null,
+    "sha256": "559b39fe344ca98bb3f48469bbe6e06db8746b39ed5895af1b04a225472f53b7",
+    "lines": 697,
+    "ai_ranges": [
+      [
+        0,
+        697
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0260",
+    "entity": "KDE (page GSoC)",
+    "csv_row": 214,
+    "path": "analysis/corpus-assessment/sources/corpus-213-other_policy-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://docs.google.com/document/d/1t9GcIBnNXPNO6klRQvU8pL8-uV6afzLo6JUAM299suA/edit?tab=t.0#heading=h.tgbr0z4x9eg5",
+    "source_id": "corpus-213-other_policy-1",
+    "sha256": "5b70eed970394ac10ac60db30c88c6cca2c234bc9709457542a61e2f4fc4c5a8",
+    "lines": 565,
+    "ai_ranges": [
+      [
+        0,
+        565
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0261",
+    "entity": "Flathub",
+    "csv_row": 215,
+    "path": "data/281/policies/Flathub/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://docs.flathub.org/docs/for-app-authors/requirements#generative-ai-policy",
+    "source_id": null,
+    "sha256": "6fd1b2a3f3b2581e44455431f43149f691d561eb1c6329f1c9826ddea597d644",
+    "lines": 1227,
+    "ai_ranges": [
+      [
+        0,
+        1227
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0262",
+    "entity": "fastapi/full-stack-fastapi-template",
+    "csv_row": 216,
+    "path": "data/281/policies/fastapi/full-stack-fastapi-template/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/fastapi/full-stack-fastapi-template/blob/4d3d5e92c1ea6b3fa0fab02c41124844ec45bca8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "03e747b1cdd5f16c83adc4d52135cae9cf87cb19c6cdd57f7cf4880961e1ba60",
+    "lines": 68,
+    "ai_ranges": [
+      [
+        31,
+        65
+      ],
+      [
+        39,
+        45
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0263",
+    "entity": "FastAPI",
+    "csv_row": 217,
+    "path": "data/281/policies/FastAPI/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://tiangolo.com/open-source/contributing/",
+    "source_id": null,
+    "sha256": "7db3cf1b0a869c38da5c25e01163cfd0bfd44d994d4318eb5a47ec740a7fe140",
+    "lines": 403,
+    "ai_ranges": [
+      [
+        0,
+        403
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0264",
+    "entity": "9001/copyparty",
+    "csv_row": 218,
+    "path": "data/281/policies/9001/copyparty/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/9001/copyparty/blob/5952401815eab89d0ccfc7f29052940274bc8233/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2058a428799a8601122da165baa168420ec7db3718e509e7a6bd9329d76bf2e8",
+    "lines": 58,
+    "ai_ranges": [
+      [
+        8,
+        20
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0265",
+    "entity": "mikf/gallery-dl",
+    "csv_row": 219,
+    "path": "data/281/policies/mikf/gallery-dl/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/mikf/gallery-dl/blob/01f5dff21fbbde04c9729cecdabac7306a997121/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e03afd8232886f0e545e5750c8cfe39f40bf75aa44e46fde05b4ec9dced79cb2",
+    "lines": 13,
+    "ai_ranges": [
+      [
+        8,
+        13
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0266",
+    "entity": "microsoft/VibeVoice",
+    "csv_row": 220,
+    "path": "data/281/policies/microsoft/VibeVoice/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/microsoft/VibeVoice/blob/303b2833e01cff4578ec278bbfe536da54bd19fe/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "cba16108b4a4762ba1ef68533c50376ab43dabda9f2d34760ee7daea753bed8d",
+    "lines": 43,
+    "ai_ranges": [
+      [
+        28,
+        34
+      ],
+      [
+        29,
+        35
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0267",
+    "entity": "jaywcjlove/awesome-mac",
+    "csv_row": 221,
+    "path": "data/281/policies/jaywcjlove/awesome-mac/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/jaywcjlove/awesome-mac/blob/9ac448f6768427ea7f1b4c93728c0342e64731aa/docs/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "2992b604a5e6730ef9e6e11dd59db7d6a0441510c87076f50ea9479a65591705",
+    "lines": 77,
+    "ai_ranges": [
+      [
+        25,
+        52
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0268",
+    "entity": "alibaba/mnn",
+    "csv_row": 222,
+    "path": "data/281/policies/alibaba/mnn/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/alibaba/mnn/blob/ea43f4924ed388c29fb4c32981a71dc37cb1debb/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d12030ea5339048ed11ff9db089645db00d81b7145a92a26b23809ea5d2fa101",
+    "lines": 69,
+    "ai_ranges": [
+      [
+        56,
+        64
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0269",
+    "entity": "bmad-code-org/BMAD-METHOD",
+    "csv_row": 223,
+    "path": "data/281/policies/bmad-code-org/BMAD-METHOD/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/717479bc3f50f38119fd958b9e577a8bde2e0184/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3e3adb5338cfd6a0a7dcfd3717e55493d8c75cfcc0eba5a4fe39d8cba63d27df",
+    "lines": 182,
+    "ai_ranges": [
+      [
+        86,
+        92
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0270",
+    "entity": "rapid7/metasploit-framework",
+    "csv_row": 224,
+    "path": "data/281/policies/rapid7/metasploit-framework/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rapid7/metasploit-framework/blob/c0cb225b06341a1b590979dff51e8a2039e05e80/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9c4b1cc309c104cc27f6208f15720e504e4c0a515e50a77918f2e50c7c8d095b",
+    "lines": 120,
+    "ai_ranges": [
+      [
+        27,
+        78
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0271",
+    "entity": "atuinsh/atuin",
+    "csv_row": 225,
+    "path": "data/281/policies/atuinsh/atuin/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/atuinsh/atuin/blob/4aea14ae86f5efad23b9236f5d5de206a35efed3/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "cc14dcbb8758d9244cdc1ab3c296de78a259ea8e1c74561cc5d97dd42d171757",
+    "lines": 127,
+    "ai_ranges": [
+      [
+        4,
+        8
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0272",
+    "entity": "catchorg/catch2",
+    "csv_row": 226,
+    "path": "data/281/policies/catchorg/catch2/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/catchorg/catch2/blob/ae5d271da2c88b859d6365281ac075112115d4b1/docs/contributing.md",
+    "source_id": null,
+    "sha256": "96940a76b364744a5592fd6cbc421c75be3cbaf567d99920e41b6b960748bb70",
+    "lines": 357,
+    "ai_ranges": [
+      [
+        337,
+        357
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0273",
+    "entity": "tursodatabase/turso",
+    "csv_row": 227,
+    "path": "data/281/policies/tursodatabase/turso/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/tursodatabase/turso/blob/74c597ba1935b769a537e7413a150922ef102330/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "ac5daba16fafb545f5d5957b3527e690412a8f606fbb1779e0ffbf3034535c65",
+    "lines": 572,
+    "ai_ranges": [
+      [
+        144,
+        159
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0274",
+    "entity": "cryptomator/cryptomator",
+    "csv_row": 228,
+    "path": "data/281/policies/cryptomator/cryptomator/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/cryptomator/cryptomator/blob/688d1a4a24a32fb401041946f0f612e6b42598d5/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9cba7cd82c3e38cddc890fc3220c717b3897933227b155bace642f1ca53efd1c",
+    "lines": 35,
+    "ai_ranges": [
+      [
+        22,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0275",
+    "entity": "m2team/nanazip",
+    "csv_row": 229,
+    "path": "data/281/policies/m2team/nanazip/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/m2team/nanazip/blob/7551b164cb178f1b5b14e01969e5d16215bce275/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "930db5d9dcc7ecd260eb7e281103c8ea0fd424c598f22c4e74a5571314daa8d7",
+    "lines": 129,
+    "ai_ranges": [
+      [
+        18,
+        24
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0276",
+    "entity": "ankitects/anki",
+    "csv_row": 230,
+    "path": "data/281/policies/ankitects/anki/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ankitects/anki/blob/f13c15aef0c94f73f6101a030f1b69772f7f3e8c/docs/contributing.md",
+    "source_id": null,
+    "sha256": "fc827dca459e6dee791426c255d2e48add17406e75e4dd5e06b4b1d68e332bbe",
+    "lines": 185,
+    "ai_ranges": [
+      [
+        171,
+        182
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0277",
+    "entity": "slint-ui/slint",
+    "csv_row": 231,
+    "path": "data/281/policies/slint-ui/slint/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/slint-ui/slint/blob/a978809d37135b6d3abefb3f888baed7d1b41467/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "7f0d313286ecb8db5335d3300c5f41fdbf450918e211462cd77c4ff018a7a175",
+    "lines": 36,
+    "ai_ranges": [
+      [
+        8,
+        14
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0278",
+    "entity": "photoprism/photoprism",
+    "csv_row": 232,
+    "path": "data/281/policies/photoprism/photoprism/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/photoprism/photoprism/blob/017e24927ea77aeabdb79f86a9da6a8ca91d790d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d1b11089b2aa0871902c3e764bd86a85be22ef74ab36d502b90d083347743909",
+    "lines": 79,
+    "ai_ranges": [
+      [
+        43,
+        49
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0279",
+    "entity": "eyaltoledano/claude-task-master",
+    "csv_row": 233,
+    "path": "data/281/policies/eyaltoledano/claude-task-master/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/eyaltoledano/claude-task-master/blob/c0c98d367c55296bfe69e65680625b6db437af02/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1d9f8ae89981cf0b85f35578cd4594da13ff42d60a54db3fe527efce65024656",
+    "lines": 335,
+    "ai_ranges": [
+      [
+        11,
+        17
+      ],
+      [
+        13,
+        19
+      ],
+      [
+        16,
+        22
+      ],
+      [
+        138,
+        144
+      ],
+      [
+        144,
+        150
+      ],
+      [
+        181,
+        187
+      ],
+      [
+        272,
+        278
+      ],
+      [
+        293,
+        299
+      ],
+      [
+        332,
+        335
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0280",
+    "entity": "tornadoweb/tornado",
+    "csv_row": 234,
+    "path": "data/281/policies/tornadoweb/tornado/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/tornadoweb/tornado/blob/e530031405e2154654dedc4c84d5656b557ea310/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "74753947f6bf44532800ea18cb88064be5955d2958004ae02e4f988fbb07f778",
+    "lines": 54,
+    "ai_ranges": [
+      [
+        41,
+        48
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0281",
+    "entity": "abhigyanpatwari/GitNexus",
+    "csv_row": 235,
+    "path": "data/281/policies/abhigyanpatwari/GitNexus/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/abhigyanpatwari/GitNexus/blob/a05b5011025e61e56ac1898832688c4ededbd7ed/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "66bb1b05bf29c3e356ea027105a150db7933e655ed5cac3cae96764fe68f6de9",
+    "lines": 260,
+    "ai_ranges": [
+      [
+        111,
+        155
+      ],
+      [
+        155,
+        159
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0282",
+    "entity": "wavetermdev/waveterm",
+    "csv_row": 236,
+    "path": "data/281/policies/wavetermdev/waveterm/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/wavetermdev/waveterm/blob/c99022c15bd1f17273728e728a61743e690d6423/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "37fd24f379192f24cf3946516e783b49398c86994a058fb1a64a27fbe3b64c0e",
+    "lines": 111,
+    "ai_ranges": [
+      [
+        65,
+        71
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0283",
+    "entity": "scalar/scalar",
+    "csv_row": 237,
+    "path": "data/281/policies/scalar/scalar/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/scalar/scalar/blob/27b2b9f37411836cb2c863a50b6bd19e160ec898/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "582c32455b1cf0a14df6b8cee1c07ff4ff5b7bf486551bda17859fc2108f915a",
+    "lines": 133,
+    "ai_ranges": [
+      [
+        77,
+        95
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0284",
+    "entity": "Nagi-ovo/gemini-voyager",
+    "csv_row": 238,
+    "path": "data/281/policies/Nagi-ovo/gemini-voyager/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/Nagi-ovo/gemini-voyager/blob/dc460eeb3fb4ede0b1a9bdb25139f17fee0aface/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9b0eb7fc4d9d12f84d09c3045b27d895480032ac8eee9a383104720c80e95d6d",
+    "lines": 569,
+    "ai_ranges": [
+      [
+        21,
+        34
+      ],
+      [
+        299,
+        312
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0285",
+    "entity": "microsoft/playwright",
+    "csv_row": 239,
+    "path": "data/281/policies/microsoft/playwright/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/microsoft/playwright/blob/686830af68391eb5ecc5e611ebf87ec2ac3f1405/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "db4335d5d090a300219b0a66c55f4ac230f299261ce436b327155f8bb2f7ee59",
+    "lines": 162,
+    "ai_ranges": [
+      [
+        12,
+        18
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0286",
+    "entity": "prettier/prettier",
+    "csv_row": 240,
+    "path": "data/281/policies/prettier/prettier/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/prettier/prettier/blob/36bc0b7ef4343701272ad094ba7c1a2e25b0039f/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9a4a821830a444bfd05d70bc1b5b1fab06d3029a87dce6552aaca7f72a6cc8fd",
+    "lines": 160,
+    "ai_ranges": [
+      [
+        154,
+        160
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0287",
+    "entity": "microsoft/playwright-mcp",
+    "csv_row": 241,
+    "path": "data/281/policies/microsoft/playwright-mcp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/microsoft/playwright-mcp/blob/55679f5f3d4b4f3e2534ec0ce2fc5683ba2eaf3f/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "38d5a0879da77ef822b5732bc568b5b4d30772121d5c56211711d39a5dd16fa3",
+    "lines": 148,
+    "ai_ranges": [
+      [
+        12,
+        18
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0288",
+    "entity": "honojs/hono",
+    "csv_row": 242,
+    "path": "data/281/policies/honojs/hono/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/honojs/hono/blob/c285f9a498623fe0d2992b31c77b3738c0c0a54d/docs/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d3ddd5e151adff568818e8bf9aa7a7b31adc9c8887831c14232d1c260660443c",
+    "lines": 60,
+    "ai_ranges": [
+      [
+        20,
+        26
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0289",
+    "entity": "pydantic/pydantic",
+    "csv_row": 243,
+    "path": "data/281/policies/pydantic/pydantic/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/pydantic/pydantic/blob/60a3c5938aa64c527fde2fb102426de7d800146d/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "419d79ae7d440d49b3fa5fa7739f5f3a359e3ca42c3fa942e5604ae3474eb35b",
+    "lines": 1,
+    "ai_ranges": [],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0290",
+    "entity": "pydantic/pydantic",
+    "csv_row": 243,
+    "path": "data/281/policies/pydantic/pydantic/other_policy.md",
+    "kind": "other_policy",
+    "source_url": "https://github.com/pydantic/pydantic/blob/60a3c5938aa64c527fde2fb102426de7d800146d/docs/contributing.md",
+    "source_id": null,
+    "sha256": "530e038d499d9c9f330e49bd43bf2b44334df71fb5dfbe906e0007fad7c3c56d",
+    "lines": 277,
+    "ai_ranges": [
+      [
+        44,
+        70
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0291",
+    "entity": "pydantic/pydantic",
+    "csv_row": 243,
+    "path": "analysis/corpus-assessment/sources/corpus-242-contributing-1.md",
+    "kind": "supplementary_policy",
+    "source_url": "https://github.com/pydantic/pydantic/blob/60a3c5938aa64c527fde2fb102426de7d800146d/docs/contributing.md",
+    "source_id": "corpus-242-contributing-1",
+    "sha256": "530e038d499d9c9f330e49bd43bf2b44334df71fb5dfbe906e0007fad7c3c56d",
+    "lines": 277,
+    "ai_ranges": [
+      [
+        44,
+        70
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0292",
+    "entity": "DayuanJiang/next-ai-draw-io",
+    "csv_row": 244,
+    "path": "data/281/policies/DayuanJiang/next-ai-draw-io/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/4b072283202d3fe4869acd847ee897ad1165d73d/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "61cc782cd28d27135a1a652008013dfd9602333b12c8a4b5e596eb465e676294",
+    "lines": 81,
+    "ai_ranges": [
+      [
+        63,
+        72
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0293",
+    "entity": "kriasoft/react-starter-kit",
+    "csv_row": 245,
+    "path": "data/281/policies/kriasoft/react-starter-kit/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/kriasoft/react-starter-kit/blob/3c5132eb3d0a02dc8090eb6248f8959744e18d12/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "50a12427d92ba39597915dc4c8a6b8b859ea6bef4904fdaaffb5bc72b7f36353",
+    "lines": 133,
+    "ai_ranges": [
+      [
+        118,
+        124
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0294",
+    "entity": "google/adk-python",
+    "csv_row": 246,
+    "path": "data/281/policies/google/adk-python/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/google/adk-python/blob/58a14e1c578b47269ed5ed877f34c0d411566532/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b4ca1fb916fd537fbdc66de089ac078174ee5f8e180f6b58ada765cc3d6e9157",
+    "lines": 271,
+    "ai_ranges": [
+      [
+        248,
+        271
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0295",
+    "entity": "ether/etherpad-lite",
+    "csv_row": 247,
+    "path": "data/281/policies/ether/etherpad-lite/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/ether/etherpad-lite/blob/9a6109bd1dba05cc9c32b981c4ec96ecf68edc8b/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "365423d05cb05e230a5c31948d8f8f10c5e08e0f18decb64dcc83c7de09340aa",
+    "lines": 146,
+    "ai_ranges": [
+      [
+        1,
+        7
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0296",
+    "entity": "elysiajs/elysia",
+    "csv_row": 248,
+    "path": "data/281/policies/elysiajs/elysia/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/elysiajs/elysia/blob/8358ff9efbcedf9534995f5977f26b9ceab59329/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "7518bf2fee63ce8d99189121ffb19e93195f5dfe951e25cf64c2a8f9fb5d8b05",
+    "lines": 48,
+    "ai_ranges": [
+      [
+        31,
+        37
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0297",
+    "entity": "getmaxun/maxun",
+    "csv_row": 249,
+    "path": "data/281/policies/getmaxun/maxun/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/getmaxun/maxun/blob/ca3138a2dbc81564d16d1cf1beca2b52bef96104/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "52ba37a3aa489a61ee601ad49b10cdce8843a34fc03396ee5d69e472fbef99a2",
+    "lines": 57,
+    "ai_ranges": [
+      [
+        47,
+        57
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0298",
+    "entity": "github/awesome-copilot",
+    "csv_row": 250,
+    "path": "data/281/policies/github/awesome-copilot/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/github/awesome-copilot/blob/e4a1f57fd9d8c22d2a345d498fe6fde306c6456e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a260ebad04d6d8cf838969500eb73ad0426756aa8e1678764b60eecf800507e1",
+    "lines": 475,
+    "ai_ranges": [
+      [
+        39,
+        45
+      ],
+      [
+        230,
+        236
+      ],
+      [
+        245,
+        251
+      ],
+      [
+        250,
+        256
+      ],
+      [
+        251,
+        257
+      ],
+      [
+        252,
+        258
+      ],
+      [
+        255,
+        261
+      ],
+      [
+        256,
+        262
+      ],
+      [
+        260,
+        266
+      ],
+      [
+        262,
+        268
+      ],
+      [
+        263,
+        269
+      ],
+      [
+        264,
+        270
+      ],
+      [
+        278,
+        284
+      ],
+      [
+        282,
+        288
+      ],
+      [
+        283,
+        289
+      ],
+      [
+        329,
+        335
+      ],
+      [
+        352,
+        358
+      ],
+      [
+        370,
+        376
+      ],
+      [
+        436,
+        442
+      ],
+      [
+        459,
+        465
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0299",
+    "entity": "jesseduffield/lazygit",
+    "csv_row": 251,
+    "path": "data/281/policies/jesseduffield/lazygit/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/jesseduffield/lazygit/blob/080da5cacfcff63a89ea23493bb91b11b0612876/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "f7b89d3f0d6cba6e21199128ac433b602ddae3d9e004e643b057dd1f3ccd0e29",
+    "lines": 34,
+    "ai_ranges": [
+      [
+        11,
+        17
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0300",
+    "entity": "amir1376/ab-download-manager",
+    "csv_row": 252,
+    "path": "data/281/policies/amir1376/ab-download-manager/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/amir1376/ab-download-manager/blob/a5b0e8a5628087fafc600106f9405aba4db694fa/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "6a634270a2b4df6f981a6af2221ffad8701fe17115c296a8cb49c91efe8379e9",
+    "lines": 65,
+    "ai_ranges": [
+      [
+        60,
+        65
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0301",
+    "entity": "aseprite/aseprite",
+    "csv_row": 253,
+    "path": "data/281/policies/aseprite/aseprite/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/aseprite/aseprite/blob/c4960507debebe9c5b3d4c79ee6be0946c936301/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "57a0c0d2d9a94e115e2e3b08c53ed435fe9d58aca34e69f3ccd5843b7450b672",
+    "lines": 171,
+    "ai_ranges": [
+      [
+        98,
+        104
+      ],
+      [
+        99,
+        105
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0302",
+    "entity": "anuken/mindustry",
+    "csv_row": 254,
+    "path": "data/281/policies/anuken/mindustry/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/anuken/mindustry/blob/2e742615667caf734562b97b31cb2838036a9044/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c1644bfd3fbc5fcc9f51d5eec21abe3387c137d0331f2f59c6761ac22e358f35",
+    "lines": 85,
+    "ai_ranges": [
+      [
+        22,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0303",
+    "entity": "PostgREST/postgrest",
+    "csv_row": 255,
+    "path": "data/281/policies/PostgREST/postgrest/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/PostgREST/postgrest/blob/c297d051dcce428a8e2ea8c8b44886c9a7893a93/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b11b8ec92fa4c2c074e2a09a95189ae7551ee1447257344ba1d8b7aa57e2e592",
+    "lines": 64,
+    "ai_ranges": [
+      [
+        2,
+        10
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0304",
+    "entity": "freetubeapp/freetube",
+    "csv_row": 256,
+    "path": "data/281/policies/freetubeapp/freetube/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/freetubeapp/freetube/blob/0bad7e13a54053c8f7f0f708654918d53b8f4b12/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d9054828b3d93e06af7b709ee15c6974e1c2c47a86dafc4156b23c830a89dc90",
+    "lines": 28,
+    "ai_ranges": [
+      [
+        5,
+        11
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0305",
+    "entity": "rapptz/discord.py",
+    "csv_row": 257,
+    "path": "data/281/policies/rapptz/discord.py/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rapptz/discord.py/blob/188d32d63221a986dee732ce6e620d0a267979cf/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "9a356c57c8bc50cd3b7cca9882effb6eae9706af012673bf2bac049238a03b80",
+    "lines": 49,
+    "ai_ranges": [
+      [
+        36,
+        40
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0306",
+    "entity": "QEMU",
+    "csv_row": 258,
+    "path": "data/281/policies/QEMU/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.qemu.org/docs/master/devel/code-provenance.html#use-of-ai-generated-content",
+    "source_id": null,
+    "sha256": "14ea3389abaa2eb74ed92f1b7202225d0bfde097287657d84eef728a2d422fe5",
+    "lines": 510,
+    "ai_ranges": [
+      [
+        0,
+        510
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0307",
+    "entity": "typst/typst",
+    "csv_row": 259,
+    "path": "data/281/policies/typst/typst/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/typst/typst/blob/14fa8cd16446e2be59a44468a649ca3d315766f1/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a32d345621bc789c9084f04274cb9573577cdee60364acd151db51629152498f",
+    "lines": 108,
+    "ai_ranges": [
+      [
+        31,
+        37
+      ],
+      [
+        33,
+        39
+      ],
+      [
+        35,
+        41
+      ],
+      [
+        41,
+        47
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0308",
+    "entity": "agarrharr/awesome-cli-apps",
+    "csv_row": 260,
+    "path": "data/281/policies/agarrharr/awesome-cli-apps/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/agarrharr/awesome-cli-apps/blob/03011f143b6b17bd7ee8578716c2582d76afe462/contributing.md",
+    "source_id": null,
+    "sha256": "eeaf95b570f92c7f368e2fa3b99324775eaba706141f1e99c624051c8265ddb2",
+    "lines": 42,
+    "ai_ranges": [
+      [
+        31,
+        37
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0309",
+    "entity": "influxdata/telegraf",
+    "csv_row": 261,
+    "path": "data/281/policies/influxdata/telegraf/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/influxdata/telegraf/blob/7c40d48b559065672441cd877a9de3728ab8bee8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "c8d9871c765cf9ea1e0ee8ff8b135c1f118fec42a481cc4905d9ea84fdf9b0b9",
+    "lines": 170,
+    "ai_ranges": [
+      [
+        42,
+        47
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0310",
+    "entity": "OpenJDK",
+    "csv_row": 262,
+    "path": "data/281/policies/OpenJDK/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://openjdk.org/legal/ai",
+    "source_id": null,
+    "sha256": "b36dae5f59b05bea752bf53c268f2c8fc448c8eedb60e449448919ef8b68b5f8",
+    "lines": 759,
+    "ai_ranges": [
+      [
+        0,
+        759
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0311",
+    "entity": "postmarketOS",
+    "csv_row": 263,
+    "path": "data/281/policies/postmarketOS/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://docs.postmarketos.org/policies-and-processes/development/ai-policy.html",
+    "source_id": null,
+    "sha256": "f7589b48b74230a7258f2ae48a70d2bb72b716fdbab5adb78c0dafd2b56a9c2a",
+    "lines": 505,
+    "ai_ranges": [
+      [
+        269,
+        328
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0312",
+    "entity": "gitroomhq/postiz-app",
+    "csv_row": 264,
+    "path": "data/281/policies/gitroomhq/postiz-app/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gitroomhq/postiz-app/blob/9a9b2de897dcf04e1beb0e3b3ed7c2acf0ea1f84/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "cabd15eba1dd43604398179af01f8e72e362760c88d06467873ecd0dfa734128",
+    "lines": 72,
+    "ai_ranges": [
+      [
+        42,
+        47
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0313",
+    "entity": "immich-app/immich",
+    "csv_row": 265,
+    "path": "data/281/policies/immich-app/immich/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/immich-app/immich/blob/d8ed7d7bb9d5a816ba55abda0123cfb543b04050/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "11df52d8368272cca136175c4f285b9cb81bd4744462dcbc269c93f5f2425f63",
+    "lines": 45,
+    "ai_ranges": [
+      [
+        19,
+        23
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0314",
+    "entity": "gradio-app/gradio",
+    "csv_row": 266,
+    "path": "data/281/policies/gradio-app/gradio/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/gradio-app/gradio/blob/ec3c6735a1df6824fe9d4cd9938ef8d0fbf41fc8/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "28f22758590d6f339e3781645f5569fe0b79bf90e9807cf7641657acdb86d953",
+    "lines": 526,
+    "ai_ranges": [
+      [
+        7,
+        13
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0315",
+    "entity": "codemirror/codemirror5",
+    "csv_row": 267,
+    "path": "data/281/policies/codemirror/codemirror5/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/codemirror/codemirror5/blob/9b4f0603cb042286a7ac2262b98245493d0d7e4b/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "7fdc3026161d96c3e11501bee92f3bcb7811b6a39a100a9d943382c9b53e4b05",
+    "lines": 80,
+    "ai_ranges": [
+      [
+        51,
+        57
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0316",
+    "entity": "spree/spree",
+    "csv_row": 268,
+    "path": "data/281/policies/spree/spree/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/spree/spree/blob/a5d65fae59eb89acb02292f1f5f1ba6b0bdc55a2/.github/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "3364d24dc1c47e33571c06f1378e02e4233e2045c7c06bbe501871f45ef79fda",
+    "lines": 481,
+    "ai_ranges": [
+      [
+        466,
+        478
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0317",
+    "entity": "sindresorhus/type-fest",
+    "csv_row": 269,
+    "path": "data/281/policies/sindresorhus/type-fest/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/sindresorhus/type-fest/blob/48ddc4ba71cb215c3e3d98b0257360edc229fa75/.github/contributing.md",
+    "source_id": null,
+    "sha256": "22a157d05d4b7e97557d398643e524f5a675e68cba7e7f5583ade595a751e2f2",
+    "lines": 28,
+    "ai_ranges": [
+      [
+        23,
+        28
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0318",
+    "entity": "mintplex-labs/anything-llm",
+    "csv_row": 270,
+    "path": "data/281/policies/mintplex-labs/anything-llm/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/mintplex-labs/anything-llm/blob/61766d06b77b903f66dc4afd8dffb3a39012db14/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "1aeef70401fd179792548e65cb3027d3abbae1bc56d379520a34ab0c591499b6",
+    "lines": 146,
+    "ai_ranges": [
+      [
+        102,
+        131
+      ],
+      [
+        131,
+        143
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0319",
+    "entity": "huggingface/trl",
+    "csv_row": 271,
+    "path": "data/281/policies/huggingface/trl/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/huggingface/trl/blob/84e83143af5b1c6980cb859b087808085450e4dc/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "8f1788c9862cc517984214605ec748465530d70e0c2004173cde90860da2e75d",
+    "lines": 430,
+    "ai_ranges": [
+      [
+        10,
+        16
+      ],
+      [
+        421,
+        430
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0320",
+    "entity": "better-auth/better-auth",
+    "csv_row": 272,
+    "path": "data/281/policies/better-auth/better-auth/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/better-auth/better-auth/blob/502a262ff20f4485d66f24cf6d6119e8001ebb18/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "a57065aa7b626dca54659680591b9969cf80394d3cca371b8c58ff31e474843e",
+    "lines": 242,
+    "ai_ranges": [
+      [
+        235,
+        242
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0321",
+    "entity": "anomalyco/opencode",
+    "csv_row": 273,
+    "path": "data/281/policies/anomalyco/opencode/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/anomalyco/opencode/blob/888c4cb50476aaecaad48e6a448759da3040ed2e/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "35f4fb66d82fb2915ddc49e372ec635ba627ae0b9b8deb28f23d9f46128d6e9e",
+    "lines": 299,
+    "ai_ranges": [
+      [
+        203,
+        211
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0322",
+    "entity": "opentofu/opentofu",
+    "csv_row": 274,
+    "path": "data/281/policies/opentofu/opentofu/agent.md",
+    "kind": "agent",
+    "source_url": "https://github.com/opentofu/opentofu/blob/af57c7a0e76b49c60040bb3bd8d0de58921400a9/AGENTS.md",
+    "source_id": null,
+    "sha256": "75254e2fd431ef6bfda0af5febd7bde36f787151cc8b3aefd3eeef21b5785321",
+    "lines": 27,
+    "ai_ranges": [
+      [
+        0,
+        27
+      ],
+      [
+        4,
+        16
+      ],
+      [
+        16,
+        24
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0323",
+    "entity": "AFNix",
+    "csv_row": 275,
+    "path": "data/281/policies/AFNix/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://docs.afnix.fr/policies/ai.html",
+    "source_id": null,
+    "sha256": "6f74656d63d04c0f7741572d6e6979bde4a666150ffd9e1dfcfd2cde0b530735",
+    "lines": 23,
+    "ai_ranges": [
+      [
+        0,
+        23
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0324",
+    "entity": "camel-ai/camel",
+    "csv_row": 276,
+    "path": "data/281/policies/camel-ai/camel/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/camel-ai/camel/blob/0b9d9862b863af13d54c971fdff0c2c7e2f2ae01/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "b868b69c0bdba4aa423f9ebd1e5159b356ca21cb7cc03fa2efe44a7147679287",
+    "lines": 487,
+    "ai_ranges": [
+      [
+        6,
+        40
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0325",
+    "entity": "PrefectHQ/fastmcp",
+    "csv_row": 277,
+    "path": "data/281/policies/PrefectHQ/fastmcp/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/PrefectHQ/fastmcp/blob/1d932cc778a24cc0bf46fc4baad8306d4fed9c4b/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "467a8fcee62b9de19c8fc69d6b77249e12cf020c84b077f19195fc69ae0adfdb",
+    "lines": 53,
+    "ai_ranges": [
+      [
+        16,
+        20
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0326",
+    "entity": "Linux Foundation",
+    "csv_row": 278,
+    "path": "data/281/policies/Linux Foundation/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://www.linuxfoundation.org/legal/generative-ai",
+    "source_id": null,
+    "sha256": "c7ac4e38caa546aaee7df0efc6cdbc30f184b437f14c2fc68e491b218c70cf59",
+    "lines": 353,
+    "ai_ranges": [
+      [
+        0,
+        353
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0327",
+    "entity": "niri-wm/niri",
+    "csv_row": 279,
+    "path": "data/281/policies/niri-wm/niri/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/niri-wm/niri/blob/0777769e719b7c9b7c980d4ea66288bfbb4da5b3/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "e8d3d1a5403c998b41667c4d69f3d3332520b9bcbb2a9a9ed969e40a43c67b8d",
+    "lines": 114,
+    "ai_ranges": [
+      [
+        100,
+        114
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0328",
+    "entity": "chromium/chromium",
+    "csv_row": 280,
+    "path": "data/281/policies/chromium/chromium/ai_policy.md",
+    "kind": "ai_policy",
+    "source_url": "https://github.com/chromium/chromium/blob/2a263aae57a97fae5419db65f5aac9f4065c00e3/agents/ai_policy.md",
+    "source_id": null,
+    "sha256": "7b0ac6c3f1863a2064b065ce142ad9fe4931e9aba3177eea69929d48ba9bb929",
+    "lines": 54,
+    "ai_ranges": [
+      [
+        0,
+        54
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0329",
+    "entity": "zeroclaw-labs/zeroclaw",
+    "csv_row": 281,
+    "path": "data/281/policies/zeroclaw-labs/zeroclaw/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/zeroclaw-labs/zeroclaw/blob/08baac5c31535f7395c4ff772b6fcfd9c5e01382/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "d9ead8f141483910277ee9189e610c703dd0325f21d663873b61604f00c8a7a5",
+    "lines": 149,
+    "ai_ranges": [
+      [
+        133,
+        139
+      ]
+    ],
+    "extraction_status": "text_available"
+  },
+  {
+    "document_id": "D0330",
+    "entity": "rqlite/rqlite",
+    "csv_row": 282,
+    "path": "data/281/policies/rqlite/rqlite/contributing.md",
+    "kind": "contributing",
+    "source_url": "https://github.com/rqlite/rqlite/blob/52415ca836cc8d40b5de27a3d619efddcc518298/CONTRIBUTING.md",
+    "source_id": null,
+    "sha256": "5997b2637484b323e7295643cf707244ed4e7b8af8d1290d7b8a0f0e8af20bcb",
+    "lines": 13,
+    "ai_ranges": [
+      [
+        11,
+        13
+      ]
+    ],
+    "extraction_status": "text_available"
+  }
+]

@@ -1,0 +1,10 @@
+The current Maintainers Group for the [Atlantis] Project consists of:
+
+| Name                | GitHub ID                                                | Employer          | Role             |
+| ------------------- | -------------------------------------------------------- | ----------------- | ---------------- |
+| Dylan Page          | [GenPage](https://github.com/GenPage)                    | Lambda            | Maintainer       |
+| PePe Amengual       | [jamengual](https://github.com/jamengual)                | Slalom            | Maintainer       |
+| Rui Chen            | [chenrui333](https://github.com/chenrui333)              | Meetup            | Maintainer       |
+| Bruno Schaatsbergen | [bschaatsbergen](https://github.com/bschaatsbergen)      | Xebia             | Core Contributor |
+| Ronak               | [nitrocode](https://github.com/nitrocode)                | RB Consulting LLC | Core Contributor |
+| Luke Massa          | [lukemassa](https://github.com/lukemassa)                | Tripadvisor       | Core Contributor |

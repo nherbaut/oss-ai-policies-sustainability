@@ -1,0 +1,44 @@
+[
+  [
+    "data/281/policies/diesel-rs/diesel/other_policy.md",
+    "analysis/corpus-assessment/sources/corpus-016-other_policy-1.md",
+    "data/281/policies/NLnet/ai_policy.md",
+    "analysis/corpus-assessment/sources/corpus-037-ai_policy-1.md"
+  ],
+  [
+    "analysis/corpus-assessment/sources/corpus-016-followup.md",
+    "analysis/corpus-assessment/sources/corpus-037-followup.md"
+  ],
+  [
+    "data/281/policies/apache/kafka/other_policy.md",
+    "data/281/policies/Apache Software Foundation/ai_policy.md"
+  ],
+  [
+    "data/281/policies/verl-project/verl/contributing.md",
+    "data/281/policies/volcengine/verl/contributing.md"
+  ],
+  [
+    "data/281/policies/verl-project/verl/other_policy.md",
+    "data/281/policies/volcengine/verl/other_policy.md"
+  ],
+  [
+    "data/281/policies/astral-sh/uv/other_policy.md",
+    "data/281/policies/astral-sh/ruff/other_policy.md"
+  ],
+  [
+    "data/281/policies/textualize/rich/ai_policy.md",
+    "data/281/policies/textualize/textual/ai_policy.md"
+  ],
+  [
+    "data/281/policies/huggingface/diffusers/other_policy.md",
+    "analysis/corpus-assessment/sources/corpus-189-contributing-1.md"
+  ],
+  [
+    "analysis/corpus-assessment/sources/corpus-204-contributing-1.md",
+    "analysis/corpus-assessment/sources/corpus-204-other_policy-1.md"
+  ],
+  [
+    "data/281/policies/pydantic/pydantic/other_policy.md",
+    "analysis/corpus-assessment/sources/corpus-242-contributing-1.md"
+  ]
+]

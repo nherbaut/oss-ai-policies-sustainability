@@ -1,0 +1,32 @@
+{
+  "pilot_entities": 24,
+  "evidence_rows": 80,
+  "rq1_purpose_passage_counts": {
+    "explicit_sustainability": 3,
+    "interpreted_dimension": 5,
+    "purpose_only": 16
+  },
+  "rq2_status_counts": {
+    "explicit_environmental_concern": 6,
+    "explicit_sustainability_ai": 5,
+    "implicit_concern_ai": 9,
+    "general_context_only": 1,
+    "generic_rules_only": 3
+  },
+  "rq3_entity_counts_by_candidate_dimension": {
+    "environmental": 6,
+    "social": 12,
+    "individual": 17,
+    "technical": 7,
+    "economic": 1
+  },
+  "rq4_classification_counts": {
+    "insufficient_evidence": 24
+  },
+  "supplementary_retrieval_records": 56,
+  "retrieval_status_counts": {
+    "downloaded": 55,
+    "possible_bot_challenge": 1
+  },
+  "original_cells_sha256": "e26eace5167b8b5826122634660ed13ab952534fbc886a97ca839a134f8980ba"
+}

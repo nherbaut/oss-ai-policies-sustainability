@@ -1,0 +1,3 @@
+Cookie monster!
+
+This is an automated check to get rid of most bots. If you have JavaScript enabled, it should redirect to the real page soon. If you don't, it still should redirect soon, but you can [click here](?trans-rights=human-rights) if you're fast.

@@ -1,0 +1,958 @@
+
+
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#">
+
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>LLM-gen-AI - Software Freedom Conservancy</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="The Software Freedom Conservancy provides a non-profit home and services to Free, Libre and Open Source Software (FLOSS) projects." />
+    <meta name="keywords" content="software, freedom, conservancy, open source, gnu, GNU, Open Source, Free and Open Source, Free and Open Source Software, FLOSS, FOSS, protect, protection, help, policy, linux, non-profit" />
+    <link rel="shortcut icon" href="/static/favicon.641dcd867f20.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/static/css/tachyons.min.b08933e143e6.css"/>
+    <link rel="stylesheet" type="text/css" media="(min-width: 67em)" href="/static/css/conservancy-bigscreen.0ac8bcb524e0.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/conservancy.4befd0e530fb.css" />
+    <script src="/static/js/conservancy.0701dc242404.js" ></script>
+    
+<link href="/static/css/forms.fcca8e9c5a79.css" rel="stylesheet" type="text/css"/>
+
+
+  </head>
+
+  <body class="conservancy-WhatWeDo">
+
+<!--  <a class="notification-bar" href="/copyleft-compliance/vizio.html" role="alert" aria-label="Important notification: Get the latest update on our Vizio court case">Get the latest update on our Vizio court case <svg class="arrow-right" aria-hidden="true"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#arrow-right"></use></svg></a> -->
+
+  <header class="header-container">
+      <div class="header-inner"> 
+
+        <nav id="primary-nav-bar">
+          <a href="/" class="header-logo-link">
+            <img src="/static/img/conservancy-header-logo.322da8acaa91.svg" alt="Software Freedom Conservancy" class="header-logo" width="284" height="90" />
+          </a>
+
+          <button id="mobile-menu-toggle" class="dn-ns bg-transparent bn pa2 pointer" aria-expanded="false" aria-controls="main-mobile-nav">
+              <svg style="color: var(--orange); width: 30px; height: 30px;"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#bars"></use></svg>
+              <span class="sr-only">Toggle navigation menu</span>
+          </button>
+
+          <ul id="main-desktop-list" role="menu"> 
+
+            <li class="News"><a href="/news/" role="menuitem" aria-haspopup="true">News <svg class="menu-arrow"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a> 
+              <ul class="dropdown-menu-list">
+ 
+ <li>
+  <a class_="dropdown-item-link" href="/news/">
+   <h3>
+    Press Releases
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/">
+   <h3>
+    Press
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/blog/">
+   <h3>
+    Blog
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/vizio-coverage.html">
+   <h3>
+    Vizio Lawsuit in the News
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/inthenews.html">
+   <h3>
+    Our Issues in the News
+   </h3>
+  </a>
+ </li>
+</ul>
+
+            </li>
+            <li class="About"><a href="/about/" role="menuitem" aria-haspopup="true">About <svg class="menu-arrow"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a> 
+              <ul class="dropdown-menu-list">
+ 
+ <li class="Sponsors">
+  <a class_="dropdown-item-link" href="/sponsors/">
+   <h3>
+    Sponsors
+   </h3>
+  </a>
+ </li>
+ <li class="Sustainers">
+  <a class_="dropdown-item-link" href="/sustainer/">
+   <h3>
+    Sustainers
+   </h3>
+  </a>
+ </li>
+ <li class="Directors">
+  <a class_="dropdown-item-link" href="/about/board/">
+   <h3>
+    Board of Directors
+   </h3>
+  </a>
+ </li>
+ <li class="Staff">
+  <a class_="dropdown-item-link" href="/about/staff/">
+   <h3>
+    Staff
+   </h3>
+  </a>
+ </li>
+ <li class="Eval">
+  <a class_="dropdown-item-link" href="/about/eval-committee/">
+   <h3>
+    Evaluation Committee
+   </h3>
+  </a>
+ </li>
+ <li class="Outside">
+  <a class_="dropdown-item-link" href="/about/outside/">
+   <h3>
+    Outside Counsel, et alia
+   </h3>
+  </a>
+ </li>
+ <li class="Transparency">
+  <a class_="dropdown-item-link" href="/about/transparency">
+   <h3>
+    Transparency
+   </h3>
+  </a>
+ </li>
+ <li class="Contact">
+  <a class_="dropdown-item-link" href="/about/contact/">
+   <h3>
+    Contact
+   </h3>
+  </a>
+ </li>
+</ul>
+ 
+            </li>
+            <li class="OurWork"><a href="/activities" role="menuitem" aria-haspopup="true">Our Work <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a> 
+              <ul class="dropdown-menu-list">
+ 
+ <li class="CopyleftCompliance">
+  <a class_="dropdown-item-link" href="/copyleft-compliance/">
+   <h3>
+    Copyleft Compliance
+   </h3>
+   <p class_="dropdown-description">
+    We defend &amp; uphold the rights enshrined in copyleft licenses.
+   </p>
+  </a>
+ </li>
+ <li class="ImpactLitigaton">
+  <a class_="dropdown-item-link" href="/copyleft-compliance/past-lawsuits.html">
+   <h3>
+    Impact Litigation
+   </h3>
+   <p class_="dropdown-description">
+    We defend the legal rights of software users in Court when needed.
+   </p>
+  </a>
+ </li>
+ <li class="LLMGenAI">
+  <a class_="dropdown-item-link" href="/llm-gen-ai/">
+   <h3>
+    LLM-Gen-AI in FOSS
+   </h3>
+   <p class_="dropdown-description">
+    We help FOSS contributors navigate this ongoing conundrum.
+   </p>
+  </a>
+ </li>
+ <li class="FOSSY">
+  <a class_="dropdown-item-link" href="https://fossy.ca">
+   <h3>
+    FOSSY
+   </h3>
+   <p class_="dropdown-description">
+    Our annual community-oriented conference.
+   </p>
+  </a>
+ </li>
+<!-- <li class="GiveUpGitHub">
+  <a class_="dropdown-item-link" href="https://GiveUpGitHub.org">
+   <h3>
+    Give Up GitHub
+   </h3>
+   <p class_="dropdown-description">
+    <em>Leave GitHub <strong>today</strong>!</em>  Learn why &amp; how.
+   </p>
+  </a>
+ </li>-->
+ <li class="Outreachy">
+  <a class_="dropdown-item-link" href="https://outreachy.org">
+   <h3>
+    Outreachy
+   </h3>
+   <p class_="dropdown-description">
+    Internships for those who face under&shy;representation, systemic bias, or discrimination in tech.
+   </p>
+  </a>
+ </li>
+ <li class="Hiring">
+  <a class_="dropdown-item-link" href="/hiring">
+   <h3>
+    Hiring
+   </h3>
+   <p class_="dropdown-description">
+    SFC is hiring!
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </li>
+            <li class="Tools"><a href="#" role="menuitem" aria-haspopup="true">Tools <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+              <ul class="dropdown-menu-list">
+ 
+ <li class="MemberProjects">
+  <a class_="dropdown-item-link" href="/projects/">
+   <h3>
+    Member Projects
+   </h3>
+   <p class_="dropdown-description">
+    We provide non-profit infrastructure and services to our members creating Free/Libre and Open Source Software.
+   </p>
+  </a>
+ </li>
+ <li class="UseTheSource">
+  <a class_="dropdown-item-link" href="/usethesource/">
+   <h3>
+    Use The Source
+   </h3>
+   <p class_="dropdown-description">
+    Our tool for evaluating the source code candidates companies must provide for GPLed software.
+   </p>
+  </a>
+ </li>
+ <li class="OpenWrtOneRouter">
+  <a class_="dropdown-item-link" href="/activities/openwrt-one.html">
+   <h3>
+    OpenWrt One
+   </h3>
+   <p class_="dropdown-description">
+    We designed and built the first ever wireless Internet router designed with software freedom and right to repair in mind.
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </li>
+            <li class="Learn"><a href="/learn" role="menuitem" aria-haspopup="true">Learn <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+              <ul class="dropdown-menu-list">
+ 
+ <li>
+  <a class_="dropdown-item-link" href="/casts/the-corresponding-source/">
+   <h3>
+    The Corresponding Source
+   </h3>
+   <p class_="dropdown-description">
+    A bi-weekly oggcast about legal, policy, and many other issues in the Free, Libre, and Open Source Software (FLOSS) world. 
+   </p>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/copyleft-compliance/glossary.html">
+   <h3>
+    Glossary of Terms
+   </h3>
+   <p class_="dropdown-description">
+    A list of terms you might be unfamiliar with but occur frequently in our work.
+   </p>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/qanda.html">
+   <h3>
+    FAQ About the Vizio Lawsuit
+   </h3>
+   <p class_="dropdown-description">
+    Your most frequently asked questions about the Vizio lawsuit, answered in one place.
+   </p>
+  </a>
+ </li>
+</ul>
+
+            </li>
+            <li>
+              <a href="/sustainer/" class="desktop-donate-btn">Donate</a> 
+            </li>
+          </ul>
+        </nav>
+
+
+      </div>
+    </header>
+
+    <div id="main-mobile-nav" class="mobile-nav-overlay" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <a href="/" class="mobile-logo-link">
+                <img src="/static/img/conservancy-header-logo.322da8acaa91.svg" alt="Software Freedom Conservancy" width="200" />
+            </a>
+            <button id="mobile-nav-close" class="bg-transparent bn pa2 pointer">
+                <svg style="color: var(--navy); width: 30px; height: 30px;"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#xmark"></use></svg>
+                <span class="sr-only">Close navigation menu</span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-content" aria-label="Main Mobile Navigation">
+            <ul class="mobile-main-menu list" role="menu">
+                <li class="News"><a href="/news/" role="menuitem" aria-haspopup="true">News <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+                    <ul class="dropdown-menu-list">
+ 
+ <li>
+  <a class_="dropdown-item-link" href="/news/">
+   <h3>
+    Press Releases
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/">
+   <h3>
+    Press
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/blog/">
+   <h3>
+    Blog
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/vizio-coverage.html">
+   <h3>
+    Vizio Lawsuit in the News
+   </h3>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/inthenews.html">
+   <h3>
+    Our Issues in the News
+   </h3>
+  </a>
+ </li>
+</ul>
+
+                </li>
+                <li class="About"><a href="/about/" role="menuitem" aria-haspopup="true">About <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+                    <ul class="dropdown-menu-list">
+ 
+ <li class="Sponsors">
+  <a class_="dropdown-item-link" href="/sponsors/">
+   <h3>
+    Sponsors
+   </h3>
+  </a>
+ </li>
+ <li class="Sustainers">
+  <a class_="dropdown-item-link" href="/sustainer/">
+   <h3>
+    Sustainers
+   </h3>
+  </a>
+ </li>
+ <li class="Directors">
+  <a class_="dropdown-item-link" href="/about/board/">
+   <h3>
+    Board of Directors
+   </h3>
+  </a>
+ </li>
+ <li class="Staff">
+  <a class_="dropdown-item-link" href="/about/staff/">
+   <h3>
+    Staff
+   </h3>
+  </a>
+ </li>
+ <li class="Eval">
+  <a class_="dropdown-item-link" href="/about/eval-committee/">
+   <h3>
+    Evaluation Committee
+   </h3>
+  </a>
+ </li>
+ <li class="Outside">
+  <a class_="dropdown-item-link" href="/about/outside/">
+   <h3>
+    Outside Counsel, et alia
+   </h3>
+  </a>
+ </li>
+ <li class="Transparency">
+  <a class_="dropdown-item-link" href="/about/transparency">
+   <h3>
+    Transparency
+   </h3>
+  </a>
+ </li>
+ <li class="Contact">
+  <a class_="dropdown-item-link" href="/about/contact/">
+   <h3>
+    Contact
+   </h3>
+  </a>
+ </li>
+</ul>
+
+                </li>
+                <li class="OurWork"><a href="/activities" role="menuitem" aria-haspopup="true">Our Work <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+                    <ul class="dropdown-menu-list">
+ 
+ <li class="CopyleftCompliance">
+  <a class_="dropdown-item-link" href="/copyleft-compliance/">
+   <h3>
+    Copyleft Compliance
+   </h3>
+   <p class_="dropdown-description">
+    We defend &amp; uphold the rights enshrined in copyleft licenses.
+   </p>
+  </a>
+ </li>
+ <li class="ImpactLitigaton">
+  <a class_="dropdown-item-link" href="/copyleft-compliance/past-lawsuits.html">
+   <h3>
+    Impact Litigation
+   </h3>
+   <p class_="dropdown-description">
+    We defend the legal rights of software users in Court when needed.
+   </p>
+  </a>
+ </li>
+ <li class="LLMGenAI">
+  <a class_="dropdown-item-link" href="/llm-gen-ai/">
+   <h3>
+    LLM-Gen-AI in FOSS
+   </h3>
+   <p class_="dropdown-description">
+    We help FOSS contributors navigate this ongoing conundrum.
+   </p>
+  </a>
+ </li>
+ <li class="FOSSY">
+  <a class_="dropdown-item-link" href="https://fossy.ca">
+   <h3>
+    FOSSY
+   </h3>
+   <p class_="dropdown-description">
+    Our annual community-oriented conference.
+   </p>
+  </a>
+ </li>
+<!-- <li class="GiveUpGitHub">
+  <a class_="dropdown-item-link" href="https://GiveUpGitHub.org">
+   <h3>
+    Give Up GitHub
+   </h3>
+   <p class_="dropdown-description">
+    <em>Leave GitHub <strong>today</strong>!</em>  Learn why &amp; how.
+   </p>
+  </a>
+ </li>-->
+ <li class="Outreachy">
+  <a class_="dropdown-item-link" href="https://outreachy.org">
+   <h3>
+    Outreachy
+   </h3>
+   <p class_="dropdown-description">
+    Internships for those who face under&shy;representation, systemic bias, or discrimination in tech.
+   </p>
+  </a>
+ </li>
+ <li class="Hiring">
+  <a class_="dropdown-item-link" href="/hiring">
+   <h3>
+    Hiring
+   </h3>
+   <p class_="dropdown-description">
+    SFC is hiring!
+   </p>
+  </a>
+ </li>
+</ul>
+
+                </li>
+                <li class="Tools"><a href="/tools" role="menuitem" aria-haspopup="true">Tools <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+                    <ul class="dropdown-menu-list">
+ 
+ <li class="MemberProjects">
+  <a class_="dropdown-item-link" href="/projects/">
+   <h3>
+    Member Projects
+   </h3>
+   <p class_="dropdown-description">
+    We provide non-profit infrastructure and services to our members creating Free/Libre and Open Source Software.
+   </p>
+  </a>
+ </li>
+ <li class="UseTheSource">
+  <a class_="dropdown-item-link" href="/usethesource/">
+   <h3>
+    Use The Source
+   </h3>
+   <p class_="dropdown-description">
+    Our tool for evaluating the source code candidates companies must provide for GPLed software.
+   </p>
+  </a>
+ </li>
+ <li class="OpenWrtOneRouter">
+  <a class_="dropdown-item-link" href="/activities/openwrt-one.html">
+   <h3>
+    OpenWrt One
+   </h3>
+   <p class_="dropdown-description">
+    We designed and built the first ever wireless Internet router designed with software freedom and right to repair in mind.
+   </p>
+  </a>
+ </li>
+</ul>
+
+                </li>
+                <li class="Learn"><a href="/learn" role="menuitem" aria-haspopup="true">Learn <svg class="menu-arrow" ><use href="/static/img/font_awesome_subset.8fba61a09652.svg#chevron-down"></use></svg></a>
+                    <ul class="dropdown-menu-list">
+ 
+ <li>
+  <a class_="dropdown-item-link" href="/casts/the-corresponding-source/">
+   <h3>
+    The Corresponding Source
+   </h3>
+   <p class_="dropdown-description">
+    A bi-weekly oggcast about legal, policy, and many other issues in the Free, Libre, and Open Source Software (FLOSS) world. 
+   </p>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/copyleft-compliance/glossary.html">
+   <h3>
+    Glossary of Terms
+   </h3>
+   <p class_="dropdown-description">
+    A list of terms you might be unfamiliar with but occur frequently in our work.
+   </p>
+  </a>
+ </li>
+ <li>
+  <a class_="dropdown-item-link" href="/press/qanda.html">
+   <h3>
+    FAQ About the Vizio Lawsuit
+   </h3>
+   <p class_="dropdown-description">
+    Your most frequently asked questions about the Vizio lawsuit, answered in one place.
+   </p>
+  </a>
+ </li>
+</ul>
+
+                </li>
+                
+                <li class="mobile-donate"><a href="/sustainer/" role="menuitem">Donate</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+  
+
+
+
+
+
+
+    <div>
+      
+<div class="content-with-donate-sidebar">
+    <div id="container">
+         <div id="mainContent">
+<h1
+id="recommendations-when-using-llm-backed-generative-ai-systems-for-foss-contributions">Recommendations<br/>
+When Using LLM-backed Generative AI<br/> Systems for FOSS Contributions</h1>
+
+<h3 class="policy-article" id="preamble">Preamble</h3>
+<p>The entire community of computer users, which quickly approaches
+every human, faces the growing conundrum of generative artificial
+intelligence systems backed by Large Language Models (“LLM-gen-AI”)<a
+href="#footnote-which-systems" id="return-which-systems" class="footnote-ref"
+role="doc-noteref"><sup>1</sup></a>. Software freedom activists face
+particularly difficult challenges in this regard; these LLM-gen-AI
+systems have been applied in earnest to the endeavors of software
+creation and modification.</p>
+<p>We cannot sufficiently mitigate this tricky problem with merely one
+statement or a few blog posts. In 2022, Software Freedom Conservancy
+began our journey on this particular issue when our policy fellow,
+Bradley M. Kühn, published <a
+href="https://sfconservancy.org/blog/2022/feb/03/github-copilot-copyleft-gpl/">If
+Software is My Copilot, Who Programmed My Software?</a>. In the last
+year, that journey grew in complexity and urgency when some of SFC’s
+member projects and supporters began to regularly request moral and
+ethical guidance on these matters. SFC spent these months in
+almost-daily internal discussions about the plethora of dilemmas
+presented by LLM-gen-AI systems.</p>
+<p>In 2024, <a
+href="https://sfconservancy.org/news/2024/oct/25/aspirational-on-llm-generative-ai-programming/">SFC
+published an aspirational statement</a>, a thought experiment rather
+than a definition. We now make urgent recommendations to those ordered by
+their employers to use LLM-gen-AI code assistants to contribute to Free
+and Open Source Software (“FOSS”).</p>
+<p>Some FOSS project leaders have taken a zero-tolerance approach to any
+LLM-gen-AI contributions to their projects. We support leaders who make
+such decisions. FOSS project leaders deserve our sympathy and
+understanding regarding the voluminous onslaught of new contributions.
+Patch evaluation has always required careful analysis (after all, humans
+write bad code too). Now, that analysis demand (reasonably) feels
+daunting to maintainers. Everyone should respect their decisions.</p>
+<p>Nevertheless, we cannot and must not ignore the many FOSS
+contributors who decide to explore these tools for the betterment of
+FOSS. Software freedom activism only succeeds when we admit that we are
+at least decades away from universal software freedom. Proprietary
+systems will continue to exist; there is a real danger they will
+continue to leapfrog FOSS. We should resist the use of proprietary
+systems, which include the most popular LLM-gen-AI systems, but we
+should also remain willing (<a
+href="https://sfconservancy.org/blog/2026/jun/02/ethical-use-proprietary-develop-free-software-foss/">as
+we always have</a>) to utilize such systems when they can advance
+software freedom.</p>
+<p>After much study, consideration, collaboration, and consultation with
+many FOSS leaders, SFC formulated the following recommendations for FOSS
+contributors who have decided to use LLM-gen-AI systems to augment their
+FOSS work. We expect to update these recommendations periodically. These
+are not mandates, demands, conclusions, nor definitions; rather, they
+are best practices that we have formulated after careful study of the
+undeniable reality that some FOSS contributors do want to use these
+LLM-gen-AI systems.</p>
+<p>In the months following the announcement of these recommendations,
+SFC plans an ongoing engagement campaign, including documents, online
+tutorials, public Q&amp;As, and other community engagement, on these
+matters. SFC does not make these recommendations in isolation; rather,
+we offer sustained assistance to the community, particularly to FOSS
+projects working with proprietary LLM-gen-AI systems.</p>
+<p>The long term goal of software freedom is to eliminate the harm of
+proprietary technology. While we work toward that greater goal, we
+should seek to mitigate the harms that we cannot immediately eliminate.
+These recommendations aim to abate the damage of these systems, and also
+consider how these tools might counter-intuitively <em>help</em> us
+advance FOSS.</p>
+<h2 class="policy-article" id="recommendations">Recommendations</h2>
+<p>These recommendations are listed in order of our view of their
+relative importance (most important first).</p>
+<ol type="1">
+<li id="reject-ok"><p><strong>The FOSS community should support, not just tolerate,
+those who outright reject LLM-gen-AI systems.</strong> There are many
+intersecting ethical and moral issues regarding these systems, many of
+which are not currently fully understood. Anyone who chooses to avoid
+them deserves our support and assistance.</p></li>
+<li><p><strong>Every FOSS contributor deserves self-determination
+regarding LLM-gen-AI.</strong> No one should be <em>required</em> to use
+these systems under duress. We make special note here of the increasing
+reports from technology workers who have been ordered by their
+management (often under penalty of termination) to use these systems for
+all their work: FOSS and proprietary. Such mandates are unconscionable
+and we call on the industry to make use of LLM-gen-AI fully optional,
+and adopt non-discrimination policies regarding those who opt
+out.</p></li>
+<li><p><strong>FOSS projects should not shun contributors who choose to
+use LLM-gen-AI systems.</strong> Even FOSS projects that have chosen a
+zero-tolerance policy should make an effort to welcome contributors who
+submit a contribution that includes content or who received assistance
+from an LLM-gen-AI system. Such contributions should be treated no
+differently than a technically inadequate “first patch”: such submitters
+should be welcomed to the community and receive a gentle (albeit perhaps
+form language) response thanking them for their interest and explaining
+gently why the project will not accept their contribution.</p></li>
+<li><p><strong>Before submission, FOSS Contributors must invest
+substantial time reviewing LLM-gen-AI -assisted and/or -generated
+contributions.</strong> Such contributions need curation. Contributors
+should acquire an in-depth understanding of their contribution. FOSS
+processes yield software systems that are resilient, highly
+maintainable, and contributor-friendly. Human contributors engage with
+FOSS projects (even as volunteers) because of the enjoyment and
+satisfaction available in FOSS projects. <strong>LLM-gen-AI
+contributions could erode the best aspects of FOSS if an unsolicited
+onslaught of unvetted, prompt-generated contributions become
+commonplace.</strong></p></li>
+<li><p><strong>Full disclosure of how and when an LLM-gen-AI system was
+utilized to assist in creation of a contribution is a moral
+imperative.</strong> FOSS project leaders cannot make good decisions
+about LLM-gen-AI policy if they cannot survey which contributions were
+assisted, and how much they are assisted. Part of the contribution
+process should (at least) include a disclosure of what LLM-gen-AI system
+was used, its version (as these system change over time), and a brief
+description of how the system assisted the contributor. This information
+should be included in a machine-readable format in commit logs.</p></li>
+<li><p><strong>Contributors should only submit “unattended”<a
+href="#footnote-unattended-means" id="return-unattended-means" class="footnote-ref"
+role="doc-noteref"><sup>2</sup></a> LLM-gen-AI contributions in an area
+explicitly designated for such. If none exists, such contributions
+should be assumed unwelcome.</strong> FOSS maintainers are often
+volunteers, or permitted to work only a limited amount of time on their
+upstream projects. Maintainers’ time is precious, and is best used in
+human-to-human interactions with new and existing human contributors.
+New contributors should respect existing decisions about “unattended”
+LLM-gen-AI. Maintainers should think carefully about the types of
+unattended LLM-gen-AI contributions that may be useful. We encourage
+project leaders to flexibly and regularly (but also slowly and
+deliberately) consider policy changes on unattended contributions when
+new contributors present new ideas.</p></li>
+<li><p><strong>LLM-gen-AI users should keep detailed and accurate
+records of their interaction and save those meta-artifacts for
+posterity.</strong> LLM-gen-AI systems excel at automation of users’
+logs of prompts, notes, and other written details of the interaction
+that led to the creation of an artifact. FOSS contributors should keep
+such meta-artifacts, and <em>regardless of license</em> they should be
+archived as if they are part of the Corresponding Source for the
+contribution. (In the coming weeks, SFC will publish tutorials and
+templates to assist in automating this important process.)</p></li>
+<li id="copyleft-next"><p><strong>Avoid jumping to conclusions about the legal significance
+of generated contributions and whether they are
+“copyright-washing-machines that ruin copyleft”.</strong> There remain
+many unanswered legal questions, and experts are actively working on
+solutions. SFC will publish more on this issue in the coming
+months.</p></li>
+<li id="input-licensing"><p><strong>Inputs impact the licensing of the artifacts</strong>.
+The question of licensing obligations for material passed through the
+process called “training” remains undecided. Nevertheless, most
+LLM-gen-AI sessions don’t begin <em>only</em> with a prompt. By
+contrast, most commonly, the user points the LLM-gen-AI at a codebase
+and receives its assistance to generate a patch for that codebase. If
+that codebase is under a copyleft license, your changes <em>must</em> be
+licensed under the project’s license, due to both copyright and
+contractual terms of that license.</p></li>
+<li><p><strong>“Copyleft Everything” remains the best viable and safest
+approach</strong> Certainly those who want to release FOSS under
+non-copyleft licenses have more to worry about when using these tools.
+It’s apparent that every widely used LLM-gen-AI was trained on much
+well-known copylefted code. Courts need years to deliver guidance on
+many relevant legal questions. In the meantime, <em>nothing</em> stops
+you from using a copyleft license for the work you generate,
+particularly a license that is widely compatible with other copyleft
+licenses. SFC will make its staff time available to the <a
+href="https://next.copyleft.org">copyleft-next</a> project to eventually
+offer a license that is widely compatible with other copylefts and
+extremely suitable as a copyleft for LLM-gen-AI outputs.</p></li>
+<li><p><strong>When LLM-gen-AI systems (including proprietary ones) can
+massively accelerate FOSS improvements, use of such tools is an
+appropriate strategic compromise</strong>. Most FOSS developers are not
+experts in the area of creation and training of LLM-gen-AI systems.
+Those developers should feel comfortable making the strategic choice to
+use LLM-gen-AI systems in these cases.</p>
+<p>We detest using proprietary tools and we are never comfortable
+recommending them. Yet <a
+href="https://sfconservancy.org/blog/2026/jun/02/ethical-use-proprietary-develop-free-software-foss/">for
+nearly fifty years, FOSS contributors have used proprietary tools</a> to
+create and advance software freedom. <em>Writing</em> proprietary
+systems is undoubtedly an anti-social act that we all should avoid.
+<em>Using</em> proprietary systems, particularly when they can forward
+FOSS, is a highly fact-dependent tactical decision.</p>
+<p><strong>Warning</strong>: do take great care to fully understand the
+implications of any proprietary license. SFC will publish in the coming
+weeks some guidance on how to approach such analysis.</p></li>
+<li><p><strong>Those with skills and interest in making FOSS-friendlier
+LLM-gen-AI systems should do so as a matter of high priority</strong>.
+While no system meets the (currently) <a
+href="https://sfconservancy.org/news/2024/oct/25/aspirational-on-llm-generative-ai-programming/">Impossible
+Dream of our aspirational system</a>, there are obvious avenues of
+pursuit that will make progress in that direction. SFC will highlight on
+our blog in the coming months individuals working in these
+directions.</p></li>
+<li id="avoid-skill-atrophy"><p><strong>Do not overuse LLM-gen-AI, or allow your skills to
+atrophy</strong>. In our discussions with the FOSS community about
+LLM-gen-AI, there seems to be one universal conclusion: the systems are
+most effective and help the most when a very experienced FOSS developer
+sits at the prompting helm. LLM-gen-AI systems should
+<em>complement</em> existing skills and tools, not <em>replace</em>
+them. Developers should remain <em>curious</em> about why software acts
+the way it does, and this curiosity should extend to the LLM-gen-AI
+outputs — and even the system itself.</p></li>
+<li><p><strong>Think carefully about your usage</strong>. As software
+technologists, we have for decades made complex choices regarding
+resource consumption vs. convenience. The advent of CI, as just one
+example, led to massive increases in computing time, while at the same
+time simplified contribution workflows. As individual FOSS developers,
+we are unlikely to change the bad behavior of these proprietary software
+companies who are either focusing on the creation of, or mandating the
+excessive use of, LLM-gen-AI.</p>
+<p>There are hundreds of intersectional issues of societal significance
+and social justice that are touched by these technologies, including the
+environmental impact of the development and use of these systems. Our
+focus and expertise centers on the implications for software; here we
+assess user freedom and add our ideas to the overall social
+conversations about how this technology should be used, controlled, and
+distributed in the context of FOSS. On matters unrelated to software
+freedom, we defer to experts that focus on environmental and other
+intersectional issues.</p>
+<p>In our experience, FOSS contributors are historically much more
+mindful and concerned about how their actions impact others than
+developers of proprietary software and systems. Bring that mindfulness
+to your use of LLM-gen-AI. As just two examples:</p>
+<ul>
+<li><p>don’t run to an LLM-gen-AI immediately for every
+problem,</p></li>
+<li><p>pay attention to the LLM-gen-AI when it is clearly doing useless
+processing, and quickly redirect it to something more useful.</p></li>
+</ul></li>
+</ol>
+<h3 class="policy-article" id="the-road-ahead">The Road Ahead</h3>
+<p>Most new technologies have some adverse outcomes. We must carefully
+recognize and mitigate them. Social justice movements (including the
+software freedom and software right-to-repair movements) succeed when
+well-intentioned individuals act sustainably and consistently to bring
+needed change. In FOSS, those individuals constantly invent and improve
+new technologies that respect users’ rights and freedoms.</p>
+<p>The recommendations above are a start. We’re ready for revision and
+further explanation as facts change. Our community has successfully
+deployed our unique acumen, and will again to shift this current
+imbalance of power. We must creatively act as we always have; the FOSS
+community excels at strategems that counteract proprietary software with
+ingenuity.</p>
+<p>SFC walks with you on this multi-generational journey to universal
+software freedom and rights.<br />
+Expect (but embrace) the trepidation as we take this next step together
+now. SFC’s goal is steadfast: empower consumers and users to advance and
+exercise software freedom, and their right to software repair. Remember
+these strategies have worked and <strong>will continue to work</strong>
+when we remain vigilant, mindful, and focused.</p>
+<h4 class="policy-article" id="acknowledgments">Acknowledgments</h4>
+<p>Software Freedom Conservancy publishes this statement after months of
+internal deliberation and discussions with a group of volunteers,
+including John Sullivan, Stefano Zacchiroli, and many anonymous
+contributors. The statement was drafted by SFC in collaboration with
+  that group.</p>
+<br/>
+<div id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr class="footnote-separator"/>
+<h4 class="policy-article">Footnotes</h4>
+<p><a id="footnote-which-systems" href="#return-which-systems"><sup>1</sup></a> These Recommendations are made specifically for systems (most of
+which are currently proprietary), such as Claude Code, Copilot CLI,
+Antigravity, and OpenCode. These systems utilize an LLM to generate
+textual artifacts that assist software project contributors. There is no
+known shorthand for referring to these systems, so we refer to them here
+as “LLM-gen-AI” to remind the reader throughout that these
+recommendations are not necessarily intended to apply to other forms of
+AI nor other uses of LLMs<a href="#return-which-systems" class="footnote-back"
+role="doc-backlink">↩</a></p>
+<p><a
+id="footnote-unattended-means" href="#return-unattended-means" class="footnote-ref"
+role="doc-noteref"><sup>2</sup></a>
+<p>By “unattended”, we mean prompt-generated contributions that received
+no further human vetting.<a href="#return-unattended-means" class="footnote-back"
+                            role="doc-backlink">↩</a></p>
+</div>
+
+</div>
+         <div id="sidebar" class="LLMGenAIRecs">
+            <h2>What We Do</h2>
+            <ul>
+  <li><a href="/casts/the-corresponding-source/">The Corresponding Source</a></li>
+  <li class="CopyleftCompliance"><a href="/copyleft-compliance/">Copyleft Compliance</a></li>
+  <li class="VizioTopBar"><a href="/copyleft-compliance/vizio.html">Vizio Lawsuit</a></li>
+  <li class="LLMGenAI"><a href="/llm-gen-ai/">Facing <abbr title="Large-Language-Model-backed generative AI systems">LLM-gen-AI</abbr> in <abbr title="Free and Open Source Software">FOSS</abbr></a></li>
+  <li class="ImpactLitigationCopyleft"><a href="/copyleft-compliance/past-lawsuits.html#past">Past Impact Litigation</a></li>
+  <li class="GiveUpGitHub"><a href="https://GiveUpGitHub.org/"><em>Give Up GitHub!</em></a></li>
+  <li class="FIXME"><a href="/projects/">Member Projects</a></li>
+  <li class="Outreachy"><a href="https://outreachy.org">Outreachy</a></li>
+  <li class="UseTheSource"><a href="/usethesource/">Use The Source</a></li>
+  <li class="FOSSY"><a href="https://fossy.us">FOSSY</a></li>
+  <li><a href="/activities/openwrt-one.html">OpenWrt One</a></li>
+  <li><a href="/activities/awards.html">Awards</a></li>
+</ul>
+
+            <h2>Facing <abbr title="Large-Language-Model-backed generative AI systems">LLM-gen-AI</abbr> in <abbr title="Free and Open Source Software">FOSS</abbr></h2>
+            <ul>
+            <li class="LLMGenAIRecs"><a href="/llm-gen-ai/llm-backed-generative-ai-recommendations.html"><cite>Recommendations
+When Using LLM-backed Generative AI Systems for FOSS Contributions</cite></a></li>
+            <li class="LLMGenAIAspriational"><a href="/llm-gen-ai/aspirational-statement-on-llm-generative-ai-for-programming.html">
+                Aspirational Statement on <abbr title="Free and Open Source Software">FOSS</abbr>
+                <abbr title="Large-Language-Model-backed generative Artificial Intelligence systems">LLM-gen-AI</abbr></a></li>
+            <li>More to come &hellip;</li>
+            </ul>
+         </div>
+    </div>
+</div>
+
+    </div>
+
+    <footer class="footer-container" role="contentinfo">
+      <div class="footer-inner">
+       
+        <a href="/" id="footer-logo-link">
+          <img class="footer-logo" src="/static/img/conservancy-header-logo.322da8acaa91.svg" alt="Software Freedom Conservancy" />
+        </a>
+
+        
+        <div class="social-links">
+          <a class="social-x" href="https://x.com/conservancy" aria-label="X">
+            <svg class="fa-icon" aria-hidden="true"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#x-twitter"></use></svg>
+          </a>
+          <a class="social-facebook" href="https://www.facebook.com/SoftwareFreedomConservancy/" aria-label="Facebook">
+            <svg class="fa-icon" aria-hidden="true"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#facebook-f"></use></svg>
+          </a>
+          <a class="social-youtube" href="https://www.youtube.com/channel/UCUEeuNvX2UyTTyTYXR9dm_A" aria-label="YouTube">
+            <svg class="fa-icon" aria-hidden="true"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#youtube"></use></svg>
+          </a>
+          <a class="social-mastodon" href="https://social.sfconservancy.org/conservancy" aria-label="Fediverse">
+            <svg class="fa-icon" aria-hidden="true"><use href="/static/img/font_awesome_subset.8fba61a09652.svg#mastodon"></use></svg>
+          </a>
+        </div>
+
+        
+        <div class="footer-nav">
+          <nav aria-label="Footer navigation">
+            <ul>
+              <li><a href="/">Main Page</a></li>
+              <li><a href="/about/">Contact</a></li>
+              <li><a href="/sponsors/">Sponsors</a></li>
+              <li><a href="/feeds/omnibus/">RSS Feed</a></li>
+              <li><a href="/sustainer/" id="footer-donate-btn" aria-label="Donate to Software Freedom Conservancy">Donate</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        
+        <div class="charity-info">
+          <p>Software Freedom Conservancy is a 501(c)(3) non-profit charity.</p>
+        </div>
+
+      </div>
+      
+      
+      
+      <div class="site-footer-info">
+        <div class="privacy-policy">
+          <p><a href="/privacy-policy/">Privacy Policy</a> last updated 22 December 2020.</p>
+        </div>
+        <div class="cc-license">
+          <p>This page and its contents are licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0"> Creative Commons Attribution-Share Alike 4.0 International License</a>.</p>
+        </div>
+        <a class="cc-logo" rel="license" href="https://creativecommons.org/licenses/by-sa/4.0">
+          <img src="/static/img/creative-commons-footer-icons.42c681015296.svg" alt="Creative Commons Attribution-Share Alike 4.0 International License" />
+        </a>
+      </div>
+
+
+    </footer>
+
+    <script src="/static/js/mobile-nav.ed67bf382581.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "entity": "Nagi-ovo/gemini-voyager",
+  "removed_files": [
+    "analysis/corpus-assessment/frozen/16766cb1a5b94c516eb838515499a4e5af10efa94df89512dcde322383e1af71.md",
+    "analysis/corpus-assessment/frozen/9b0eb7fc4d9d12f84d09c3045b27d895480032ac8eee9a383104720c80e95d6d.md",
+    "analysis/corpus-assessment/sources/corpus-237-purpose.md",
+    "analysis/corpus-assessment/sources/corpus-237-purpose.raw.md",
+    "data/281/policies/Nagi-ovo/gemini-voyager/contributing.md",
+    "data/coding.qda/documents/Nagi-ovo__gemini-voyager--contributing--9b0eb7fc4d9d.md",
+    "data/coding.qda/documents/Nagi-ovo__gemini-voyager--purpose_statement_candidate--16766cb1a5b9.md"
+  ],
+  "removed_evidence_ids": [
+    "C0170",
+    "C0550"
+  ],
+  "remaining_projects": 280
+}

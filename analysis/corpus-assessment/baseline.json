@@ -1,0 +1,11 @@
+{
+  "dataset_entries": 280,
+  "original_columns": 32,
+  "original_cells_sha256": "c508fa2261ba4bf2ad0cc789a64e1fbd7c59466eb99fd52a1c42a6582e84c26c",
+  "previous_baseline": {
+    "dataset_entries": 281,
+    "original_columns": 32,
+    "original_cells_sha256": "e26eace5167b8b5826122634660ed13ab952534fbc886a97ca839a134f8980ba"
+  },
+  "maintenance_note": "User-authorized project exclusion and source-URL corrections; the prior baseline remains nested for historical reference."
+}

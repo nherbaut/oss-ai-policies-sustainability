@@ -1,0 +1,43 @@
+{
+  "entities": 281,
+  "local_files": 308,
+  "documents_including_supplements": 330,
+  "evidence_rows": 619,
+  "rq1_counts": {
+    "purpose_only": 16,
+    "interpreted_dimension": 17,
+    "explicit_sustainability": 4,
+    "source_available_no_positive_purpose_code": 243,
+    "insufficient_purpose_evidence": 1
+  },
+  "rq2_counts": {
+    "general_context_only": 4,
+    "implicit_concern_ai": 97,
+    "explicit_sustainability_ai": 5,
+    "no_sustainability_specific_code_established": 168,
+    "explicit_environmental_concern": 7
+  },
+  "rq3_entity_counts": {
+    "individual": 94,
+    "social": 42,
+    "technical": 22,
+    "environmental": 7,
+    "economic": 2
+  },
+  "rq4_counts": {
+    "insufficient_evidence": 281
+  },
+  "source_records": 313,
+  "source_status_counts": {
+    "downloaded": 308,
+    "unavailable": 5
+  },
+  "document_quality_counts": {
+    "text_available": 321,
+    "empty_text": 4,
+    "path_stub": 4,
+    "rendering_problem_requires_review": 1
+  },
+  "entities_with_quality_flags": 8,
+  "baseline_original_cells_sha256": "e26eace5167b8b5826122634660ed13ab952534fbc886a97ca839a134f8980ba"
+}

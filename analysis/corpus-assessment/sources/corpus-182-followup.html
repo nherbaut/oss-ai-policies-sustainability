@@ -1,0 +1,788 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Rules for contributions" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://contributing.godotengine.org/en/latest/development/contribution_rules.html" />
+<meta property="og:site_name" content="Contributing to Godot" />
+<meta property="og:description" content="This page contains rules and guidelines relevant for contributing to any area of Godot. When contributing to any particular area, please also refer to its respective guidelines. Respect our Code of..." />
+<meta name="description" content="This page contains rules and guidelines relevant for contributing to any area of Godot. When contributing to any particular area, please also refer to its respective guidelines. Respect our Code of..." />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rules for contributions &mdash; Contributing to Godot</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=0ccd29e2" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/js/custom.js?v=3d0dc42a"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/versions.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Workflows" href="workflows/index.html" />
+    <link rel="prev" title="Proposing and discussing ideas" href="../feedback/ideas.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="godot-contributing-docs" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/development/contribution_rules.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/docs_logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Ways to contribute</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ways_to_contribute/fundraising.html">Fundraising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ways_to_contribute/feedback.html">Provide feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ways_to_contribute/development.html">Participate in Godot's development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ways_to_contribute/development.html#contribute-engine-code">Contribute engine code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ways_to_contribute/development.html#contribute-documentation">Contribute documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ways_to_contribute/ecosystem.html">Help in Godot's ecosystem</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Feedback guidelines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../feedback/issues/index.html">Testing and reporting issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../feedback/issues/issue_report_writing.html">How to write a good issue report</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#checklist">Checklist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#before-opening-an-issue">Before opening an issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-anatomy-of-an-issue-report">The anatomy of an issue report</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-issue-title">The issue title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-tested-versions">The tested versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-system-details">The system details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-issue-description">The issue description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-reproduction-steps">The reproduction steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#the-minimal-reproduction-project-mrp">The Minimal Reproduction Project (MRP)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#videos-and-screenshots-in-reports">Videos and screenshots in reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/issue_report_writing.html#code-snippets-in-reports">Code snippets in reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../feedback/issues/testing_development_versions.html">Testing development versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feedback/issues/bisecting.html">Bisecting regressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/bisecting.html#what-is-bisecting">What is bisecting?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/bisecting.html#using-official-builds-to-speed-up-bisecting">Using official builds to speed up bisecting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../feedback/issues/bisecting.html#the-git-bisect-command">The Git bisect command</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/bisecting.html#determine-the-commit-hashes">Determine the commit hashes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/bisecting.html#build-the-engine">Build the engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../feedback/issues/bisecting.html#run-the-engine">Run the engine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../feedback/ideas.html">Proposing and discussing ideas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../feedback/ideas.html#how-are-proposals-accepted">How are proposals accepted?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feedback/ideas.html#evaluating-proposals">Evaluating proposals</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development guidelines</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rules for contributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#respect-our-code-of-conduct">Respect our Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#respect-copyright">Respect copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-features-from-new-contributors">No features from new contributors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribute-one-change-at-a-time">Contribute one change at a time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explain-your-contributions">Explain your contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribute-only-what-you-understand">Contribute only what you understand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ai-assisted-contributions">AI-assisted contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#for-contributors">For contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-maintainers">For maintainers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#substantial-code-definition">&quot;Substantial code&quot; definition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="workflows/index.html">Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflows/pr_workflow.html">Pull request workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/pr_workflow.html#when-will-a-pull-request-get-reviewed">When will a pull request get reviewed?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/creating_pull_requests.html">How to create pull requests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#git-source-repository">Git source repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#forking-and-cloning">Forking and cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#updating-your-branch">Updating your branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#making-changes">Making changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#pushing-changes-to-a-remote">Pushing changes to a remote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#issuing-a-pull-request">Issuing a pull request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#modifying-a-pull-request">Modifying a pull request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#the-interactive-rebase">The interactive rebase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#rebasing-onto-another-branch">Rebasing onto another branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/creating_pull_requests.html#deleting-a-git-branch">Deleting a Git branch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/areas.html">Areas and teams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#how-to-join-a-team-become-a-maintainer">How to join a team / become a maintainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#team-2d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#team-3d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#animation">Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#asset-pipeline">Asset pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#audio">Audio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#core">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#demos">Demos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#editor">Editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#debugger">Debugger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#script-editor">Script Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#gui">GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#input">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#navigation">Navigation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#networking">Networking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#physics">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#platforms">Platforms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#android">Android</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#apple">Apple</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#buildsystem">Buildsystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#web">Web</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#linux-bsd">Linux / BSD</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#quality-assurance">Quality Assurance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#tests">Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#bugsquad-issue-triage">Bugsquad / Issue triage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#rendering">Rendering</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#shaders">Shaders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#vfx-tech-art-particles">VFX / Tech Art / Particles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#scripting">Scripting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#gdextension">GDExtension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#gdscript">GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/areas.html#c-net-mono">C# / .NET / Mono</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#server-infrastructure">Server Infrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#technical-leadership-committee-tlc">Technical Leadership Committee (TLC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#translation-i18n">Translation / i18n</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#usability">Usability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#website">Website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/areas.html#xr">XR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/triage_projects.html">Helping out teams (using triage projects)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage_projects.html#how-to-use-triage-projects">How to use triage projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage_projects.html#triage-guidelines">Triage guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/review_guidelines.html">Reviewing pull requests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#confirm-that-that-pull-request-is-valid">Confirm that that pull request is valid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#confirm-that-the-problem-exists">Confirm that the problem exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#confirm-that-the-approach-is-appropriate">Confirm that the approach is appropriate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#test-the-pr-and-look-for-regressions">Test the PR and look for regressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#do-a-code-review">Do a code review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#what-to-avoid-during-review">What to avoid during review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/review_guidelines.html#post-your-review">Post your review</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/testing_pull_requests.html">Testing pull requests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/testing_pull_requests.html#downloading-a-compiled-build">Downloading a compiled build</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/testing_pull_requests.html#if-you-have-a-github-account">If you have a GitHub account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/testing_pull_requests.html#if-you-don-t-have-a-github-account">If you don't have a GitHub account</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/testing_pull_requests.html#compiling-a-pull-request-branch-from-source">Compiling a pull request branch from source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/testing_pull_requests.html#downloading-a-zipped-pull-request-branch">Downloading a zipped pull request branch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/testing_pull_requests.html#checking-out-a-pull-request-branch-with-git">Checking out a pull request branch with git</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/triage/index.html">Bugsquad and triage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/about.html">Introduction to issue triage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/about.html#tasks">Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/workflow.html">Bug triage overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#triage-checklist">Triage checklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#check-issue-validity">Check issue validity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#initial-assessment">Initial assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#check-for-duplicates">Check for duplicates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#assigning-milestones">Assigning milestones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#testing-an-issue">Testing an issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#finalize-assessment">Finalize assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#closing-an-issue">Closing an issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/workflow.html#team-workflow">Team workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/guidelines.html">Bug triage guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/guidelines.html#issues-management">Issues management</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/release_priorities.html">Release priority tracking</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/release_priorities.html#doc-identifying-release-priorities">Identifying release priority issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/release_priorities.html#severity">Severity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/triage_sprints.html">Participating in triage sprints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprints.html#sprint-steps">Sprint steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html">Organizing triage sprints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#before-starting">Before starting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#gauge-interest">Gauge interest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#prepare-the-sprint">Prepare the sprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#start-the-sprint">Start the sprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#track-and-follow-up-the-sprint">Track and follow up the sprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#finalize-the-sprint">Finalize the sprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/triage/triage_sprint_organization.html#final-steps">Final steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/release_management/index.html">Release management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workflows/release_management/merge_guidelines.html">Merge guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/merge_guidelines.html#get-feedback-from-the-right-people-teams">1. Get feedback from the right people/teams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/merge_guidelines.html#get-feedback-from-the-community">2. Get feedback from the community</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/merge_guidelines.html#git-checklist">3. Git checklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/merge_guidelines.html#github-checklist">4. GitHub checklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/merge_guidelines.html#merge-the-pull-request">5. Merge the pull request</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="workflows/release_management/maintenance_releases.html">Maintenance release process</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/maintenance_releases.html#changes-suitable-for-maintenance-releases">Changes suitable for maintenance releases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="workflows/release_management/maintenance_releases.html#cherry-picking-process">Cherry-picking process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="engine/index.html">Engine development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="engine/introduction.html">Introduction to engine contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/introduction.html#checklist-for-new-contributors">Checklist for new contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/introduction.html#setting-up-a-dev-environment">Setting up a dev environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="engine/introduction.html#ide-integration">IDE integration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/best_practices.html">Best practices for engine contributors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/best_practices.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/best_practices.html#language">Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/best_practices.html#best-practices">Best Practices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#the-problem-always-comes-first">#1: The problem always comes first</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#to-solve-the-problem-it-has-to-exist-in-the-first-place">#2: To solve the problem, it has to exist in the first place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#the-problem-has-to-be-complex-or-frequent">#3: The problem has to be complex or frequent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#the-solution-must-be-discussed-with-others">#4: The solution must be discussed with others</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#to-each-problem-its-own-solution">#5: To each problem, its own solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#cater-to-common-use-cases-leave-the-door-open-for-the-rare-ones">#6: Cater to common use cases, leave the door open for the rare ones</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#prefer-local-solutions">#7: Prefer local solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/best_practices.html#don-t-use-complex-canned-solutions-for-simple-problems">#8: Don't use complex canned solutions for simple problems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/cpp_usage_guidelines.html">C++ rules and guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#automated-style-checks">Automated style checks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#disallowed-features">Disallowed features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#naming">Naming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#spacing">Spacing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#header-includes">Header includes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/cpp_usage_guidelines.html#comments">Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/other_languages.html">Other language guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/other_languages.html#gdscript">GDScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/other_languages.html#objective-c">Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/other_languages.html#java">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/other_languages.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/optimization.html">Optimization guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#choosing-what-to-optimize">Choosing what to optimize</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="engine/optimization.html#benefits">Benefits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="engine/optimization.html#costs">Costs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#optimization-process">Optimization process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#pull-request-requirements">Pull request requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#optimizing-for-best-worst-cases">Optimizing for best / worst cases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#gpu-optimization">GPU optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/optimization.html#compilation-time-optimization">Compilation time optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/editor_style_guide.html">Editor style guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#writing-style">Writing style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#button-and-menu-texts">Button and menu texts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#inspector-sections">Inspector sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#inspector-performance-hints">Inspector performance hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/editor_style_guide.html#tooltips">Tooltips</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/gdscript_language_guidelines.html">GDScript language design guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/gdscript_language_guidelines.html#typing-guidelines">Typing guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/gdscript_language_guidelines.html#performance-goals">Performance goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine/gdscript_language_guidelines.html#annotation-guidelines">Annotation guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/unit_tests.html">Unit tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="engine/unit_tests.html#unit-test-guidelines">Unit test guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="engine/compatibility.html">Handling compatibility breakages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation/index.html">Writing documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documentation/overview.html">Documentation overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/content_guidelines.html">Content guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/content_guidelines.html#guidelines-and-principles">Guidelines and principles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/content_guidelines.html#writing-complete-and-accessible-documentation">Writing complete and accessible documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/content_guidelines.html#limiting-cognitive-load">Limiting cognitive load</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/docs_writing_guidelines.html">Writing guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#english-language-quirks-to-be-aware-of">English language quirks to be aware of</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#the-noun-adjunct">The noun adjunct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#deverbals">Deverbals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#initialisms-and-a-an">Initialisms and a/an</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#and-or-with-lists">And/or with lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#rules-for-clear-english">7 rules for clear English</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-the-active-voice">Use the active voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-precise-action-verbs">Use precise action verbs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#avoid-verbs-that-end-in-ing">Avoid verbs that end in -ing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#remove-unnecessary-adverbs-and-adjectives">Remove unnecessary adverbs and adjectives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#ban-these-8-words">Ban these 8 words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-explicit-references">Use explicit references</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-s-to-show-possession">Use 's to show possession</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-the-oxford-comma-to-enumerate-anything">Use the Oxford comma to enumerate anything</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#dynamic-vs-static-typing">Dynamic vs static typing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-real-world-code-examples-where-appropriate">Use real-world code examples where appropriate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#give-an-overview-of-the-node-in-the-brief-description">Give an overview of the node in the brief description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#mention-what-methods-return-if-it-s-useful">Mention what methods return if it's useful</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-if-true-to-describe-booleans">Use &quot;if true&quot; to describe booleans</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-code-around-arguments">Use <code class="docutils literal notranslate"><span class="pre">[code]</span></code> around arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-godot-s-documentation">Common vocabulary to use in Godot's documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#manual-style-guidelines">Manual style guidelines</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#text-styles">Text styles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#emphasis">Emphasis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#numbers">Numbers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#classes-properties-and-methods">Classes, properties, and methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#editor-ui">Editor UI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#project-settings">Project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#code-blocks-and-adominitions">Code blocks and adominitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#manually-wrapping-lines">Manually wrapping lines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#section-header-syntax">Section header syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-godot-version">When to refer to a specific Godot version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_writing_guidelines.html#use-roles-for-editor-ui">Use roles for editor UI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_writing_guidelines.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_image_guidelines.html#images">Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#capturing-an-image">Capturing an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#format-conversion">Format conversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#cropping">Cropping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#scaling-down-an-image">Scaling down an image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#saving-as-webp-in-krita">Saving as WebP in Krita</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#outlines-arrows-and-text">Outlines, arrows and text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#adding-an-image-to-a-documentation-page">Adding an image to a documentation page</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_image_guidelines.html#videos">Videos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#capturing-a-video">Capturing a video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/docs_image_guidelines.html#compressing-the-captured-video">Compressing the captured video</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_image_guidelines.html#adding-a-video-to-a-documentation-page">Adding a video to a documentation page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/docs_contribution_checklist.html">Documentation contribution checklist</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_contribution_checklist.html#writing-style">Writing style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_contribution_checklist.html#code-examples">Code examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_contribution_checklist.html#manual-style-and-formatting">Manual style and formatting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_contribution_checklist.html#images-and-videos">Images and videos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/docs_contribution_checklist.html#github">GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/class_reference.html">The class reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/class_reference.html#the-source-of-the-class-reference">The source of the class reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/class_reference.html#updating-class-reference-when-working-on-the-engine">Updating class reference when working on the engine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/manual/index.html">The manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html">Writing the manual</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#getting-started">Getting started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#what-is-the-godot-documentation">What is the Godot documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#contributing-changes">Contributing changes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#editing-pages-online">Editing pages online</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#adding-new-pages">Adding new pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/contributing_to_the_manual.html#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/manual/building_the_manual.html">Building the manual with Sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/building_the_manual.html#dealing-with-errors">Dealing with errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="documentation/manual/building_the_manual.html#hints-for-performance">Hints for performance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="documentation/contributing_docs.html">The contributing docs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="documentation/contributing_docs.html#making-changes-to-the-contributing-docs">Making changes to the contributing docs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/contributing_docs.html#what-kinds-of-information-are-documented-here">What kinds of information are documented here?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/contributing_docs.html#how-is-this-page-structured">How is this page structured?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation/contributing_docs.html#building-the-documentation-locally">Building the documentation locally</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translations.html">Translating Godot</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="translations.html#using-weblate-for-translations">Using Weblate for translations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="translations.html#adding-a-new-language">Adding a new language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translations.html#translation-interface">Translation interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="translations.html#locating-original-content">Locating original content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translations.html#respecting-the-markup-syntax">Respecting the markup syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="translations.html#editor-interface-c">Editor interface (C++)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translations.html#online-documentation-rst">Online documentation (RST)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translations.html#class-reference-bbcode">Class reference (BBCode)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="translations.html#offline-translation-and-testing">Offline translation and testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="translations.html#localizing-documentation-images">Localizing documentation images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other/index.html">Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="other/benchmarks.html">Contributing benchmarks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="other/benchmarks.html#adding-new-benchmarks">Adding new benchmarks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="other/benchmarks.html#create-new-benchmark">Create new benchmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other/benchmarks.html#configure-the-benchmark">Configure the benchmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other/benchmarks.html#implement-the-benchmark">Implement the benchmark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other/benchmarks.html#test-the-benchmark">Test the benchmark</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="other/demos.html">Contributing demo projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="other/demos.html#demo-submission-criteria">Demo submission criteria</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="other/demos.html#submission-criteria-for-new-demos">Submission criteria for new demos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="other/godot-cpp.html">Contributing to godot-cpp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="other/godot-cpp.html#feature-guidelines">Feature guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="other/website.html">Contributing to the website</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="other/website.html#content-guidelines">Content guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="other/resources.html">Development resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#benchmarks-long-term-performance-tracker">Benchmarks (long-term performance tracker)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#binary-size-history">Binary size history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#class-reference-status">Class reference status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#commit-artifacts">Commit artifacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#godot-builds">Godot builds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#interactive-changelog">Interactive changelog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#issue-statistics">Issue statistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#proposals-viewer">Proposals viewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#pull-requests-by-file">Pull requests by file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#team-reports">Team reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="other/resources.html#website-article-cover-generator">Website article cover generator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Contributing to Godot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+<li>
+	<div style="font-size: 105%;font-weight: 600;">
+		Godot Engine contributing documentation in English
+	</div>
+	<ul class="wy-breadcrumbs">
+		
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Rules for contributions</li>
+	</ul>
+</li>
+
+
+<li style="float: right; text-align: right;">
+	<ul>
+		
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/godotengine/godot-contributing-docs/blob/main/development/contribution_rules.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+	</ul>
+
+	<style>
+		.godot-edit-guidelines {
+			font-size: 14px;
+			float: right;
+			clear: both;
+			padding-top: 4px;
+		}
+
+		@media screen and (max-width: 480px) {
+			.godot-edit-guidelines {
+				display: none;
+			}
+		}
+	</style>
+	<a class="godot-edit-guidelines" href="https://docs.godotengine.org/en/">
+		Visit the engine documentation!
+	</a>
+</li>
+
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rules-for-contributions">
+<span id="doc-pull-request-guidelines"></span><h1>Rules for contributions<a class="headerlink" href="#rules-for-contributions" title="Link to this heading"></a></h1>
+<p>This page contains rules and guidelines relevant for contributing to any area of Godot.</p>
+<p>When contributing to any particular area, please also refer to its respective guidelines.</p>
+<section id="respect-our-code-of-conduct">
+<h2>Respect our Code of Conduct<a class="headerlink" href="#respect-our-code-of-conduct" title="Link to this heading"></a></h2>
+<p>When you contribute to Godot, we expect that you respect our <a class="reference external" href="https://godotengine.org/code-of-conduct/">Code of Conduct</a>.</p>
+</section>
+<section id="respect-copyright">
+<span id="doc-licenses"></span><h2>Respect copyright<a class="headerlink" href="#respect-copyright" title="Link to this heading"></a></h2>
+<p>You must be mindful of the copyright and patent rights of anything you submit.</p>
+<p>If you authored every part of your contribution and own the rights, this is not a problem.
+You can submit your contribution without reading further.</p>
+<p>However, any code or assets you took from somewhere else — including code generated by AI — may be subject to copyright
+or patent rights, which you must respect. In such cases, you need to check the license of the material. Some licenses
+are permissive enough to be compatible with Godot's <a class="reference external" href="https://github.com/godotengine/godot/blob/master/LICENSE.txt">MIT license</a>.
+You must include this license in your contribution.
+Examples of compatible licenses include Apache 2.0, BSD, ISC, MPL 2.0, and MIT itself.</p>
+<p>Most other licenses are not compatible with Godot's license. This includes &quot;copy-left&quot; licenses like GPL or LGPL,
+since these licenses effectively disallow static linking in proprietary software
+(which Godot is distributed as in most exported projects).
+This also applies for libraries that are only linked in the editor.</p>
+<p>&quot;Source-available&quot; is <strong>not</strong> &quot;open-source&quot;. For example, you cannot submit exclusive code or ideas from proprietary
+game engines like Unreal or Unity, nor use their code as inspiration. We strongly recommend against reading any
+&quot;source-available&quot; code before contributing to Godot.</p>
+</section>
+<section id="no-features-from-new-contributors">
+<span id="doc-new-contributor-rules"></span><h2>No features from new contributors<a class="headerlink" href="#no-features-from-new-contributors" title="Link to this heading"></a></h2>
+<p>The Godot project has grown considerably over the years and reviewing contributions takes a heavy toll on maintainers,
+while also creating risks for the stability of the existing codebase. Given this we want to ensure that
+new contributors take the time to learn the codebase and engage with maintainers to build trust by working on bug
+fixes and documentation before diving into significant projects.</p>
+<p>As a consequence, new features or significant re-factoring from new contributors will not be accepted without explicit
+permission from maintainers in advance. We consider a new contributor to be someone with 3 or fewer merged pull requests.</p>
+</section>
+<section id="contribute-one-change-at-a-time">
+<h2>Contribute one change at a time<a class="headerlink" href="#contribute-one-change-at-a-time" title="Link to this heading"></a></h2>
+<p>Each pull request should contain a single self-contained change. Avoid pushing multiple unrelated changes
+in the same pull request.</p>
+<p>As a rule of thumb, if your pull request could be split into two pull requests without
+breaking anything, it should probably be two separate pull requests.</p>
+<p>The exception to this rule is &quot;batching changes&quot;, where you make the same kind of change to multiple places in
+the codebase. In this case, it is preferable to make one larger pull request instead of many small ones.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Imagine yourself in the shoes of the reviewer: how can you make the PR easy to review and approve?
+This is best achieved if your pull request is simple, coherent, and uncontroversial.</p>
+<p>Limiting pull requests to one change at a time also simplifies the Git history, makes it possible to
+revert or cherry-pick specific changes, and reduces the potential of accidentally introducing bugs.</p>
+</div>
+</section>
+<section id="explain-your-contributions">
+<h2>Explain your contributions<a class="headerlink" href="#explain-your-contributions" title="Link to this heading"></a></h2>
+<p>When submitting a pull request, please make use of the pull request description.</p>
+<p>Your pull request description should, as clearly and succinctly as possible, explain all the necessary
+information to understand the changes you made.</p>
+<p>For example, if you're just fixing a typo, a single sentence description is appropriate.</p>
+<p>However, if your change is large, or may affect multiple systems in potentially unexpected ways,
+we expect you to be more thorough with your explanation.</p>
+<p>Here are the components of a thorough pull request description:</p>
+<ul class="simple">
+<li><p><strong>Summary of changes:</strong> A short overview of what is changed.</p></li>
+<li><p><strong>Motivation:</strong> Why you opened the pull request. Ideally, this is a link to an <a class="reference external" href="https://github.com/godotengine/godot/issues">issue</a> or <a class="reference external" href="https://github.com/godotengine/godot-proposals/issues">proposal</a>.</p></li>
+<li><p><strong>Related work:</strong> Link to similar pull requests or ongoing discussions that provide additional context.</p></li>
+<li><p><strong>Technical overview:</strong> Briefly explain each of the changes in this pull request, and why they are necessary.</p></li>
+<li><p><strong>Testing:</strong> How you tested the pull request, and the results of your testing. For example, optimization PRs should be
+profiled or benchmarked (see <a class="reference internal" href="engine/optimization.html#doc-optimization"><span class="std std-ref">Optimization guidelines</span></a>).</p></li>
+<li><p><strong>Discussion:</strong> How you see the pull request in context. For example, list risks and caveats and how they could be
+mitigated. If existing projects may be negatively affected, you should disclose this here, with particular attention
+to possible <a class="reference internal" href="engine/compatibility.html#doc-handling-compatibility-breakages"><span class="std std-ref">compatibility breakages</span></a> and regressions.</p></li>
+<li><p><strong>Additional work:</strong> If applicable, highlight anything you need help with or feedback on, and describe any necessary
+or potential follow-up work.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may not need <em>every</em> one of these components, and you do not need to copy this exact structure.
+Always ask yourself what would be most helpful for reviewers, and try to balance brevity and thoroughness
+appropriately.</p>
+</div>
+</section>
+<section id="contribute-only-what-you-understand">
+<h2>Contribute only what you understand<a class="headerlink" href="#contribute-only-what-you-understand" title="Link to this heading"></a></h2>
+<p>Please only submit code that you understand and are prepared to explain to a maintainer.</p>
+<p>If you do not fully understand the code, please take extra care to test it rigorously, and disclose this in your
+pull request description.</p>
+<p>This especially applies if you implement the idea of another person, copy code from elsewhere, or if you use AI to
+assist you with your contribution. In all of these cases, you must disclose which part of your submission wasn't fully
+authored by you.</p>
+</section>
+<section id="ai-assisted-contributions">
+<span id="doc-ai-assisted-contributions"></span><h2>AI-assisted contributions<a class="headerlink" href="#ai-assisted-contributions" title="Link to this heading"></a></h2>
+<p>This policy is intended to provide clarity for contributors and maintainers as to what amount of AI-assistance is
+acceptable. These rules should be applied with empathy and considering <a class="reference external" href="https://godotengine.org/code-of-conduct/">code of conduct</a>. Ultimately, our goal is to
+reduce the review burden on maintainers and to review PRs with a focus on quality and maintainability.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>&quot;AI&quot; in this page refers to any LLM/generative
+AI model like ChatGPT, Claude, Grok, etc., or any other
+models that fulfill the same role. Translation software
+used only for communicating is not considered AI in the
+context of this policy.</p>
+<p>This policy does not apply to thirdparty libraries
+which the Godot project relies on.</p>
+</div>
+<section id="for-contributors">
+<h3>For contributors<a class="headerlink" href="#for-contributors" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Do not use AI-generated text in human-to-human communication</strong></p>
+<ul>
+<li><p>This includes all interactions on GitHub, RocketChat, and in official Godot communities.</p></li>
+<li><p>Machine translations are still acceptable as long as the original text was written by a human.</p></li>
+</ul>
+</li>
+<li><p><strong>Do not allow an AI agent to submit PRs on your behalf</strong></p></li>
+<li><p><strong>Do not use AI to generate substantial pieces of code</strong></p>
+<ul>
+<li><p>AI should not be used to author code. Code authoring is more than typing, it includes making decisions about where the code should go, what techniques/algorithms should be used, and ultimately what the code should look like. All those decisions need to be made by a human.</p></li>
+<li><p>For example using AI for code completion is permissible. The important consideration is whether the AI is producing the same code you would have written manually or not. If you do not have the knowledge/ability to write the code yourself, you are not allowed to use AI to write it.</p></li>
+<li><p>You must understand and take responsibility for everything that you submit.</p></li>
+</ul>
+</li>
+<li><p><strong>Do not use AI to generate user-facing media (e.g. documentation, images and audio)</strong></p></li>
+</ul>
+<p>If you do use AI, in compliance with the above principles, we expect that you put in effort to proofread and improve
+anything it generates. As maintainers spend significant time reviewing your code, please make sure that the code you
+submit is well-tested and functional. Please be respectful of their time and only submit something you have put thought
+and effort into. Repeated submission of low-effort contributions may result in limits or bans being placed on your account.</p>
+</section>
+<section id="for-maintainers">
+<h3>For maintainers<a class="headerlink" href="#for-maintainers" title="Link to this heading"></a></h3>
+<ul>
+<li><p><strong>Maintainers are not obliged to review AI-assisted PRs</strong></p></li>
+<li><p><strong>Maintainers must pay special attention to quality and maintainability when reviewing AI-assisted PRs</strong></p></li>
+<li><p><strong>All PRs must be reviewed and approved by a human before merging</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>We want humans to have the last word on every review and approval.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Remember the</strong> <a class="reference external" href="https://godotengine.org/code-of-conduct/">code of conduct</a> <strong>and always presume good intent</strong></p></li>
+</ul>
+<section id="substantial-code-definition">
+<h4>&quot;Substantial code&quot; definition<a class="headerlink" href="#substantial-code-definition" title="Link to this heading"></a></h4>
+<p>“Substantial code” is code that poses potential risks to quality and maintainability of the engine and is to be measured
+on the basis of: the amount of code involved, its degree of complexity, the level of experience of the contributor in
+the Godot project, the area of the codebase, and ultimately the risk of merging the code.</p>
+<p>It is commonly accepted that code changes of 15 lines or less are generally trivial (and cannot be the subject of
+copyright). Accordingly, we presume that anything under 15 lines should be considered trivial unless otherwise shown.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../feedback/ideas.html" class="btn btn-neutral float-left" title="Proposing and discussing ideas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="workflows/index.html" class="btn btn-neutral float-right" title="Workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Godot Engine Contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

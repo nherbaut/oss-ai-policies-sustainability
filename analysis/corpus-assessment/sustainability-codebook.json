@@ -1,0 +1,190 @@
+{
+  "source": "User-provided sustainability diagram, 2026-11-06",
+  "notes": "Labels and memo wording transcribed from the diagram. Branch nodes are QualCoder categories; leaf nodes are codes. Colors approximate the diagram. No passages were coded.",
+  "categories": [
+    {
+      "name": "Social",
+      "memo": "sustainability aims at preserving the societal communities in their solidarity and services.",
+      "codes": [
+        {
+          "name": "Equitable Access",
+          "memo": "End-user data availability\nhorizontal and vertical equity",
+          "color": "#ffc89f"
+        },
+        {
+          "name": "Ethical Concerns",
+          "memo": "Degree of bias",
+          "color": "#3498db"
+        },
+        {
+          "name": "Customer social value",
+          "memo": "Amount of positive feedbacks",
+          "color": "#c99eb5"
+        },
+        {
+          "name": "User error protection",
+          "memo": "Recovery Time",
+          "color": "#e7d1eb"
+        },
+        {
+          "name": "Digital Inclusivity",
+          "memo": "Number of supported language demographics",
+          "color": "#ae7bdc"
+        },
+        {
+          "name": "Social Engineering",
+          "memo": "Well Being (for the users)",
+          "color": "#c96038"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "name": "Economic",
+      "memo": "sustainability aims at maintaining capital and added value.",
+      "codes": [
+        {
+          "name": "Cost efficiency",
+          "memo": "Development cost- number of workers\namount of time and effort",
+          "color": "#82baf0"
+        },
+        {
+          "name": "Software process evolving intellectual capital",
+          "memo": "Customer capital value\nMarket requirements value\ninnovation value\nmaintenance value",
+          "color": "#7d22cc"
+        },
+        {
+          "name": "Circular Economy",
+          "memo": "Percentage of reused code or services\nAmount of shared infrastructure",
+          "color": "#e1cef0"
+        },
+        {
+          "name": "Affordability",
+          "memo": "Access Cost",
+          "color": "#e6aaaa"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "name": "Technical",
+      "memo": "sustainability refers to longevity of information, systems, and infrastructure and their adequate evolution with changing surrounding conditions.",
+      "codes": [
+        {
+          "name": "Feature Bloat",
+          "memo": "Percentage of user engagement with each feature",
+          "color": "#eccacc"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Repairability",
+          "memo": "",
+          "codes": [
+            {
+              "name": "Degree of traceability documentation",
+              "memo": "",
+              "color": "#f5e4cf"
+            },
+            {
+              "name": "Degree of Cohesion and coupling",
+              "memo": "",
+              "color": "#b9c9c1"
+            }
+          ],
+          "categories": []
+        },
+        {
+          "name": "Perdurability",
+          "memo": "",
+          "codes": [
+            {
+              "name": "Technical evolution",
+              "memo": "",
+              "color": "#dce7e2"
+            },
+            {
+              "name": "functional evolution",
+              "memo": "",
+              "color": "#7164d9"
+            }
+          ],
+          "categories": []
+        },
+        {
+          "name": "Longitivity",
+          "memo": "",
+          "codes": [
+            {
+              "name": "Mean time between failures",
+              "memo": "",
+              "color": "#c0f078"
+            },
+            {
+              "name": "Average life span in usage hours per year",
+              "memo": "",
+              "color": "#a4b8d6"
+            }
+          ],
+          "categories": []
+        }
+      ]
+    },
+    {
+      "name": "Environmental",
+      "memo": "sustainability refers to improving human welfare by protecting the natural resources:\nwater, land, air, minerals\nand ecosystem services.",
+      "codes": [
+        {
+          "name": "Water footprint",
+          "memo": "",
+          "color": "#ef6900"
+        },
+        {
+          "name": "E-waste",
+          "memo": "",
+          "color": "#00ea84"
+        },
+        {
+          "name": "Carbon Footprint",
+          "memo": "",
+          "color": "#a5c1b3"
+        },
+        {
+          "name": "Resource management",
+          "memo": "",
+          "color": "#c99eb5"
+        },
+        {
+          "name": "Energy Consumption",
+          "memo": "Energy efficiency\nRuntime efficiency\nCPU-intensity\nmemory usage\nperipheral intensity\nIdleness and Algorithmic efficiency",
+          "color": "#faecdd"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Code Sustainability",
+          "memo": "",
+          "codes": [
+            {
+              "name": "CPU usage",
+              "memo": "",
+              "color": "#dda3a3"
+            },
+            {
+              "name": "Memory usage",
+              "memo": "",
+              "color": "#a5c1b3"
+            }
+          ],
+          "categories": []
+        }
+      ]
+    },
+    {
+      "name": "Individual",
+      "memo": "sustainability refers to maintaining human capital (e.g., health, education, skills, knowledge, leadership, and access to services).",
+      "codes": [],
+      "categories": []
+    }
+  ]
+}
