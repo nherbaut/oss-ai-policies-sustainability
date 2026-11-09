@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "id": "9ed3b9efb8984debbc7c99ffd6d509d0",
+  "coder": "NicolasH",
+  "base": "57cff61ec41416ec3c53e2b5baf5855a7855aaae",
+  "destination": "57cff61ec41416ec3c53e2b5baf5855a7855aaae",
+  "submission": "82ed53d375abf270ff83a8c7e9f91a4144b76e15",
+  "pr": null,
+  "branch": "coding/nicolash/20261109-093344-9ed3b9ef",
+  "integrated_at": "2026-11-09T09:48:13.495341+00:00",
+  "report": {
+    "coder": "NicolasH",
+    "changes": [
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          1,
+          1511,
+          1735,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 8,
+          "cid": 1,
+          "fid": 148,
+          "seltext": "- **privilege:** only large organizations can effectively train and operate high-performance LLMs, limited accessibility to the technology for the unprivileged, and bias in the datasets and outputs in favor of the privileged",
+          "pos0": 1511,
+          "pos1": 1735,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:37:05",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "- **privilege:** only large organizations can effectively train and operate high-performance LLMs, limited accessibility to the technology for the unprivileged, and bias in the datasets and outputs in favor of the privileged",
+        "code": "Equitable Access",
+        "operation": "add"
+      },
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          18,
+          1736,
+          1832,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 10,
+          "cid": 18,
+          "fid": 148,
+          "seltext": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+          "pos0": 1736,
+          "pos1": 1832,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:37:25",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+        "code": "Water footprint",
+        "operation": "add"
+      },
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          20,
+          1736,
+          1832,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 9,
+          "cid": 20,
+          "fid": 148,
+          "seltext": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+          "pos0": 1736,
+          "pos1": 1832,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:37:22",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+        "code": "Carbon Footprint",
+        "operation": "add"
+      },
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          21,
+          524,
+          548,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 7,
+          "cid": 21,
+          "fid": 148,
+          "seltext": "fully open and frugal AI",
+          "pos0": 524,
+          "pos1": 548,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:36:12",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "fully open and frugal AI",
+        "code": "Resource management",
+        "operation": "add"
+      },
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          22,
+          1736,
+          1832,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 11,
+          "cid": 22,
+          "fid": 148,
+          "seltext": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+          "pos0": 1736,
+          "pos1": 1832,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:37:27",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "- **environmental:** land use, carbon footprint, and water use for cooling of large data centers",
+        "code": "Energy Consumption",
+        "operation": "add"
+      },
+      {
+        "table": "code_text",
+        "identity": [
+          148,
+          22,
+          524,
+          548,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 6,
+          "cid": 22,
+          "fid": 148,
+          "seltext": "fully open and frugal AI",
+          "pos0": 524,
+          "pos1": 548,
+          "owner": "NicolasH",
+          "date": "2026-11-09 10:36:06",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "cases": [
+          "freecad/freecad"
+        ],
+        "excerpt": "fully open and frugal AI",
+        "code": "Energy Consumption",
+        "operation": "add"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "code_text:add": 6
+    },
+    "by_document": [
+      {
+        "document": "freecad__freecad--ai_policy--a7eccda58eb2.md",
+        "owner": "NicolasH",
+        "summary": {
+          "code_text:add": 6
+        }
+      }
+    ]
+  }
+}
