@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "id": "dee22c74dca74e908aab09a5ad0f2f12",
+  "coder": "NicolasH",
+  "base": "b9e1bcb227d2cb01411893b976c0169c6602d959",
+  "destination": "6be6135c256ae48ded942ced144f83be59b910c5",
+  "submission": "89275936364b7f1387f5abe3c2cf57d66cec302d",
+  "pr": 4,
+  "branch": "coding/nicolash/20261109-143155-dee22c74",
+  "integrated_at": "2026-11-09T14:40:04.668477+00:00",
+  "report": {
+    "coder": "NicolasH",
+    "changes": [],
+    "conflicts": [],
+    "summary": {},
+    "by_document": []
+  }
+}
