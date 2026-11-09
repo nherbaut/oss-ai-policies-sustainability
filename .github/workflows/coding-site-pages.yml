@@ -1,0 +1,66 @@
+name: Deploy coding explorer to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/coding-site-pages.yml'
+      - 'Makefile'
+      - 'data/coding.qda/data.qda'
+      - 'scripts/build_coding_site.py'
+      - 'scripts/merge_qualcoder.py'
+      - 'scripts/coding_site/**'
+      - 'scripts/tests/test_build_coding_site.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coding-site-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # Manual runs must also publish only the integrated master snapshot.
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Test the static exporter
+        run: python3 -B -m unittest discover -s scripts/tests -p test_build_coding_site.py -v
+
+      - name: Build the coding explorer
+        run: make coding-site
+
+      - name: Upload the generated site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/coding-site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy the coding explorer
+        id: deployment
+        uses: actions/deploy-pages@v4

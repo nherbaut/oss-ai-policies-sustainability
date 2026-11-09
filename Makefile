@@ -10,7 +10,7 @@ clean:
 	rm -f $(PDF)
 
 # See CODING.md. Export arguments as data rather than interpolating them in shell code.
-export PR BRANCH SESSION
+export PR BRANCH SESSION RESOLUTIONS
 
 coding:
 	@bash scripts/coding-session.sh
@@ -47,10 +47,30 @@ coding-integrate:
 		exit 2; \
 	fi
 
+coding-sync:
+	@bash scripts/coding-session.sh sync
+
+coding-codebook-init:
+	@bash scripts/coding-session.sh codebook-init
+
+coding-codebook-register:
+	@bash scripts/coding-session.sh codebook-register
+
+coding-theory-publish:
+	@bash scripts/coding-session.sh theory-publish --branch "$$BRANCH"
+
 coding-test:
 	python3 -B -m unittest discover -s scripts/tests -v
 	node scripts/tests/test_coding_action.cjs
 	bash -n scripts/coding-session.sh
 	@for hook in .githooks/*; do sh -n "$$hook" || exit; done
 
+# Static, read-only snapshot of the current checkout's QualCoder project.
+coding-site:
+	python3 -B scripts/build_coding_site.py
+
+.PHONY: coding-site
+
 .PHONY: all clean coding coding-start coding-setup coding-protect coding-finish coding-request-merge coding-status coding-integrate coding-test
+
+.PHONY: coding-sync coding-codebook-init coding-codebook-register coding-theory-publish

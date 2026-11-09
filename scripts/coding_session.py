@@ -18,6 +18,8 @@ import unicodedata
 import uuid
 
 from merge_qualcoder import MergeError, ensure_closed, plan_merge, read_project, write_candidate
+import codebook as cb
+from coding_codebook import CodebookWorkflow, validate_v2, context_at, load_resolutions
 from coding_guards import authorize_commit, install as install_guards, protect_database, require_installed, writable_database
 
 PROJECT = 'data/coding.qda'
@@ -112,7 +114,8 @@ def fetch_master(repo):
 
 
 def check_manifest(manifest):
-    if (manifest.get('version') != VERSION or manifest.get('project') != PROJECT
+    if (('codebook_version' in manifest and manifest['codebook_version'] != 1)
+            or manifest.get('version') != VERSION or manifest.get('project') != PROJECT
             or not re.fullmatch(r'[a-f0-9]{32}', manifest.get('id', ''))
             or not re.fullmatch(r'[a-f0-9]{40,64}', manifest.get('base', ''))
             or not manifest.get('branch', '').startswith('coding/')
@@ -139,6 +142,10 @@ def coding_commit_message(title, report):
     for document in documents:
         counts = ', '.join(f'{labels[key]}: {value}' for key, value in sorted(document['changes'].items()))
         lines.append(f'- {document["path"] or document["name"]} ({counts})')
+    proposals = report.get('codebook_proposals', report.get('codebook_changes', []))
+    if proposals:
+        lines += ['', 'Codebook proposals/changes:']
+        lines += [f'- {c["after"]["kind"]}: {c["after"]["name"]} ({c["id"]})' for c in proposals]
     return '\n'.join(lines)
 
 
@@ -147,14 +154,20 @@ def validate_submission(repo, session, head, temporary):
     ancestor(repo, session['base'], head)
     path = f'coding/sessions/{session["id"]}.json'
     changed = set(p for p in run(['git', 'diff', '--name-only', '--no-renames', '-z', session['base'], head], repo).stdout.split('\0') if p)
-    if not changed <= {DATABASE, path} or path not in changed:
+    allowed = {DATABASE, path} | ({cb.REGISTRY} if session.get('codebook_version') else set())
+    if not changed <= allowed or path not in changed:
         raise MergeError('Submission changes files outside its database and session manifest')
     stored = tracked_json(repo, head, path)
     if stored != session:
         raise MergeError('Session manifest does not match the submitted snapshot')
     base = extract_project(repo, session['base'], temporary / 'base')
     submitted = extract_project(repo, head, temporary / 'submission')
-    report = plan_merge(read_project(base), read_project(base), read_project(submitted), session['coder'])
+    if session.get('codebook_version'):
+        report = validate_v2(repo, session, head, base, submitted)
+    else:
+        if tracked_json(repo, 'refs/remotes/origin/master', cb.REGISTRY, optional=True):
+            raise MergeError('Legacy sessions must be integrated before codebook initialization')
+        report = plan_merge(read_project(base), read_project(base), read_project(submitted), session['coder'])
     if report['conflicts'] or report['summary'] != session['summary']:
         raise MergeError('Submission differs from its validated completion summary')
     if 'changed_documents' in session and session['changed_documents'] != changed_documents(report):
@@ -162,7 +175,7 @@ def validate_submission(repo, session, head, temporary):
     return base, submitted, report
 
 
-class Workflow:
+class Workflow(CodebookWorkflow):
     def __init__(self, repo):
         self.repo = Path(git(repo, 'rev-parse', '--show-toplevel')).resolve()
         self.local = Path(git(self.repo, 'rev-parse', '--absolute-git-dir')) / 'qualcoder'
@@ -203,6 +216,7 @@ class Workflow:
         branch = f'coding/{slug[:40]}/{datetime.now(timezone.utc):%Y%m%d-%H%M%S}-{identity[:8]}'
         session = dict(version=VERSION, id=identity, coder=coder, branch=branch,
                        base=git(self.repo, 'rev-parse', 'HEAD'), project=PROJECT, started_at=now(), phase='active')
+        self.codebook_start_context(session)
         # Persist recovery state before any project mutation.
         git(self.repo, 'switch', '-c', branch)
         self.state.update(active=session, preferred_coder=coder)
@@ -223,6 +237,8 @@ class Workflow:
         if self.branch() != session['branch']:
             raise MergeError(f'Resume the session branch first: {session["branch"]}')
         ensure_closed(self.repo / PROJECT)
+        if session.get('codebook_version'):
+            return self.finish_codebook()
         manifest_path = f'coding/sessions/{session["id"]}.json'
         head = git(self.repo, 'rev-parse', 'HEAD')
         # A crash after commit but before the local state update is recoverable.
@@ -486,13 +502,25 @@ class Workflow:
             base, incoming, _ = validate_submission(self.repo, manifest, head, workspace / 'inputs')
             git(self.repo, 'worktree', 'add', '-b', integration_branch, worktree, master)
             destination = worktree / PROJECT
-            report = plan_merge(read_project(base), read_project(destination), read_project(incoming), manifest['coder'])
+            registry = None
+            if manifest.get('codebook_version'):
+                context = context_at(self.repo, manifest, head)
+                report, expected, registry = cb.submission_plan(
+                    read_project(base), read_project(destination), read_project(incoming),
+                    tracked_json(self.repo, manifest['base'], cb.REGISTRY),
+                    tracked_json(self.repo, master, cb.REGISTRY), context, manifest['id'], manifest['coder'],
+                    load_resolutions(getattr(self, 'resolutions', None)))
+            else:
+                report = plan_merge(read_project(base), read_project(destination), read_project(incoming), manifest['coder'])
             save_json(workspace / 'report.json', report)
             print(json.dumps(report, indent=2, ensure_ascii=False))
             if report['conflicts']:
                 raise MergeError('Conflicts require review; master was not changed')
             candidate = workspace / 'candidate.qda'
-            write_candidate(base, destination, incoming, manifest['coder'], candidate, report)
+            if registry is not None:
+                cb.write_snapshot(destination, expected, candidate)
+            else:
+                write_candidate(base, destination, incoming, manifest['coder'], candidate, report)
             candidate_hash = hashlib.sha256((candidate / 'data.qda').read_bytes()).hexdigest()
             print(f'Validated candidate: {candidate}\nReport: {workspace / "report.json"}')
             prompt = 'Commit and push this integration to origin/master'
@@ -523,10 +551,14 @@ class Workflow:
             save_json(worktree / audit_path, dict(version=VERSION, id=identity, coder=manifest['coder'],
                                                 base=manifest['base'], destination=master, submission=head,
                                                 pr=number, branch=branch, integrated_at=now(), report=report))
-            git(worktree, 'add', '--', DATABASE, audit_path)
+            integration_paths = [DATABASE, audit_path]
+            if registry is not None:
+                save_json(worktree / cb.REGISTRY, registry)
+                integration_paths.append(cb.REGISTRY)
+            git(worktree, 'add', '--', *integration_paths)
             description = f'notification #{number}' if number is not None else f'branch {branch}'
             message = coding_commit_message(f'Integrate coding session {identity} ({description})', report)
-            git(worktree, 'commit', '-m', message, '--', DATABASE, audit_path, commit_kind='integration')
+            git(worktree, 'commit', '-m', message, '--', *integration_paths, commit_kind='integration')
             commit = git(worktree, 'rev-parse', 'HEAD')
             git(worktree, 'push', 'origin', f'{commit}:refs/heads/master')
             # A failed push leaves the integration branch/worktree recoverable.
@@ -541,6 +573,10 @@ class Workflow:
                 print(f'Integrated branch {branch} as {commit}.')
                 self.notify_branch_integration(branch, identity, head, commit)
             git(self.repo, 'worktree', 'remove', worktree)
+        except cb.CodebookConflict as error:
+            save_json(workspace / 'conflicts.json', error.report)
+            print(f'Conflict report: {workspace / "conflicts.json"}')
+            raise
         except BaseException:
             print(f'Integration workspace retained for recovery: {workspace}')
             raise
@@ -578,9 +614,16 @@ def main():
     for name in ('start', 'finish', 'status', 'setup', 'protect'):
         sub.add_parser(name)
     sub.add_parser('request-merge').add_argument('--session')
+    for name in ('codebook-init', 'codebook-register'):
+        sub.add_parser(name)
+    sub.add_parser('sync').add_argument('--resolutions', default=os.environ.get('RESOLUTIONS') or None)
+    theory = sub.add_parser('theory-publish')
+    theory.add_argument('--branch', required=True)
+    theory.add_argument('--resolutions', default=os.environ.get('RESOLUTIONS') or None)
     integration = sub.add_parser('integrate')
     integration.add_argument('pr', nargs='?', type=int)
     integration.add_argument('--branch')
+    integration.add_argument('--resolutions', default=os.environ.get('RESOLUTIONS') or None)
     args = parser.parse_args()
     try:
         if args.command != 'setup':
@@ -599,9 +642,14 @@ def main():
             elif args.command == 'integrate':
                 if args.pr is not None and args.pr < 1:
                     raise MergeError('PR number must be positive')
+                workflow.resolutions = args.resolutions
                 workflow.integrate(args.pr, branch=args.branch)
+            elif args.command == 'sync':
+                workflow.sync(args.resolutions)
+            elif args.command == 'theory-publish':
+                workflow.theory_publish(args.branch, args.resolutions)
             else:
-                getattr(workflow, args.command)()
+                getattr(workflow, args.command.replace('-', '_'))()
         return 0
     except (MergeError, OSError, sqlite3.Error, ValueError, KeyError, TypeError, EOFError, KeyboardInterrupt) as error:
         print(f'Stopped: {error}')

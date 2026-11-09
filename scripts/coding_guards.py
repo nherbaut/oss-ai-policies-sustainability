@@ -77,7 +77,7 @@ def protect_database(repo):
     active = state(repo).get('active')
     current = branch(repo)
     writable = bool(active and current == active.get('branch') and current.startswith('coding/')
-                    and (active.get('phase') == 'committing' or git(repo, 'rev-parse', 'HEAD') == active.get('base')))
+                    and (active.get('phase') in ('committing', 'syncing') or git(repo, 'rev-parse', 'HEAD') == active.get('checkpoint', active.get('base'))))
     previous = stat.S_IMODE(path.stat().st_mode)
     desired = previous & ~0o222
     if writable:
@@ -156,7 +156,7 @@ def require_installed(repo):
 @contextmanager
 def authorize_commit(repo, kind):
     """Authorize only this exact staged tree and branch for one subprocess."""
-    if kind not in ('session', 'integration'):
+    if kind not in ('session', 'integration', 'sync'):
         raise GuardError('Unknown commit authorization')
     directory = local_directory(repo) / 'commit-permits'
     directory.mkdir(parents=True, exist_ok=True)
@@ -195,10 +195,14 @@ def check_commit(repo):
         raise GuardError('Database commits on master are blocked. Use make coding-start and make coding-finish; maintainers use make coding-integrate.')
     active = state(repo).get('active')
     if current.startswith('coding/') or (active and active.get('branch') == current):
-        if (not active or active.get('branch') != current or active.get('phase') != 'committing'
-                or commit_permit(repo) != 'session'):
+        permit = commit_permit(repo)
+        phase = active.get('phase') if active else None
+        if (not active or active.get('branch') != current
+                or (phase, permit) not in (('committing', 'session'), ('syncing', 'sync'))):
             raise GuardError('Manual commits on coding session branches are blocked. Use make coding-finish.')
         allowed = {DATABASE, f'coding/sessions/{active["id"]}.json'}
+        if permit == 'sync':
+            allowed.add('coding/codebook.json')
         if not paths <= allowed:
             raise GuardError('Session commits may contain only their database and session manifest')
     if current.startswith('integration/') and DATABASE in paths and commit_permit(repo) != 'integration':

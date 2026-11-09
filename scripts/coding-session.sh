@@ -9,7 +9,7 @@ if (( $# )); then
 fi
 python3 "$script_dir/coding_session.py" protect || exit $?
 while true; do
-    printf '\n1) Start a coding session\n2) Complete the ongoing session\n3) Publish an unpublished session (automatic draft PR)\n4) Session status\n5) Integrate a PR or coding branch (maintainer)\nq) Quit\n'
+    printf '\n1) Start a coding session\n2) Complete the ongoing session\n3) Publish an unpublished session (automatic draft PR)\n4) Session status\n5) Integrate a PR or coding branch (maintainer)\n6) Synchronize shared theory into the ongoing session\nq) Quit\n'
     read -r -p 'Choose: ' choice || exit 0
     case "$choice" in
         1) python3 "$script_dir/coding_session.py" start ;;
@@ -21,7 +21,8 @@ while true; do
                coding/*) python3 "$script_dir/coding_session.py" integrate --branch "$target" ;;
                *) python3 "$script_dir/coding_session.py" integrate "$target" ;;
            esac ;;
+        6) python3 "$script_dir/coding_session.py" sync ;;
         q|Q) exit 0 ;;
-        *) printf 'Choose 1–5 or q.\n' ;;
+        *) printf 'Choose 1–6 or q.\n' ;;
     esac
 done

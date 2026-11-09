@@ -41,13 +41,13 @@ setup stops rather than replacing them silently.
 - The database is **read-only on master**, detached checkouts, completed coding
   branches, and branches without a matching active session.
 - Starting or resuming the registered session enables owner write access. Its
-  branch must still be at the session's recorded starting commit.
+  branch must be at its recorded starting commit or latest authorized synchronization checkpoint.
 - Finishing returns to master and restores read-only permissions. Checkout and
   merge hooks reapply permissions after manual branch switches and pulls.
 - Commits containing `data/coding.qda/data.qda` on master are rejected. Ordinary
   tooling/documentation commits on master remain allowed.
 - Manual commits on coding branches are rejected, including empty commits. Use
-  `make coding-finish`. The finish and integration programs authorize only their
+  `make coding-finish` or `make coding-sync`. The finish, synchronization, and integration programs authorize only their
   exact staged tree and branch for their own commit subprocess; they do not leave
   a global bypass enabled. Integration writes occur in its isolated worktree.
 
@@ -101,6 +101,7 @@ Or run its individual commands:
 
 ```sh
 make coding-start
+make coding-sync  # after shared theory changes (once the registry is initialized)
 make coding-finish
 make coding-request-merge
 make coding-status
@@ -132,10 +133,12 @@ make coding-status
 
 Within a session, you may add/edit/delete **your own text coding and
 annotations**, including their memos and importance flags. Do not change source
-text, source/document memos, cases, attributes, codes, categories, journals,
-graphs, or another coder's records. Media/transcript coding is outside version
-one. Codebook changes should be agreed and committed on master between coding
-rounds. Routine bookmarks, the selected coder, display settings, and filters
+text, source/document memos, cases, attributes, journals, graphs, or another coder's
+records. After the codebook registry is initialized, you may also create codes and
+categories attributed to yourself and refine your own new concepts, including
+their hierarchy and definitions. Existing shared concepts are maintained through
+the theory workflow below. Before initialization, codes and categories remain
+frozen. Media/transcript coding is outside this merger's scope. Routine bookmarks, the selected coder, display settings, and filters
 can change; integration retains the master's UI state.
 
 You may code different documents/cases or independently code the same passages.
@@ -186,7 +189,8 @@ overlapping passages by different coders are retained. It understands deletions
 relative to the recorded base; it does not simply union database rows. Different
 edits to the same logical record, deletion versus editing, and incompatible
 additions by the same coder stop integration for review. Changed document text,
-case structure, codebook, or unsupported analytical tables also stop integration.
+case structure, unauthorized shared-codebook changes, or unsupported analytical
+tables also stop integration.
 Deletions that would invalidate graph references are rejected.
 
 New notification PRs show a **Corpus files with coding changes** section, with
@@ -226,6 +230,140 @@ Committed manifests live in `coding/sessions/` on submission branches. Losing th
 local registry does not remove those commits, but the menu will no longer know
 which local sessions to offer automatically.
 
+## Inductive coding and shared theory
+
+The shared codebook uses `coding/codebook.json` to associate permanent UUIDs with
+QualCoder codes/categories. SQLite IDs are local identifiers and can collide
+across branches; synchronization and integration translate them by UUID, including
+code/category references in coding and graphs. The SQLite schema and native
+UTF-16 passage offsets stay unchanged. Names never establish identity on their own.
+
+### Enable once at a clean boundary
+
+First finish and integrate outstanding legacy sessions in every clone. Remove
+published coding branches from the remote after integration. From a clean master
+matching origin/master, with no active session:
+
+```sh
+make coding-setup
+make coding-codebook-init
+git add coding/codebook.json
+git commit -m "Initialize shared codebook identities"
+git push origin master
+```
+
+Initialization writes only the registry; it preserves every existing coded
+passage and leaves the database unchanged. It refuses outstanding local legacy
+jobs or remote coding branches. Coordinate with other coders: a legacy active
+session in another clone cannot be discovered if it was never pushed. New
+sessions use the new protocol only after the registry has been committed and
+published. This implementation does not initialize the research project for you.
+
+### Work inductively on a coding branch
+
+Use `make coding-start` as usual. Add codes/categories in QualCoder under your
+confirmed coder name. You can rename, redefine, recolor, or reorganize those new
+concepts; you cannot edit/delete existing shared concepts or another coder's
+records. Remove an unused local proposal if it is no longer needed. Codebook
+proposals are shown at completion, in the commit, in the notification PR, and in
+its full session manifest. Integration accepts proposals into the shared registry.
+That advances the shared revision for other active sessions.
+
+### Incorporate new shared theory explicitly
+
+Keep QualCoder closed and run:
+
+```sh
+make coding-sync
+```
+
+Synchronization fetches origin/master and imports its **codebook only**. It keeps
+your local codebook proposals and coding, without importing other coders' new
+passages. A preview lists theory changes and your affected passages. Definitions
+are reported for interpretation; assignments are not automatically recoded and no
+review acknowledgement is required. After your confirmation it writes a backup,
+updates the database/registry/progress manifest, and makes an authorized sync
+commit on the existing coding branch. The original baseline stays recorded; the
+new checkpoint is used by the guards. Running sync again when current makes no
+commit. Do not Git-merge or rebase master into an active session.
+
+Completion checks the latest shared revision and asks you to synchronize if it
+changed. Once a session is completed, further theory updates are handled by the
+maintainer during integration: the report shows affected submitted passages and
+preserves their assignments, without requiring the coder to reopen the session.
+
+An interrupted sync before its commit restores the verified backup on the next
+sync/finish command, provided the files have not since changed. An interruption
+after the commit recovers the checkpoint from its committed progress manifest.
+If recovery finds additional edits, it stops and points to the backup rather than
+overwriting them. Reports and backups remain under `.git/qualcoder/sync-*`.
+
+### Publish new theory as a maintainer
+
+Prepare theory manually on a separate maintenance branch, with no coding session:
+
+```sh
+git switch master
+git pull --ff-only
+git switch -c maintenance/new-theory
+chmod u+w data/coding.qda/data.qda
+# Edit only the codebook in QualCoder, then close it.
+make coding-codebook-register
+git add data/coding.qda/data.qda coding/codebook.json coding/theory/
+git commit -m "Register new theory"
+git push -u origin maintenance/new-theory
+git switch master
+make coding-theory-publish BRANCH=maintenance/new-theory
+```
+
+Registration records new UUIDs and a theory manifest; it validates that documents,
+cases, coding, annotations, and other analytical content are unchanged. Re-run
+registration after refining your maintenance work and before committing it.
+Use a fresh branch for each published revision. Publication compares the theory
+branch with its base and the latest master, builds a candidate in an isolated
+worktree, and previews changed concepts and affected master passages. Confirm to
+commit/push the semantic result and its audit in `coding/theory-revisions/`.
+Existing master coding is preserved. A rejected push requires a new preview;
+rerunning an already published snapshot is harmless. Master remains read-only
+and its database commit guard stays enabled.
+
+Maintainers can add, rename, redefine, recolor, and reorganize shared concepts.
+Deleting or merging shared codes/categories is deliberately unsupported. Two
+maintainers changing the same field differently produces a conflict; refine the
+maintenance branch, register it again, and retry. Disjoint field edits can merge.
+
+### Decide conflicts between independently created concepts
+
+Independent same-name codes/categories stop sync or integration even if their
+definitions match. The printed `conflicts.json` includes the current destination
+revision and the proposal UUIDs. Copy it outside the repository and replace its
+`choices` list with explicit decisions, for example:
+
+```json
+{
+  "revision": "CURRENT_DESTINATION_REVISION_FROM_REPORT",
+  "choices": [
+    {"entity": "LOCAL_PROPOSAL_UUID", "action": "adopt-shared", "target": "SHARED_UUID"}
+  ]
+}
+```
+
+Adoption reassigns references to the chosen shared concept. To keep a distinct
+concept, use `{"entity":"LOCAL_PROPOSAL_UUID","action":"rename-local","name":"Distinct name"}`.
+Never edit UUIDs to force equivalence. Resolutions target the exact destination
+revision; stale files are rejected. Run the applicable command again:
+
+```sh
+make coding-sync RESOLUTIONS=/tmp/decisions.json
+make coding-integrate BRANCH=coding/alice/SESSION_BRANCH RESOLUTIONS=/tmp/decisions.json
+make coding-theory-publish BRANCH=maintenance/new-theory RESOLUTIONS=/tmp/decisions.json
+```
+
+These decisions apply to incoming new concepts. Shared-field conflicts require
+refinement on the maintenance branch. If adoption would collapse multiple coding
+records onto one identity, review those passages first; the program rejects that
+case instead of discarding a record.
+
 ## Standalone merger
 
 For manual review of three closed project directories:
@@ -246,11 +384,63 @@ Exit code 2 indicates a conflict, unsupported change, or validation failure.
 The merger verifies matching schemas and frozen project content, exact selected
 excerpts, valid character offsets, references, unique records, and SQLite
 integrity. It checks the complete candidate database against its expected result.
-Text identity and code IDs must remain stable through the coding round.
+Text identity must remain stable through the coding round. The standalone legacy
+merger also requires unchanged code IDs and a frozen codebook; use the session
+commands for codebook-aware merges.
 QualCoder's native text offsets use UTF-16 units. The merger verifies selected
 text against both UTF-16 and legacy Python code-point offsets, preserving the
 stored positions unchanged. Annotation previews prefer native UTF-16 when both
 interpretations are possible, since annotations contain no selected-text field.
+
+## Static coding explorer
+
+Generate a standalone, read-only explorer of the current checkout's coding:
+
+```sh
+make coding-site
+python3 -m http.server 8000 --directory dist/coding-site
+```
+
+Open <http://localhost:8000>. The French interface includes searchable documents,
+the code/category tree and memos, filters by code and coder, highlighted source
+text, overlapping interpretations, coding memos, importance flags, and annotations.
+Selecting a code filters that exact code; the code tree counts all coded passages
+in the snapshot. Documents without coding remain visible unless filtered out.
+Text is displayed verbatim, including Markdown, to preserve coding positions.
+UTF-16 positions and historical code-point positions are validated against the
+stored excerpts. Media files, journals, and application settings are not exported.
+
+The output is `dist/coding-site/` (ignored by Git). Python 3.10+ is the only build
+dependency; no packages, network, backend, or CDN are needed. All document text,
+coder names, document/code memos, and annotations are included in this export.
+Rerun the target to refresh the snapshot; the QualCoder project is never modified.
+Invalid references or text positions stop generation with an explicit error.
+The exporter supports custom locations:
+
+```sh
+python3 -B scripts/build_coding_site.py --project data/coding.qda --output /tmp/coding-site
+```
+
+### GitHub Pages deployment
+
+The workflow `.github/workflows/coding-site-pages.yml` tests and rebuilds the site
+from the committed QualCoder database, then publishes `dist/coding-site/` as a
+GitHub Pages artifact. Generated files, including `.nojekyll` and `.coding-site`,
+stay ignored by Git; only the generator, web assets, and workflow are versioned.
+Relative asset URLs work under a repository subpath.
+
+In the repository's **Settings → Pages → Build and deployment → Source**, select
+**GitHub Actions** once. Commit and push the site sources and workflow to `master`.
+Changes to the database, generator, assets, exporter tests, or build workflow then
+trigger deployment automatically. You can also select **Deploy coding explorer
+to GitHub Pages → Run workflow** in the Actions tab, with the `master` branch.
+Manual runs on other branches are skipped. No personal token is needed: the
+deployment job uses `GITHUB_TOKEN` and GitHub's OIDC permissions.
+
+The published URL appears in the workflow's `github-pages` environment. Only the
+generated site directory is uploaded, including the exported corpus text, coder
+names, memos, and annotations. `make coding-site` itself remains a local build.
+See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Tests
 

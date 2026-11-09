@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorer le codage · Politiques IA et soutenabilité</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <p class="eyebrow">OSS · Politiques IA · Soutenabilité</p>
+    <h1>Explorer le codage</h1>
+    <p>Documents, codes et interprétations du corpus de recherche.</p>
+    <p id="summary" role="status"></p>
+  </header>
+  <main>
+    <aside class="sidebar" aria-label="Exploration du corpus">
+      <section class="filters">
+        <h2>Parcourir le corpus</h2>
+        <label for="search">Rechercher dans les documents et leur texte</label>
+        <input id="search" type="search" placeholder="Projet, fichier ou expression…">
+        <label for="coder">Codeur</label>
+        <select id="coder"><option value="">Tous les codeurs</option></select>
+        <label class="check"><input id="coded-only" type="checkbox"> Documents codés uniquement</label>
+        <button id="reset" type="button">Réinitialiser les filtres</button>
+      </section>
+      <section>
+        <h2>Codes <span id="code-filter"></span></h2>
+        <p class="hint">Choisir un code pour filtrer ses passages. Les nombres comptent les passages codés.</p>
+        <button id="all-codes" type="button" aria-pressed="true">Tous les codes</button>
+        <div id="code-tree"></div>
+      </section>
+      <section>
+        <h2>Documents <span id="document-count"></span></h2>
+        <div id="documents" class="document-list"></div>
+      </section>
+    </aside>
+    <article id="viewer" aria-label="Document sélectionné">
+      <div id="empty" class="empty">Choisir un document pour consulter son codage.</div>
+      <div id="document-view" hidden>
+        <header class="document-header">
+          <p id="entity" class="eyebrow"></p>
+          <h2 id="document-title"></h2>
+          <p id="document-info" class="hint"></p>
+          <details id="provenance"><summary>Provenance et mémo du document</summary><pre id="document-memo"></pre></details>
+        </header>
+        <nav class="tabs" aria-label="Vues du document">
+          <a href="#document-text">Texte et surlignages</a>
+          <a href="#passage-list">Détails des passages</a>
+        </nav>
+        <p class="hint legend">Les passages surlignés sont sélectionnables. Un contour signale plusieurs codes ou codeurs superposés. Les annotations sont soulignées.</p>
+        <div id="document-text" class="source-text" tabindex="0"></div>
+        <section id="passage-list"><h3>Passages et annotations</h3><div id="passages"></div></section>
+      </div>
+    </article>
+  </main>
+  <footer>Instantané de consultation · <span id="snapshot"></span> · Généré depuis QualCoder, en lecture seule.</footer>
+  <noscript>Activez JavaScript pour parcourir cet instantané du codage.</noscript>
+</body>
+</html>

@@ -294,7 +294,7 @@ class WorkflowTests(unittest.TestCase):
         fixture(self.repo / session.PROJECT)
         shutil.copytree(ROOT / '.githooks', self.repo / '.githooks')
         (self.repo / 'scripts').mkdir()
-        for name in ('coding_guards.py','coding_session.py','merge_qualcoder.py','coding-session.sh'):
+        for name in ('coding_guards.py','coding_session.py','merge_qualcoder.py', 'codebook.py', 'coding_codebook.py','coding-session.sh'):
             shutil.copy2(ROOT / 'scripts' / name, self.repo / 'scripts' / name)
         shutil.copy2(ROOT / 'Makefile', self.repo / 'Makefile')
         (self.repo / '.gitignore').write_text('__pycache__/\ndata/*_BKUP_*.qda/\ndata/*.qda/ai_data/\n')

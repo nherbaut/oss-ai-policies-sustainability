@@ -156,3 +156,25 @@ test('large file lists stay within PR body limits and link to the full manifest'
   assert.ok(body.includes('additional files'));
   assert.ok(body.includes(`[full file list](https://github.com/team/research/blob/${state.head}/coding/sessions/${state.manifest.id}.json)`));
 });
+
+test('codebook sessions list proposals and accept the synchronized registry path', async () => {
+  const {state, run} = harness();
+  state.manifest.codebook_version = 1;
+  state.manifest.codebook_context = {shared: {revision: 'd'.repeat(64)}, history: [{master: 'e'.repeat(40)}]};
+  state.manifest.codebook_proposals = [{id: '11111111-1111-4111-8111-111111111111',
+    before: null, after: {kind: 'code', name: 'Emergent sustainability'}}];
+  state.files.push({filename: 'coding/codebook.json', status: 'modified'});
+  await run();
+  assert.match(state.created[0].body, /Emergent sustainability/);
+  assert.match(state.created[0].body, /Explicit synchronizations: 1/);
+  state.manifest.codebook_context.shared.revision = 'invalid';
+  await assert.rejects(run(), /Invalid codebook/);
+});
+
+test('an unfinished synchronization checkpoint does not create a notification PR', async () => {
+  const {state, run} = harness();
+  delete state.manifest.completed_at;
+  await run();
+  assert.equal(state.created.length, 0);
+  assert.match(state.messages[0], /Active synchronization checkpoint/);
+});

@@ -34,12 +34,18 @@ jobs:
             const tree = await github.rest.git.getTree({owner, repo, tree_sha: commit.data.tree.sha, recursive: '1'});
             if (tree.data.truncated) throw new Error('Repository tree was truncated; cannot validate the session manifest.');
             const matches = [];
+            let progress = false;
             for (const entry of tree.data.tree) {
               if (entry.type !== 'blob' || !/^coding\/sessions\/[a-f0-9]{32}\.json$/.test(entry.path)) continue;
               const blob = await github.rest.git.getBlob({owner, repo, file_sha: entry.sha});
               if (blob.data.encoding !== 'base64') throw new Error('Unexpected manifest encoding.');
               const manifest = JSON.parse(Buffer.from(blob.data.content, 'base64').toString('utf8'));
-              if (manifest.branch === branch) matches.push({manifest, path: entry.path});
+              if (manifest.branch === branch && !manifest.completed_at) progress = true;
+              if (manifest.branch === branch && manifest.completed_at) matches.push({manifest, path: entry.path});
+            }
+            if (matches.length === 0 && progress) {
+              core.info('Active synchronization checkpoint; publish after completing the session.');
+              return;
             }
             if (matches.length !== 1) throw new Error('Expected exactly one completed session manifest for this branch.');
             const {manifest: m, path} = matches[0];
@@ -73,10 +79,11 @@ jobs:
             }
             const comparison = await github.rest.repos.compareCommitsWithBasehead({owner, repo, basehead: `${m.base}...${head}`});
             const files = comparison.data.files || [];
-            if (comparison.data.status !== 'ahead' || files.length === 0 || files.length > 2 ||
+            if (comparison.data.status !== 'ahead' || files.length === 0 || files.length > (m.codebook_version === 1 ? 3 : 2) ||
                 !files.some(f => f.filename === path && f.status === 'added') ||
                 !files.every(f => (f.filename === path && f.status === 'added') ||
-                                 (f.filename === 'data/coding.qda/data.qda' && f.status === 'modified'))) {
+                                 (f.filename === 'data/coding.qda/data.qda' && f.status === 'modified') ||
+                                 (m.codebook_version === 1 && f.filename === 'coding/codebook.json' && f.status === 'modified'))) {
               throw new Error('Coding branches may change only their database and new session manifest.');
             }
             // Do not reopen a completed/rejected job or accept a different
@@ -123,11 +130,28 @@ jobs:
               const manifestUrl = `https://github.com/${owner}/${repo}/blob/${head}/${path}`;
               if (shown < documents.length) corpusList += `\n${documents.length - shown} additional files: [full file list](${manifestUrl}).`;
             }
+            let codebookList = '';
+            if (m.codebook_version !== undefined) {
+              if (m.codebook_version !== 1 || !m.codebook_context ||
+                  !/^[a-f0-9]{64}$/.test(m.codebook_context.shared?.revision || '') ||
+                  !Array.isArray(m.codebook_context.history) || !Array.isArray(m.codebook_proposals) ||
+                  !m.codebook_proposals.every(c => c && /^[a-f0-9-]{36}$/.test(c.id) &&
+                    c.after && ['code', 'category'].includes(c.after.kind) && typeof c.after.name === 'string')) {
+                throw new Error('Invalid codebook proposal metadata.');
+              }
+              const proposalLines = m.codebook_proposals.slice(0, 100).map(c =>
+                `- ${escapeMarkdown(c.after.kind)}: ${escapeMarkdown(c.after.name.slice(0, 200))} (${c.id})`);
+              codebookList = '### Codebook proposals\n\n' + (proposalLines.join('\n') || 'None.') +
+                `\n\nShared theory revision: \`${m.codebook_context.shared.revision}\`. ` +
+                `Explicit synchronizations: ${m.codebook_context.history.length}.\n` +
+                `Full definitions and theory impact reports are in [the session manifest](https://github.com/${owner}/${repo}/blob/${head}/${path}).`;
+            }
             const body = [
               `Coding session by **${escapedCoder}**.`,
               '**Notification only: do not use GitHub Merge or rebase this branch.**',
               `Session: \`${m.id}\`\nBase: \`${m.base}\`\nSnapshot: \`${head}\``,
               corpusList,
+              codebookList,
               'Changes:\n```json\n' + JSON.stringify(m.summary, null, 2) + '\n```',
               'Maintainer: run `make coding-integrate PR=PR_NUMBER`.',
               `Without gh, run: \`make coding-integrate BRANCH=${branch}\`.`,
