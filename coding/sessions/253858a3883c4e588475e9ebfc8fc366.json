@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "id": "253858a3883c4e588475e9ebfc8fc366",
+  "coder": "NicolasH",
+  "branch": "coding/nicolash/20261109-143641-253858a3",
+  "base": "6be6135c256ae48ded942ced144f83be59b910c5",
+  "project": "data/coding.qda",
+  "started_at": "2026-11-09T14:36:41.026807+00:00",
+  "completed_at": "2026-11-09T14:37:55.486507+00:00",
+  "summary": {
+    "code_text:add": 1
+  },
+  "changed_documents": [
+    {
+      "name": "9001__copyparty--contributing--2058a428799a.md",
+      "path": "data/coding.qda/documents/9001__copyparty--contributing--2058a428799a.md",
+      "cases": [
+        "9001/copyparty"
+      ],
+      "changes": {
+        "code_text:add": 1
+      }
+    }
+  ]
+}
