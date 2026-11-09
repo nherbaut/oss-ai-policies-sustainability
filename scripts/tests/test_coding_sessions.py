@@ -206,7 +206,10 @@ class FakeGitHub:
             return str(args[args.index(name) + 1])
         operation = args[1]
         if operation == 'list':
-            return json.dumps([dict(number=n, url=p['url'], state=p['state']) for n, p in self.prs.items() if p['headRefName'] == option('--head')])
+            fields = option('--json').split(',')
+            return json.dumps([{k: dict(number=n, **p)[k] for k in fields} for n, p in self.prs.items()
+                               if p['headRefName'] == option('--head') and
+                               (option('--state') == 'all' or p['state'].lower() == option('--state'))])
         if operation == 'create':
             if self.fail_create:
                 self.fail_create = False
@@ -375,6 +378,42 @@ class WorkflowTests(unittest.TestCase):
         self.workflow.integrate(1)
         self.assertEqual(command(self.remote, 'git', 'rev-parse', 'master'), before)
         self.assertEqual(self.github.prs[1]['state'], 'CLOSED')
+
+    def test_branch_integration_comments_once_without_closing(self):
+        done = self.submit()
+        with patch('builtins.input', return_value='y'):
+            self.workflow.integrate(branch=done['branch'])
+        before = command(self.remote, 'git', 'rev-parse', 'master')
+        self.assertEqual(self.github.prs[1]['state'], 'OPEN')
+        self.assertEqual(len(self.github.prs[1]['comments']), 1)
+        self.assertIn(before, self.github.prs[1]['comments'][0]['body'])
+        self.workflow.integrate(branch=done['branch'])
+        self.assertEqual(len(self.github.prs[1]['comments']), 1)
+        self.assertEqual(command(self.remote, 'git', 'rev-parse', 'master'), before)
+
+    def test_branch_comment_failure_can_be_retried_without_reintegration(self):
+        done = self.submit()
+        gh = self.workflow.gh
+        def outage(*args):
+            if args[1] == 'comment':
+                raise merger.MergeError('Simulated comment outage')
+            return gh(*args)
+        with patch.object(self.workflow, 'gh', side_effect=outage), patch('builtins.input', return_value='y'):
+            self.workflow.integrate(branch=done['branch'])
+        before = command(self.remote, 'git', 'rev-parse', 'master')
+        self.assertIn('comment could not be posted', self.output.getvalue())
+        self.assertEqual(self.github.prs[1]['comments'], [])
+        self.workflow.integrate(branch=done['branch'])
+        self.assertEqual(command(self.remote, 'git', 'rev-parse', 'master'), before)
+        self.assertEqual(len(self.github.prs[1]['comments']), 1)
+
+    def test_branch_notification_ignores_mismatched_snapshot(self):
+        done = self.submit()
+        self.github.prs[1]['headRefOid'] = 'a' * 40
+        with patch('builtins.input', return_value='y'):
+            self.workflow.integrate(branch=done['branch'])
+        self.assertEqual(self.github.prs[1]['comments'], [])
+        self.assertEqual(self.github.prs[1]['state'], 'OPEN')
 
     def test_two_coders_same_document_integration_and_repeat(self):
         self.submit('Alice')

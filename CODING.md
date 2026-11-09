@@ -99,9 +99,13 @@ make coding-integrate BRANCH=coding/alice/SESSION_BRANCH
 
 The menu accepts either a PR number or the full `coding/...` branch name. Branch
 mode validates the remote branch's manifest and snapshot, confirms the merge, and
-records it in the same integration audit trail. It does not modify any PR. Close
-an existing notification manually afterward, or rerun integration by PR number
-when `gh` is available; its audit record prevents duplicate coding.
+records it in the same integration audit trail. When `gh` is available and
+authenticated, it finds the matching open notification and comments with the
+integration commit, leaving the PR open. Without `gh`, the coding still integrates.
+Rerunning the branch command retries a missing comment without duplicating coding
+or existing comments. Close the notification manually afterward, or rerun
+integration by PR number when `gh` is available to close it automatically.
+Comment failures are reported separately and do not undo a successful integration.
 
 The command checks the PR's recorded snapshot, extracts its common starting
 project, and compares it with current remote master. It uses trusted tooling

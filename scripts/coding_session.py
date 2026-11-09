@@ -272,21 +272,50 @@ class Workflow:
         print('GitHub Actions will create or update its draft notification PR when enabled. No local gh CLI is required.')
         print(f'Maintainer can also integrate directly:\nmake coding-integrate BRANCH={completed["branch"]}')
 
-    def close_notification(self, number, identity, head, commit):
+    def comment_notification(self, number, identity, head, commit):
         info = json.loads(self.gh('pr', 'view', number, '--json', 'state,headRefOid,comments'))
         if info['headRefOid'] != head:
-            raise MergeError('Coding was integrated, but the PR head changed; do not close it automatically')
+            raise MergeError('Coding was integrated, but the PR head changed; notification was not modified')
         if info['state'] == 'CLOSED':
-            print(f'Already integrated as {commit}; notification is closed.')
-            return
+            return False
         marker = f'<!-- qualcoder-integrated:{identity}:{head} -->'
         if not any(marker in c['body'] for c in info.get('comments', [])):
             with tempfile.TemporaryDirectory(dir=self.local) as temp:
                 body = Path(temp) / 'comment.md'
                 body.write_text(f'Integrated programmatically in commit {commit}. Coder attribution was retained.\n\n{marker}\n')
                 self.gh('pr', 'comment', number, '--body-file', body)
+        return True
+
+    def close_notification(self, number, identity, head, commit):
+        if not self.comment_notification(number, identity, head, commit):
+            print(f'Already integrated as {commit}; notification is closed.')
+            return
         self.gh('pr', 'close', number)
         print(f'Integrated as {commit}; notification PR #{number} closed.')
+
+    def notify_branch_integration(self, branch, identity, head, commit):
+        if shutil.which('gh') is None:
+            print('gh is unavailable; no PR comment was posted. Coding integration is complete.')
+            return
+        try:
+            prs = json.loads(self.gh('pr', 'list', '--state', 'open', '--head', branch,
+                                     '--base', 'master', '--json', 'number,headRefOid,body'))
+            matched = False
+            for pr in prs:
+                marker = re.search(r'<!-- qualcoder-session-v1: (\{[^\n]*\}) -->', pr.get('body') or '')
+                if not marker or pr.get('headRefOid') != head:
+                    continue
+                snapshot = json.loads(marker[1])
+                if snapshot.get('id') != identity or snapshot.get('head') != head:
+                    continue
+                if self.comment_notification(pr['number'], identity, head, commit):
+                    print(f'Integration recorded in PR #{pr["number"]}; the notification remains open.')
+                    matched = True
+            if not matched:
+                print('No matching open notification PR was found. Coding integration is complete.')
+        except (MergeError, OSError, ValueError, KeyError, TypeError) as error:
+            print(f'Coding integration is complete, but the PR comment could not be posted: {error}')
+            print(f'Retry make coding-integrate BRANCH={branch}; existing coding will not be duplicated.')
 
     def integrate(self, number=None, branch=None):
         self.require_master()
@@ -355,6 +384,7 @@ class Workflow:
                 self.close_notification(number, identity, head, commit)
             else:
                 print(f'Already integrated as {commit}. No coding was duplicated.')
+                self.notify_branch_integration(branch, identity, head, commit)
             return
         ancestor(self.repo, manifest['base'], master)
         workspace = Path(tempfile.mkdtemp(prefix='integration-', dir=self.local))
@@ -376,6 +406,8 @@ class Workflow:
             prompt = 'Commit and push this integration to origin/master'
             if number is not None:
                 prompt += ', then close the notification PR'
+            elif shutil.which('gh') is not None:
+                prompt += ', then comment on its notification PR'
             if not confirm(prompt + '?'):
                 print(f'Cancelled; candidate retained at {workspace}. Master is unchanged.')
                 return
@@ -411,7 +443,8 @@ class Workflow:
             if number is not None:
                 self.close_notification(number, identity, head, commit)
             else:
-                print(f'Integrated branch {branch} as {commit}. No PR was modified; close any notification manually or later via its PR number.')
+                print(f'Integrated branch {branch} as {commit}.')
+                self.notify_branch_integration(branch, identity, head, commit)
             git(self.repo, 'worktree', 'remove', worktree)
         except BaseException:
             print(f'Integration workspace retained for recovery: {workspace}')
