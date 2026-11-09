@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import shutil
 import sqlite3
+import stat
 import subprocess
 import sys
 import tempfile
@@ -15,6 +16,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import coding_session as session
 import merge_qualcoder as merger
+import coding_guards as guards
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -290,12 +292,18 @@ class WorkflowTests(unittest.TestCase):
         command(self.repo, 'git', 'config', 'user.email', 'test@example.invalid')
         command(self.repo, 'git', 'config', 'commit.gpgsign', 'false')
         fixture(self.repo / session.PROJECT)
+        shutil.copytree(ROOT / '.githooks', self.repo / '.githooks')
+        (self.repo / 'scripts').mkdir()
+        for name in ('coding_guards.py','coding_session.py','merge_qualcoder.py','coding-session.sh'):
+            shutil.copy2(ROOT / 'scripts' / name, self.repo / 'scripts' / name)
+        shutil.copy2(ROOT / 'Makefile', self.repo / 'Makefile')
         (self.repo / '.gitignore').write_text('__pycache__/\ndata/*_BKUP_*.qda/\ndata/*.qda/ai_data/\n')
         command(self.repo, 'git', 'add', '.')
         command(self.repo, 'git', 'commit', '-m', 'Shared baseline')
         command(self.repo, 'git', 'remote', 'add', 'origin', str(self.remote))
         command(self.repo, 'git', 'push', '-u', 'origin', 'master')
         self.workflow = session.Workflow(self.repo)
+        guards.install(self.repo)
         self.github = FakeGitHub(self.repo)
         self.workflow.gh = self.github
         self.gh_path = patch.object(session.shutil, 'which', return_value='/mock/gh')
@@ -347,6 +355,47 @@ class WorkflowTests(unittest.TestCase):
         done = self.workflow.state['completed'][0]
         files = command(self.repo, 'git', 'diff', '--name-only', base, done['head']).splitlines()
         self.assertEqual(set(files), {session.DATABASE, f'coding/sessions/{done["id"]}.json'})
+        self.assertEqual(done['changed_documents'], [dict(name='1.md', path=session.PROJECT+'/documents/1.md', cases=['Case 1'], changes={'code_text:add':1})])
+        message = command(self.repo, 'git', 'show', '--no-patch', '--format=%B', done['head'])
+        self.assertIn('Corpus files with coding changes:', message)
+        self.assertIn(session.PROJECT+'/documents/1.md (coding added: 1)', message)
+
+    def test_commit_lists_all_changed_corpus_documents_and_change_types(self):
+        self.start('Baseline')
+        coding(self.repo / session.PROJECT, 'Baseline', fid=2)
+        sql(self.repo / session.PROJECT, "UPDATE code_text SET memo='Reviewed' WHERE ctid=1")
+        sql(self.repo / session.PROJECT, "INSERT INTO annotation(fid,pos0,pos1,owner,memo) VALUES (1,0,5,'Baseline','Note')")
+        with patch('builtins.input', return_value='y'):
+            self.workflow.finish()
+        done = self.workflow.state['completed'][-1]
+        self.assertEqual([d['name'] for d in done['changed_documents']], ['1.md','2.md'])
+        self.assertEqual(done['changed_documents'][0]['changes'], {'code_text:edit':1,'annotation:add':1})
+        message = command(self.repo, 'git', 'show', '--no-patch', '--format=%B', done['head'])
+        for name in ('1.md','2.md'):
+            self.assertEqual(message.count(session.PROJECT+'/documents/'+name),1)
+        self.assertIn('coding edited: 1',message)
+        self.assertIn('annotations added: 1',message)
+
+    def test_submission_corpus_file_list_is_validated_and_legacy_is_supported(self):
+        done = self.complete()
+        command(self.repo,'git','switch',done['branch'])
+        path = f'coding/sessions/{done["id"]}.json'
+        manifest = json.loads((self.repo/path).read_text())
+        manifest['changed_documents'][0]['name'] = 'wrong-document.md'
+        session.save_json(self.repo/path,manifest)
+        command(self.repo,'git','add',path)
+        command(self.repo,'git','-c','core.hooksPath=/dev/null','commit','--amend','--no-edit')
+        head = command(self.repo,'git','rev-parse','HEAD')
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaisesRegex(merger.MergeError,'corpus-file change list'):
+                session.validate_submission(self.repo,manifest,head,Path(temp))
+        del manifest['changed_documents']
+        session.save_json(self.repo/path,manifest)
+        command(self.repo,'git','add',path)
+        command(self.repo,'git','-c','core.hooksPath=/dev/null','commit','--amend','--no-edit')
+        head = command(self.repo,'git','rev-parse','HEAD')
+        with tempfile.TemporaryDirectory() as temp:
+            session.validate_submission(self.repo,manifest,head,Path(temp))
 
     def test_finish_recovers_after_commit_before_state_update(self):
         self.start()
@@ -389,7 +438,8 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(command(self.remote, 'git', 'rev-parse', done['branch']), done['head'])
         self.assertEqual(len(self.github.prs), 0)
         command(self.repo, 'git', 'switch', done['branch'])
-        command(self.repo, 'git', 'commit', '--allow-empty', '-m', 'Unexpected extra commit')
+        # Simulate a deliberate bypass/legacy repository to retain this recovery test.
+        command(self.repo, 'git', '-c', 'core.hooksPath=/dev/null', 'commit', '--allow-empty', '-m', 'Unexpected extra commit')
         with self.assertRaisesRegex(merger.MergeError, 'amended'):
             self.workflow.request_merge(done['id'])
 
@@ -617,6 +667,156 @@ class WorkflowTests(unittest.TestCase):
                 self.workflow.integrate(1)
         self.assertEqual(command(self.remote, 'git', 'rev-parse', 'master'), original)
         self.assertEqual(self.github.prs[1]['state'], 'OPEN')
+
+    def test_guard_setup_master_readonly_and_database_commit_blocked(self):
+        self.workflow.setup()
+        database = self.repo / session.DATABASE
+        self.assertEqual(stat.S_IMODE(database.stat().st_mode) & 0o222, 0)
+        if os.geteuid() != 0:
+            with self.assertRaises(sqlite3.OperationalError):
+                sql(self.repo / session.PROJECT, "UPDATE project SET memo='Accidental master edit'")
+        # Even deliberately enabling writes does not bypass the commit guard.
+        guards.writable_database(self.repo)
+        sql(self.repo / session.PROJECT, "UPDATE project SET memo='Changed'")
+        command(self.repo, 'git', 'add', session.DATABASE)
+        before = command(self.repo, 'git', 'rev-parse', 'HEAD')
+        result = subprocess.run(['git','commit','-m','Unsafe database commit'], cwd=self.repo, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Database commits on master are blocked', result.stderr)
+        self.assertEqual(command(self.repo, 'git', 'rev-parse', 'HEAD'), before)
+        self.assertEqual(stat.S_IMODE(database.stat().st_mode) & 0o222, 0)
+
+    def test_guard_allows_tooling_commits_on_master(self):
+        self.workflow.setup()
+        (self.repo / 'README.md').write_text('Tooling instructions')
+        command(self.repo, 'git', 'add', 'README.md')
+        command(self.repo, 'git', 'commit', '-m', 'Document workflow')
+        self.assertEqual(command(self.repo, 'git', 'log', '-1', '--format=%s'), 'Document workflow')
+
+    def test_guard_blocks_manual_session_commits_but_finish_succeeds(self):
+        self.start()
+        empty = subprocess.run(['git','commit','--allow-empty','-m','Manual checkpoint'], cwd=self.repo, capture_output=True, text=True)
+        self.assertNotEqual(empty.returncode, 0)
+        self.assertIn('Use make coding-finish', empty.stderr)
+        coding(self.repo / session.PROJECT, 'Alice')
+        command(self.repo, 'git', 'add', session.DATABASE)
+        result = subprocess.run(['git','commit','-m','Manual coding commit'], cwd=self.repo, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Use make coding-finish', result.stderr)
+        with patch('builtins.input', return_value='y'):
+            self.workflow.finish()
+        self.assertEqual(self.workflow.branch(), 'master')
+        self.assertEqual(stat.S_IMODE((self.repo / session.DATABASE).stat().st_mode) & 0o222, 0)
+
+    def test_guard_checkout_toggles_database_permissions(self):
+        self.start()
+        database = self.repo / session.DATABASE
+        coding_branch = self.workflow.branch()
+        self.assertTrue(database.stat().st_mode & stat.S_IWUSR)
+        command(self.repo, 'git', 'switch', 'master')
+        self.assertEqual(database.stat().st_mode & 0o222, 0)
+        command(self.repo, 'git', 'switch', coding_branch)
+        self.assertTrue(database.stat().st_mode & stat.S_IWUSR)
+
+    def test_guard_preserves_existing_custom_hooks(self):
+        command(self.repo, 'git', 'config', '--unset', 'core.hooksPath')
+        hook = self.repo / '.git/hooks/pre-commit'
+        hook.write_text('#!/bin/sh\nexit 0\n')
+        hook.chmod(0o755)
+        with self.assertRaisesRegex(guards.GuardError, 'Existing custom hooks were preserved'):
+            self.workflow.setup()
+        self.assertEqual(hook.read_text(), '#!/bin/sh\nexit 0\n')
+        self.assertEqual(session.git(self.repo, 'config', '--get', 'core.hooksPath', check=False), '')
+
+    def test_guard_preserves_existing_hooks_path(self):
+        command(self.repo, 'git', 'config', 'core.hooksPath', '/some/custom/hooks')
+        with self.assertRaisesRegex(guards.GuardError, 'Existing core.hooksPath'):
+            self.workflow.setup()
+        self.assertEqual(command(self.repo, 'git', 'config', '--get', 'core.hooksPath'), '/some/custom/hooks')
+
+    def test_menu_refuses_without_setup_and_opens_after_explicit_setup(self):
+        command(self.repo,'git','config','--unset','core.hooksPath')
+        result = subprocess.run(['make','coding'],cwd=self.repo,input='q\n',capture_output=True,text=True)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('make coding-setup',result.stdout+result.stderr)
+        self.assertNotIn('1) Start a coding session',result.stdout)
+        self.assertEqual(session.git(self.repo,'config','--get','core.hooksPath',check=False),'')
+        self.assertFalse(self.workflow.state_path.exists())
+        setup = subprocess.run(['make','coding-setup'],cwd=self.repo,capture_output=True,text=True)
+        self.assertEqual(setup.returncode,0,setup.stdout+setup.stderr)
+        result = subprocess.run(['make','coding'],cwd=self.repo,input='q\n',capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+        self.assertIn('1) Start a coding session',result.stdout)
+
+    def test_guard_gate_rejects_damaged_and_non_executable_hooks(self):
+        hook = guards.common_directory(self.repo)/'hooks/pre-commit'
+        hook.chmod(0o644)
+        with self.assertRaisesRegex(guards.GuardError,'make coding-setup'):
+            guards.require_installed(self.repo)
+        self.workflow.setup()
+        guards.require_installed(self.repo)
+        hook.unlink()
+        with self.assertRaisesRegex(guards.GuardError,'make coding-setup'):
+            guards.require_installed(self.repo)
+        self.workflow.setup()
+        guards.require_installed(self.repo)
+        hook.write_text('#!/bin/sh\nexit 0\n')
+        with self.assertRaisesRegex(guards.GuardError,'make coding-setup'):
+            self.start()
+        self.assertIsNone(self.workflow.state.get('active'))
+        self.workflow.setup()
+        guards.require_installed(self.repo)
+
+    def test_individual_session_commands_also_require_setup(self):
+        command(self.repo,'git','config','--unset','core.hooksPath')
+        before = command(self.repo,'git','rev-parse','HEAD')
+        for target in ('start','finish','status','request-merge','protect','integrate'):
+            result = subprocess.run([sys.executable,'-B',str(self.repo/'scripts/coding_session.py'),target],cwd=self.repo,
+                                    input='Alice\n',capture_output=True,text=True)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn('make coding-setup',result.stdout+result.stderr)
+        self.assertEqual(command(self.repo,'git','rev-parse','HEAD'),before)
+        self.assertFalse(self.workflow.state_path.exists())
+
+    def test_guard_installed_copy_survives_missing_worktree_hook_sources(self):
+        self.workflow.setup()
+        shutil.rmtree(self.repo / '.githooks')
+        (self.repo / 'scripts/coding_guards.py').unlink()
+        guards.writable_database(self.repo)
+        sql(self.repo / session.PROJECT, "UPDATE project SET memo='Unsafe edit'")
+        command(self.repo, 'git', 'add', session.DATABASE)
+        result = subprocess.run(['git','commit','-m','Old checkout'], cwd=self.repo, capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Database commits on master are blocked', result.stderr)
+
+    def test_guard_authorization_cannot_be_reused_for_another_staged_tree(self):
+        self.start()
+        coding(self.repo / session.PROJECT, 'Alice')
+        command(self.repo, 'git', 'add', session.DATABASE)
+        self.workflow.state['active']['phase'] = 'committing'
+        self.workflow.save()
+        with guards.authorize_commit(self.repo, 'session') as env:
+            sql(self.repo / session.PROJECT, "UPDATE code_text SET memo='Later edit' WHERE owner='Alice'")
+            command(self.repo, 'git', 'add', session.DATABASE)
+            result = subprocess.run(['git','commit','-m','Stale approval'], cwd=self.repo, env=env, capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('authorization does not match', result.stderr)
+        self.assertFalse(list((self.workflow.local / 'commit-permits').glob('*.json')))
+
+    def test_guard_reapplies_readonly_after_fastforward_database_update(self):
+        self.workflow.setup()
+        clone = self.root / 'maintenance'
+        command(self.root, 'git', 'clone', str(self.remote), str(clone))
+        command(clone, 'git', 'config', 'user.name', 'Maintainer')
+        command(clone, 'git', 'config', 'user.email', 'maintainer@example.invalid')
+        command(clone, 'git', 'config', 'commit.gpgsign', 'false')
+        sql(clone / session.PROJECT, "UPDATE project SET memo='Reviewed maintenance'")
+        command(clone, 'git', 'add', session.DATABASE)
+        command(clone, 'git', 'commit', '-m', 'Reviewed maintenance')
+        command(clone, 'git', 'push', 'origin', 'master')
+        command(self.repo, 'git', 'fetch', 'origin')
+        command(self.repo, 'git', 'merge', '--ff-only', 'origin/master')
+        self.assertEqual((self.repo / session.DATABASE).stat().st_mode & 0o222, 0)
 
 
 if __name__ == '__main__':

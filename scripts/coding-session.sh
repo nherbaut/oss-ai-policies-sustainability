@@ -7,6 +7,7 @@ export PYTHONDONTWRITEBYTECODE=1
 if (( $# )); then
     exec python3 "$script_dir/coding_session.py" "$@"
 fi
+python3 "$script_dir/coding_session.py" protect || exit $?
 while true; do
     printf '\n1) Start a coding session\n2) Complete the ongoing session\n3) Publish an unpublished session (automatic draft PR)\n4) Session status\n5) Integrate a PR or coding branch (maintainer)\nq) Quit\n'
     read -r -p 'Choose: ' choice || exit 0

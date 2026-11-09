@@ -52,6 +52,25 @@ jobs:
                 !Object.entries(m.summary).every(([key, value]) => summaryKeys.test(key) && Number.isSafeInteger(value) && value >= 0)) {
               throw new Error('Invalid completed coding-session manifest.');
             }
+            const documents = m.changed_documents;
+            if (documents !== undefined) {
+              const safeText = value => typeof value === 'string' && value.trim() && !/[\x00-\x1f]/.test(value);
+              const validCounts = counts => counts && typeof counts === 'object' && !Array.isArray(counts) &&
+                Object.entries(counts).every(([key, value]) => summaryKeys.test(key) && Number.isSafeInteger(value) && value >= 0);
+              if (!Array.isArray(documents) || !documents.every(d => d && safeText(d.name) &&
+                  (d.path === null || (safeText(d.path) && d.path.startsWith('data/coding.qda/documents/') &&
+                    d.path.split('/').every(part => part && part !== '.' && part !== '..'))) &&
+                  Array.isArray(d.cases) && d.cases.every(safeText) && validCounts(d.changes) &&
+                  Object.values(d.changes).some(count => count > 0)) ||
+                  new Set(documents.map(d => d.name)).size !== documents.length) {
+                throw new Error('Invalid corpus-file change list.');
+              }
+              const totals = {};
+              for (const d of documents) for (const [key, count] of Object.entries(d.changes)) totals[key] = (totals[key] || 0) + count;
+              if ([...new Set([...Object.keys(totals), ...Object.keys(m.summary)])].some(key => (totals[key] || 0) !== (m.summary[key] || 0))) {
+                throw new Error('Corpus-file counts do not match the session summary.');
+              }
+            }
             const comparison = await github.rest.repos.compareCommitsWithBasehead({owner, repo, basehead: `${m.base}...${head}`});
             const files = comparison.data.files || [];
             if (comparison.data.status !== 'ahead' || files.length === 0 || files.length > 2 ||
@@ -81,10 +100,34 @@ jobs:
             }
             const escapedCoder = m.coder.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/`/g, '\\`');
             const title = `[Coding session] ${m.coder.slice(0, 100)}: ${m.id.slice(0, 8)}`;
+            const escapeMarkdown = value => value.replace(/([\\`*_[\]<>])/g, '\\$1');
+            let corpusList = '### Corpus files with coding changes\n\n';
+            if (documents === undefined) {
+              corpusList += 'Not recorded by this older client.';
+            } else if (documents.length === 0) {
+              corpusList += 'None (no logical coding changes).';
+            } else {
+              const labels = {'code_text:add': 'coded passages added', 'code_text:edit': 'coded passages edited',
+                'code_text:delete': 'coded passages deleted', 'annotation:add': 'annotations added',
+                'annotation:edit': 'annotations edited', 'annotation:delete': 'annotations deleted'};
+              let shown = 0;
+              for (const d of documents) {
+                const name = escapeMarkdown(d.name);
+                const link = d.path ? `[${name}](https://github.com/${owner}/${repo}/blob/${head}/${d.path.split('/').map(encodeURIComponent).join('/')})` : name;
+                const counts = Object.entries(d.changes).filter(([, count]) => count > 0).map(([key, count]) => `${labels[key]}: ${count}`).join(', ');
+                const line = `- ${link} — ${counts}\n`;
+                if (shown >= 100 || corpusList.length + line.length > 40000) break;
+                corpusList += line;
+                shown++;
+              }
+              const manifestUrl = `https://github.com/${owner}/${repo}/blob/${head}/${path}`;
+              if (shown < documents.length) corpusList += `\n${documents.length - shown} additional files: [full file list](${manifestUrl}).`;
+            }
             const body = [
               `Coding session by **${escapedCoder}**.`,
               '**Notification only: do not use GitHub Merge or rebase this branch.**',
               `Session: \`${m.id}\`\nBase: \`${m.base}\`\nSnapshot: \`${head}\``,
+              corpusList,
               'Changes:\n```json\n' + JSON.stringify(m.summary, null, 2) + '\n```',
               'Maintainer: run `make coding-integrate PR=PR_NUMBER`.',
               `Without gh, run: \`make coding-integrate BRANCH=${branch}\`.`,

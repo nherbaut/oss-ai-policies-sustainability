@@ -1,0 +1,5 @@
+#!/bin/sh
+# QualCoder session guards. File-only checkouts do not change branch policy.
+[ "$3" = 1 ] || exit 0
+common=$(git rev-parse --git-common-dir) || exit 1
+exec python3 -B "$common/qualcoder/coding_guards.py" protect

@@ -121,3 +121,38 @@ test('rejects missing session manifests and truncated repository trees', async (
   state.manifest.summary = {'unexpected:operation': 1};
   await assert.rejects(run(), /Invalid completed/);
 });
+
+test('lists changed corpus files with snapshot links and per-file counts', async () => {
+  const {state, run} = harness();
+  state.manifest.changed_documents = ['one.md','policy two.md'].map(name => ({name,
+    path:`data/coding.qda/documents/${name}`,cases:['Example'],changes:{'code_text:add':1}}));
+  await run();
+  const body = state.created[0].body;
+  assert.ok(body.includes('Corpus files with coding changes'));
+  assert.ok(body.includes('[one.md]'));
+  assert.ok(body.includes(`[policy two.md](https://github.com/team/research/blob/${state.head}/data/coding.qda/documents/policy%20two.md)`));
+  assert.ok(body.includes('coded passages added: 1'));
+});
+
+test('rejects inaccurate per-file counts and invalid corpus paths', async () => {
+  const {state, run} = harness();
+  state.manifest.changed_documents = [{name:'one.md',path:'data/coding.qda/documents/one.md',
+    cases:['Example'],changes:{'code_text:add':1}}];
+  await assert.rejects(run(),/counts do not match/);
+  state.manifest.changed_documents[0].changes['code_text:add'] = 2;
+  state.manifest.changed_documents[0].path = 'data/coding.qda/documents/../secret';
+  await assert.rejects(run(),/Invalid corpus-file/);
+  assert.equal(state.created.length,0);
+});
+
+test('large file lists stay within PR body limits and link to the full manifest', async () => {
+  const {state, run} = harness();
+  state.manifest.summary = {'code_text:add':201};
+  state.manifest.changed_documents = Array.from({length:201},(_,i) => ({name:`document-${i}.md`,
+    path:`data/coding.qda/documents/document-${i}.md`,cases:[],changes:{'code_text:add':1}}));
+  await run();
+  const body=state.created[0].body;
+  assert.ok(body.length<65536);
+  assert.ok(body.includes('additional files'));
+  assert.ok(body.includes(`[full file list](https://github.com/team/research/blob/${state.head}/coding/sessions/${state.manifest.id}.json)`));
+});

@@ -1,0 +1,4 @@
+#!/bin/sh
+# QualCoder session guards. Reapply permissions after pulls/fast-forward updates.
+common=$(git rev-parse --git-common-dir) || exit 1
+exec python3 -B "$common/qualcoder/coding_guards.py" protect

@@ -18,6 +18,7 @@ import unicodedata
 import uuid
 
 from merge_qualcoder import MergeError, ensure_closed, plan_merge, read_project, write_candidate
+from coding_guards import authorize_commit, install as install_guards, protect_database, require_installed, writable_database
 
 PROJECT = 'data/coding.qda'
 DATABASE = PROJECT + '/data.qda'
@@ -28,15 +29,18 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-def run(args, cwd, check=True, binary=False):
-    result = subprocess.run(args, cwd=cwd, capture_output=True, text=not binary)
+def run(args, cwd, check=True, binary=False, env=None):
+    result = subprocess.run(args, cwd=cwd, capture_output=True, text=not binary, env=env)
     if check and result.returncode:
         error = result.stderr.decode(errors='replace') if binary else result.stderr
         raise MergeError(f'{args[0]} {args[1]} failed: {error.strip()}')
     return result
 
 
-def git(repo, *args, check=True):
+def git(repo, *args, check=True, commit_kind=None):
+    if commit_kind is not None:
+        with authorize_commit(Path(repo), commit_kind) as env:
+            return run(['git', *map(str, args)], repo, check=check, env=env).stdout.strip()
     return run(['git', *map(str, args)], repo, check=check).stdout.strip()
 
 
@@ -117,6 +121,27 @@ def check_manifest(manifest):
         raise MergeError('Invalid coding-session manifest')
 
 
+def changed_documents(report):
+    return [dict(name=group['document'],
+                 path=f'{PROJECT}/{group["path"]}' if group.get('path') else None,
+                 cases=group.get('cases', []), changes=group['summary'])
+            for group in report['by_document']]
+
+
+def coding_commit_message(title, report):
+    lines = [title, '', 'Corpus files with coding changes:']
+    labels = {'code_text:add': 'coding added', 'code_text:edit': 'coding edited',
+              'code_text:delete': 'coding deleted', 'annotation:add': 'annotations added',
+              'annotation:edit': 'annotations edited', 'annotation:delete': 'annotations deleted'}
+    documents = changed_documents(report)
+    if not documents:
+        lines.append('- None (no logical coding changes).')
+    for document in documents:
+        counts = ', '.join(f'{labels[key]}: {value}' for key, value in sorted(document['changes'].items()))
+        lines.append(f'- {document["path"] or document["name"]} ({counts})')
+    return '\n'.join(lines)
+
+
 def validate_submission(repo, session, head, temporary):
     check_manifest(session)
     ancestor(repo, session['base'], head)
@@ -132,6 +157,8 @@ def validate_submission(repo, session, head, temporary):
     report = plan_merge(read_project(base), read_project(base), read_project(submitted), session['coder'])
     if report['conflicts'] or report['summary'] != session['summary']:
         raise MergeError('Submission differs from its validated completion summary')
+    if 'changed_documents' in session and session['changed_documents'] != changed_documents(report):
+        raise MergeError('Submission differs from its corpus-file change list')
     return base, submitted, report
 
 
@@ -154,6 +181,8 @@ class Workflow:
             raise MergeError('A coding session is active; complete it first')
         if self.branch() != 'master':
             raise MergeError('Run this command from master')
+        require_installed(self.repo)
+        protect_database(self.repo)
         clean(self.repo)
         ensure_closed(self.repo / PROJECT)
 
@@ -178,12 +207,15 @@ class Workflow:
         git(self.repo, 'switch', '-c', branch)
         self.state.update(active=session, preferred_coder=coder)
         self.save()
+        protect_database(self.repo)
         with closing(sqlite3.connect(self.repo / DATABASE)) as conn, conn:
             conn.execute('UPDATE project SET codername=?', (coder,))
             conn.execute('INSERT OR IGNORE INTO coder_names(name,visibility) VALUES (?,1)', (coder,))
         print(f'Session: {identity}\nBranch: {branch}\nOpen: {self.repo / PROJECT}\nIn QualCoder Settings, verify the current coder is {coder!r}.')
 
     def finish(self):
+        require_installed(self.repo)
+        protect_database(self.repo)
         session = self.state.get('active')
         if not session:
             print('No coding session is active.')
@@ -221,12 +253,13 @@ class Workflow:
             if fresh != report or dirty_paths(self.repo) - {DATABASE, manifest_path}:
                 raise MergeError('Work changed after preview; review completion again')
             manifest = {k: v for k, v in session.items() if k != 'phase'}
-            manifest.update(completed_at=now(), summary=report['summary'])
+            manifest.update(completed_at=now(), summary=report['summary'], changed_documents=changed_documents(report))
             save_json(self.repo / manifest_path, manifest)
             session['phase'] = 'committing'
             self.save()
             git(self.repo, 'add', '--', DATABASE, manifest_path)
-            git(self.repo, 'commit', '-m', f'Coding session: {session["coder"]} ({session["id"][:8]})', '--', DATABASE, manifest_path)
+            message = coding_commit_message(f'Coding session: {session["coder"]} ({session["id"][:8]})', report)
+            git(self.repo, 'commit', '-m', message, '--', DATABASE, manifest_path, commit_kind='session')
             head = git(self.repo, 'rev-parse', 'HEAD')
             with tempfile.TemporaryDirectory(dir=self.local) as temp:
                 validate_submission(self.repo, manifest, head, Path(temp))
@@ -236,6 +269,7 @@ class Workflow:
         self.state['active'] = None
         self.save()
         git(self.repo, 'switch', 'master')
+        protect_database(self.repo)
         print(f'Completed {completed["id"]}; snapshot {head}. Returned to master.')
 
     def select_completed(self, identity, sessions=None):
@@ -484,13 +518,15 @@ class Workflow:
                 current_head = git(self.repo, 'ls-remote', '--exit-code', '--heads', 'origin', 'refs/heads/' + branch).split()[0]
             if fetch_master(self.repo) != master or current_head != head:
                 raise MergeError('Remote master or submission advanced; run integration again for a fresh preview')
+            writable_database(worktree)
             shutil.copy2(candidate / 'data.qda', worktree / DATABASE)
             save_json(worktree / audit_path, dict(version=VERSION, id=identity, coder=manifest['coder'],
                                                 base=manifest['base'], destination=master, submission=head,
                                                 pr=number, branch=branch, integrated_at=now(), report=report))
             git(worktree, 'add', '--', DATABASE, audit_path)
             description = f'notification #{number}' if number is not None else f'branch {branch}'
-            git(worktree, 'commit', '-m', f'Integrate coding session {identity} ({description})', '--', DATABASE, audit_path)
+            message = coding_commit_message(f'Integrate coding session {identity} ({description})', report)
+            git(worktree, 'commit', '-m', message, '--', DATABASE, audit_path, commit_kind='integration')
             commit = git(worktree, 'rev-parse', 'HEAD')
             git(worktree, 'push', 'origin', f'{commit}:refs/heads/master')
             # A failed push leaves the integration branch/worktree recoverable.
@@ -498,6 +534,7 @@ class Workflow:
             if self.branch() == 'master' and not dirty_paths(self.repo):
                 ensure_closed(self.repo / PROJECT)
                 git(self.repo, 'merge', '--ff-only', commit)
+                protect_database(self.repo)
             if number is not None:
                 self.close_notification(number, identity, head, commit)
             else:
@@ -507,6 +544,18 @@ class Workflow:
         except BaseException:
             print(f'Integration workspace retained for recovery: {workspace}')
             raise
+        finally:
+            if (worktree / DATABASE).exists():
+                protect_database(worktree)
+
+    def setup(self):
+        install_guards(self.repo)
+        print('Coding commit guards enabled. The master database is read-only.')
+
+    def protect(self):
+        require_installed(self.repo)
+        protect_database(self.repo)
+        print('Database permissions match the current branch/session.')
 
     def status(self):
         print(json.dumps(self.state, indent=2, ensure_ascii=False))
@@ -526,7 +575,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo', type=Path, default=Path.cwd())
     sub = parser.add_subparsers(dest='command', required=True)
-    for name in ('start', 'finish', 'status'):
+    for name in ('start', 'finish', 'status', 'setup', 'protect'):
         sub.add_parser(name)
     sub.add_parser('request-merge').add_argument('--session')
     integration = sub.add_parser('integrate')
@@ -534,11 +583,17 @@ def main():
     integration.add_argument('--branch')
     args = parser.parse_args()
     try:
+        if args.command != 'setup':
+            repo = Path(git(args.repo, 'rev-parse', '--show-toplevel')).resolve()
+            require_installed(repo)
         workflow = Workflow(args.repo)
         with local_lock(workflow.local / 'command.lock'):
             # Reload state after obtaining the lock.
             if workflow.state_path.exists():
                 workflow.state = json.loads(workflow.state_path.read_text())
+            if args.command != 'setup':
+                require_installed(workflow.repo)
+                protect_database(workflow.repo)
             if args.command == 'request-merge':
                 workflow.request_merge(args.session)
             elif args.command == 'integrate':

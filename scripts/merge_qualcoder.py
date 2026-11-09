@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import shutil
 import sqlite3
+import stat
 import subprocess
 import tempfile
 
@@ -186,6 +187,8 @@ def plan_merge(base, destination, submission, coder):
                           document=source_names[row['fid']], owner=row['owner'],
                           cases=sorted({case_names[r['caseid']] for r in base['data']['case_text'] if r['fid'] == row['fid']}))
             source = next(r for r in base['data']['source'] if r['id'] == row['fid'])
+            media = source.get('mediapath') or ''
+            detail['document_path'] = 'documents/' + media[6:] if media.startswith('/docs/') else None
             detail['excerpt'] = (row['seltext'] if table == 'code_text' else
                                  text_span_candidates(source['fulltext'], row['pos0'], row['pos1'])[0])
             if table == 'code_text':
@@ -200,6 +203,8 @@ def plan_merge(base, destination, submission, coder):
                   summary=dict(Counter(f'{c["table"]}:{c["operation"]}' for c in changes)))
     report['by_document'] = [
         dict(document=document, owner=owner,
+             path=next(c['document_path'] for c in changes if c['document'] == document),
+             cases=sorted({case for c in changes if c['document'] == document for case in c['cases']}),
              summary=dict(Counter(f'{c["table"]}:{c["operation"]}' for c in changes
                                   if c['document'] == document and c['owner'] == owner)))
         for document, owner in sorted({(c['document'], c['owner']) for c in changes})]
@@ -252,6 +257,10 @@ def write_candidate(base_path, destination_path, submission_path, coder, output,
     staging = staging_root / 'candidate.qda'
     try:
         shutil.copytree(paths[1], staging, ignore=shutil.ignore_patterns('data.qda-wal', 'data.qda-shm', 'data.qda-journal'))
+        # Destination snapshots on master are intentionally read-only. Only the
+        # new candidate copy is made writable; input permissions stay untouched.
+        staged_database = staging / 'data.qda'
+        staged_database.chmod(stat.S_IMODE(staged_database.stat().st_mode) | stat.S_IWUSR)
         expected = projected_data(snapshots[1], report)
         with closing(sqlite3.connect(staging / 'data.qda')) as conn, conn:
             for table, (pk, _) in TABLES.items():

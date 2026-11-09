@@ -19,6 +19,59 @@ completing, or integrating a session. Automatic backups and AI chat history stay
 local; already-tracked generated files have been removed from tracking, retaining
 their local copies. Existing copies remain in Git history.
 
+## Local commit guards and database protection
+
+The hook sources are versioned in `.githooks/`. Git does not enable hooks merely
+by cloning a repository. Enable them once in each clone, with QualCoder closed:
+
+```sh
+make coding-setup
+```
+
+The menu and all session commands refuse to run until setup has completed. They
+also reject missing, disabled, changed, or non-executable hooks; run
+`make coding-setup` again after updating the guard code or repairing an installation.
+They never silently install or repair guards. Setup copies
+the managed hooks and their standalone Python helper into Git's local common
+directory and sets local `core.hooksPath`. The installed copies continue to work
+when switching to older branches that lack the hook source files. No global Git
+settings are changed. Existing custom hooks or `core.hooksPath` are preserved:
+setup stops rather than replacing them silently.
+
+- The database is **read-only on master**, detached checkouts, completed coding
+  branches, and branches without a matching active session.
+- Starting or resuming the registered session enables owner write access. Its
+  branch must still be at the session's recorded starting commit.
+- Finishing returns to master and restores read-only permissions. Checkout and
+  merge hooks reapply permissions after manual branch switches and pulls.
+- Commits containing `data/coding.qda/data.qda` on master are rejected. Ordinary
+  tooling/documentation commits on master remain allowed.
+- Manual commits on coding branches are rejected, including empty commits. Use
+  `make coding-finish`. The finish and integration programs authorize only their
+  exact staged tree and branch for their own commit subprocess; they do not leave
+  a global bypass enabled. Integration writes occur in its isolated worktree.
+
+To reapply permissions after an interrupted operation:
+
+```sh
+make coding-protect
+```
+
+These are accident guards, not an access-control boundary against the checkout's
+owner: local hooks can be bypassed and permissions can be changed manually.
+**Close QualCoder before switching branches.** A post-checkout hook runs after
+Git has switched, and removing write permissions does not revoke an already-open
+database handle. If that is detected, close the application and run
+`make coding-protect`. Keep GitHub's master protection enabled as the server-side
+control. Fast-forward Git merges do not create commits and are not blocked by a
+pre-commit hook.
+
+For intentional corpus/codebook maintenance, use a separate maintenance branch
+with no active coding session, explicitly enable database writes there with
+`chmod u+w data/coding.qda/data.qda`, and follow the maintainer's review process.
+Reapply protection afterward. Do not perform that maintenance on master or in a
+coder's active session.
+
 ### Enable automatic notification PRs
 
 Publish `.github/workflows/coding-session-pr.yml` with this setup. In the repository's
@@ -63,6 +116,8 @@ make coding-status
    manifest; Enter or `n` leaves the session active. After committing, the script
    returns to `master`. No unrelated files are staged; resolve unrelated work
    separately if it prevents completion.
+   The commit message and session manifest list the corpus documents whose coding
+   changed, with per-file counts for added, edited, and deleted coding/annotations.
 3. **Request merge** checks remote branches and integration audits, offers only
    unpublished completed sessions, and pushes the selected immutable snapshot.
    Already-published or integrated sessions are excluded. An explicit
@@ -133,6 +188,14 @@ edits to the same logical record, deletion versus editing, and incompatible
 additions by the same coder stop integration for review. Changed document text,
 case structure, codebook, or unsupported analytical tables also stop integration.
 Deletions that would invalidate graph references are rejected.
+
+New notification PRs show a **Corpus files with coding changes** section, with
+links to the document snapshots and per-file change counts. Large lists include
+a link to the full manifest to stay within GitHub's PR-description size limit.
+The maintainer verifies this file list against the actual database changes.
+Older session manifests remain supported; their PRs indicate that a file list
+was not recorded rather than guessing one. Integration commit messages also list
+the files whose coding was actually changed by the merge.
 
 ### Failures and recovery
 
