@@ -353,6 +353,55 @@ class WorkflowTests(unittest.TestCase):
         with self.assertRaisesRegex(merger.MergeError, 'amended'):
             self.workflow.request_merge(done['id'])
 
+    def test_publish_menu_offers_only_unpublished_sessions(self):
+        published = self.submit('Alice')
+        pending = self.complete('Bob')
+        with patch('builtins.input', side_effect=AssertionError('Only Bob should be eligible; no menu is needed')):
+            self.workflow.request_merge(None)
+        self.assertEqual(command(self.remote, 'git', 'rev-parse', pending['branch']), pending['head'])
+        self.assertEqual(published['publication_status'], 'published')
+        with patch.object(session, 'git', wraps=session.git) as git_calls, patch('builtins.input', side_effect=AssertionError('No unpublished sessions should be offered')):
+            self.workflow.request_merge(None)
+        self.assertFalse(any(call.args[1] == 'push' for call in git_calls.call_args_list))
+        self.assertIn('No unpublished completed sessions', self.output.getvalue())
+
+    def test_old_registry_detects_already_published_remote_snapshot(self):
+        done = self.complete()
+        command(self.repo, 'git', 'push', 'origin', done['branch'])
+        self.assertNotIn('publication_status', done)
+        with patch.object(session, 'git', wraps=session.git) as git_calls:
+            self.workflow.request_merge(done['id'])
+        self.assertFalse(any(call.args[1] == 'push' for call in git_calls.call_args_list))
+        self.assertEqual(done['publication_status'], 'published')
+        self.assertIn('already published; nothing was pushed', self.output.getvalue())
+
+    def test_integrated_sessions_stay_hidden_after_remote_branch_cleanup(self):
+        done = self.submit()
+        with patch('builtins.input', return_value='y'):
+            self.workflow.integrate(1)
+        command(self.repo, 'git', 'push', 'origin', '--delete', done['branch'])
+        with patch.object(session, 'git', wraps=session.git) as git_calls:
+            self.workflow.request_merge(None)
+            self.workflow.request_merge(done['id'])
+        self.assertFalse(any(call.args[1] == 'push' for call in git_calls.call_args_list))
+        self.assertEqual(done['publication_status'], 'integrated')
+        self.assertIn('already integrated; nothing was pushed', self.output.getvalue())
+
+    def test_deleted_published_branch_is_not_resurrected(self):
+        done = self.submit()
+        command(self.repo, 'git', 'push', 'origin', '--delete', done['branch'])
+        self.workflow.request_merge(None)
+        self.assertEqual(done['publication_status'], 'published')
+        self.assertEqual(command(self.repo, 'git', 'ls-remote', '--heads', 'origin', 'refs/heads/' + done['branch']), '')
+
+    def test_publication_check_network_failure_does_not_push_or_mark_published(self):
+        done = self.complete()
+        with patch.object(session, 'fetch_master', side_effect=merger.MergeError('Network unavailable')):
+            with self.assertRaisesRegex(merger.MergeError, 'Network unavailable'):
+                self.workflow.request_merge(done['id'])
+        self.assertNotIn('publication_status', done)
+        self.assertEqual(command(self.repo, 'git', 'ls-remote', '--heads', 'origin', 'refs/heads/' + done['branch']), '')
+
     def test_branch_only_integration_without_gh_and_repeat(self):
         done = self.complete()
         with patch.object(session.shutil, 'which', return_value=None), patch.object(self.workflow, 'gh', side_effect=AssertionError('No GitHub CLI calls allowed')):

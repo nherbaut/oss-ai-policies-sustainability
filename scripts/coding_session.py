@@ -238,8 +238,9 @@ class Workflow:
         git(self.repo, 'switch', 'master')
         print(f'Completed {completed["id"]}; snapshot {head}. Returned to master.')
 
-    def select_completed(self, identity):
-        sessions = self.state.get('completed', [])
+    def select_completed(self, identity, sessions=None):
+        if sessions is None:
+            sessions = self.state.get('completed', [])
         if identity:
             sessions = [s for s in sessions if s['id'] == identity]
         if not sessions:
@@ -256,8 +257,63 @@ class Workflow:
     def gh(self, *args):
         return run(['gh', *map(str, args)], self.repo).stdout.strip()
 
+    def refresh_publication_status(self):
+        sessions = self.state.get('completed', [])
+        if not sessions:
+            return
+        master = fetch_master(self.repo)
+        refs = git(self.repo, 'ls-remote', '--heads', 'origin')
+        remote = {line.split()[1]: line.split()[0] for line in refs.splitlines()}
+        statuses = []
+        for completed in sessions:
+            check_manifest(completed)
+            audit = tracked_json(self.repo, master, f'coding/merges/{completed["id"]}.json', optional=True)
+            published_head = remote.get('refs/heads/' + completed['branch'])
+            if audit:
+                status = 'integrated' if audit['submission'] == completed['head'] else 'conflict'
+            elif published_head:
+                status = 'published' if published_head == completed['head'] else 'conflict'
+            elif completed.get('published_head') == completed['head']:
+                status = 'published'  # Do not resurrect a previously published, deleted branch.
+            else:
+                status = 'unpublished'
+            statuses.append(status)
+        # Persist only after every remote check succeeds. Older registries are
+        # classified from actual remote refs/audits, not guessed from local flags.
+        for completed, status in zip(sessions, statuses):
+            completed['publication_status'] = status
+            if status in ('published', 'integrated'):
+                completed['published_head'] = completed['head']
+        self.save()
+
     def request_merge(self, identity):
-        completed = self.select_completed(identity)
+        if not self.state.get('completed'):
+            print('No completed coding session is ready to publish.')
+            return
+        if identity:
+            self.select_completed(identity)  # Check the supplied ID before network access.
+        self.refresh_publication_status()
+        if identity:
+            completed = self.select_completed(identity)
+        else:
+            unpublished = [s for s in self.state['completed'] if s['publication_status'] == 'unpublished']
+            if not unpublished:
+                counts = {status: sum(s['publication_status'] == status for s in self.state['completed'])
+                          for status in ('published', 'integrated', 'conflict')}
+                print('No unpublished completed sessions. ' + ', '.join(f'{k}: {v}' for k, v in counts.items()) + '.')
+                return
+            completed = self.select_completed(None, unpublished)
+        local_head = git(self.repo, 'rev-parse', '--verify', 'refs/heads/' + completed['branch'], check=False)
+        if local_head and local_head != completed['head']:
+            raise MergeError('Completed session was amended; submit the original immutable snapshot')
+        status = completed['publication_status']
+        if status in ('published', 'integrated'):
+            print(f'Session {completed["id"]} is already {status}; nothing was pushed.')
+            if status == 'published':
+                print('An up-to-date branch does not trigger another Action. Check GitHub Actions if its PR is missing.')
+            return
+        if status == 'conflict':
+            raise MergeError('The remote branch or integration audit has a different snapshot; nothing was pushed')
         head = git(self.repo, 'rev-parse', completed['branch'])
         if head != completed['head']:
             raise MergeError('Completed session was amended; submit the original immutable snapshot')
@@ -268,6 +324,8 @@ class Workflow:
         if self.branch() == completed['branch']:
             clean(self.repo)
         git(self.repo, 'push', '--set-upstream', 'origin', completed['branch'])
+        completed.update(publication_status='published', published_head=head, published_at=now())
+        self.save()
         print(f'Published coding branch: {completed["branch"]}\nSnapshot: {head}')
         print('GitHub Actions will create or update its draft notification PR when enabled. No local gh CLI is required.')
         print(f'Maintainer can also integrate directly:\nmake coding-integrate BRANCH={completed["branch"]}')

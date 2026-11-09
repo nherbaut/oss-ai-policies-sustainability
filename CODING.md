@@ -63,7 +63,12 @@ make coding-status
    manifest; Enter or `n` leaves the session active. After committing, the script
    returns to `master`. No unrelated files are staged; resolve unrelated work
    separately if it prevents completion.
-3. **Request merge** selects a completed session and pushes its immutable snapshot.
+3. **Request merge** checks remote branches and integration audits, offers only
+   unpublished completed sessions, and pushes the selected immutable snapshot.
+   Already-published or integrated sessions are excluded. An explicit
+   `SESSION=SESSION_ID` for one of those sessions reports its status without
+   pushing again. Publication status is saved locally and refreshed each time
+   this command runs, including sessions created before status tracking existed.
    The Action creates or updates the draft notification PR asynchronously. No local
    GitHub CLI calls are made. The command also prints the branch and a direct
    integration command to share with the maintainer if Actions are unavailable. With
