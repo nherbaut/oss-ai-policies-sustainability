@@ -1,0 +1,4 @@
+# SQLite snapshots must be integrated with scripts/coding-session.sh.
+data/coding.qda/data.qda binary
+# Keep document bytes identical across platforms for coding offsets/provenance.
+data/coding.qda/documents/** -text

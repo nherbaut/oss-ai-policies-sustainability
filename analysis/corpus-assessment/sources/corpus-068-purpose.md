@@ -1,0 +1,217 @@
+<div class="www_title">
+
+The **LLVM** Compiler Infrastructure <img src="img/LLVMWyvernSmall.png" style="height:1em; width:auto" />
+
+</div>
+
+<table width="100%" data-border="0" data-cellpadding="10">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;" data-valign="top"><strong>Site Map:</strong>
+<div class="www_sidebar">
+<a href="/">Overview</a><br />
+<a href="/Features.html">Features</a><br />
+<a href="/docs/">Documentation</a><br />
+<a href="/docs/CommandGuide/">Command Guide</a><br />
+<a href="/docs/FAQ.html">FAQ</a><br />
+<a href="/pubs/">Publications</a><br />
+<a href="/ProjectsWithLLVM/">LLVM Projects</a><br />
+<a href="/OpenProjects.html">Open Projects</a><br />
+<a href="/Users.html">LLVM Users</a><br />
+<a href="https://github.com/llvm/llvm-project/issues/">Bug tracker</a><br />
+<a href="/Logo.html">LLVM Logo</a><br />
+<a href="http://blog.llvm.org/">Blog</a><br />
+<a href="/devmtg/">Meetings</a><br />
+<a href="//foundation.llvm.org">LLVM Foundation</a><br />
+&#10;</div>
+<br />
+<strong>Download!</strong>
+<div class="www_sidebar">
+<span style="font-size:smaller">Download now:</span> <a href="https://releases.llvm.org/"><strong>LLVM 23.1.5</strong></a><br />
+<a href="/releases/">All Releases</a><br />
+<a href="https://apt.llvm.org/">APT Packages</a><br />
+<a href="https://copr.fedorainfracloud.org/coprs/g/fedora-llvm-team/llvm-snapshots/">RPM Snapshots</a><br />
+<a href="https://prereleases.llvm.org/">Pre-releases</a><br />
+<br />
+<span style="font-size:smaller">View the open-source</span><br />
+<a href="/releases/14.0.0/LICENSE.TXT"><strong>license</strong></a>
+</div>
+<br />
+<strong>Search this Site</strong>
+<div class="www_sidebar">
+<div>
+<br />
+&#10;</div>
+</div>
+<br />
+<strong>Useful Links</strong>
+<div class="www_sidebar">
+<span style="font-size:smaller">Forums</span><br />
+<a href="https://discourse.llvm.org/">LLVM Discourse</a><br />
+<br />
+<span style="font-size:smaller">Mailing Lists:</span><br />
+<a href="https://lists.llvm.org/cgi-bin/mailman/listinfo">Commits List</a><br />
+<br />
+<span style="font-size:smaller">Discord (Real-time Chat):</span><br />
+<a href="https://discord.gg/xS7Z362">Discord</a><br />
+<br />
+<span style="font-size:smaller">Calendar:</span><br />
+<a href="https://calendar.google.com/calendar/u/0/embed?src=calendar@llvm.org">LLVM Community Calendar</a><br />
+<br />
+<span style="font-size:smaller">Dev. Resources:</span><br />
+<a href="/doxygen/">doxygen</a><br />
+<a href="https://github.com/llvm/llvm-project/">Sources (GitHub)</a><br />
+<a href="https://reviews.llvm.org">Code Review</a><br />
+<a href="http://blog.llvm.org/">Blog</a><br />
+<a href="https://github.com/llvm/llvm-project/issues/">Bug tracker</a><br />
+<a href="https://lab.llvm.org/buildbot/">Buildbot</a><br />
+<a href="http://green.lab.llvm.org/">Green Dragon</a><br />
+<a href="http://lnt.llvm.org/">LNT</a><br />
+<a href="/reports/scan-build/">Scan-build</a><br />
+<a href="https://lab.llvm.org/coverage/coverage-reports/index.html">llvm-cov</a><br />
+<a href="https://llvm-compile-time-tracker.com/">Compile-time tracker</a><br />
+&#10;</div>
+<br />
+<strong>Release Emails</strong>
+<div class="www_sidebar">
+<span style="font-size:smaller"> 23.1.5: <a href="https://discourse.llvm.org/t/llvm-23-1-5-released/92716">Nov 2026</a> 23.1.4: <a href="https://discourse.llvm.org/t/llvm-23-1-4-released/92564">Oct 2026</a> 23.1.3: <a href="https://discourse.llvm.org/t/llvm-23-1-3-released/92432">Oct 2026</a> 23.1.2: <a href="https://discourse.llvm.org/t/lvm-23-1-2-released/91895">Sep 2026</a> 23.1.1: <a href="https://discourse.llvm.org/t/llvm-23-1-1-released/91760">Sep 2026</a> 23.1.0: <a href="https://discourse.llvm.org/t/llvm-23-1-0-released/91654">Aug 2026</a> 22.1.8: <a href="https://discourse.llvm.org/t/llvm-22-1-8-released/91084">Jun 2026</a> 22.1.7: <a href="https://discourse.llvm.org/t/llvm-22-1-7-released/90961">Jun 2026</a> 22.1.6: <a href="https://discourse.llvm.org/t/llvm-22-1-6-released/90838/3">May 2026</a> 22.1.5: <a href="https://discourse.llvm.org/t/llvm-22-1-5-released/90734">May 2026</a> 22.1.4: <a href="https://discourse.llvm.org/t/llvm-22-1-3-released/90467">Apr 2026</a> 22.1.3: <a href="https://discourse.llvm.org/t/llvm-22-1-3-released/90467">Apr 2026</a> 22.1.2: <a href="https://discourse.llvm.org/t/llvm-22-1-2-released/90308">Mar 2026</a> 22.1.1: <a href="https://discourse.llvm.org/t/llvm-22-1-1-released/90150">Mar 2026</a> 22.1.0: <a href="https://discourse.llvm.org/t/llvm-22-1-0-released/89950/2">Feb 2026</a> <a href="https://discourse.llvm.org/c/announce/46">All Announcements</a><br />
+</span>
+</div>
+<br />
+<span style="font-size:smaller">Maintained by the<br />
+<a href="mailto:llvm-admin@lists.llvm.org">llvm-admin team</a> </span></td>
+<td data-valign="top"><table data-border="0" data-cellpadding="0" data-cellspacing="0" width="95%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td data-valign="top" style="width: 64%"><div class="www_sectiontitle">
+LLVM Overview
+</div>
+<div class="www_text">
+<p>The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name "LLVM" itself is not an acronym; it is the full name of the project.</p>
+<p>LLVM began as a <a href="pubs/2004-01-30-CGO-LLVM.html">research project</a> at the <a href="https://cs.illinois.edu/">University of Illinois</a>, with the goal of providing a modern, SSA-based compilation strategy capable of supporting both static and dynamic compilation of arbitrary programming languages. Since then, LLVM has grown to be an umbrella project consisting of a number of subprojects, many of which are being used in production by a wide variety of <a href="Users.html">commercial and open source</a> projects as well as being widely used in <a href="pubs/">academic research</a>. Code in the LLVM project is licensed under the <a href="docs/DeveloperPolicy.html#new-llvm-project-license-framework">"Apache 2.0 License with LLVM exceptions"</a></p>
+<p>The primary sub-projects of LLVM are:</p>
+<ol>
+<li><p>The <strong>LLVM Core</strong> libraries provide a modern source- and target-independent <a href="docs/Passes.html">optimizer</a>, along with <a href="docs/CodeGenerator.html">code generation support</a> for many popular CPUs (as well as some less common ones!) These libraries are built around a <a href="docs/LangRef.html">well specified</a> code representation known as the LLVM intermediate representation ("LLVM IR"). The LLVM Core libraries are <a href="docs/">well documented</a>, and it is particularly easy to invent your own language (or port an existing compiler) to use <a href="docs/tutorial/">LLVM as an optimizer and code generator</a>.</p></li>
+<li><p><strong><a href="https://clang.llvm.org">Clang</a></strong> is an "LLVM native" C/C++/Objective-C compiler, which aims to deliver amazingly fast compiles, extremely useful <a href="https://clang.llvm.org/diagnostics.html">error and warning messages</a> and to provide a platform for building great source level tools. The <a href="https://clang-analyzer.llvm.org/">Clang Static Analyzer</a> and <a href="https://clang.llvm.org/extra/clang-tidy/">clang-tidy</a> are tools that automatically find bugs in your code, and are great examples of the sort of tools that can be built using the Clang frontend as a library to parse C/C++ code.</p></li>
+<li><p><strong><a href="https://flang.llvm.org">Flang</a></strong> is a modern Fortran compiler with an associated runtime, which aims to generate high-performance code, and support Fortran 2023 and all official Fortran standards going back to Fortran 77, including a number of widely-used <a href="https://flang.llvm.org/docs/Extensions.html">extensions</a>. Flang supports <a href="https://flang.llvm.org/docs/OpenMPSupport.html">OpenMP</a> for both CPUs and GPUs.</p></li>
+<li><p>The <strong><a href="https://lldb.llvm.org">LLDB</a></strong> project builds on libraries provided by LLVM and Clang to provide a great native debugger. It uses the Clang ASTs and expression parser, LLVM JIT, LLVM disassembler, etc so that it provides an experience that "just works". It is also blazing fast and much more memory efficient than GDB at loading symbols.</p></li>
+<li><p>The <strong><a href="https://libcxx.llvm.org">libc++</a></strong> and <strong><a href="https://libcxxabi.llvm.org">libc++ ABI</a></strong> projects provide a standard conformant and high-performance implementation of the C++ Standard Library, including full support for C++11 and C++14.</p></li>
+<li><p>The <strong><a href="https://libc.llvm.org">libc</a></strong> project provides a high-performance, standards-conformant implementation of the C Standard Library, fully integrated with LLVM. It delivers optimized performance and comprehensive support for modern C standards, ensuring a reliable and efficient foundation for C applications.</p></li>
+<li><p>The <strong><a href="https://compiler-rt.llvm.org">compiler-rt</a></strong> project provides highly tuned implementations of the low-level code generator support routines like "<code>__fixunsdfdi</code>" and other calls generated when a target doesn't have a short sequence of native instructions to implement a core IR operation. It also provides implementations of run-time libraries for dynamic testing tools such as <a href="https://clang.llvm.org/docs/AddressSanitizer.html">AddressSanitizer</a>, <a href="https://clang.llvm.org/docs/ThreadSanitizer.html">ThreadSanitizer</a>, <a href="https://clang.llvm.org/docs/MemorySanitizer.html">MemorySanitizer</a>, and <a href="https://clang.llvm.org/docs/DataFlowSanitizer.html">DataFlowSanitizer</a>.</p></li>
+<li><p>The <strong><a href="https://mlir.llvm.org">MLIR</a></strong> subproject is a novel approach to building reusable and extensible compiler infrastructure. MLIR aims to address software fragmentation, improve compilation for heterogeneous hardware, significantly reduce the cost of building domain specific compilers, and aid in connecting existing compilers together.</p></li>
+<li><p>The <strong><a href="https://openmp.llvm.org">OpenMP</a></strong> subproject provides an <a href="https://openmp.org">OpenMP</a> runtime for use with the OpenMP implementation in Clang and Flang.</p></li>
+<li><p>The <strong><a href="https://polly.llvm.org/">polly</a></strong> project implements a suite of cache-locality optimizations as well as auto-parallelism and vectorization using a polyhedral model.</p></li>
+<li><p>The <strong><a href="https://libclc.llvm.org/">libclc</a></strong> project aims to implement the OpenCL standard library.</p></li>
+<li><p>The <strong><a href="https://klee.llvm.org">klee</a></strong> project implements a "symbolic virtual machine" which uses a theorem prover to try to evaluate all dynamic paths through a program in an effort to find bugs and to prove properties of functions. A major feature of klee is that it can produce a testcase in the event that it detects a bug.</p></li>
+<li><p>The <strong><a href="https://lld.llvm.org/">LLD</a></strong> project is a new linker. That is a drop-in replacement for system linkers and runs much faster.</p></li>
+<li><p>The <strong><a href="https://github.com/llvm/llvm-project/tree/main/bolt">BOLT</a></strong> project is a post-link optimizer. It achieves the improvements by optimizing application's code layout based on execution profile gathered by sampling profiler.</p></li>
+</ol>
+<p>In addition to official subprojects of LLVM, there are a broad variety of other projects that <a href="/ProjectsWithLLVM/">use components of LLVM for various tasks</a>. Through these external projects you can use LLVM to compile Ruby, Python, Haskell, Rust, D, PHP, Pure, Lua, Julia, and a number of other languages. A major strength of LLVM is its versatility, flexibility, and reusability, which is why it is being used for such a wide variety of different tasks: everything from doing light-weight JIT compiles of embedded languages like Lua to compiling Fortran code for massive super computers.</p>
+<p>As much as everything else, LLVM has a broad and friendly community of people who are interested in building great low-level tools. If you are interested in <a href="https://llvm.org/docs/GettingInvolved.html">getting involved</a>, a good first place is to skim the <a href="https://blog.llvm.org">LLVM Blog</a> and join <a href="https://discourse.llvm.org">LLVM Discourse</a>. For information on how to send in a patch, get commit access, and copyright and license topics, please see <a href="docs/DeveloperPolicy.html">the LLVM Developer Policy</a>.</p>
+</div></td>
+<td style="width: 2%"></td>
+<td data-valign="top" style="width: 35%"><div class="www_sectiontitle">
+Latest LLVM Release!
+</div>
+<div class="www_text">
+<p><strong>3 November 2026</strong>: LLVM 23.1.5 is now <a href="releases/"><strong>available for download</strong></a>! LLVM is publicly available under an open source <a href="releases/23.1.0/LICENSE.TXT">License</a>. Also, you might want to check out <a href="docs/ReleaseNotes.html#whatsnew"><strong>the new features</strong></a> in Git that will appear in the next LLVM release. If you want them early, <a href="releases/">download LLVM</a> through anonymous Git.</p>
+</div>
+<div class="www_sectiontitle">
+Upcoming Events
+</div>
+<p><a href="/devmtg/2026-10/">October 26-28</a> 2026 US LLVM<br />
+</p>
+<div class="www_sectiontitle">
+ACM Software System Award!
+</div>
+<div class="www_text">
+<p>LLVM has been awarded the <strong>2012 ACM Software System Award</strong>! This award is given by ACM to <em>one</em> software system worldwide every year. LLVM is <a href="https://awards.acm.org/software-system/award-recipients">in highly distinguished company</a>! Click on any of the individual recipients' names on that page for the detailed citation describing the award.</p>
+</div>
+<div class="www_sectiontitle">
+Upcoming Releases
+</div>
+<div class="www_text">
+<p><strong>LLVM Release Schedule:</strong></p>
+<ul>
+<li>23.1.x
+<ul>
+<li>Tue Jul 14th, 2026: release/23.x branch</li>
+<li>Fri Jul 17th, 2026: 23.1.0-rc1 was released</li>
+<li>Tue Jul 28th, 2026: 23.1.0-rc2 was released</li>
+<li>Tue Aug 12th, 2026: 23.1.0-rc3 was released</li>
+<li>Tue Aug 25th, 2026: 23.1.0 was released</li>
+<li>Tue Sep 8th, 2026: 23.1.1 was released</li>
+<li>Tue Sep 22nd, 2026: 23.1.2 was released</li>
+<li>Tue Oct 6th, 2026: 23.1.3 was released</li>
+<li>Tue Oct 20th, 2026: 23.1.4 was released</li>
+<li>Tue Nov 3rd, 2026: 23.1.5 was released</li>
+<li>Tue Nov 17th, 2026: 23.1.6</li>
+<li>Tue Dec 1st, 2026: 23.1.7</li>
+<li>Tue Dec 15th, 2026: 23.1.8</li>
+<li>Tue Dec 29th, 2026: 23.1.9 (if necessary)</li>
+</ul></li>
+</ul>
+</div>
+<div class="www_sectiontitle">
+Developer Meetings
+</div>
+<div class="www_text">
+<p>Upcoming:</p>
+<ul>
+<li><a href="/devmtg/2026-10/">October 26-28, 2026</a></li>
+</ul>
+<p>Proceedings from past meetings:</p>
+<ul>
+<li><a href="/devmtg/2026-04/">April 13-15, 2026</a></li>
+<li><a href="/devmtg/2025-10/">October 27-29, 2025</a></li>
+<li><a href="/devmtg/2025-06/">June 10, 2025</a></li>
+<li><a href="/devmtg/2025-04/">April 14-16, 2025</a></li>
+<li><a href="/devmtg/2024-10/">October 22-24, 2024</a></li>
+<li><a href="/devmtg/2024-04/">April 10-11, 2024</a></li>
+<li><a href="/devmtg/2023-10/">October 9-11, 2023</a></li>
+<li><a href="/devmtg/2023-05/">May 10-11, 2023</a></li>
+<li><a href="/devmtg/2022-11/">November 8-9, 2022</a></li>
+<li><a href="/devmtg/2022-05/">May 10-11, 2022</a></li>
+<li><a href="/devmtg/2021-11/">November 16-19, 2021</a></li>
+<li><a href="/devmtg/2020-09/">October 6-8, 2020</a></li>
+<li><a href="/devmtg/2019-10/">October 22-23, 2019</a></li>
+<li><a href="/devmtg/2019-04/">April 8-9, 2019</a></li>
+<li><a href="/devmtg/2018-10/">October 17-18, 2018</a></li>
+<li><a href="/devmtg/2018-04/">April 16-17, 2018</a></li>
+<li><a href="/devmtg/2017-10/">October 18-19, 2017</a></li>
+<li><a href="/devmtg/2017-03/">March 27-28, 2017</a></li>
+<li><a href="/devmtg/2016-11/">November 3-4, 2016</a></li>
+<li><a href="/devmtg/2016-03/">March 17-18, 2016</a></li>
+<li><a href="/devmtg/2015-10/">October 29-30, 2015</a></li>
+<li><a href="/devmtg/2015-04/">April 13-14, 2015</a></li>
+<li><a href="/devmtg/2014-10/">October 28-29, 2014</a></li>
+<li><a href="/devmtg/2014-04/">April 7-8, 2014</a></li>
+<li><a href="/devmtg/2013-11/">Nov 6-7, 2013</a></li>
+<li><a href="/devmtg/2013-04/">April 29-30, 2013</a></li>
+<li><a href="/devmtg/2012-11/">November 7-8, 2012</a></li>
+<li><a href="/devmtg/2012-04-12/">April 12, 2012</a></li>
+<li><a href="/devmtg/2011-11/">November 18, 2011</a></li>
+<li><a href="/devmtg/2011-09-16/">September 2011</a></li>
+<li><a href="/devmtg/2010-11/">November 2010</a></li>
+<li><a href="/devmtg/2009-10/">October 2009</a></li>
+<li><a href="/devmtg/2008-08/">August 2008</a></li>
+<li><a href="/devmtg/2007-05/">May 2007</a></li>
+</ul>
+</div>
+<br />
+</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table>

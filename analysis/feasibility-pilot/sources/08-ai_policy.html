@@ -1,0 +1,2886 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="AI Usage" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://docs.sunpy.org/en/latest/dev_guide/contents/ai_usage.html" />
+<meta property="og:site_name" content="sunpy" />
+<meta property="og:description" content="Core Principle for the Use of AI in Contributions: Contributing to the SunPy project requires human judgment, contextual understanding, and familiarity with ..." />
+<meta property="og:image" content="https://raw.githubusercontent.com/sunpy/sunpy-logo/master/generated/sunpy_logo_word.png" />
+<meta property="og:image:alt" content="sunpy" />
+<meta name="description" content="Core Principle for the Use of AI in Contributions: Contributing to the SunPy project requires human judgment, contextual understanding, and familiarity with ..." />
+<meta property="og:ignore_canonical" content="true" />
+
+    <title>AI Usage &#8212; sunpy 8.1.dev122 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=75c7c72ae941e8b558d8" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_autodoc_typehints.css?v=057ac668" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/rtd_enhanced_search.css?v=82ef885e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sunpy_style.css?v=4e036860" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=75c7c72ae941e8b558d8"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8" />
+
+    <script src="../../_static/documentation_options.js?v=0d1cc3e8"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=30646c52"></script>
+    <script async="async" src="../../_static/js/submenu-concertina-toggle.js?v=ddf1b194"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="../../_static/js/rtd_enhanced_search.js?v=a7b96e57"></script>
+    <script>
+const set_search_config = {
+  "no-results":{
+    "label": "There are no results for this search"
+  },
+  "load-more":{
+    "label": "Load more results",
+    "class": "btn sd-btn sd-bg-primary sd-bg-text-primary"
+  },
+  "projects":[
+    {
+      "name": "sunpy",
+      "link": "https://docs.sunpy.org/"
+    },
+    {
+      "name": "aiapy",
+      "link": "https://aiapy.readthedocs.io/"
+    },
+    {
+      "name": "dkist",
+      "link": "https://docs.dkist.nso.edu/projects/python-tools"
+    },
+    {
+      "name": "drms",
+      "link": "https://docs.sunpy.org/projects/drms/"
+    },
+    {
+      "name": "irispy",
+      "link": "https://irispy.readthedocs.io/"
+    },
+    {
+      "name": "ndcube",
+      "link": "https://docs.sunpy.org/projects/ndcube/"
+    },
+    {
+      "name": "roentgen",
+      "link": "https://roentgen.readthedocs.io/"
+    },
+    {
+      "name": "scope",
+      "link": "https://statistical-confidence-of-oscillatory-processes-with-emd.readthedocs.io"
+    },
+    {
+      "name": "solarmach",
+      "link": "https://solarmach.readthedocs.io/en/stable/"
+    },
+    {
+      "name": "sunkit-image",
+      "link": "https://docs.sunpy.org/projects/sunkit-image/"
+    },
+    {
+      "name": "sunkit-instruments ",
+      "link": "https://docs.sunpy.org/projects/sunkit-instruments/"
+    },
+    {
+      "name": "sunkit-magex",
+      "link": "https://docs.sunpy.org/projects/sunkit-magex/"
+    },
+    {
+      "name": "sunkit-pyvista",
+      "link": "https://docs.sunpy.org/projects/sunkit-pyvista/"
+    },
+    {
+      "name": "sunpy-soar",
+      "link": "https://docs.sunpy.org/projects/soar/"
+    },
+    {
+      "name": "sunraster",
+      "link": "https://docs.sunpy.org/projects/sunraster/"
+    },
+    {
+      "name": "xrtpy",
+      "link": "https://xrtpy.readthedocs.io/"
+    },
+    {
+      "name": "pyflct",
+      "link": "https://pyflct.readthedocs.io/"
+    },
+    {
+      "name": "radiospectra",
+      "link": "https://docs.sunpy.org/projects/radiospectra/"
+    },
+    {
+      "name": "ablog",
+      "link": "https://ablog.readthedocs.io/en/stable/"
+    },
+    {
+      "name": "mpl-animators",
+      "link": "https://docs.sunpy.org/projects/mpl-animators/"
+    },
+    {
+      "name": "streamtracer",
+      "link": "https://docs.sunpy.org/projects/streamtracer/"
+    }
+  ]
+};
+</script>
+    <script>
+            var endpoint = '';
+            if (location.hostname.endsWith('sunpy.org')) {
+                endpoint = 'https://sunpy.goatcounter.com/count'
+            }
+
+            window.goatcounter = {
+                endpoint: endpoint,
+                path: function(p) { return location.host + p }
+            }
+            </script>
+    <script async="async" src="https://gc.zgo.at/count.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'dev_guide/contents/ai_usage';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="icon" href="_static/img/sunpy_icon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Coding Standards" href="code_standards.html" />
+    <link rel="prev" title="Conventions" href="../conventions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="8.1.dev122" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="sunpy" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/dev_guide/contents/ai_usage.html" /><meta name="readthedocs-http-status" content="200" /></head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+
+
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation" aria-expanded="false" aria-controls="pst-primary-sidebar-modal">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item"><a class="navbar-brand" href="https://sunpy.org/">
+  
+  SunPy
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown ms-2">
+      
+        <a href="#" class="dropdown-toggle nav-link" id="dropdownMenu_header_about_0"
+           data-bs-toggle="dropdown" role="button" aria-expanded="false">
+          About
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu_header_about_0">
+      
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/">
+        Our Mission
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/project/">
+        SunPy Project
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/presentations/">
+        Presentations
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/meetings/">
+        Meetings
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/coc/">
+        Code of Conduct
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown ms-2">
+      
+        <a href="#" class="dropdown-toggle nav-link" id="dropdownMenu_header_documentation_0"
+           data-bs-toggle="dropdown" role="button" aria-expanded="false">
+          Documentation
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu_header_documentation_0">
+      
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/">
+        sunpy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://aiapy.readthedocs.io/">
+        aiapy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.dkist.nso.edu/projects/python-tools">
+        dkist
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/drms/">
+        drms
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://irispy.readthedocs.io/">
+        irispy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/ndcube/">
+        ndcube
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://roentgen.readthedocs.io/">
+        roentgen
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://statistical-confidence-of-oscillatory-processes-with-emd.readthedocs.io">
+        scope
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://solarmach.readthedocs.io/en/stable/">
+        solarmach
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-image/">
+        sunkit-image
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-instruments/">
+        sunkit-instruments 
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-magex/">
+        sunkit-magex
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-pyvista/">
+        sunkit-pyvista
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/soar/">
+        sunpy-soar
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunraster/">
+        sunraster
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://xrtpy.readthedocs.io/">
+        xrtpy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li>
+      <button class="dropdown-item concertina-toggle d-flex align-items-center px-0 position-relative"
+              aria-expanded="false"
+              aria-controls="submenu_header_provisional_1">
+        <span class="concertina-label ps-4">Provisional</span>
+        <span class="concertina-icon position-absolute start-0" aria-hidden="true">▸</span>
+      </button>
+      <ul id="submenu_header_provisional_1" class="concertina-submenu collapse">
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://pyflct.readthedocs.io/">
+        pyflct
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/radiospectra/">
+        radiospectra
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li>
+      <button class="dropdown-item concertina-toggle d-flex align-items-center px-0 position-relative"
+              aria-expanded="false"
+              aria-controls="submenu_header_tools_1">
+        <span class="concertina-label ps-4">Tools</span>
+        <span class="concertina-icon position-absolute start-0" aria-hidden="true">▸</span>
+      </button>
+      <ul id="submenu_header_tools_1" class="concertina-submenu collapse">
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://ablog.readthedocs.io/en/stable/">
+        ablog
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/mpl-animators/">
+        mpl-animators
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/streamtracer/">
+        streamtracer
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+  
+
+        
+      </ul>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/affiliated/">
+        Packages
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/help/">
+        Get Help
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/contribute/">
+        Contribute
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/blog/">
+        Blog
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://docs.sunpy.org/en/stable/citation.html">
+        Cite SunPy
+      </a>
+    </li>
+
+  
+  
+
+      
+    
+
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page" aria-expanded="false" aria-controls="pst-secondary-sidebar-modal">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal" tabindex="-1"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown ms-2">
+      
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center"
+           data-bs-toggle="collapse" data-bs-target="#collapse_sidebar_about_0"
+           role="button" aria-expanded="false" aria-controls="collapse_sidebar_about_0">
+          About
+          <span class="caret" aria-hidden="true">▾</span>
+        </a>
+        <ul class="collapse" id="collapse_sidebar_about_0">
+      
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/">
+        Our Mission
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/project/">
+        SunPy Project
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/presentations/">
+        Presentations
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/about/meetings/">
+        Meetings
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://sunpy.org/coc/">
+        Code of Conduct
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown ms-2">
+      
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center"
+           data-bs-toggle="collapse" data-bs-target="#collapse_sidebar_documentation_0"
+           role="button" aria-expanded="false" aria-controls="collapse_sidebar_documentation_0">
+          Documentation
+          <span class="caret" aria-hidden="true">▾</span>
+        </a>
+        <ul class="collapse" id="collapse_sidebar_documentation_0">
+      
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/">
+        sunpy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://aiapy.readthedocs.io/">
+        aiapy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.dkist.nso.edu/projects/python-tools">
+        dkist
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/drms/">
+        drms
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://irispy.readthedocs.io/">
+        irispy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/ndcube/">
+        ndcube
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://roentgen.readthedocs.io/">
+        roentgen
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://statistical-confidence-of-oscillatory-processes-with-emd.readthedocs.io">
+        scope
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://solarmach.readthedocs.io/en/stable/">
+        solarmach
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-image/">
+        sunkit-image
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-instruments/">
+        sunkit-instruments 
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-magex/">
+        sunkit-magex
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunkit-pyvista/">
+        sunkit-pyvista
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/soar/">
+        sunpy-soar
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://docs.sunpy.org/projects/sunraster/">
+        sunraster
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item" href="https://xrtpy.readthedocs.io/">
+        xrtpy
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li>
+      <button class="dropdown-item concertina-toggle d-flex align-items-center px-0 position-relative"
+              aria-expanded="false"
+              aria-controls="submenu_sidebar_provisional_1">
+        <span class="concertina-label ps-4">Provisional</span>
+        <span class="concertina-icon position-absolute start-0" aria-hidden="true">▸</span>
+      </button>
+      <ul id="submenu_sidebar_provisional_1" class="concertina-submenu collapse">
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://pyflct.readthedocs.io/">
+        pyflct
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/radiospectra/">
+        radiospectra
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li>
+      <button class="dropdown-item concertina-toggle d-flex align-items-center px-0 position-relative"
+              aria-expanded="false"
+              aria-controls="submenu_sidebar_tools_1">
+        <span class="concertina-label ps-4">Tools</span>
+        <span class="concertina-icon position-absolute start-0" aria-hidden="true">▸</span>
+      </button>
+      <ul id="submenu_sidebar_tools_1" class="concertina-submenu collapse">
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://ablog.readthedocs.io/en/stable/">
+        ablog
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/mpl-animators/">
+        mpl-animators
+      </a>
+    </li>
+
+  
+  
+
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item dropdown-submenu ">
+      <a class="dropdown-item concertina-subitem" href="https://docs.sunpy.org/projects/streamtracer/">
+        streamtracer
+      </a>
+    </li>
+
+  
+  
+
+        
+      </ul>
+    </li>
+  
+
+        
+      </ul>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/affiliated/">
+        Packages
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/help/">
+        Get Help
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/contribute/">
+        Contribute
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://sunpy.org/blog/">
+        Blog
+      </a>
+    </li>
+
+  
+  
+
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <li class="nav-item ms-2">
+      <a class="nav-link" href="https://docs.sunpy.org/en/stable/citation.html">
+        Cite SunPy
+      </a>
+    </li>
+
+  
+  
+
+      
+    
+
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/sunpy_icon.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/sunpy_icon.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  <p class="title logo__title">sunpy 8.1.dev122 documentation</p>
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorial/index.html">The sunpy tutorial</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/units.html">Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/time.html">Times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/coordinates.html">Coordinates</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorial/acquiring_data/index.html">Acquiring Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorial/acquiring_data/jsoc.html">Finding and Downloading Data from JSOC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorial/acquiring_data/hek.html">Searching the Heliophysics Event Knowledgebase</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorial/timeseries.html">Timeseries</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../generated/gallery/index.html">Example Gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/acquiring_data/index.html">Acquiring Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/soar_search_attrs.html">Available search attributes for the SOAR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/solo_vso_eui.html">Downloading EUI Data with VSO and SOAR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/search_cdaweb.html">Getting data from CDAWeb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/fido_metadata_queries.html">Querying Metadata clients</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/querying_and_loading_SHARP_data.html">Querying and loading SHARP data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/querying_the_GOES_event_list.html">Querying the GOES flare event list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/soar_quick.html">Quick overview of Searching the SOAR with Fido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/downloading_cutouts.html">Requesting cutouts of AIA images from the JSOC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/soar_searching_with_sensor.html">Searching for EPD/EPT data with the <code class="docutils literal notranslate"><span class="pre">a.soar.Sensor</span></code> attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/soar_solar_distance_query.html">Searching for Solar Orbiter data using Solar Distance attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/acquiring_data/soar_detector_wavelength.html">Searching for Solar Orbiter data using Wavelength and Detector attributes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/map/index.html">Map</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/compare_rotation_results.html">Comparing Map Rotation Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/composite_map_AIA_HMI.html">Creating a Composite map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/lasco_mask.html">Creating a mask for LASCO C2 data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/submaps_and_cropping.html">Cropping a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/plotting_metis_data.html">Downloading and plotting Metis coronagraph data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/image_bright_regions_gallery_example.html">Finding bright regions with ndimage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_contouring.html">Finding contours of a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/brightness_pixel_location.html">Finding the brightest pixel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_from_numpy_array.html">Generating a map from data array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_data_histogram.html">Histograming map data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/interactive_point_selection.html">Interactively Selecting Coordinates on a Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_metadata_modification.html">Map metadata modification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/masking_hmi.html">Masking HMI based on the intensity of AIA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/hmi_contours_wcsaxes.html">Overplotting HMI Contours on an AIA Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/plot_frameless_image.html">Plotting a Map without any Axes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/difference_images.html">Plotting a difference image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_resampling_and_superpixels.html">Resampling Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_rotation.html">Rotating a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/map_segment.html">Segmenting a Map based on transformation of coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map/track_active_region.html">Tracking an Active Region Across the Solar Disk</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/map_transformations/index.html">Combining, Co-aligning, and Reprojecting Images</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_align_aia_hmi.html">Aligning AIA and HMI Data with Reproject</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/autoalign_aia_hmi.html">Auto-Aligning AIA and HMI Data During Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_carrington.html">Creating Carrington Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_aia_euvi_mosaic.html">Creating a Full Sun Map with AIA and EUVI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/solo_phi_reproject.html">Downloading and Reprojecting a Solar Orbiter PHI/HRT Magnetogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_different_observers.html">Reprojecting Images to Different Observers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_spherical_screen.html">Reprojecting Using a Spherical Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_helioprojective_radial.html">Reprojecting a Helioprojective Map to Helioprojective Radial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/projection_custom_origin.html">Reprojecting to a Map Projection with a Custom Origin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/reprojection_auto_extent.html">Reprojecting with Automatic Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/map_transformations/upside_down_hmi.html">Rotating HMI maps so they’re not ‘upside-down’</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/time_series/index.html">Time Series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/goes_xrs_nrt_data.html">Creating a TimeSeries from GOES-XRS near real time data with flare times</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/timeseries_peak_finding.html">Find Peaks in sunpy TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/goes_hek_m25.html">Flare times on a GOES XRS plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/power_spectra_example.html">Making a power spectrum from a TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/goes_xrs_example.html">Retrieving and analyzing GOES X-Ray Sensor (XRS) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/timeseries_convolution_filter.html">Smoothing of timeSeries data using convolution filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/timeseriesmetadata_example.html">The TimeSeriesMetaData class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/time_series/timeseries_example.html">Using TimeSeries</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/index.html">Coordinates, times, and units</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/SDO_to_STEREO_Coordinate_Conversion.html">AIA to STEREO coordinate conversion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/AltAz_Coordinate_transform.html">Converting between Helioprojective and AltAz Coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/spice.html">Coordinates computations using SPICE kernels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/radec_to_hpc_map.html">Create a Helioprojective Map from observations in the RA-DEC coordinate system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/AIA_limb_STEREO.html">Drawing the AIA limb on a STEREO EUVI image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/map_slit_extraction.html">Extracting intensity of a map along a line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/planet_locations.html">Getting the location of the planets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/getting_observer_location.html">Getting the observer location from a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/STEREO_SECCHI_starfield.html">Identifying stars in a STEREO/SECCHI COR2 coronagraph image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/ParkerSolarProbe_trajectory.html">Obtaining a spacecraft trajectory from JPL Horizons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/north_offset_frame.html">Offsetting the north pole of a coordinate frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/venus_transit.html">Overplotting the position of the Venus transit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/solo_fov.html">Plotting Fields of View of Solar Orbiter and DKIST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/units_and_coordinates/getting_lasco_observer_location.html">Setting the correct position for SOHO in a LASCO C3 Map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/plotting/index.html">Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/adding_earth.html">Adding an Earth scale image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/screen_blend_mode.html">Blending maps together</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/masked_composite_plot.html">Combining off-limb and disk maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/three_map_composite.html">Creating a Composite Plot with Three Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/quadrangle.html">Drawing a latitude-longitude quadrangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/plot_rotated_rectangle.html">Drawing a rotated rectangle on a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/great_arc_example.html">Drawing and using a Great Arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/lat_lon_lines.html">Drawing heliographic longitude and latitude lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/draw_wcs_extent.html">Drawing the Extent of a WCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/map_editcolormap.html">Editing the colormap and normalization of a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/fading_between_maps.html">Fading between two maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/finding_local_peaks_in_solar_data.html">Finding Local Peaks in Solar Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/finegrained_plot.html">Fine grained Plotting Features of Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/wcsaxes_map_example.html">Imshow and maps coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/hmi_synoptic_maps.html">Loading an HMI synoptic map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/lasco_overlay.html">Overlay an AIA image on a LASCO C2 coronagraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/AIA_HMI_composite.html">Overlaying Two Maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/offdisk_contours.html">Overlaying off-disk contours using a screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/overplot_hek_polygon.html">Overplotting HEK feature/event polygons on a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/magnetogram_active_regions.html">Overplotting SRS active region locations on a magnetograms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/plotting_blank_map.html">Plot positions on a blank map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/phi_example.html">Plotting Solar Orbiter PHI Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/grid_plotting.html">Plotting a coordinate grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/aia_example.html">Plotting a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/solar_cycle_example.html">Plotting a solar cycle index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/wcsaxes_plotting_example.html">Plotting points on a Map with WCSAxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/plot_equator_prime_meridian.html">Plotting the solar equator and prime meridian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/limb_plotting.html">Plotting the solar limb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/xy_lims.html">Set Axis Range When Plotting a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/simple_differential_rotation.html">Simple Differential Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/plotting/sunpy_matplotlib_colormap.html">Using the sunpy Colormaps with matplotlib</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/differential_rotation/index.html">Differential Rotation of the Sun</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/differential_rotation/comparing_rotation_models.html">Comparing differential-rotation models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/differential_rotation/differentially_rotated_coordinate.html">Differentially rotating a coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/differential_rotation/reprojected_map.html">Differentially rotating a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/differential_rotation/differentially_rotated_gridlines.html">Overlaying differentially rotated gridlines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/saving_and_loading_data/index.html">Saving and Loading Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/saving_and_loading_data/load_adapt_fits_into_map.html">Reading ADAPT FITS Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/saving_and_loading_data/coordinates_in_asdf.html">Saving and loading coordinates with asdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/saving_and_loading_data/genericmap_in_asdf.html">Saving and loading sunpy Maps with ASDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/saving_and_loading_data/genericmap_in_fits.html">Saving and loading sunpy Maps with FITS</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/computer_vision_techniques/index.html">Computer Vision Techniques</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/computer_vision_techniques/loop_edge_enhance.html">Edge Enhancing Coronal Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/computer_vision_techniques/off_limb_enhance.html">Enhancing off-disk emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/computer_vision_techniques/finding_masking_bright_pixels.html">Finding and masking bright pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/computer_vision_techniques/mask_disk.html">Masking out the solar disk</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../generated/gallery/showcase/index.html">Showcase</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/artemis-ii-eclipse.html">Artemis II Solar Eclipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/artemis-ii-trajectory.html">Artemis II trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/time_distance.html">Creating a time-distance plot from a sequence of maps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/hmi_cutout.html">HMI Showcase: Cutout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/eclipse_amount.html">Obtaining solar-eclipse information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/spice_parallel_fitting.html">Parallel Spectral Fitting with Astropy Modeling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/where_is_stereo.html">Reproducing the “Where is STEREO Today?” plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/los_simulation_box_intersection.html">Understanding Observer Orientation Relative to a Simulated Volume with <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.coordinates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/gallery/showcase/stereoscopic_3d.html">Visualizing 3D stereoscopic images</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../how_to/index.html">How-To Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/coord_components.html">Access coordinate components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/create_a_map.html">Create a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/create_coords.html">Create coordinate objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/create_custom_map.html">Create a custom <code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/create_custom_timeseries.html">Create a custom <code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeSeries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/create_rectangle_on_map.html">Draw a rectangle on a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/fix_map_metadata.html">Fix incorrect metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/manipulate_grid_lines.html">Manipulate grids lines when plotting a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/observer_by_coordinate.html">Specify an observer by coordinate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/parse_time.html">Parse times with <code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_time</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/read_asdf_file.html">Read an ASDF file into a <code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/remote_data_manager.html">Use the remote data manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/search_multiple_wavelengths.html">Search for multiple wavelengths with <code class="xref py py-obj docutils literal notranslate"><span class="pre">Fido</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/search_vso.html">Search the Virtual Solar Observatory (VSO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/transform_coords.html">Transform between coordinate frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how_to/soar_wavelength.html">Query for Solar Orbiter data using the <code class="docutils literal notranslate"><span class="pre">Wavelength</span></code> attribute</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../topic_guide/index.html">Topic Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../topic_guide/coordinates/index.html">Coordinates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/coordinates/carrington.html">Calculating Carrington longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/coordinates/rotatedsunframe.html">Differential rotation using coordinate frames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/coordinates/velocities.html">Coordinates with velocity information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/coordinates/wcs.html">Coordinates and WCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/coordinates/rsun.html">The role of rsun in coordinate transformations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../topic_guide/data/index.html">Data and Metadata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/data/map_rsun.html">The role of “rsun” in sunpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/data/timeseries_metadata.html">A Detailed Look at the TimeSeries Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/data/history_comments.html">How “HISTORY” and “COMMENT” FITS Keys are Handled in sunpy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../topic_guide/configuration/index.html">Configuration and Installation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/configuration/installation.html">Advanced Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topic_guide/configuration/logger.html">Logging system</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../reference/index.html">Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/sunpy.html">sunpy (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.self_test.html">self_test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.system_info.html">system_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.print_config.html">print_config</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/coordinates/index.html">Coordinates (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.coordinates</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.get_body_heliographic_stonyhurst.html">get_body_heliographic_stonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.get_earth.html">get_earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.get_horizons_coord.html">get_horizons_coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.propagate_with_solar_surface.html">propagate_with_solar_surface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.solar_frame_to_wcs_mapping.html">solar_frame_to_wcs_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.solar_wcs_frame_mapping.html">solar_wcs_frame_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.transform_with_sun_center.html">transform_with_sun_center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.BaseHeliographic.html">BaseHeliographic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.BaseMagnetic.html">BaseMagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.GeocentricEarthEquatorial.html">GeocentricEarthEquatorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.GeocentricSolarEcliptic.html">GeocentricSolarEcliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.GeocentricSolarMagnetospheric.html">GeocentricSolarMagnetospheric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.Geomagnetic.html">Geomagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.Heliocentric.html">Heliocentric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.HeliocentricEarthEcliptic.html">HeliocentricEarthEcliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.HeliocentricInertial.html">HeliocentricInertial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.HeliographicCarrington.html">HeliographicCarrington</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.HeliographicStonyhurst.html">HeliographicStonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.Helioprojective.html">Helioprojective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.HelioprojectiveRadial.html">HelioprojectiveRadial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.NorthOffsetFrame.html">NorthOffsetFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.PlanarScreen.html">PlanarScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.RotatedSunFrame.html">RotatedSunFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.SolarMagnetic.html">SolarMagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.SphericalScreen.html">SphericalScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.SunPyBaseCoordinateFrame.html">SunPyBaseCoordinateFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.ephemeris.get_body_heliographic_stonyhurst.html">get_body_heliographic_stonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.ephemeris.get_earth.html">get_earth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.ephemeris.get_horizons_coord.html">get_horizons_coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.get_body.html">get_body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.get_fov.html">get_fov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.initialize.html">initialize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.install_frame.html">install_frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.get_rotation_matrix.html">get_rotation_matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.spice.SpiceBaseCoordinateFrame.html">SpiceBaseCoordinateFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.angular_radius.html">angular_radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.sky_position.html">sky_position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.carrington_rotation_number.html">carrington_rotation_number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.carrington_rotation_time.html">carrington_rotation_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.true_longitude.html">true_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.apparent_longitude.html">apparent_longitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.true_latitude.html">true_latitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.apparent_latitude.html">apparent_latitude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.mean_obliquity_of_ecliptic.html">mean_obliquity_of_ecliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.true_rightascension.html">true_rightascension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.true_declination.html">true_declination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.true_obliquity_of_ecliptic.html">true_obliquity_of_ecliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.apparent_rightascension.html">apparent_rightascension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.apparent_declination.html">apparent_declination</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.print_params.html">print_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.B0.html">B0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.L0.html">L0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.P.html">P</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.earth_distance.html">earth_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.orientation.html">orientation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.sun.eclipse_amount.html">eclipse_amount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.utils.get_rectangle_coordinates.html">get_rectangle_coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.utils.solar_angle_equivalency.html">solar_angle_equivalency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.utils.get_limb_coordinates.html">get_limb_coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.utils.get_heliocentric_angle.html">get_heliocentric_angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.utils.GreatArc.html">GreatArc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.SunPyBaseCoordinateFrame.html">SunPyBaseCoordinateFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.BaseHeliographic.html">BaseHeliographic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.BaseMagnetic.html">BaseMagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.HeliographicStonyhurst.html">HeliographicStonyhurst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.HeliographicCarrington.html">HeliographicCarrington</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.Heliocentric.html">Heliocentric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.Helioprojective.html">Helioprojective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.HelioprojectiveRadial.html">HelioprojectiveRadial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.HeliocentricEarthEcliptic.html">HeliocentricEarthEcliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.GeocentricSolarEcliptic.html">GeocentricSolarEcliptic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.HeliocentricInertial.html">HeliocentricInertial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.GeocentricEarthEquatorial.html">GeocentricEarthEquatorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.Geomagnetic.html">Geomagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.SolarMagnetic.html">SolarMagnetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.frames.GeocentricSolarMagnetospheric.html">GeocentricSolarMagnetospheric</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.screens.BaseScreen.html">BaseScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.screens.SphericalScreen.html">SphericalScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.screens.PlanarScreen.html">PlanarScreen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.metaframes.NorthOffsetFrame.html">NorthOffsetFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.metaframes.RotatedSunFrame.html">RotatedSunFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.wcs_utils.solar_wcs_frame_mapping.html">solar_wcs_frame_mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.coordinates.wcs_utils.solar_frame_to_wcs_mapping.html">solar_frame_to_wcs_mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/data.html">Data (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.data</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.EARTH_IMAGE.html">EARTH_IMAGE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.manager.html">manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.cache.html">cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.sample.download_all.html">download_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.test.get_test_filepath.html">get_test_filepath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.test.get_test_data_filenames.html">get_test_data_filenames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.test.get_dummy_map_from_header.html">get_dummy_map_from_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.test.write_header_file_from_image_file.html">write_header_file_from_image_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.Cache.html">Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.DataManager.html">DataManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.ParfiveDownloader.html">ParfiveDownloader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.SqliteStorage.html">SqliteStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.downloader.DownloaderBase.html">DownloaderBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.downloader.DownloaderError.html">DownloaderError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.downloader.ParfiveDownloader.html">ParfiveDownloader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.storage.StorageProviderBase.html">StorageProviderBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.storage.SqliteStorage.html">SqliteStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.data.data_manager.storage.InMemStorage.html">InMemStorage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/image.html">Image processing (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.image</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.image.resample.resample.html">resample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.image.resample.reshape_image_to_4d_superpixel.html">reshape_image_to_4d_superpixel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.image.transform.add_rotation_function.html">add_rotation_function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.image.transform.affine_transform.html">affine_transform</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/io.html">Input/output (<code class="docutils literal notranslate"><span class="pre">sunpy.io</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io.special.genx.read_genx.html">read_genx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io.ana.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io.ana.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io.ana.write.html">write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io.special.srs.read_srs.html">read_srs</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/map.html">Maps (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.map</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.all_coordinates_from_map.html">all_coordinates_from_map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.all_corner_coords_from_map.html">all_corner_coords_from_map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.all_pixel_indices_from_map.html">all_pixel_indices_from_map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.contains_coordinate.html">contains_coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.contains_full_disk.html">contains_full_disk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.contains_limb.html">contains_limb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.contains_solar_center.html">contains_solar_center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.coordinate_is_on_solar_disk.html">coordinate_is_on_solar_disk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.is_all_off_disk.html">is_all_off_disk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.is_all_on_disk.html">is_all_on_disk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.make_hpr_header.html">make_hpr_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.map_edges.html">map_edges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.on_disk_bounding_coordinates.html">on_disk_bounding_coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.pixelate_coord_path.html">pixelate_coord_path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sample_at_coords.html">sample_at_coords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.solar_angular_radius.html">solar_angular_radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.CompositeMap.html">CompositeMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.GenericMap.html">GenericMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.MapMetaValidationError.html">MapMetaValidationError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.MapSequence.html">MapSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.PixelPair.html">PixelPair</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.Map.html">Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.header_helper.make_fitswcs_header.html">make_fitswcs_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.header_helper.get_observer_meta.html">get_observer_meta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.header_helper.make_heliographic_header.html">make_heliographic_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.header_helper.make_hpr_header.html">make_hpr_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.from_helioviewer_project.html">from_helioviewer_project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.source_stretch.html">source_stretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.ADAPTMap.html">ADAPTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.AIAMap.html">AIAMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.CORMap.html">CORMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.EITL1Map.html">EITL1Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.EITMap.html">EITMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.EUIMap.html">EUIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.EUVIMap.html">EUVIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.GONGHalphaMap.html">GONGHalphaMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.GONGMagnetogramMap.html">GONGMagnetogramMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.GONGSynopticMap.html">GONGSynopticMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.HIMap.html">HIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.HMIMap.html">HMIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.HMISynopticMap.html">HMISynopticMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.HXIMap.html">HXIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.KCorMap.html">KCorMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.LASCOMap.html">LASCOMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.MDIMap.html">MDIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.MDISynopticMap.html">MDISynopticMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.METISMap.html">METISMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.PHIMap.html">PHIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.PUNCHMap.html">PUNCHMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.RHESSIMap.html">RHESSIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SJIMap.html">SJIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SOTMap.html">SOTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SUITMap.html">SUITMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SUVIMap.html">SUVIMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SWAPMap.html">SWAPMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.SXTMap.html">SXTMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.TRACEMap.html">TRACEMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.WISPRMap.html">WISPRMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.map.sources.XRTMap.html">XRTMap</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/net.html">Remote data (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.net</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.Scraper.html">Scraper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.Fido.html">Fido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Time.html">Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Instrument.html">Instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Wavelength.html">Wavelength</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Level.html">Level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.ExtentType.html">ExtentType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Sample.html">Sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Detector.html">Detector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Resolution.html">Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Physobs.html">Physobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Source.html">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.Provider.html">Provider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.AttrAnd.html">AttrAnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attrs.AttrOr.html">AttrOr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.fido_factory.UnifiedResponse.html">UnifiedResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.fido_factory.UnifiedDownloaderFactory.html">UnifiedDownloaderFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.VSOClient.html">VSOClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.VSOQueryResponseTable.html">VSOQueryResponseTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.Extent.html">Extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.Field.html">Field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.Pixels.html">Pixels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.Filter.html">Filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.Quicklook.html">Quicklook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.vso.attrs.PScale.html">PScale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.ADAPTClient.html">ADAPTClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.AIASynopsisClient.html">AIASynopsisClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.EVEClient.html">EVEClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.GBMClient.html">GBMClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.GONGClient.html">GONGClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.LYRAClient.html">LYRAClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.NOAAIndicesClient.html">NOAAIndicesClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.NOAAPredictClient.html">NOAAPredictClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.NoRHClient.html">NoRHClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.RHESSIClient.html">RHESSIClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.SRSClient.html">SRSClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.SUVIClient.html">SUVIClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.XRSClient.html">XRSClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.goes.SatelliteNumber.html">SatelliteNumber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTFileType.html">ADAPTFileType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTLonType.html">ADAPTLonType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTInputSource.html">ADAPTInputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTDataAssimilation.html">ADAPTDataAssimilation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTResolution.html">ADAPTResolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTVersionYear.html">ADAPTVersionYear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTVersionMonth.html">ADAPTVersionMonth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTEvolutionMode.html">ADAPTEvolutionMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTHelioData.html">ADAPTHelioData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTRealizations.html">ADAPTRealizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.attrs.adapt.ADAPTMagData.html">ADAPTMagData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Cutout.html">Cutout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.JSOCClient.html">JSOCClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.JSOCResponse.html">JSOCResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Keyword.html">Keyword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.PrimeKey.html">PrimeKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.Series.html">Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Series.html">Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Protocol.html">Protocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Notify.html">Notify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Segment.html">Segment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.PrimeKey.html">PrimeKey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Cutout.html">Cutout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.jsoc.attrs.Keyword.html">Keyword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.HEKClient.html">HEKClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.HEKRow.html">HEKRow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.HEKTable.html">HEKTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.attrs.Contains.html">Contains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.attrs.EventType.html">EventType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.attrs.HEKAttr.html">HEKAttr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.attrs.HEKComparisonParamAttrWrapper.html">HEKComparisonParamAttrWrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek.attrs.SpatialRegion.html">SpatialRegion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek2vso.translate_results_to_query.html">translate_results_to_query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek2vso.vso_attribute_parse.html">vso_attribute_parse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.hek2vso.H2VClient.html">H2VClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.cdaweb.get_datasets.html">get_datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.cdaweb.get_observatory_groups.html">get_observatory_groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.cdaweb.CDAWEBClient.html">CDAWEBClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.cdaweb.Dataset.html">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.helio.HECClient.html">HECClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.helio.HECResponse.html">HECResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.helio.Chaincode.html">Chaincode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.helio.attrs.MaxRecords.html">MaxRecords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.helio.attrs.TableName.html">TableName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.Dataset.html">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.Limit.html">Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.SOLARNETClient.html">SOLARNETClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.Tags.html">Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.Target.html">Target</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.attrs.Dataset.html">Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.attrs.Limit.html">Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.attrs.Target.html">Target</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.solarnet.attrs.Tags.html">Tags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.soar.SOARClient.html">SOARClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.soar.attrs.SOOP.html">SOOP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.soar.attrs.Distance.html">Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.soar.attrs.Product.html">Product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.soar.attrs.Sensor.html">Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.convert_row_to_table.html">convert_row_to_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.QueryResponseColumn.html">QueryResponseColumn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.BaseQueryResponse.html">BaseQueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.QueryResponseRow.html">QueryResponseRow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.QueryResponseTable.html">QueryResponseTable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.base_client.BaseClient.html">BaseClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.client.QueryResponse.html">QueryResponse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.dataretriever.client.GenericClient.html">GenericClient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.and_.html">and</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.or_.html">or</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.AttrMeta.html">AttrMeta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.Attr.html">Attr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.DataAttr.html">DataAttr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.DummyAttr.html">DummyAttr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.SimpleAttr.html">SimpleAttr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.Range.html">Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.AttrAnd.html">AttrAnd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.AttrOr.html">AttrOr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.ValueAttr.html">ValueAttr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.AttrWalker.html">AttrWalker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.AttrComparison.html">AttrComparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.attr.ComparisonParamAttrWrapper.html">ComparisonParamAttrWrapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.scraper.Scraper.html">Scraper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.scraper_utils.extract_timestep.html">extract_timestep</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.scraper_utils.date_floor.html">date_floor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.net.scraper_utils.get_timerange_from_exdict.html">get_timerange_from_exdict</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/physics.html">Physics (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.physics</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.physics.differential_rotation.solar_rotate_coordinate.html">solar_rotate_coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.physics.differential_rotation.differential_rotate.html">differential_rotate</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/sun.html">Solar properties (<code class="docutils literal notranslate"><span class="pre">sunpy.sun</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.get.html">get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.find.html">find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.print_all.html">print_all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.spectral_classification.html">spectral_classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.au.html">au</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.mass.html">mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.equatorial_radius.html">equatorial_radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.volume.html">volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.surface_area.html">surface_area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.average_density.html">average_density</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.equatorial_surface_gravity.html">equatorial_surface_gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.effective_temperature.html">effective_temperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.luminosity.html">luminosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.mass_conversion_rate.html">mass_conversion_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.escape_velocity.html">escape_velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.sfu.html">sfu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.average_angular_size.html">average_angular_size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.sidereal_rotation_rate.html">sidereal_rotation_rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.first_carrington_rotation.html">first_carrington_rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.constants.mean_synodic_period.html">mean_synodic_period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.models.differential_rotation.html">differential_rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.models.interior.html">interior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.sun.models.evolution.html">evolution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/time.html">Time (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.time</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.find_time.html">find_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.is_time.html">is_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.is_time_equal.html">is_time_equal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.is_time_in_given_format.html">is_time_in_given_format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.julian_centuries.html">julian_centuries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.parse_time.html">parse_time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.TimeRange.html">TimeRange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.TimeTaiSeconds.html">TimeTaiSeconds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.time.TimeUTime.html">TimeUTime</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/timeseries.html">Timeseries (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.timeseries</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.TimeSeriesMetaData.html">TimeSeriesMetaData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.GenericTimeSeries.html">GenericTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.TimeSeries.html">TimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.ESPTimeSeries.html">ESPTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.EVESpWxTimeSeries.html">EVESpWxTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.GBMSummaryTimeSeries.html">GBMSummaryTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.XRSTimeSeries.html">XRSTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.LYRATimeSeries.html">LYRATimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.NOAAIndicesTimeSeries.html">NOAAIndicesTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.NOAAPredictIndicesTimeSeries.html">NOAAPredictIndicesTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.NoRHTimeSeries.html">NoRHTimeSeries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.timeseries.sources.RHESSISummaryTimeSeries.html">RHESSISummaryTimeSeries</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/util.html">Utilities (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.util</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.cached_property_based_on.html">cached_property_based_on</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.check_arithmetic_compatibility.html">check_arithmetic_compatibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.deprecated.html">deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.deprecated_renamed_argument.html">deprecated_renamed_argument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.dict_keys_same.html">dict_keys_same</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.expand_list.html">expand_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.expand_list_generator.html">expand_list_generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.extent_in_other_wcs.html">extent_in_other_wcs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.find_dependencies.html">find_dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.fix_duplicate_notes.html">fix_duplicate_notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.get_keywords.html">get_keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.get_set_methods.html">get_set_methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.get_width.html">get_width</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.grid_perimeter.html">grid_perimeter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.hash_file.html">hash_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.missing_dependencies_by_extra.html">missing_dependencies_by_extra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.replacement_filename.html">replacement_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.sunpycontextmanager.html">sunpycontextmanager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.system_info.html">system_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.unique.html">unique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.warn_connection.html">warn_connection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.warn_deprecated.html">warn_deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.warn_metadata.html">warn_metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.warn_user.html">warn_user</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.MetaDict.html">MetaDict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.NoMapsInFileError.html">NoMapsInFileError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyConnectionWarning.html">SunpyConnectionWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyDeprecationWarning.html">SunpyDeprecationWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyMetadataWarning.html">SunpyMetadataWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyPendingDeprecationWarning.html">SunpyPendingDeprecationWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyUserWarning.html">SunpyUserWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.SunpyWarning.html">SunpyWarning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.add_common_docstring.html">add_common_docstring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.config.load_config.html">load_config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.config.copy_default_config.html">copy_default_config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.config.print_config.html">print_config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.datatype_factory_base.BasicRegistrationFactory.html">BasicRegistrationFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.datatype_factory_base.NoMatchError.html">NoMatchError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.datatype_factory_base.MultipleMatchError.html">MultipleMatchError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.datatype_factory_base.ValidationFunctionError.html">ValidationFunctionError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.parse_header.html">parse_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.slugify.html">slugify</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.get_content_disposition.html">get_content_disposition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.get_filename.html">get_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.get_system_filename.html">get_system_filename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.download_file.html">download_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.net.download_fileobj.html">download_fileobj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.xml.xml_to_dict.html">xml_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.xml.node_to_dict.html">node_to_dict</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.xml.get_node_text.html">get_node_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.xml.NotTextNodeError.html">NotTextNodeError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.sphinx.generate.Generate.html">Generate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.util.functools.seconddispatch.html">seconddispatch</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/visualization.html">Visualization (<code class="xref py py-obj docutils literal notranslate"><span class="pre">sunpy.visualization</span></code>)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.axis_labels_from_ctype.html">axis_labels_from_ctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.peek_show.html">peek_show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.show_hpr_impact_angle.html">show_hpr_impact_angle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.show_colormaps.html">show_colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.aia_color_table.html">aia_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.sswidl_lasco_color_table.html">sswidl_lasco_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.eit_color_table.html">eit_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.sxt_color_table.html">sxt_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.xrt_color_table.html">xrt_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.trace_color_table.html">trace_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.sot_color_table.html">sot_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.hmi_mag_color_table.html">hmi_mag_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.suvi_color_table.html">suvi_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.rhessi_color_table.html">rhessi_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.std_gamma_2.html">std_gamma_2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.euvi_color_table.html">euvi_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.solohri_lya1216_color_table.html">solohri_lya1216_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.suit_color_table.html">suit_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.punch_color_table.html">punch_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.colormaps.color_tables.metis_color_table.html">metis_color_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.animator.MapSequenceAnimator.html">MapSequenceAnimator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.wcsaxes_compat.is_wcsaxes.html">is_wcsaxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.wcsaxes_compat.gca_wcs.html">gca_wcs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.wcsaxes_compat.get_world_transform.html">get_world_transform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.wcsaxes_compat.default_wcs_grid.html">default_wcs_grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.wcsaxes_compat.wcsaxes_heliographic_overlay.html">wcsaxes_heliographic_overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.drawing.limb.html">limb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.drawing.equator.html">equator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.drawing.prime_meridian.html">prime_meridian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.visualization.drawing.extent.html">extent</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/customization.html">Customizing sunpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/troubleshooting.html">Troubleshooting and Bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/ssw.html">SSWIDL/sunpy Cheat Sheet</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../reference/internal_api.html">Internal API Documentation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._file_tools.read_file.html">read_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._file_tools.read_file_header.html">read_file_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._file_tools.write_file.html">write_file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._file_tools.detect_filetype.html">detect_filetype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._header.FileHeader.html">FileHeader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.header_to_fits.html">header_to_fits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.write.html">write</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.extract_waveunit.html">extract_waveunit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._fits.format_comments_and_history.html">format_comments_and_history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._jp2.read.html">read</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._jp2.get_header.html">get_header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../generated/api/sunpy.io._jp2.write.html">write</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../whatsnew/index.html">Release History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/changelog.html">Full Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/8.1.html">What’s New in sunpy 8.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/8.0.html">What’s New in sunpy 8.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/7.1.html">What’s New in sunpy 7.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/7.0.html">What’s New in sunpy 7.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/6.1.html">What’s New in sunpy 6.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/6.0.html">What’s New in sunpy 6.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/5.1.html">What’s New in sunpy 5.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/5.0.html">What’s New in sunpy 5.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/4.1.html">What’s New in sunpy 4.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/4.0.html">What’s New in SunPy 4.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/3.1.html">What’s New in SunPy 3.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/3.0.html">What’s New in SunPy 3.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/2.1.html">What’s New in SunPy 2.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/2.0.html">What’s New in SunPy 2.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/1.1.html">What’s New in SunPy 1.1?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/1.0.html">What’s New in SunPy 1.0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/0.9.html">What’s New in SunPy 0.9?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../whatsnew/0.8.html">What’s New in SunPy 0.8?</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../citation.html">Acknowledging or Citing SunPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/known_issues.html">Known Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/stability.html">Current status of sub-packages</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Developer’s Guide</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../getting_started.html">Getting started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="newcomers.html">Newcomers’ Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pr_checklist.html">Pull Request Check List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="conda_for_dependencies.html">Using <code class="docutils literal notranslate"><span class="pre">conda</span></code> for Development Dependencies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../conventions.html">Conventions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a aria-current="page" class="current reference internal" href="#">AI Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code_standards.html">Coding Standards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html">Testing Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_gallery.html">Example Gallery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pr_review_procedure.html">Pull Requests and GitHub Teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="units_quantities.html">Use of quantities and units</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../repo_management.html">Repo management</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="maintainer_workflow.html">Workflow for Maintainers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Extra Packages and Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ci_jobs.html">What runs on our Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="backports.html">Making Changes to Released Versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deprecation.html">Deprecation, Versioning and Release Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="funding.html">Submodule and funding</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../extending_sunpy.html">Extending sunpy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="public_api.html">sunpy’s Public API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logger.html">Logging, Warnings, and Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remote_data_manager.html">Tests using the Remote Data Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extending_fido.html">Adding new data sources to Fido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new_map_class.html">Writing a new instrument Map class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom_map_rotate.html">Add a new rotation method to Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scraper_migration.html">Migrating to the new Scraper pattern system in <code class="docutils literal notranslate"><span class="pre">sunpy</span></code> 6.1</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="soar/index.html">SOAR Client Developer Guide</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="soar/working.html">How data is retrieved from the SOAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="soar/tables.html">Tables supported in <code class="docutils literal notranslate"><span class="pre">SOARClient</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="soar/query.html">Request methods <code class="docutils literal notranslate"><span class="pre">SOARClient</span></code> supports</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Developer’s Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../conventions.html" class="nav-link">Conventions</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">AI Usage</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="ai-usage">
+<span id="id1"></span><h1>AI Usage<a class="headerlink" href="#ai-usage" title="Link to this heading">#</a></h1>
+<section id="core-principle-for-the-use-of-ai-in-contributions">
+<h2>Core Principle for the Use of AI in Contributions<a class="headerlink" href="#core-principle-for-the-use-of-ai-in-contributions" title="Link to this heading">#</a></h2>
+<p>Contributing to the SunPy project requires human judgment, contextual understanding, and familiarity with the SunPy project’s structure and goals.
+It is not suitable for automatic processing by AI tools; please refrain from submitting issues or pull requests generated by fully-automated tools.
+The SunPy project will accept the responsible use of AI-assisted tools by both contributors and maintainers.
+These tools can be valuable aids for exploration, debugging, documentation, and code improvement.
+However, AI cannot replace human effort and intellect, and its use must not shift disproportionate effort or responsibility onto the project.
+The core principle can be summarised as:</p>
+<p><strong>Any contribution should be worth more to the project than the effort required to review it.</strong></p>
+</section>
+<section id="non-compliance">
+<h2>Non-Compliance<a class="headerlink" href="#non-compliance" title="Link to this heading">#</a></h2>
+<p>Contributions which that appear to violate this principle can be summarily closed or removed.</p>
+<p>All pull requests <strong>must</strong> include the AI Assistance Disclosure checklist (listed below) in their description</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## AI Assistance Disclosure</span>
+<span class="n">AI</span> <span class="n">tools</span> <span class="n">were</span> <span class="n">used</span> <span class="k">for</span><span class="p">:</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Code</span> <span class="n">generation</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">when</span> <span class="n">writing</span> <span class="n">an</span> <span class="n">implementation</span> <span class="ow">or</span> <span class="n">fixing</span> <span class="n">a</span> <span class="n">bug</span><span class="p">)</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Test</span><span class="o">/</span><span class="n">benchmark</span> <span class="n">generation</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Documentation</span> <span class="p">(</span><span class="n">including</span> <span class="n">examples</span><span class="p">)</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Research</span> <span class="ow">and</span> <span class="n">understanding</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">No</span> <span class="n">AI</span> <span class="n">tools</span> <span class="n">were</span> <span class="n">used</span>
+
+<span class="o">&gt;</span> <span class="n">Regardless</span> <span class="n">of</span> <span class="n">AI</span> <span class="n">use</span><span class="p">,</span> <span class="n">the</span> <span class="n">human</span> <span class="n">contributor</span> <span class="n">remains</span> <span class="n">fully</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">correctness</span><span class="p">,</span> <span class="n">design</span> <span class="n">choices</span><span class="p">,</span> <span class="n">licensing</span> <span class="n">compatibility</span><span class="p">,</span> <span class="ow">and</span> <span class="n">long</span><span class="o">-</span><span class="n">term</span> <span class="n">maintainability</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This is automatically added to the pull request description when you open a pull request.
+If it is not automatically added to the pull request description (e.g. if using the GitHub API), then the contributor is responsible for manually adding the above checklist to the pull request description.
+Pull requests which fail to complete the AI Assistance Disclosure checklist <strong>will be marked as draft and will not be reviewed until the checklist is completed</strong>.
+Pull requests which remove the AI Assistance Disclosure checklist entirely <strong>may be immediately closed without a review</strong>.
+Removing or failing to complete this checklist may be deemed a form of non-compliance.</p>
+<p>Repeated non-compliance may be considered a <a class="reference external" href="https://sunpy.org/coc/">code of conduct</a> violation.</p>
+</section>
+<section id="responsible-uses-of-ai">
+<h2>Responsible Uses of AI<a class="headerlink" href="#responsible-uses-of-ai" title="Link to this heading">#</a></h2>
+<p>Contributions should be prepared with the expectation that they must be worth more to the project than the effort required to review.
+This includes, but is not limited to:</p>
+<ul class="simple">
+<li><p>Initial code review and discussion</p></li>
+<li><p>Follow-up review cycles and revisions</p></li>
+<li><p>Testing, validation, and debugging</p></li>
+<li><p>Long-term maintenance and user support</p></li>
+</ul>
+<p><strong>AI assistance does not reduce the expected level of contributor effort.</strong>
+Submissions that require maintainers to spend significant time understanding, validating, or correcting work that the contributor has not fully reviewed or understood place an unfair burden on already scarce project resources.
+Regardless of whether AI tools are used, the human contributor remains the clear owner of their contribution and is responsible for:</p>
+<ul class="simple">
+<li><p>Understanding and being able to explain all changes</p></li>
+<li><p>Ensuring, to the best of their ability and knowledge, correctness, scientific validity, and reproducibility</p></li>
+<li><p>Following sunpy’s <a class="reference internal" href="code_standards.html#coding-standards"><span class="std std-ref">Coding Standards</span></a>, <a class="reference internal" href="documentation.html#docs-guidelines"><span class="std std-ref">Documentation</span></a> style, and design principles</p></li>
+<li><p>Addressing review feedback in a timely and constructive manner</p></li>
+<li><p>Ensuring copyrighted material does not appear in their contributions</p></li>
+</ul>
+<p>Maintainers may also use AI tools to assist with review, triage, or debugging, but this does not replace the need for human judgment, project knowledge, and accountability.</p>
+<section id="examples-of-appropriate-use">
+<h3>Examples of appropriate use:<a class="headerlink" href="#examples-of-appropriate-use" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A contributor uses AI to help diagnose a failing test or isolate a bug in a pull request they authored and understand</p></li>
+<li><p>A contributor uses AI to help improve or reword PR summaries and or comments they have written</p></li>
+<li><p>AI is used to suggest improvements to documentation, error messages, or small refactors, followed by careful human verification.</p></li>
+<li><p>Maintainers use AI tools to summarize discussions, explore alternative implementations, or assist in reviewing well-scoped, clearly explained changes.</p></li>
+</ul>
+</section>
+<section id="examples-of-inappropriate-use">
+<h3>Examples of inappropriate use:<a class="headerlink" href="#examples-of-inappropriate-use" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Generating an entire pull request directly from an issue description and submitting it with minimal human understanding or validation.</p></li>
+<li><p>Pasting AI generated text in the description of issues, PRs or in comments.</p></li>
+<li><p>Using AI-generated changes as a substitute for learning the codebase or engaging with review feedback.</p></li>
+<li><p>Expecting maintainers to serve as the primary filter for correctness, design decisions, or AI hallucinations.</p></li>
+<li><p>Passing off AI generated content as created by a human</p></li>
+</ul>
+</section>
+</section>
+<section id="transparency-and-sustainable-collaboration">
+<h2>Transparency and Sustainable Collaboration<a class="headerlink" href="#transparency-and-sustainable-collaboration" title="Link to this heading">#</a></h2>
+<p>Contributors should be transparent about AI assistance and be prepared to explain how AI tools were used and how the resulting work was validated.
+Transparency supports trust, effective collaboration, and sustainable maintenance.
+The intent of this policy is not to discourage AI use, but to ensure that all contributions, AI-assisted or not, respect the time, expertise, and long-term responsibilities of both contributors and maintainers.</p>
+<p>This document may evolve over time as generative AI tooling and community expectations change.
+Contributors should refer to the latest version when preparing contributions.
+This document was inspired by many other open source projects AI usage polices and documents such as <a class="reference external" href="https://scikit-learn.org/dev/developers/contributing.html#automated-contributions-policy">scikit-learn</a> and <a class="reference external" href="https://llvm.org/docs//AIToolPolicy.html">LLVM</a>.</p>
+<span class="target" id="cv2-warpaffine"></span><span class="target" id="cv2-filter2d"></span></section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../conventions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Conventions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="code_standards.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Coding Standards</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal" tabindex="-1"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-principle-for-the-use-of-ai-in-contributions">Core Principle for the Use of AI in Contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-compliance">Non-Compliance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#responsible-uses-of-ai">Responsible Uses of AI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-appropriate-use">Examples of appropriate use:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-inappropriate-use">Examples of inappropriate use:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transparency-and-sustainable-collaboration">Transparency and Sustainable Collaboration</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=75c7c72ae941e8b558d8"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=75c7c72ae941e8b558d8"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, The SunPy Community.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><div class="footer-links">
+    
+            <a href="https://github.com/sunpy">Code</a>
+            
+                <span> • </span>
+            
+            <a href="https://community.openastronomy.org/c/sunpy">Forum</a>
+            
+                <span> • </span>
+            
+            <a href="https://openastronomy.element.io/#/room/#sunpy:openastronomy.org">Chat</a>
+            
+    
+</div></div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+    Built with <a href="http://sphinx-doc.org/">Sphinx
+        9.2.0.</a>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

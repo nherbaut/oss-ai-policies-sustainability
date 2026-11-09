@@ -1,0 +1,174 @@
+[
+  {
+    "entity": "W3C",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/W3C/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "processing/p5.js",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/processing/p5.js/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "EFF",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/EFF/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "freecad/freecad",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/freecad/freecad/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "Software Freedom Conservancy (recommandations LLM)",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/Software Freedom Conservancy (recommandations LLM)/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "postmarketOS",
+    "screening_group": "environmental",
+    "files": [
+      "data/281/policies/postmarketOS/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "scala/scala",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/scala/scala/ai_policy.md",
+      "data/281/policies/scala/scala/other_policy.md"
+    ]
+  },
+  {
+    "entity": "SunPy",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/SunPy/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "vectordotdev/vector",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/vectordotdev/vector/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "tauri-apps/tauri",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/tauri-apps/tauri/contributing.md"
+    ]
+  },
+  {
+    "entity": "ggml-org/whisper.cpp",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/ggml-org/whisper.cpp/contributing.md",
+      "data/281/policies/ggml-org/whisper.cpp/other_policy.md"
+    ]
+  },
+  {
+    "entity": "wavetermdev/waveterm",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/wavetermdev/waveterm/contributing.md"
+    ]
+  },
+  {
+    "entity": "scalar/scalar",
+    "screening_group": "other_explicit_sustainability",
+    "files": [
+      "data/281/policies/scalar/scalar/contributing.md"
+    ]
+  },
+  {
+    "entity": "ratatui/ratatui",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/ratatui/ratatui/contributing.md"
+    ]
+  },
+  {
+    "entity": "leptos-rs/leptos",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/leptos-rs/leptos/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "keycloak/keycloak",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/keycloak/keycloak/contributing.md"
+    ]
+  },
+  {
+    "entity": "storybookjs/storybook",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/storybookjs/storybook/contributing.md"
+    ]
+  },
+  {
+    "entity": "bitcoin/bitcoin",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/bitcoin/bitcoin/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "mastodon/mastodon",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/mastodon/mastodon/contributing.md",
+      "data/281/policies/mastodon/mastodon/other_policy.md"
+    ]
+  },
+  {
+    "entity": "rust-lang/rust-analyzer",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/rust-lang/rust-analyzer/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "Forgejo",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/Forgejo/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "posthog/posthog",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/posthog/posthog/ai_policy.md"
+    ]
+  },
+  {
+    "entity": "nixos/nix",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/nixos/nix/contributing.md"
+    ]
+  },
+  {
+    "entity": "nextcloud/server",
+    "screening_group": "no_explicit_sustainability",
+    "files": [
+      "data/281/policies/nextcloud/server/contributing.md",
+      "data/281/policies/nextcloud/server/other_policy.md"
+    ]
+  }
+]

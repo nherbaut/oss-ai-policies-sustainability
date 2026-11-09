@@ -1,0 +1,32 @@
+<div align="center">
+    <h1>Spegel</h1>
+    <img src="https://raw.githubusercontent.com/spegel-org/website/main/static/images/logo-transparent.svg" width="150px" alt="spegel logo"/>
+    <p><strong>Spegel, mirror in Swedish, is a stateless cluster local OCI registry mirror.</strong></p>
+</div>
+
+> Note: Spegel is a project with an evolving API and no guaranteed support. Assistance is provided on a best-effort basis by the developers. We focus on the home lab and individual contributor use case.
+
+---
+
+<p align="center">
+  <img src="https://spegel.dev/images/overview.gif">
+</p>
+
+## Features
+
+Spegel is for you if you are looking to do any of the following.
+
+* Locally cache images from external registries with no explicit configuration.
+* Avoid cluster failure during external registry downtime.
+* Improve image pull speed and pod startup time by pulling images from the local cache first.
+* Avoid rate-limiting when pulling images from external registries (e.g. Docker Hub).
+* Decrease egressing traffic outside of the clusters network.
+* Increase image pull efficiency in edge node deployments.
+
+## Getting Started
+
+Read the [getting started](https://spegel.dev/docs/getting-started/) guide to deploy Spegel.
+
+## Acknowledgements
+
+Spegel was initially developed at [Xenit AB](https://xenit.se/).

@@ -1,0 +1,110 @@
+# Contributing
+
+Your contributions are always welcome!
+
+## Quick steps
+
+1. Create a new file in `patterns/` using kebab-case.
+2. Copy the template from [`TEMPLATE.md`](https://github.com/nibzard/awesome-agentic-patterns/blob/main/TEMPLATE.md).
+3. Open a PR titled `Add: pattern-name`.
+
+## Pattern Schema
+
+All patterns must follow the schema defined in [`SCHEMA.md`](SCHEMA.md). This includes:
+
+- Required front matter fields
+- Optional front matter fields
+- Required body sections
+- Optional body sections
+
+### Required Front Matter
+
+Every pattern MUST include these fields:
+
+```yaml
+---
+title: "Pattern Title Here"
+status: emerging  # proposed, emerging, established, validated-in-production, best-practice, experimental-but-awesome, rapidly-improving
+authors: ["Contributor Name (@username)"]
+category: "Feedback Loops"  # See SCHEMA.md for all categories
+source: "https://example.com/reference"
+tags: [tag1, tag2, tag3]
+summary: "One sentence that says what the pattern does (the solution, not the problem)"
+signals: ["When this pattern helps"]  # 2-4 items; shown as "Use when"
+anti_signals: ["When it is a bad fit"]  # 2-3 items; shown as "Avoid when"
+---
+```
+
+### Optional Front Matter
+
+These fields MAY be added to provide additional context:
+
+```yaml
+---
+based_on: ["Original Creator (Source)"]
+slug: "pattern-slug"  # Auto-generated from title if omitted
+maturity: "maturing"  # early, maturing, mature
+complexity: "medium"  # low, medium, high
+effort: "days"  # hours, days, weeks
+impact: "high"  # low, medium, high
+prerequisites: ["Prereq 1", "Prereq 2"]
+related: ["other-pattern-id"]
+anti_patterns: ["opposing-pattern-id"]
+tools: ["tool-type-1", "tool-type-2"]
+domains: ["coding", "research", "ops"]
+updated_at: "2025-01-13"
+---
+```
+
+See [`SCHEMA.md`](SCHEMA.md) for complete field definitions and enum values.
+
+## Rules
+
+* One pattern per PR.
+* Keep the pattern concise (max ~200 lines) and backed by a public reference.
+* Fill in all required front matter fields.
+* Include all required body sections: Problem, Solution, How to use it, Trade-offs, References.
+* Do not edit README sections between the AUTO-GENERATED markers.
+* `docs/index.md` is a compatibility symlink to `README.md`; do not maintain separate content there.
+* Check spelling/grammar and remove trailing whitespace.
+* Keep contributions community-first: no promotional, sales, affiliate, or backlink-seeding content.
+* For external contributors, external links should generally be limited to `github.com`, `github.io`, or non-vendor neutral references (papers, standards, neutral technical write-ups).
+* Vendor/product links are considered only in rare cases where the contribution is truly novel and adds clear value. Explain the novelty explicitly.
+* Proposals must be materially novel and non-repetitive relative to existing patterns in this repository.
+
+## Submission policy: pattern-first and non-promotional
+
+This repository is for reusable patterns, not product marketing.
+
+A PR is accepted only when it documents a reusable engineering or design pattern. Brand names are okay only as examples or references, not as the center of the PR.
+
+### Hard constraints
+
+* The submission must clearly define a generalized Problem, Solution, and Trade-offs.
+* The PR must not read like a product announcement.
+* Promotional language and calls to action (e.g. "try now", "sign up", "buy", "subscribe", "join our ...") are not acceptable.
+* Known implementations can be listed in `Known Implementations`/references, but the write-up must explain *how the pattern works generally*.
+* If the primary reference belongs to the contributor or an affiliated project:
+  * state that relationship in front-matter (`authors` / `based_on`);
+  * add non-self references when possible;
+  * avoid promotional positioning of that project.
+
+### Maintainer decision rubric
+
+* **Accept**: all hard constraints met and the pattern is clearly reusable.
+* **Request changes**: mostly good pattern intent with clear fixes.
+* **Close**: mostly self-promotion or no reusable pattern.
+
+### Review checklist (copy into PR reviews)
+
+* [ ] This is about a reusable pattern, not a launch post.
+* [ ] Problem, Solution, and Trade-offs are present and specific.
+* [ ] No marketing/CTA language in body or references section.
+* [ ] Source links are public and verifiable.
+* [ ] Any contributor-owned project references are disclosed and framed as examples only.
+
+## Optional local checks
+
+* `bun run validate:patterns`
+* `bun run validate:patterns:content`
+* `bun run build:data`

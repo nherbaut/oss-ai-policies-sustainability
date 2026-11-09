@@ -1,0 +1,1071 @@
+[
+  {
+    "id": "01-ai_policy",
+    "entity": "W3C",
+    "role": "original_policy_verification",
+    "title": "W3C: ai_policy",
+    "url": "https://www.w3.org/TR/2026/NOTE-llms-standards-20260324/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/W3C/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.223470+00:00",
+    "resolved_url": "https://www.w3.org/TR/2026/NOTE-llms-standards-20260324/",
+    "sha256": "ae36af029ef752b774356ee44eb6625fa75b28fd73cfedf2daad73c3fe5ec40e",
+    "snapshot": "analysis/feasibility-pilot/sources/01-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/01-ai_policy.html",
+    "status": "downloaded",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "01-purpose",
+    "entity": "W3C",
+    "role": "purpose_statement_candidate",
+    "title": "W3C: official about/mission page",
+    "url": "https://www.w3.org/mission/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.225041+00:00",
+    "resolved_url": "https://www.w3.org/mission/",
+    "sha256": "d2c23c90fc4ac1c9a5c6d27222be93e5163f8ea878eb365d307751be2bd08f03",
+    "snapshot": "analysis/feasibility-pilot/sources/01-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/01-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "02-ai_policy",
+    "entity": "processing/p5.js",
+    "role": "original_policy_verification",
+    "title": "processing/p5.js: ai_policy",
+    "url": "https://github.com/processing/p5.js/blob/5743cb5ba5aef0e1cbe01259dd1d4c17910164c4/AI_USAGE_POLICY.md",
+    "version": "5743cb5ba5aef0e1cbe01259dd1d4c17910164c4",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/processing/p5.js/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.225331+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/processing/p5.js/5743cb5ba5aef0e1cbe01259dd1d4c17910164c4/AI_USAGE_POLICY.md",
+    "sha256": "a78a23320292e2743f38827b49b717746abc37d8be37917890de66a3f61590a9",
+    "snapshot": "analysis/feasibility-pilot/sources/02-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/02-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "02-purpose",
+    "entity": "processing/p5.js",
+    "role": "purpose_statement_candidate",
+    "title": "processing/p5.js: repository README",
+    "url": "https://github.com/processing/p5.js/blob/5743cb5ba5aef0e1cbe01259dd1d4c17910164c4/README.md",
+    "version": "5743cb5ba5aef0e1cbe01259dd1d4c17910164c4",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.225724+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/processing/p5.js/5743cb5ba5aef0e1cbe01259dd1d4c17910164c4/README.md",
+    "sha256": "504a19685677e49452a0fa40eb7b10d0cc49580c44cc6e58b8bdcfdbc69a636b",
+    "snapshot": "analysis/feasibility-pilot/sources/02-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/02-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "03-ai_policy",
+    "entity": "EFF",
+    "role": "original_policy_verification",
+    "title": "EFF: ai_policy",
+    "url": "https://www.eff.org/deeplinks/2026/02/effs-policy-llm-assisted-contributions-our-open-source-projects",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/EFF/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.226167+00:00",
+    "resolved_url": "https://www.eff.org/deeplinks/2026/02/effs-policy-llm-assisted-contributions-our-open-source-projects",
+    "sha256": "85cf9718e19dec56f116bb53b2bebc941df71a31f36962cd814b791591066e50",
+    "snapshot": "analysis/feasibility-pilot/sources/03-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/03-ai_policy.html",
+    "status": "downloaded",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "03-purpose",
+    "entity": "EFF",
+    "role": "purpose_statement_candidate",
+    "title": "EFF: official about/mission page",
+    "url": "https://www.eff.org/about",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.226472+00:00",
+    "resolved_url": "https://www.eff.org/about",
+    "sha256": "4ba011b9ce988e7f6670570e3694d2c1df32d1a22a4fdda141abad834b807655",
+    "snapshot": "analysis/feasibility-pilot/sources/03-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/03-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "04-ai_policy",
+    "entity": "freecad/freecad",
+    "role": "original_policy_verification",
+    "title": "freecad/freecad: ai_policy",
+    "url": "https://github.com/freecad/freecad/blob/02173427c469a27f28db0434decc1177225fa9d9/AI_POLICY.md",
+    "version": "02173427c469a27f28db0434decc1177225fa9d9",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/freecad/freecad/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.541263+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/freecad/freecad/02173427c469a27f28db0434decc1177225fa9d9/AI_POLICY.md",
+    "sha256": "a7eccda58eb2e0d5306085c21170bc20fd0023dafddc41bd58ed0e76a7b9fcc8",
+    "snapshot": "analysis/feasibility-pilot/sources/04-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/04-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "04-purpose",
+    "entity": "freecad/freecad",
+    "role": "purpose_statement_candidate",
+    "title": "freecad/freecad: repository README",
+    "url": "https://github.com/freecad/freecad/blob/02173427c469a27f28db0434decc1177225fa9d9/README.md",
+    "version": "02173427c469a27f28db0434decc1177225fa9d9",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.542077+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/freecad/freecad/02173427c469a27f28db0434decc1177225fa9d9/README.md",
+    "sha256": "d225bee87b5023b28c76afba2ac2db4a69ba1e7a3e07c3247e67eb1a2d29f080",
+    "snapshot": "analysis/feasibility-pilot/sources/04-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/04-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "05-ai_policy",
+    "entity": "Software Freedom Conservancy (recommandations LLM)",
+    "role": "original_policy_verification",
+    "title": "Software Freedom Conservancy (recommandations LLM): ai_policy",
+    "url": "https://sfconservancy.org/llm-gen-ai/llm-backed-generative-ai-recommendations.html",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/Software Freedom Conservancy (recommandations LLM)/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.652724+00:00",
+    "resolved_url": "https://sfconservancy.org/llm-gen-ai/llm-backed-generative-ai-recommendations.html",
+    "sha256": "6a8c0a6f0bfc89fc9ace7b12e8ee53cda2a62e2410fb82bb4a5514b11c86ee1d",
+    "snapshot": "analysis/feasibility-pilot/sources/05-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/05-ai_policy.html",
+    "status": "downloaded",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "05-purpose",
+    "entity": "Software Freedom Conservancy (recommandations LLM)",
+    "role": "purpose_statement_candidate",
+    "title": "Software Freedom Conservancy (recommandations LLM): official about/mission page",
+    "url": "https://sfconservancy.org/about/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.672280+00:00",
+    "resolved_url": "https://sfconservancy.org/about/",
+    "sha256": "f822ac020588fbb0c08382800d011db35e45ce8dde4ab1d8c5ba6ad74c2e3705",
+    "snapshot": "analysis/feasibility-pilot/sources/05-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/05-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "06-ai_policy",
+    "entity": "postmarketOS",
+    "role": "original_policy_verification",
+    "title": "postmarketOS: ai_policy",
+    "url": "https://docs.postmarketos.org/policies-and-processes/development/ai-policy.html",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/postmarketOS/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:19.799425+00:00",
+    "resolved_url": "https://docs.nura.eco/policies-and-processes/development/ai-policy.html",
+    "sha256": "db76171ea4ecce348a98544c2ef044618fcceb1dc91130b8f649a9c20297e217",
+    "snapshot": "analysis/feasibility-pilot/sources/06-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/06-ai_policy.html",
+    "status": "downloaded",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "06-purpose",
+    "entity": "postmarketOS",
+    "role": "purpose_statement_candidate",
+    "title": "postmarketOS: official about/mission page",
+    "url": "https://postmarketos.org/about/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:19.808071+00:00",
+    "resolved_url": "https://nura.eco/about/",
+    "sha256": "149c3a764d85e2fd4039d6c5778f6977ec4b01a8d571626002f80f08dffb5bbe",
+    "snapshot": "analysis/feasibility-pilot/sources/06-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/06-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "07-ai_policy",
+    "entity": "scala/scala",
+    "role": "original_policy_verification",
+    "title": "scala/scala: ai_policy",
+    "url": "https://github.com/scala/scala/blob/e2bf3551286f729b4f2bec78b36e3f890fccfd80/LLM_POLICY.md",
+    "version": "e2bf3551286f729b4f2bec78b36e3f890fccfd80",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/scala/scala/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:20.086542+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/scala/scala/e2bf3551286f729b4f2bec78b36e3f890fccfd80/LLM_POLICY.md",
+    "sha256": "0a3ac382ed3395d15182886ef77bf81616899f790ec6785d80881b41181ce93a",
+    "snapshot": "analysis/feasibility-pilot/sources/07-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/07-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "07-other_policy",
+    "entity": "scala/scala",
+    "role": "original_policy_verification",
+    "title": "scala/scala: other_policy",
+    "url": "https://github.com/scala/scala3/blob/266b5b3afe48c0a57c6867fd59c7cb5b9029f610/LLM_POLICY.md",
+    "version": "266b5b3afe48c0a57c6867fd59c7cb5b9029f610",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/scala/scala/other_policy.md",
+    "accessed_at": "2026-11-05T16:00:20.350645+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/scala/scala3/266b5b3afe48c0a57c6867fd59c7cb5b9029f610/LLM_POLICY.md",
+    "sha256": "62d24c9fc22de5422f9aca2ef5ff444659998049194321111f377b23e126d66f",
+    "snapshot": "analysis/feasibility-pilot/sources/07-other_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/07-other_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "07-purpose",
+    "entity": "scala/scala",
+    "role": "purpose_statement_candidate",
+    "title": "scala/scala: repository README",
+    "url": "https://github.com/scala/scala/blob/e2bf3551286f729b4f2bec78b36e3f890fccfd80/README.md",
+    "version": "e2bf3551286f729b4f2bec78b36e3f890fccfd80",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:20.598904+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/scala/scala/e2bf3551286f729b4f2bec78b36e3f890fccfd80/README.md",
+    "sha256": "d9687dd3d5159775cce8c742ba518294a69ad1316bcb8cc061816597103cfeb4",
+    "snapshot": "analysis/feasibility-pilot/sources/07-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/07-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "08-ai_policy",
+    "entity": "SunPy",
+    "role": "original_policy_verification",
+    "title": "SunPy: ai_policy",
+    "url": "https://docs.sunpy.org/en/latest/dev_guide/contents/ai_usage.html",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/SunPy/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:20.618074+00:00",
+    "resolved_url": "https://docs.sunpy.org/en/latest/dev_guide/contents/ai_usage.html",
+    "sha256": "f3246b4cc79bee3ac83796c0473ce7739ece0e4926e3e7d1d8fdb0e62562d371",
+    "snapshot": "analysis/feasibility-pilot/sources/08-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/08-ai_policy.html",
+    "status": "downloaded",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "08-purpose",
+    "entity": "SunPy",
+    "role": "purpose_statement_candidate",
+    "title": "SunPy: official about/mission page",
+    "url": "https://sunpy.org/about/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:20.660757+00:00",
+    "resolved_url": "https://sunpy.org/about/",
+    "sha256": "d975d5c22e61d09f5e45c147edc242de6d5dfccad1b9919f7e252d2d5ff04720",
+    "snapshot": "analysis/feasibility-pilot/sources/08-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/08-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "09-ai_policy",
+    "entity": "vectordotdev/vector",
+    "role": "original_policy_verification",
+    "title": "vectordotdev/vector: ai_policy",
+    "url": "https://github.com/vectordotdev/vector/blob/b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8/AI_POLICY.md",
+    "version": "b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/vectordotdev/vector/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:20.854848+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/vectordotdev/vector/b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8/AI_POLICY.md",
+    "sha256": "91a38ce21c05d2d48fe6f43efc6266951b437d84647331cfb7b8155b50302f2c",
+    "snapshot": "analysis/feasibility-pilot/sources/09-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/09-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "09-purpose",
+    "entity": "vectordotdev/vector",
+    "role": "purpose_statement_candidate",
+    "title": "vectordotdev/vector: repository README",
+    "url": "https://github.com/vectordotdev/vector/blob/b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8/README.md",
+    "version": "b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:20.887787+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/vectordotdev/vector/b5f53eb3319d2cfc3ca19962cf6a55f67b7baaa8/README.md",
+    "sha256": "ae3e1bf723b4a14d32eb664dd39572cc21a86f543efd4cc26fb42ad53435e8de",
+    "snapshot": "analysis/feasibility-pilot/sources/09-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/09-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "10-contributing",
+    "entity": "tauri-apps/tauri",
+    "role": "original_policy_verification",
+    "title": "tauri-apps/tauri: contributing",
+    "url": "https://github.com/tauri-apps/tauri/blob/5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1/.github/CONTRIBUTING.md",
+    "version": "5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/tauri-apps/tauri/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.131020+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/tauri-apps/tauri/5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1/.github/CONTRIBUTING.md",
+    "sha256": "5c4558ff1d99558db4b14fef884a75476b75c095b73de0877dbafd2d80d975d8",
+    "snapshot": "analysis/feasibility-pilot/sources/10-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/10-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "10-purpose",
+    "entity": "tauri-apps/tauri",
+    "role": "purpose_statement_candidate",
+    "title": "tauri-apps/tauri: repository README",
+    "url": "https://github.com/tauri-apps/tauri/blob/5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1/README.md",
+    "version": "5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.153279+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/tauri-apps/tauri/5b19ac9f19956cf6a318f4f01ffbf17b73d0b3a1/README.md",
+    "sha256": "db8ff4de3e034289f335c1ae5527d41f3142b2ea9c2002967be5cf5f0e7d39d7",
+    "snapshot": "analysis/feasibility-pilot/sources/10-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/10-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "11-contributing",
+    "entity": "ggml-org/whisper.cpp",
+    "role": "original_policy_verification",
+    "title": "ggml-org/whisper.cpp: contributing",
+    "url": "https://github.com/ggml-org/whisper.cpp/blob/080bbbe85230f624f0b52127f1ae1218247989f9/CONTRIBUTING.md",
+    "version": "080bbbe85230f624f0b52127f1ae1218247989f9",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/ggml-org/whisper.cpp/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.225557+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/080bbbe85230f624f0b52127f1ae1218247989f9/CONTRIBUTING.md",
+    "sha256": "ce7f9dac8abfc77f73e734836f195325a6e84f6e20ce45e9e1ba5a23b33efd27",
+    "snapshot": "analysis/feasibility-pilot/sources/11-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/11-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "11-other_policy",
+    "entity": "ggml-org/whisper.cpp",
+    "role": "original_policy_verification",
+    "title": "ggml-org/whisper.cpp: other_policy",
+    "url": "https://github.com/ggml-org/whisper.cpp/blob/080bbbe85230f624f0b52127f1ae1218247989f9/AGENTS.md",
+    "version": "080bbbe85230f624f0b52127f1ae1218247989f9",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/ggml-org/whisper.cpp/other_policy.md",
+    "accessed_at": "2026-11-05T16:00:21.278628+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/080bbbe85230f624f0b52127f1ae1218247989f9/AGENTS.md",
+    "sha256": "9bd8f8354c50c834fc5363e9152fc6beb7bd0d42add014674a7ebef6e388149e",
+    "snapshot": "analysis/feasibility-pilot/sources/11-other_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/11-other_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "11-purpose",
+    "entity": "ggml-org/whisper.cpp",
+    "role": "purpose_statement_candidate",
+    "title": "ggml-org/whisper.cpp: repository README",
+    "url": "https://github.com/ggml-org/whisper.cpp/blob/080bbbe85230f624f0b52127f1ae1218247989f9/README.md",
+    "version": "080bbbe85230f624f0b52127f1ae1218247989f9",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.343453+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/ggml-org/whisper.cpp/080bbbe85230f624f0b52127f1ae1218247989f9/README.md",
+    "sha256": "e0eeb79e3e9feea2623111082a1a3e6260e71894eab0132ef394c1f7ae225ce9",
+    "snapshot": "analysis/feasibility-pilot/sources/11-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/11-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "12-contributing",
+    "entity": "wavetermdev/waveterm",
+    "role": "original_policy_verification",
+    "title": "wavetermdev/waveterm: contributing",
+    "url": "https://github.com/wavetermdev/waveterm/blob/c99022c15bd1f17273728e728a61743e690d6423/CONTRIBUTING.md",
+    "version": "c99022c15bd1f17273728e728a61743e690d6423",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/wavetermdev/waveterm/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.401943+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/wavetermdev/waveterm/c99022c15bd1f17273728e728a61743e690d6423/CONTRIBUTING.md",
+    "sha256": "37fd24f379192f24cf3946516e783b49398c86994a058fb1a64a27fbe3b64c0e",
+    "snapshot": "analysis/feasibility-pilot/sources/12-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/12-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "12-purpose",
+    "entity": "wavetermdev/waveterm",
+    "role": "purpose_statement_candidate",
+    "title": "wavetermdev/waveterm: repository README",
+    "url": "https://github.com/wavetermdev/waveterm/blob/c99022c15bd1f17273728e728a61743e690d6423/README.md",
+    "version": "c99022c15bd1f17273728e728a61743e690d6423",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.441706+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/wavetermdev/waveterm/c99022c15bd1f17273728e728a61743e690d6423/README.md",
+    "sha256": "9863c37ff407df7a85fef92c43dca31d9a552efd83cf42479847e11adb6d61bd",
+    "snapshot": "analysis/feasibility-pilot/sources/12-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/12-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "13-contributing",
+    "entity": "scalar/scalar",
+    "role": "original_policy_verification",
+    "title": "scalar/scalar: contributing",
+    "url": "https://github.com/scalar/scalar/blob/27b2b9f37411836cb2c863a50b6bd19e160ec898/CONTRIBUTING.md",
+    "version": "27b2b9f37411836cb2c863a50b6bd19e160ec898",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/scalar/scalar/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.605612+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/scalar/scalar/27b2b9f37411836cb2c863a50b6bd19e160ec898/CONTRIBUTING.md",
+    "sha256": "582c32455b1cf0a14df6b8cee1c07ff4ff5b7bf486551bda17859fc2108f915a",
+    "snapshot": "analysis/feasibility-pilot/sources/13-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/13-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "13-purpose",
+    "entity": "scalar/scalar",
+    "role": "purpose_statement_candidate",
+    "title": "scalar/scalar: repository README",
+    "url": "https://github.com/scalar/scalar/blob/27b2b9f37411836cb2c863a50b6bd19e160ec898/README.md",
+    "version": "27b2b9f37411836cb2c863a50b6bd19e160ec898",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.672841+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/scalar/scalar/27b2b9f37411836cb2c863a50b6bd19e160ec898/README.md",
+    "sha256": "a7afacb8e5590f62e8ff892e516a8cf0672811655019a791112fdbf9c7cdd27e",
+    "snapshot": "analysis/feasibility-pilot/sources/13-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/13-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "14-contributing",
+    "entity": "ratatui/ratatui",
+    "role": "original_policy_verification",
+    "title": "ratatui/ratatui: contributing",
+    "url": "https://github.com/ratatui/ratatui/blob/506bedbf157eaaf1e9d5df77f9a5f380203112bc/CONTRIBUTING.md",
+    "version": "506bedbf157eaaf1e9d5df77f9a5f380203112bc",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/ratatui/ratatui/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.685442+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/ratatui/ratatui/506bedbf157eaaf1e9d5df77f9a5f380203112bc/CONTRIBUTING.md",
+    "sha256": "5caa8fd8288fbd6a705dfe5206ff1bb782fb7b2d19224d827b325ad6b7b7819f",
+    "snapshot": "analysis/feasibility-pilot/sources/14-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/14-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "14-purpose",
+    "entity": "ratatui/ratatui",
+    "role": "purpose_statement_candidate",
+    "title": "ratatui/ratatui: repository README",
+    "url": "https://github.com/ratatui/ratatui/blob/506bedbf157eaaf1e9d5df77f9a5f380203112bc/README.md",
+    "version": "506bedbf157eaaf1e9d5df77f9a5f380203112bc",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.691242+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/ratatui/ratatui/506bedbf157eaaf1e9d5df77f9a5f380203112bc/README.md",
+    "sha256": "80428444721189970a09ed14c0de055dd1a6f42bd4a5a49b6bb9fea762982a90",
+    "snapshot": "analysis/feasibility-pilot/sources/14-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/14-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "15-ai_policy",
+    "entity": "leptos-rs/leptos",
+    "role": "original_policy_verification",
+    "title": "leptos-rs/leptos: ai_policy",
+    "url": "https://github.com/leptos-rs/leptos/blob/f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336/AI_POLICY.md",
+    "version": "f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/leptos-rs/leptos/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:21.693594+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/leptos-rs/leptos/f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336/AI_POLICY.md",
+    "sha256": "4404ca7665638d9cb9624321ab6c6efc17ee2dff2089e0fce4a4d7bca2767717",
+    "snapshot": "analysis/feasibility-pilot/sources/15-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/15-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "15-purpose",
+    "entity": "leptos-rs/leptos",
+    "role": "purpose_statement_candidate",
+    "title": "leptos-rs/leptos: repository README",
+    "url": "https://github.com/leptos-rs/leptos/blob/f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336/README.md",
+    "version": "f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.723699+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/leptos-rs/leptos/f81ffcd5fcb4def75ac14dcc50e1f1de6de8d336/README.md",
+    "sha256": "dfc971183cb86e19ac99f0e327fdd23f18614b4941e536be68de7af334d0179c",
+    "snapshot": "analysis/feasibility-pilot/sources/15-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/15-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "16-contributing",
+    "entity": "keycloak/keycloak",
+    "role": "original_policy_verification",
+    "title": "keycloak/keycloak: contributing",
+    "url": "https://github.com/keycloak/keycloak/blob/def10975b737ccc7eb08f12c44187ee922448563/CONTRIBUTING.md",
+    "version": "def10975b737ccc7eb08f12c44187ee922448563",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/keycloak/keycloak/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.952892+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/keycloak/keycloak/def10975b737ccc7eb08f12c44187ee922448563/CONTRIBUTING.md",
+    "sha256": "b809671b4d263cc272df01639438ca89837e2f485d92194aedda06ca2c75ce5f",
+    "snapshot": "analysis/feasibility-pilot/sources/16-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/16-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "16-purpose",
+    "entity": "keycloak/keycloak",
+    "role": "purpose_statement_candidate",
+    "title": "keycloak/keycloak: repository README",
+    "url": "https://github.com/keycloak/keycloak/blob/def10975b737ccc7eb08f12c44187ee922448563/README.md",
+    "version": "def10975b737ccc7eb08f12c44187ee922448563",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:21.954917+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/keycloak/keycloak/def10975b737ccc7eb08f12c44187ee922448563/README.md",
+    "sha256": "5a5b61cb4caa1e113cc53fd07794fc8b78cafce254761ab6c690dcfb7355879c",
+    "snapshot": "analysis/feasibility-pilot/sources/16-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/16-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "17-contributing",
+    "entity": "storybookjs/storybook",
+    "role": "original_policy_verification",
+    "title": "storybookjs/storybook: contributing",
+    "url": "https://github.com/storybookjs/storybook/blob/5073688f5836ec16575855550ffbeb3e81ab1cf1/CONTRIBUTING.md",
+    "version": "5073688f5836ec16575855550ffbeb3e81ab1cf1",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/storybookjs/storybook/contributing.md",
+    "accessed_at": "2026-11-05T16:00:21.980097+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/storybookjs/storybook/5073688f5836ec16575855550ffbeb3e81ab1cf1/CONTRIBUTING.md",
+    "sha256": "ecb33f29c1eccb5796ed13513010ad110cc987b00668df063e643de7c014f5ba",
+    "snapshot": "analysis/feasibility-pilot/sources/17-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/17-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "17-purpose",
+    "entity": "storybookjs/storybook",
+    "role": "purpose_statement_candidate",
+    "title": "storybookjs/storybook: repository README",
+    "url": "https://github.com/storybookjs/storybook/blob/5073688f5836ec16575855550ffbeb3e81ab1cf1/README.md",
+    "version": "5073688f5836ec16575855550ffbeb3e81ab1cf1",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.019939+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/storybookjs/storybook/5073688f5836ec16575855550ffbeb3e81ab1cf1/README.md",
+    "sha256": "0e03c7906e9d2c72cbc8ecbec24059c691e7a2c7ac9d20fe402d375ee22dad12",
+    "snapshot": "analysis/feasibility-pilot/sources/17-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/17-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "18-ai_policy",
+    "entity": "bitcoin/bitcoin",
+    "role": "original_policy_verification",
+    "title": "bitcoin/bitcoin: ai_policy",
+    "url": "https://github.com/bitcoin/bitcoin/blob/70d9ec7f3d452789d04dce81dc02db0b3b778bb5/doc/AI_POLICY.md",
+    "version": "70d9ec7f3d452789d04dce81dc02db0b3b778bb5",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/bitcoin/bitcoin/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.025950+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/bitcoin/bitcoin/70d9ec7f3d452789d04dce81dc02db0b3b778bb5/doc/AI_POLICY.md",
+    "sha256": "9227f96b487a882d86ad6c40248bee99f0f3757da45350fcb72b5a85e64c85ca",
+    "snapshot": "analysis/feasibility-pilot/sources/18-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/18-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "18-purpose",
+    "entity": "bitcoin/bitcoin",
+    "role": "purpose_statement_candidate",
+    "title": "bitcoin/bitcoin: repository README",
+    "url": "https://github.com/bitcoin/bitcoin/blob/70d9ec7f3d452789d04dce81dc02db0b3b778bb5/README.md",
+    "version": "70d9ec7f3d452789d04dce81dc02db0b3b778bb5",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.056336+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/bitcoin/bitcoin/70d9ec7f3d452789d04dce81dc02db0b3b778bb5/README.md",
+    "sha256": "45916e6961540c536e8b17b3a4d3305393afce5b407d1ea3da82c246cba8aa5d",
+    "snapshot": "analysis/feasibility-pilot/sources/18-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/18-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "19-contributing",
+    "entity": "mastodon/mastodon",
+    "role": "original_policy_verification",
+    "title": "mastodon/mastodon: contributing",
+    "url": "https://github.com/mastodon/mastodon/blob/52e9ec7814fc971598696ba4bf33d06ac1a51938/CONTRIBUTING.md",
+    "version": "52e9ec7814fc971598696ba4bf33d06ac1a51938",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/mastodon/mastodon/contributing.md",
+    "accessed_at": "2026-11-05T16:00:22.211648+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/mastodon/mastodon/52e9ec7814fc971598696ba4bf33d06ac1a51938/CONTRIBUTING.md",
+    "sha256": "e6ae29fc137802f0a1ee163c6575fb787f5afced84110132a1103a2c3142da90",
+    "snapshot": "analysis/feasibility-pilot/sources/19-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/19-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "19-other_policy",
+    "entity": "mastodon/mastodon",
+    "role": "original_policy_verification",
+    "title": "mastodon/mastodon: other_policy",
+    "url": "https://github.com/mastodon/.github/blob/main/AI_POLICY.md",
+    "version": "main",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/mastodon/mastodon/other_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.229060+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/mastodon/.github/main/AI_POLICY.md",
+    "sha256": "9a047aa0b7dc04260061c863f889d02a0a62d86b8d1c58663a4045a88d5c1889",
+    "snapshot": "analysis/feasibility-pilot/sources/19-other_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/19-other_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "19-purpose",
+    "entity": "mastodon/mastodon",
+    "role": "purpose_statement_candidate",
+    "title": "mastodon/mastodon: repository README",
+    "url": "https://github.com/mastodon/mastodon/blob/52e9ec7814fc971598696ba4bf33d06ac1a51938/README.md",
+    "version": "52e9ec7814fc971598696ba4bf33d06ac1a51938",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.320278+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/mastodon/mastodon/52e9ec7814fc971598696ba4bf33d06ac1a51938/README.md",
+    "sha256": "fc19a5dcbef5fb5b018055e5bda0426087dc576384305ed130704dac8f81d144",
+    "snapshot": "analysis/feasibility-pilot/sources/19-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/19-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "20-ai_policy",
+    "entity": "rust-lang/rust-analyzer",
+    "role": "original_policy_verification",
+    "title": "rust-lang/rust-analyzer: ai_policy",
+    "url": "https://github.com/rust-lang/rust-analyzer/blob/7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a/AI_POLICY.md",
+    "version": "7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/rust-lang/rust-analyzer/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.331285+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/rust-lang/rust-analyzer/7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a/AI_POLICY.md",
+    "sha256": "9982d5097c733497d1850c7cd5722513b671979a26804ddb95467afd76e2dbf1",
+    "snapshot": "analysis/feasibility-pilot/sources/20-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/20-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "20-purpose",
+    "entity": "rust-lang/rust-analyzer",
+    "role": "purpose_statement_candidate",
+    "title": "rust-lang/rust-analyzer: repository README",
+    "url": "https://github.com/rust-lang/rust-analyzer/blob/7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a/README.md",
+    "version": "7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.331836+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/rust-lang/rust-analyzer/7a5ecc88dbdfa13bac99fa4e0f38adcfdca1bb0a/README.md",
+    "sha256": "12088386740a84f313a37a0e7afc5326385349ee00c4089a3ff3973fee5b5d42",
+    "snapshot": "analysis/feasibility-pilot/sources/20-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/20-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "21-ai_policy",
+    "entity": "Forgejo",
+    "role": "original_policy_verification",
+    "title": "Forgejo: ai_policy",
+    "url": "https://codeberg.org/forgejo/governance/src/branch/main/AIAgreement.md",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/Forgejo/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.354638+00:00",
+    "resolved_url": "https://codeberg.org/forgejo/governance/src/branch/main/AIAgreement.md",
+    "sha256": "5a81e20e08528d9c4b39fc17b4dc1430b5f47a5a875b603dc74fd5a89320a79a",
+    "snapshot": "analysis/feasibility-pilot/sources/21-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/21-ai_policy.html",
+    "status": "possible_bot_challenge",
+    "local_bytes_identical": false
+  },
+  {
+    "id": "21-purpose",
+    "entity": "Forgejo",
+    "role": "purpose_statement_candidate",
+    "title": "Forgejo: official about/mission page",
+    "url": "https://forgejo.org/",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.486688+00:00",
+    "resolved_url": "https://forgejo.org/",
+    "sha256": "50aba0510fd297a0ca84af1f53ca1ec330640cb4a320e7b5d448494e4bd7c631",
+    "snapshot": "analysis/feasibility-pilot/sources/21-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/21-purpose.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "22-ai_policy",
+    "entity": "posthog/posthog",
+    "role": "original_policy_verification",
+    "title": "posthog/posthog: ai_policy",
+    "url": "https://github.com/posthog/posthog/blob/e8858fdabe15cce244324d360f067c814bfebc56/AI_POLICY.md",
+    "version": "e8858fdabe15cce244324d360f067c814bfebc56",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/posthog/posthog/ai_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.512291+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/posthog/posthog/e8858fdabe15cce244324d360f067c814bfebc56/AI_POLICY.md",
+    "sha256": "ad31900be8d2868b4149343f98f2477ba6eb9adf8a379e838fb94ecbfc96c659",
+    "snapshot": "analysis/feasibility-pilot/sources/22-ai_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/22-ai_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "22-purpose",
+    "entity": "posthog/posthog",
+    "role": "purpose_statement_candidate",
+    "title": "posthog/posthog: repository README",
+    "url": "https://github.com/posthog/posthog/blob/e8858fdabe15cce244324d360f067c814bfebc56/README.md",
+    "version": "e8858fdabe15cce244324d360f067c814bfebc56",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.637572+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/posthog/posthog/e8858fdabe15cce244324d360f067c814bfebc56/README.md",
+    "sha256": "8672914d49851b0df81cd6bac562f67666f0fcf3a94db34b3778e49e5263debb",
+    "snapshot": "analysis/feasibility-pilot/sources/22-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/22-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "23-contributing",
+    "entity": "nixos/nix",
+    "role": "original_policy_verification",
+    "title": "nixos/nix: contributing",
+    "url": "https://github.com/nixos/nix/blob/55cc1cab880a60cd204e36e9398fee536371f06e/CONTRIBUTING.md",
+    "version": "55cc1cab880a60cd204e36e9398fee536371f06e",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/nixos/nix/contributing.md",
+    "accessed_at": "2026-11-05T16:00:22.640231+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/nixos/nix/55cc1cab880a60cd204e36e9398fee536371f06e/CONTRIBUTING.md",
+    "sha256": "51386d2b69dd3f3b85e53fdfa8d689d47ea5f7936293f11d3e6b21a7d3d703f1",
+    "snapshot": "analysis/feasibility-pilot/sources/23-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/23-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "23-purpose",
+    "entity": "nixos/nix",
+    "role": "purpose_statement_candidate",
+    "title": "nixos/nix: repository README",
+    "url": "https://github.com/nixos/nix/blob/55cc1cab880a60cd204e36e9398fee536371f06e/README.md",
+    "version": "55cc1cab880a60cd204e36e9398fee536371f06e",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.762782+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/nixos/nix/55cc1cab880a60cd204e36e9398fee536371f06e/README.md",
+    "sha256": "e7343b7d008763547860aa32f87a580c95819123dd07c9cb3fe9a47f0d23c15f",
+    "snapshot": "analysis/feasibility-pilot/sources/23-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/23-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "24-contributing",
+    "entity": "nextcloud/server",
+    "role": "original_policy_verification",
+    "title": "nextcloud/server: contributing",
+    "url": "https://github.com/nextcloud/server/blob/795b12252df8c7f863544716f2c80292bde5ed52/.github/CONTRIBUTING.md",
+    "version": "795b12252df8c7f863544716f2c80292bde5ed52",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/nextcloud/server/contributing.md",
+    "accessed_at": "2026-11-05T16:00:22.769104+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/nextcloud/server/795b12252df8c7f863544716f2c80292bde5ed52/.github/CONTRIBUTING.md",
+    "sha256": "a73f29506a12ee00f5887609e4e024ac397c26676acd538131a7312c34296934",
+    "snapshot": "analysis/feasibility-pilot/sources/24-contributing.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/24-contributing.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "24-other_policy",
+    "entity": "nextcloud/server",
+    "role": "original_policy_verification",
+    "title": "nextcloud/server: other_policy",
+    "url": "https://github.com/nextcloud/.github/blob/master/AI_POLICY.md",
+    "version": "master",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "local_path": "data/281/policies/nextcloud/server/other_policy.md",
+    "accessed_at": "2026-11-05T16:00:22.803329+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/nextcloud/.github/master/AI_POLICY.md",
+    "sha256": "1e4b71f830ddbdd968ca28eaed4b93a343c5b1ca02b4e71974c2a7a0d385992c",
+    "snapshot": "analysis/feasibility-pilot/sources/24-other_policy.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/24-other_policy.raw.md",
+    "status": "downloaded",
+    "local_bytes_identical": true
+  },
+  {
+    "id": "24-purpose",
+    "entity": "nextcloud/server",
+    "role": "purpose_statement_candidate",
+    "title": "nextcloud/server: repository README",
+    "url": "https://github.com/nextcloud/server/blob/795b12252df8c7f863544716f2c80292bde5ed52/README.md",
+    "version": "795b12252df8c7f863544716f2c80292bde5ed52",
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:00:22.866844+00:00",
+    "resolved_url": "https://raw.githubusercontent.com/nextcloud/server/795b12252df8c7f863544716f2c80292bde5ed52/README.md",
+    "sha256": "694e8653a25b8f50d3bc772bd84b088e72ac56b2477f38134996189f8ab26a2c",
+    "snapshot": "analysis/feasibility-pilot/sources/24-purpose.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/24-purpose.raw.md",
+    "status": "downloaded"
+  },
+  {
+    "id": "01-ethical-principles",
+    "entity": "W3C",
+    "title": "Ethical Web Principles: sustainability",
+    "url": "https://www.w3.org/TR/ethical-web-principles/#sustainable",
+    "role": "referenced_framework",
+    "version": null,
+    "relevant_rqs": [
+      "RQ3",
+      "RQ4"
+    ],
+    "accessed_at": "2026-11-05T16:01:22.415532+00:00",
+    "resolved_url": "https://www.w3.org/TR/ethical-web-principles/#sustainable",
+    "sha256": "2d9daa8489c59f173f872786cc1e774b315067d5b14a139a83fa53a28cb2b513",
+    "snapshot": "analysis/feasibility-pilot/sources/01-ethical-principles.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/01-ethical-principles.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "03-contribution-rules",
+    "entity": "EFF",
+    "title": "Coding with EFF",
+    "url": "https://www.eff.org/about/opportunities/volunteer/coding-with-eff",
+    "role": "additional_contribution_policy",
+    "version": null,
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "accessed_at": "2026-11-05T16:01:22.416913+00:00",
+    "resolved_url": "https://www.eff.org/about/opportunities/volunteer/coding-with-eff",
+    "sha256": "17926942b820d897d19eef9cb1d8bc5c45f6124e9a94199bb20e7636065219d0",
+    "snapshot": "analysis/feasibility-pilot/sources/03-contribution-rules.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/03-contribution-rules.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "06-purpose-followup",
+    "entity": "postmarketOS",
+    "title": "About postmarketOS (redirect target)",
+    "url": "https://wiki.nura.eco/wiki/About_postmarketOS",
+    "role": "purpose_statement_candidate",
+    "version": null,
+    "relevant_rqs": [
+      "RQ1"
+    ],
+    "accessed_at": "2026-11-05T16:01:22.417384+00:00",
+    "resolved_url": "https://wiki.nura.eco/wiki/About_postmarketOS",
+    "sha256": "8a34e8819647ee05300037241a4c8ecfeb13d56d97a8947d4966427636fb9e93",
+    "snapshot": "analysis/feasibility-pilot/sources/06-purpose-followup.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/06-purpose-followup.html",
+    "status": "downloaded"
+  },
+  {
+    "id": "21-policy-raw",
+    "entity": "Forgejo",
+    "title": "Forgejo governance AI Agreement (raw endpoint)",
+    "url": "https://codeberg.org/forgejo/governance/raw/branch/main/AIAgreement.md",
+    "role": "additional_policy_retrieval",
+    "version": "main",
+    "relevant_rqs": [
+      "RQ2",
+      "RQ3",
+      "RQ4"
+    ],
+    "accessed_at": "2026-11-05T16:01:22.417726+00:00",
+    "resolved_url": "https://codeberg.org/forgejo/governance/raw/branch/main/AIAgreement.md",
+    "sha256": "ee33ff8ac41d73a4e09336620ece17e8b89d67b8b9694b9627e2cf99878dc115",
+    "snapshot": "analysis/feasibility-pilot/sources/21-policy-raw.md",
+    "raw_snapshot": "analysis/feasibility-pilot/sources/21-policy-raw.raw.md",
+    "status": "downloaded"
+  }
+]

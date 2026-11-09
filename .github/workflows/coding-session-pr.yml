@@ -1,0 +1,103 @@
+name: Coding session notification
+
+on:
+  push:
+    branches:
+      - 'coding/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: coding-notification-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-24.04
+    steps:
+      # No checkout or execution of repository scripts from the coding branch.
+      - name: Create or refresh the draft notification PR
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const branch = context.ref.replace(/^refs\/heads\//, '');
+            const head = context.sha;
+            const current = await github.rest.repos.getBranch({owner, repo, branch});
+            if (current.data.commit.sha !== head) {
+              core.info('A newer push superseded this notification run.');
+              return;
+            }
+            const commit = await github.rest.git.getCommit({owner, repo, commit_sha: head});
+            const tree = await github.rest.git.getTree({owner, repo, tree_sha: commit.data.tree.sha, recursive: '1'});
+            if (tree.data.truncated) throw new Error('Repository tree was truncated; cannot validate the session manifest.');
+            const matches = [];
+            for (const entry of tree.data.tree) {
+              if (entry.type !== 'blob' || !/^coding\/sessions\/[a-f0-9]{32}\.json$/.test(entry.path)) continue;
+              const blob = await github.rest.git.getBlob({owner, repo, file_sha: entry.sha});
+              if (blob.data.encoding !== 'base64') throw new Error('Unexpected manifest encoding.');
+              const manifest = JSON.parse(Buffer.from(blob.data.content, 'base64').toString('utf8'));
+              if (manifest.branch === branch) matches.push({manifest, path: entry.path});
+            }
+            if (matches.length !== 1) throw new Error('Expected exactly one completed session manifest for this branch.');
+            const {manifest: m, path} = matches[0];
+            const summaryKeys = /^(code_text|annotation):(add|edit|delete)$/;
+            if (m.version !== 1 || m.project !== 'data/coding.qda' ||
+                !/^[a-f0-9]{32}$/.test(m.id) || path !== `coding/sessions/${m.id}.json` ||
+                !/^[a-f0-9]{40,64}$/.test(m.base) || typeof m.coder !== 'string' ||
+                !m.coder.trim() || m.coder.trim().toLowerCase() === 'default' || /[\x00-\x1f]/.test(m.coder) ||
+                typeof m.completed_at !== 'string' || !m.summary || Array.isArray(m.summary) || typeof m.summary !== 'object' ||
+                !Object.entries(m.summary).every(([key, value]) => summaryKeys.test(key) && Number.isSafeInteger(value) && value >= 0)) {
+              throw new Error('Invalid completed coding-session manifest.');
+            }
+            const comparison = await github.rest.repos.compareCommitsWithBasehead({owner, repo, basehead: `${m.base}...${head}`});
+            const files = comparison.data.files || [];
+            if (comparison.data.status !== 'ahead' || files.length === 0 || files.length > 2 ||
+                !files.some(f => f.filename === path && f.status === 'added') ||
+                !files.every(f => (f.filename === path && f.status === 'added') ||
+                                 (f.filename === 'data/coding.qda/data.qda' && f.status === 'modified'))) {
+              throw new Error('Coding branches may change only their database and new session manifest.');
+            }
+            // Do not reopen a completed/rejected job or accept a different
+            // snapshot for an already integrated session ID.
+            try {
+              const audit = await github.rest.repos.getContent({owner, repo, path: `coding/merges/${m.id}.json`, ref: 'master'});
+              const integrated = JSON.parse(Buffer.from(audit.data.content, 'base64').toString('utf8'));
+              if (integrated.submission !== head) throw new Error('This session ID was already integrated from a different snapshot.');
+              core.info('This coding snapshot is already integrated; no PR update is needed.');
+              return;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+            const prs = await github.paginate(github.rest.pulls.list, {
+              owner, repo, head: `${owner}:${branch}`, base: 'master', state: 'all', per_page: 100
+            });
+            const existing = prs.find(p => p.state === 'open');
+            if (!existing && prs.length) {
+              core.info('The notification PR was closed. Create a new coding session rather than reopening it.');
+              return;
+            }
+            const escapedCoder = m.coder.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/`/g, '\\`');
+            const title = `[Coding session] ${m.coder.slice(0, 100)}: ${m.id.slice(0, 8)}`;
+            const body = [
+              `Coding session by **${escapedCoder}**.`,
+              '**Notification only: do not use GitHub Merge or rebase this branch.**',
+              `Session: \`${m.id}\`\nBase: \`${m.base}\`\nSnapshot: \`${head}\``,
+              'Changes:\n```json\n' + JSON.stringify(m.summary, null, 2) + '\n```',
+              'Maintainer: run `make coding-integrate PR=PR_NUMBER`.',
+              `Without gh, run: \`make coding-integrate BRANCH=${branch}\`.`,
+              'The maintainer program validates and combines the coding. This Action never merges the database.',
+              `<!-- qualcoder-session-v1: ${JSON.stringify({id: m.id, head})} -->`
+            ].join('\n\n');
+            if (existing) {
+              if (!existing.draft) {
+                await github.graphql('mutation($id: ID!) { convertPullRequestToDraft(input: {pullRequestId: $id}) { pullRequest { id } } }', {id: existing.node_id});
+              }
+              await github.rest.pulls.update({owner, repo, pull_number: existing.number, title, body});
+              core.info(`Updated draft notification PR #${existing.number}.`);
+            } else {
+              const created = await github.rest.pulls.create({owner, repo, base: 'master', head: branch, draft: true, title, body});
+              core.info(`Created draft notification PR #${created.data.number}.`);
+            }

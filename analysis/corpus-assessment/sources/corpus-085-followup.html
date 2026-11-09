@@ -1,0 +1,678 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Dolphin Emulator - Frequently Asked Questions</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Official Dolphin FAQ answers all the questions that people often ask about Dolphin.">
+
+        
+        
+        <meta property="og:site_name" content="Dolphin Emulator" />
+        <meta property="fb:admins" content="1064682820" />
+
+        <link rel="shortcut icon" href="https://dolphin-emu.org/m/static/img/favicon.0885422b72c1.ico" />
+
+        <link rel="alternate" type="application/atom+xml" title="Latest blog articles" href="/blog/feeds/" />
+
+        
+            
+            <link rel="alternate" hreflang="ast" href="//ast.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="ms-MY" href="//ms.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="ca" href="//ca.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="cs" href="//cs.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="cy" href="//cy.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="da" href="//da.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="de" href="//de.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+        
+            
+            <link rel="alternate" hreflang="es" href="//es.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="el" href="//el.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="fr" href="//fr.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="gl" href="//gl.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="it" href="//it.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="hu" href="//hu.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="nl" href="//nl.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="nb" href="//nb.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="pl" href="//pl.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="pt" href="//pt.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="pt-BR" href="//br.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="ru" href="//ru.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="sv" href="//sv.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="tr" href="//tr.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="zh-CN" href="//cn.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="ja" href="//ja.dolphin-emu.org/docs/faq/" />
+            
+        
+            
+            <link rel="alternate" hreflang="ko" href="//ko.dolphin-emu.org/docs/faq/" />
+            
+        
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://dolphin-emu.org/m/static/css/bootstrap.min.9e0acbc8a914.css" rel="stylesheet">
+        <link href="https://dolphin-emu.org/m/static/css/bootstrap-theme.min.c1c924a4f6b3.css" rel="stylesheet">
+        <link href="https://dolphin-emu.org/m/static/css/dolphin.35feedaba1a0.css" rel="stylesheet">
+        <link href="https://dolphin-emu.org/m/static/sprites/nav.49b60948af59.css" rel="stylesheet">
+        
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.3.2/highcharts.js" integrity="sha512-dm3Cn0X6XyRMz52WqL1wag+e2WCNAnggh2+4mv/9Ngd+IhBIH9NEQYUZ4g3A6GJUbhKrGw5hErqcFIyk73lUgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.3.2/modules/data.min.js" integrity="sha512-8b+GXbLsl2QWPgMMRF/q2/fBYSHd/xl0IezPaedR+yNdRtfjhEWPxJ4jaBSMfWmpIm04KJwC2RROO7auA1yxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+          var CHART_ID = 0;
+          function addChart(options) {
+            var this_id = CHART_ID++;
+            document.write('<div id="chart' + CHART_ID + '"></div>');
+            options['credits'] = false;
+            options['chart'] = options['chart'] || {};
+            options['chart']['style'] = options['chart']['style'] || {};
+            options['chart']['style']['fontFamily'] = 'Helvetica Neue,Helvetica,Arial,sans-serif';
+            Highcharts.chart("chart" + CHART_ID, options);
+          }
+        </script>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8646203626363069" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+
+        <div id="navbar-dolphin" class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-logo" href="/"><img src="https://dolphin-emu.org/m/static/img/logo.72ba8e6312af.png" height="32" alt="Dolphin Emulator"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pull-left">
+                        <li><a href="/download/">Download</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/media/">Screenshots</a></li>
+                        <li><a href="/docs/faq/">FAQ</a></li>
+                        <li><a href="/docs/guides/">Guides</a></li>
+                        <li><a href="/compat/">Compatibility</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://discord.dolphin-emu.org/">Discord</a></li>
+                                <li><a href="https://forums.dolphin-emu.org/">Forum</a></li>
+                                <li><a href="https://wiki.dolphin-emu.org/">Wiki</a></li>
+                                <li><a href="https://github.com/dolphin-emu/dolphin">GitHub</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="flag curr-flag sprite-nav-en"></div> <span>English</span> <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                            
+                                
+                                <li><a href="//ast.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ast"></div><span dir="ltr">Asturianu</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//ms.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ms"></div><span dir="ltr">Bahasa Melayu</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//ca.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ca"></div><span dir="ltr">Català</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//cs.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-cs"></div><span dir="ltr">Česky</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//cy.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-cy"></div><span dir="ltr">Cymraeg</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//da.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-da"></div><span dir="ltr">Dansk</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//de.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-de"></div><span dir="ltr">Deutsch</span></a></li>
+                                
+                            
+                                
+                            
+                                
+                                <li><a href="//es.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-es"></div><span dir="ltr">Español</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//el.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-el"></div><span dir="ltr">Ελληνικά</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//fr.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-fr"></div><span dir="ltr">Français</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//gl.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-gl"></div><span dir="ltr">Galego</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//it.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-it"></div><span dir="ltr">Italiano</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//hu.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-hu"></div><span dir="ltr">Magyar</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//nl.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-nl"></div><span dir="ltr">Nederlands</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//nb.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-nb"></div><span dir="ltr">Norsk (Bokmål)</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//pl.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-pl"></div><span dir="ltr">Polski</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//pt.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-pt"></div><span dir="ltr">Português</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//br.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-br"></div><span dir="ltr">Português (Brasil)</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//ru.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ru"></div><span dir="ltr">Русский</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//sv.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-sv"></div><span dir="ltr">Svenska</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//tr.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-tr"></div><span dir="ltr">Türkçe</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//cn.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-cn"></div><span dir="ltr">中文(中国)</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//ja.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ja"></div><span dir="ltr">日本語</span></a></li>
+                                
+                            
+                                
+                                <li><a href="//ko.dolphin-emu.org/docs/faq/?nocr=true"><div class="flag sprite-nav-ko"></div><span dir="ltr">한국어</span></a></li>
+                                
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        <div class="container">
+            
+            
+<div class="row">
+    <div class="col-md-3">
+        <div class="well sidebar-nav">
+            <ul class="nav">
+                
+                <li class="faq-cat">About Dolphin</li>
+                
+                <li class="faq-title"><a href="#what-dolphin">What is Dolphin?                                                </a></li>
+                
+                <li class="faq-title"><a href="#what-dolphins-license">Dolphin&#x27;s License                                               </a></li>
+                
+                <li class="faq-title"><a href="#who-made-dolphin">Who Made Dolphin?                                               </a></li>
+                
+                
+                <li class="faq-cat">Hardware and system requirements</li>
+                
+                <li class="faq-title"><a href="#what-operating-systems-are-supported">Operating Systems                                               </a></li>
+                
+                <li class="faq-title"><a href="#which-cpu-should-i-use">CPU                                                             </a></li>
+                
+                <li class="faq-title"><a href="#which-gpu-do-i-need">GPU                                                             </a></li>
+                
+                <li class="faq-title"><a href="#how-much-ram-do-i-need-run-dolphin">RAM                                                             </a></li>
+                
+                
+                <li class="faq-cat">Installation issues</li>
+                
+                <li class="faq-title"><a href="#which-version-dolphin-should-i-download">Which version?                                                  </a></li>
+                
+                <li class="faq-title"><a href="#program-cant-start-because-vcdll-is-missing">VCdll missing                                                   </a></li>
+                
+                <li class="faq-title"><a href="#application-has-failed-start-because-xinput1_3dll-">XINPUT_3.dll not found                                          </a></li>
+                
+                <li class="faq-title"><a href="#application-was-unable-start-correctly-0xc000007b">Error 0xc000007b                                                </a></li>
+                
+                
+                <li class="faq-cat">Configuration issues</li>
+                
+                <li class="faq-title"><a href="#my-laptop-new-gpu-not-performing-well-it-should">Laptop/GPU is slower than it should be                          </a></li>
+                
+                <li class="faq-title"><a href="#i-configured-bindings-second-gc-pad-it-does-not-wo">Second GC pad not working                                       </a></li>
+                
+                
+                <li class="faq-cat">Common issues</li>
+                
+                <li class="faq-title"><a href="#my-audio-stuttering">Audio Stuttering                                                </a></li>
+                
+                <li class="faq-title"><a href="#game-x-does-not-run-correctly">Game issues                                                     </a></li>
+                
+                <li class="faq-title"><a href="#dolphin-speeds-when-i-open-graphics-menu">Graphics menu makes games faster?                               </a></li>
+                
+                
+                <li class="faq-cat">Dolphin development</li>
+                
+                <li class="faq-title"><a href="#how-can-i-build-dolphin-my-computer">Building Dolphin                                                </a></li>
+                
+                <li class="faq-title"><a href="#what-best-way-follow-development-progress">Following development                                           </a></li>
+                
+                <li class="faq-title"><a href="#ive-got-idea-make-dolphin-better-how-should-i-tell">Suggesting improvements                                         </a></li>
+                
+                
+                <li class="faq-cat">Miscellaneous</li>
+                
+                <li class="faq-title"><a href="#couldnt-dolphin-use-more-my-cpu-cores-go-faster">Why not use more cores                                          </a></li>
+                
+                <li class="faq-title"><a href="#why-do-i-need-such-powerful-computer-emulate-old-c">Why does Dolphin require so much power                          </a></li>
+                
+                <li class="faq-title"><a href="#where-can-i-download-game-isosroms">Downloading game ISOs/ROMs                                      </a></li>
+                
+                <li class="faq-title"><a href="#what-dump-formats-are-supported-dolphin">Supported Dump Formats                                          </a></li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div style="text-align: center;">
+            <ins class="adsbygoogle"
+            style="display:inline-block;width:728px;height:90px"
+            data-ad-client="ca-pub-8646203626363069"
+            data-ad-slot="4072573718"></ins>
+        </div>
+    
+        <section id="about-dolphin" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">About Dolphin</h1>
+        </div>
+
+        
+        <h3 id="what-dolphin" dir="ltr">What is Dolphin?<a class="headerlink" href="#what-dolphin">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin is a GameCube and Wii emulator with high compatibility across the majority of titles for both platforms. It was first developed as closed source in 2003, and as open source since 2008.</p>
+        </div>
+        
+        <h3 id="what-dolphins-license" dir="ltr">What is Dolphin&#x27;s License?<a class="headerlink" href="#what-dolphins-license">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>When Dolphin went open-source in 2008, it was released under the GPLv2 license. However it has since been  <a href="https://dolphin-emu.org/blog/2015/05/25/relicensing-dolphin/">relicensed to GPLv2+</a>. According to the license, you may use Dolphin and its source code for any purpose, but distributing Dolphin requires that the source code be released and attribution given. For more details, see the <a href="https://github.com/dolphin-emu/dolphin/tree/master/LICENSES">license document</a>.</p>
+        </div>
+        
+        <h3 id="who-made-dolphin" dir="ltr">Who Made Dolphin?<a class="headerlink" href="#who-made-dolphin">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Over 200 people have worked hard over the years to create Dolphin. The list of contributors can be found <a href="https://github.com/dolphin-emu/dolphin/graphs/contributors">on GitHub</a>.</p>
+<p>Dolphin is not affiliated with Nintendo in any way.</p>
+        </div>
+        
+        </section>
+    
+        <section id="hardware-system-requirements" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Hardware and system requirements</h1>
+        </div>
+
+        
+        <h3 id="what-operating-systems-are-supported" dir="ltr">What operating systems are supported?<a class="headerlink" href="#what-operating-systems-are-supported">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin is a cross-platform emulator that runs on Windows (10 and newer), Linux, macOS (11.0 Big Sur and up), and Android (7.0 and above). Other Unix-like systems (such as FreeBSD) may work but are not officially supported.  Operating systems are required to be 64-bit to run Dolphin.</p>
+        </div>
+        
+        <h3 id="which-cpu-should-i-use" dir="ltr">Which CPU should I use?<a class="headerlink" href="#which-cpu-should-i-use">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin is a dual core application that relies upon IPC (Instructions Per Clock) and clockspeed for performance. Additional cores will not make Dolphin go any faster, though an "extra" core that Dolphin isn’t using may help slightly by keeping background tasks from using the same cores as Dolphin. </p>
+<p>Accordingly, the perfect CPU for Dolphin has high IPC, a high clock rate, and <em>four</em> cores or more.  With four cores, Dolphin has two cores for the main emulation threads, a third core for other tasks, and another core for the operating system and background tasks to run without taking resources from the emulator.</p>
+<p>Newer processors are generally better than older ones, thanks to the increased IPC that comes with newer architectures. </p>
+<ul>
+<li>
+<p><strong>Intel</strong>: Dolphin cares about frequency rather than core count, so within a given generation, mid-tier processors with fewer cores will act more or less the same as high-tier processors with more cores. Newer generations will give higher performance per clock, and K series processors will allow for overclocking to gain extra performance.  Be wary of U and Y series processors, as their reduced clockspeeds often struggle with Dolphin's workload.</p>
+</li>
+<li>
+<p><strong>AMD</strong>: Dolphin is not cache bound so it does not benefit much from X3D, and it doesn't use a lot of cores so Dolphin doesn't benefit from high core count CPUs either. Threadripper will work fine of course but a mid-tier Ryzen 5 of the same generation will technically outperform it. When buying Ryzen CPUs with Dolphin in mind, focus on frequency, and try to get as new as possible CPU for the best IPC. </p>
+</li>
+</ul>
+<p>For more details, such as specific CPU recommendations, CPU comparisons, or what hardware you should purchase to get playable speeds on a specific game, please ask on our <a href="https://forums.dolphin-emu.org/Forum-hardware">Hardware Forum</a> <strong>before purchasing</strong>.</p>
+<p><strong>Note</strong>: For more information regarding CPU performance, please check out <a href="https://docs.google.com/spreadsheet/ccc?key=0AkEUvobPn_DcdEo2aEhhdUpnU01tYUtNM3ZVX2d6SkE&amp;usp=sharing">this handy benchmark</a> that contains results from tons of users.  It's important to remember that Dolphin is a console emulator with tons of optimizations and features.  But, in the end, it does what the game instructs it to do.  <a href="https://wiki.dolphin-emu.org/index.php?title=Crazy_Taxi">Some</a> games only use features that are easy to emulate, and thus will run full-speed on just about any computer that supports Dolphin.  Meanwhile, <a href="https://wiki.dolphin-emu.org/index.php?title=The_Last_Story">others</a> struggle to run full speed at all times on even the most powerful of processors.</p>
+        </div>
+        
+        <h3 id="which-gpu-do-i-need" dir="ltr">Which GPU do I need?<a class="headerlink" href="#which-gpu-do-i-need">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Choosing a GPU for Dolphin is a fairly simple task. The more powerful the graphics card, the more pixels and enhancements you can throw at it before you’ll see slowdown. However, the biggest thing to watch for is making sure the GPU supports DirectX11.1 and OpenGL 4.4. Dolphin emulates a console that functions very differently from a traditional PC, and uses the latest D3D and OGL features to reduce overhead. If you do not have those extensions, performance will suffer. </p>
+<ul>
+<li>
+<p><strong>NVIDIA</strong>: Any modern mid-range or better NVIDIA GPU will be able to play Dolphin in HD resolutions with <a href="https://dolphin-emu.org/blog/2017/07/30/ubershaders/">Ubershaders</a> quite well. Old (10+ years) and/or low end GPUs may struggle, and are not recommended.</p>
+</li>
+<li>
+<p><strong>AMD</strong>: Any modern mid-range or better AMD GPU will perform well in Dolphin with Ubershaders. AMD generally favors D3D over OpenGL, so we recommend D3D for these GPUs. Old (10+ years) and/or low end GPUs may struggle, and are not recommended.</p>
+</li>
+<li>
+<p><strong>Intel</strong>: Iris Pro iGPUs will handle Dolphin well in D3D in Windows, though there are driver issues with the other graphics backends on that OS. A full fledged discrete graphics card is still highly recommended. IGPs older than the HD4000 are not supported.</p>
+</li>
+</ul>
+        </div>
+        
+        <h3 id="how-much-ram-do-i-need-run-dolphin" dir="ltr">How much RAM do I need to run Dolphin?<a class="headerlink" href="#how-much-ram-do-i-need-run-dolphin">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>2GB or more is recommended. RAM speed or the amount of RAM generally has no effect on emulation speed.</p>
+        </div>
+        
+        </section>
+    
+        <section id="installation-issues" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Installation issues</h1>
+        </div>
+
+        
+        <h3 id="which-version-dolphin-should-i-download" dir="ltr">Which version of Dolphin should I download?<a class="headerlink" href="#which-version-dolphin-should-i-download">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>The latest beta version of Dolphin is a good choice to start with: our betas are well tested and should give a reliable experience. Development versions have the latest fixes and optimizations, but their constantly changing nature means that little testing has been done on them and unknown bugs may appear. Choose dev builds if you want to be on the bleeding edge of new features, and/or want to help with Dolphin's development.</p>
+<p>Our buildbot provides each revision of Dolphin in four variants on the main site:</p>
+<ul>
+<li><strong>Windows x64</strong> for 64-bit x86 Windows operating systems</li>
+<li><strong>Windows ARM64</strong> for 64-bit ARM Windows operating systems</li>
+<li><strong>macOS</strong> for 64-bit macOS computers, ARM or x86</li>
+<li><strong>Android</strong> APKs for 64-bit Android </li>
+</ul>
+<p>We no longer distribute Linux builds on our website, requiring users to build from source. Please see our <a href="https://dolphin-emu.org/docs/guides/building-dolphin-linux/">Building Dolphin on Linux</a> guide for instructions.</p>
+<p>Dolphin <a href="https://dolphin-emu.org/blog/2014/05/19/obituary-32bit/">does not support 32-bit operating systems</a>. To check if your version of Windows is compatible with 64-bit applications, open the Start Menu, right click on <em>Computer</em> and select the <em>Properties</em> option. A window should appear, showing "64-bit operating system" as the <em>System type</em> if your Windows version can run Dolphin x64.  If you are running a 32-bit operating system, you should upgrade to a 64-bit version to better utilize the abilities of your hardware.</p>
+<p>On Android, Dolphin also requires 64-bit (ARMv8 AArch64). To see if your Android phone has the necessary requirements, simply run the APK, and Dolphin will alert you.</p>
+<p>Do note that sometimes various revisions may not have built correctly for all OSes, and some builds are missing. If this occurs, it will be fixed in a short time.</p>
+        </div>
+        
+        <h3 id="program-cant-start-because-vcdll-is-missing" dir="ltr">&quot;This program can&#x27;t start because VC_.dll is missing&quot;<a class="headerlink" href="#program-cant-start-because-vcdll-is-missing">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin now uses Visual Studio C++ 2022 on Windows. Windows users must have the latest Visual C++ 2015, 2017, 2019, and 2022 runtime installed in order to use Dolphin. If you ever encounter a MSVCP__.dll or vcruntime__.dll error, please download the latest Visual C++ runtime version from <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft's website</a>.</p>
+<p>Also, remember to extract Dolphin's files from the archive to a folder on your computer instead of running Dolphin directly from inside the archive.</p>
+        </div>
+        
+        <h3 id="application-has-failed-start-because-xinput1_3dll-" dir="ltr">&quot;This application has failed to start because XINPUT1_3.dll was not found&quot;<a class="headerlink" href="#application-has-failed-start-because-xinput1_3dll-">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Update and/or repair DirectX or reinstall the <a href="https://www.microsoft.com/accessories/en-ca/d/xbox-360-controller-for-windows">Xbox 360 Controller Drivers</a>.</p>
+        </div>
+        
+        <h3 id="application-was-unable-start-correctly-0xc000007b" dir="ltr">&quot;The application was unable to start correctly (0xc000007b)&quot;<a class="headerlink" href="#application-was-unable-start-correctly-0xc000007b">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>When people see one of the error messages about vcomp100.dll or xinput1_3.dll missing they often download 32-bit builds of these files from the internet and expect them to work fine with 64-bit applications.</p>
+<p>If you're suffering from this issue, make sure to delete any manually downloaded DLL files which are stored in your system paths and in the path where the Dolphin binary is stored and reinstall them with the proper runtime installers instead. Refer to the two questions above for further information.</p>
+        </div>
+        
+        </section>
+    
+        <section id="configuration-issues" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Configuration issues</h1>
+        </div>
+
+        
+        <h3 id="my-laptop-new-gpu-not-performing-well-it-should" dir="ltr">My Laptop / New GPU is not performing as well as it should<a class="headerlink" href="#my-laptop-new-gpu-not-performing-well-it-should">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Laptops and modern GPUs use a variety of tricks to reduce their power consumption and overall temperature. Underclocking, reducing voltages, using integrated instead of discrete graphics, etc. Sometimes these tricks get in the way of Dolphin, and the system needs a little help to use its maximum capabilities with the emulator. Use the links below for assistance.</p>
+<ul>
+<li><a href="https://forums.dolphin-emu.org/Thread-laptop-performance-guide">Windows</a></li>
+<li><a href="https://www.linux.org/threads/nvidia-optimus-on-linux.8873/">Linux</a></li>
+</ul>
+        </div>
+        
+        <h3 id="i-configured-bindings-second-gc-pad-it-does-not-wo" dir="ltr">I configured the bindings for the second GC pad but it does not work<a class="headerlink" href="#i-configured-bindings-second-gc-pad-it-does-not-wo">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Make sure that the emulated GameCube port 2 is configured as a Standard Controller in the GameCube tab of the main configuration window. If the pad still does not work, check that your game can actually use a second GameCube controller.</p>
+        </div>
+        
+        </section>
+    
+        <section id="common-issues" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Common issues</h1>
+        </div>
+
+        
+        <h3 id="my-audio-stuttering" dir="ltr">My audio is stuttering!<a class="headerlink" href="#my-audio-stuttering">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Sometimes when you're running a game you may run into occasions where Dolphin is unable to run full-speed.  Because the emulated console isn't running full-speed, it doesn't output as much audio as Dolphin needs. As such there end up being gaps in the audio, commonly referred to as <em>audio stuttering</em> by users.</p>
+<p>This is not actually an audio issue, but a performance issue.  Audio stuttering can be avoided by running Dolphin full-speed, or, in the latest development builds, activating time-stretched audio.  Time-stretched audio will "stretch" the currently output audio over the gaps, allowing the game to sound more natural at the cost of some audio latency.</p>
+        </div>
+        
+        <h3 id="game-x-does-not-run-correctly" dir="ltr">Game &quot;X&quot; does not run correctly<a class="headerlink" href="#game-x-does-not-run-correctly">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Even with a decade of work, Dolphin isn't a perfect emulator.  This means you may encounter various issues that range from minor sound or graphics defects to game breaking errors and crashes.  In order to provide users with as much information as possible, the Dolphin website hosts a <a href="https://wiki.dolphin-emu.org/">wiki</a> with thousands of pages dedicated to games and various features of the emulator.  Game Specific pages often list problems a game has, solutions, and what settings are needed to make it run as accurately as possible.</p>
+<p>If you find a bug in a game that isn't listed on the Wiki, please checkout the <a href="https://bugs.dolphin-emu.org/projects/emulator/issues">issue tracker</a> and see if it is reported there.  If it isn't, feel free to report the bug you found so that the developers are aware of the issue.  Be aware, one of the rules you must follow before reporting an issue is make sure the issue isn't already fixed on the latest development version.</p>
+        </div>
+        
+        <h3 id="dolphin-speeds-when-i-open-graphics-menu" dir="ltr">Dolphin speeds up when I open the graphics menu?<a class="headerlink" href="#dolphin-speeds-when-i-open-graphics-menu">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin is configured to run as fast as possible by default. However, for some games, that will cause a lot of problems, and they need more accurate and more demanding settings to run properly. For user convenience, many games have had these settings preconfigured in the "GameINI", a file with custom settings for each game.</p>
+<p><strong>Note: The below is only relevant to Dolphin versions before <a href="https://dolphin-emu.org/blog/2017/07/01/dolphin-progress-report-june-2017/#50-4171-videoconfig-port-to-layered-configuration-system-by-merrymage">5.0-4171</a></strong></p>
+<p>By opening the graphics menu, you are overriding the GameINI default settings and instead using the settings within the graphics menu, which will be the global defaults or whatever you last set them to. If you are playing a game that needs accurate but demanding settings, opening the graphics menu will disable those settings and result in a speed up. However, you will then be subject to the glitches and problems the GameINI settings were protecting you from.</p>
+<p>See the <a href="https://wiki.dolphin-emu.org/">Dolphin Wiki</a> for details on what games needs which settings to run correctly and why.</p>
+        </div>
+        
+        </section>
+    
+        <section id="dolphin-development" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Dolphin development</h1>
+        </div>
+
+        
+        <h3 id="how-can-i-build-dolphin-my-computer" dir="ltr">How can I build Dolphin on my computer?<a class="headerlink" href="#how-can-i-build-dolphin-my-computer">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>The build instructions are available on GitHub:</p>
+<ul>
+<li><a href="https://github.com/dolphin-emu/dolphin#building-for-windows">Windows build instructions</a></li>
+<li><a href="https://github.com/dolphin-emu/dolphin#building-for-linux-and-macos">Linux/macOS build instructions</a></li>
+</ul>
+        </div>
+        
+        <h3 id="what-best-way-follow-development-progress" dir="ltr">What is the best way to follow the development progress?<a class="headerlink" href="#what-best-way-follow-development-progress">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Builds are compiled for every development version of Dolphin and are available on the <a href="http://dolphin-emu.org/download/">download page</a>. </p>
+<p>All of the Git commits are also available on <a href="https://github.com/dolphin-emu/dolphin/">GitHub</a> where you can comment on changes and view new <a href="https://github.com/dolphin-emu/dolphin/pulls">pull requests</a> to get a jump on upcoming features.</p>
+        </div>
+        
+        <h3 id="ive-got-idea-make-dolphin-better-how-should-i-tell" dir="ltr">I&#x27;ve got an idea to make Dolphin better, how should I tell the devs about it?<a class="headerlink" href="#ive-got-idea-make-dolphin-better-how-should-i-tell">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Most of the Dolphin developers read the <a href="http://forums.dolphin-emu.org/Forum-development-discussion">"Development discussion" forum</a>. Posting a thread there might be a good idea to get some feedback from developers but also from users.</p>
+<p>Dolphin developers also communicate via IRC, which is better for instant discussion than a forum. Join us on <code>#dolphin-emu @ irc.libera.chat</code>.</p>
+<p>Even if your idea is very good, note that developers are doing their work on Dolphin on their free time and don't necessarily have the time to implement everything people suggest. If you can, implementing a first draft of your idea might be a good way to get developers attention.</p>
+        </div>
+        
+        </section>
+    
+        <section id="miscellaneous" class="faq-section">
+        <div class="page-header">
+            <h1 dir="ltr">Miscellaneous</h1>
+        </div>
+
+        
+        <h3 id="couldnt-dolphin-use-more-my-cpu-cores-go-faster" dir="ltr">Couldn&#x27;t Dolphin use more of my CPU cores to go faster?<a class="headerlink" href="#couldnt-dolphin-use-more-my-cpu-cores-go-faster">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>CPUs do not work that way.</p>
+<p>Every core on a CPU runs in parallel. Two tasks can run very well in parallel if they don't need to communicate often or to run at the exact same speed. For example, compressing files can be run on separate cores because compressing one file and compressing another file are two completely independent tasks, which do not need to communicate.</p>
+<p>In Dolphin, the only demanding tasks that can run well in parallel are the CPU, the GPU and the DSP. Breaking up any of these tasks into smaller tasks just to run it on more cores is very likely to make the program slower. That's why Dolphin only runs on 3 cores and won't use all of your 4 or 6 cores CPU.</p>
+        </div>
+        
+        <h3 id="why-do-i-need-such-powerful-computer-emulate-old-c" dir="ltr">Why do I need such a powerful computer to emulate an old console?<a class="headerlink" href="#why-do-i-need-such-powerful-computer-emulate-old-c">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>While it's true the GameCube and Wii hardware is a lot slower than what you need to emulate the console using Dolphin, the hardware found in these consoles is also very different from what you can find in a gaming PC. For example:</p>
+<ul>
+<li>
+<p>Instead of an Intel or AMD x86 CPU, GameCube and Wii use an <a href="http://en.wikipedia.org/wiki/Gekko_(microprocessor)">IBM PowerPC</a> CPU. Games are programmed for this CPU: when emulating, every basic instruction a game runs needs to be translated to something a PC can execute. Depending on the instruction, this can take from 2x to 100x clock cycles, which explains why you need more than a 486MHz CPU to emulate a GameCube.</p>
+</li>
+<li>
+<p>The RAM in these consoles is <a href="http://en.wikipedia.org/wiki/Static_random_access_memory">SRAM</a>, smaller but faster than the <a href="http://en.wikipedia.org/wiki/SDRAM">SDRAM</a> used in a PC. It is also shared between CPU and GPU, which makes operations like texture uploads (CPU memory to GPU memory) or framebuffer copies (GPU memory to CPU memory) a lot less demanding than they are on a PC.</p>
+</li>
+<li>
+<p>The GPU is not using shaders: every graphics effect and every computation done by the game is executed directly by the hardware without an intermediate programming language. This does not match how a PC GPU works at all. Dolphin uses shaders on the PC GPU to translate what the GC GPU can do directly in hardware, causing it to run a lot slower.</p>
+</li>
+<li>A PC runs an operating system in order to be able to run several programs at the same time. A GameCube or a Wii does not have the same requirement and can directly execute things on the hardware without going through the operating system, making a lot of communication between chips faster.</li>
+</ul>
+<p>This list is not exhaustive but should give you a good idea of what exactly makes emulation require a powerful computer.</p>
+        </div>
+        
+        <h3 id="where-can-i-download-game-isosroms" dir="ltr">Where can I download game ISOs/ROMs?<a class="headerlink" href="#where-can-i-download-game-isosroms">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Short answer: You don't. Buy games and dump them with a Wii.</p>
+<p>Long answer: Downloading commercial games is illegal and thus strongly frowned upon by the Dolphin developers. To prevent legal issues, this includes gray areas like downloading games which you purchased earlier. You don't necessarily need to own a gaming console by yourself because you can buy a game disc and dump them with a friend's console. On the other hand, copying a friend's game dump is considered illegal again.</p>
+<p>For dumping games with a Wii, you'll want to install the homebrew channel and run an application like <a href="http://wiibrew.org/wiki/CleanRip">CleanRip</a>.</p>
+        </div>
+        
+        <h3 id="what-dump-formats-are-supported-dolphin" dir="ltr">What dump formats are supported by Dolphin?<a class="headerlink" href="#what-dump-formats-are-supported-dolphin">¶</a></h3>
+
+        <div class="faq-answer always-ltr">
+        <p>Dolphin supports playing games dumped in the following formats:</p>
+<ul>
+<li>GCM/ISO (uncompressed dumps, should be 1.4GB for GameCube games and 4.7GB for Wii games)</li>
+<li>GCZ &ast;</li>
+<li>CISO</li>
+<li>WBFS</li>
+<li>WIA &ast;</li>
+<li>NFS (Wii games purchased from the Wii U eShop)</li>
+<li><a href="https://dolphin-emu.org/blog/2020/07/05/dolphin-progress-report-may-and-june-2020/#50-12188-support-for-rvz-and-wia-disc-formats-by-josjuice">RVZ</a> &ast;</li>
+</ul>
+<p>Note that WBFS and CISO are lossy compression formats: they remove some of the unused information stored on the discs to make files smaller. If you wish to compress your dumps to save space, we recommend RVZ.</p>
+<p>&ast; Dolphin can be used to compress your games to this format</p>
+        </div>
+        
+        </section>
+    
+    </div>
+</div>
+
+        </div>
+
+        <footer>
+        <p class="footer-text">
+            &copy; Dolphin Emulator Project -
+            <a href="https://github.com/dolphin-emu/www">Website Source Code</a> -
+            <a href="/docs/privacy/">Privacy Policy</a>
+
+            <a href="https://social.dolphin-emu.org/@dolphin" rel="me" style="display: none;">Mastodon verification</a>
+        </p>
+        </footer>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://dolphin-emu.org/m/static/js/bootstrap.min.cfe18215d149.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+    </body>
+</html>

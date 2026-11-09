@@ -1,0 +1,91 @@
+<div align="center">
+    <img alt="Tinyauth" title="Tinyauth" width="96" src="assets/logo-rounded.png">
+    <h1>Tinyauth</h1>
+    <p>The tiniest OpenID Certified™ authorization and authentication server you have ever seen.</p>
+</div>
+
+<div align="center">
+    <img alt="License" src="https://img.shields.io/github/license/tinyauthapp/tinyauth">
+    <img alt="Release" src="https://img.shields.io/github/v/release/tinyauthapp/tinyauth">
+    <img alt="Issues" src="https://img.shields.io/github/issues/tinyauthapp/tinyauth">
+    <img alt="Tinyauth CI" src="https://github.com/tinyauthapp/tinyauth/actions/workflows/ci.yml/badge.svg">
+    <a title="Crowdin" target="_blank" href="https://crowdin.com/project/tinyauth"><img src="https://badges.crowdin.net/tinyauth/localized.svg"></a>
+    <a href="https://scorecard.dev/viewer/?uri=github.com/tinyauthapp/tinyauth" target="_blank" title="OpenSSF Scorecard">
+      <img src="https://api.scorecard.dev/projects/github.com/tinyauthapp/tinyauth/badge">
+    </a>
+    <a href="https://www.bestpractices.dev/projects/12681" target="_blank" title="OSSF Best Practices"><img src="https://www.bestpractices.dev/projects/12681/baseline"></a>
+</div>
+
+<br />
+
+**Note as of 30/10/2026**: Right now, Tinyauth is maintained by a single person. AI agents are constantly spamming our repositories with bugs and security reports, some of them valid, some others not. Reviewing and fixing all of them takes a considerable amount of time which I unfortunately do not have. So, If you are a developer and would like to help, please reach out to me on Discord or via <a href="mailto:hello@tinyauth.app">hello@tinyauth.app</a>.
+
+Tinyauth is the simplest and tiniest authentication and authorization server you have ever seen. It is designed to both work as an authentication middleware for your apps, offering support for OAuth, LDAP and access-controls, and as a standalone authentication server. It supports all the popular proxies like Traefik, Nginx and Caddy.
+
+![Screenshot](assets/screenshot.png)
+
+> [!WARNING]
+> Tinyauth is in active development and configuration may change often. Please make sure to carefully read the release notes before updating.
+
+> [!NOTE]
+> This is the main development branch. For the latest stable release, see the [documentation](https://tinyauth.app) or the latest stable tag.
+
+As of 2026-06-25, Tinyauth v5.1.0 is OpenID Certified™ for Basic OP. You can find the certification details [here](https://openid.net/certification-old/certified-openid-providers-profiles/), test suite available [here](https://www.certification.openid.net/plan-detail.html?public=true&plan=H0qhpsOcQkxUE).
+
+<img alt="OpenID Certified" width="200" src="https://openid.net/wordpress-content/uploads/2016/05/oid-l-certification-mark-l-cmyk-150dpi-90mm.jpg" />
+
+## Getting Started
+
+You can get started with Tinyauth by following the guide in the [documentation](https://tinyauth.app/docs/getting-started). There is also an available [docker-compose](./docker-compose.example.yml) file that has Traefik, Whoami and Tinyauth to demonstrate its capabilities (keep in mind that this file lives in the development branch so it may have updates that are not yet released).
+
+## Demo
+
+If you are still not sure if Tinyauth suits your needs you can try out the [demo](https://demo.tinyauth.app). The default username is `user` and the default password is `password`.
+
+## Documentation
+
+You can find documentation and guides on all of the available configuration of Tinyauth in the [website](https://tinyauth.app).
+
+If you wish to contribute to the documentation head over to the [repository](https://github.com/tinyauthapp/docs).
+
+## Discord
+
+Tinyauth has a [Discord](https://discord.gg/eHzVaCzRRd) server. Feel free to hop in to chat about self-hosting, homelabs and of course Tinyauth. See you there!
+
+## Contributing
+
+All contributions to the codebase are welcome! If you have any free time, feel free to pick up an [issue](https://github.com/tinyauthapp/tinyauth/issues) or add your own missing features. Make sure to check out the [contributing guide](./CONTRIBUTING.md) for instructions on how to get the development server up and running.
+
+## Localization
+
+If you like, you can help translate Tinyauth into more languages by visiting the [Crowdin](https://crowdin.com/project/tinyauth) page.
+
+## License
+
+Tinyauth is licensed under the GNU Affero General Public License v3.0. TL;DR — You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) AGPL-licensed code must also be made available under the AGPL along with build & install instructions. If you run a modified version over a network, you must also make the source available to the users of that service. For more information about the license check the [license](LICENSE) file.
+
+## Sponsors
+
+A big thank-you to the following individuals and companies
+for their support for Tinyauth.
+
+### Individuals
+
+A huge thank you to [selfh.st](https://selfh.st) for their generous donation to Tinyauth.
+
+<img alt="selfh.st" width="128" src="https://selfh.st/content/images/size/w640/format/webp/2025/04/selfh-st-logo-white-1.svg">
+
+---
+
+<!-- sponsors --><a href="https://github.com/erwinkramer"><img src="https:&#x2F;&#x2F;github.com&#x2F;erwinkramer.png" width="64px" alt="User avatar: erwinkramer" /></a>&nbsp;&nbsp;<a href="https://github.com/nicotsx"><img src="https:&#x2F;&#x2F;github.com&#x2F;nicotsx.png" width="64px" alt="User avatar: nicotsx" /></a>&nbsp;&nbsp;<a href="https://github.com/SimpleHomelab"><img src="https:&#x2F;&#x2F;github.com&#x2F;SimpleHomelab.png" width="64px" alt="User avatar: SimpleHomelab" /></a>&nbsp;&nbsp;<a href="https://github.com/jmadden91"><img src="https:&#x2F;&#x2F;github.com&#x2F;jmadden91.png" width="64px" alt="User avatar: jmadden91" /></a>&nbsp;&nbsp;<a href="https://github.com/tribor"><img src="https:&#x2F;&#x2F;github.com&#x2F;tribor.png" width="64px" alt="User avatar: tribor" /></a>&nbsp;&nbsp;<a href="https://github.com/eliasbenb"><img src="https:&#x2F;&#x2F;github.com&#x2F;eliasbenb.png" width="64px" alt="User avatar: eliasbenb" /></a>&nbsp;&nbsp;<a href="https://github.com/afunworm"><img src="https:&#x2F;&#x2F;github.com&#x2F;afunworm.png" width="64px" alt="User avatar: afunworm" /></a>&nbsp;&nbsp;<a href="https://github.com/chip-well"><img src="https:&#x2F;&#x2F;github.com&#x2F;chip-well.png" width="64px" alt="User avatar: chip-well" /></a>&nbsp;&nbsp;<a href="https://github.com/Lancelot-Enguerrand"><img src="https:&#x2F;&#x2F;github.com&#x2F;Lancelot-Enguerrand.png" width="64px" alt="User avatar: Lancelot-Enguerrand" /></a>&nbsp;&nbsp;<a href="https://github.com/allgoewer"><img src="https:&#x2F;&#x2F;github.com&#x2F;allgoewer.png" width="64px" alt="User avatar: allgoewer" /></a>&nbsp;&nbsp;<a href="https://github.com/NEANC"><img src="https:&#x2F;&#x2F;github.com&#x2F;NEANC.png" width="64px" alt="User avatar: NEANC" /></a>&nbsp;&nbsp;<a href="https://github.com/axjab"><img src="https:&#x2F;&#x2F;github.com&#x2F;axjab.png" width="64px" alt="User avatar: axjab" /></a>&nbsp;&nbsp;<a href="https://github.com/stegratech"><img src="https:&#x2F;&#x2F;github.com&#x2F;stegratech.png" width="64px" alt="User avatar: stegratech" /></a>&nbsp;&nbsp;<a href="https://github.com/apearson"><img src="https:&#x2F;&#x2F;github.com&#x2F;apearson.png" width="64px" alt="User avatar: apearson" /></a>&nbsp;&nbsp;<a href="https://github.com/Micky5991"><img src="https:&#x2F;&#x2F;github.com&#x2F;Micky5991.png" width="64px" alt="User avatar: Micky5991" /></a>&nbsp;&nbsp;<!-- sponsors -->
+
+### Companies and Organizations
+
+- [JetBrains for Open-Source](https://jb.gg/OpenSource)
+- [CodeRabbit AI](https://www.coderabbit.ai)
+
+## Acknowledgements
+
+- **Freepik** for providing the police hat and badge.
+- **Renee French** for the original gopher logo.
+- [Siru Zhou](https://unsplash.com/@syrhu) for providing the background image of the app.

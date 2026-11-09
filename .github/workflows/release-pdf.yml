@@ -1,0 +1,37 @@
+name: Build and release PDF
+
+on:
+  push:
+    tags:
+      - '**'
+
+permissions:
+  contents: write
+
+jobs:
+  release-pdf:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install PDF build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y \
+            pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended
+
+      - name: Build PDF
+        run: make --always-make all
+
+      - name: Publish PDF to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" protocol.pdf --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" protocol.pdf \
+              --verify-tag --generate-notes
+          fi

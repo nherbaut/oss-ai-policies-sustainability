@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      
+        Contributor Agreements | OpenSSL Library
+      
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+  
+    
+    
+      
+        
+          <link rel="stylesheet" href="/css/main.365ab85dcfa55e30f6ff8a1600ce255d66095a3a9c6591bf72d13c05160fb84c.css" integrity="sha256-Nlq4Xc&#43;lXjD2/4oWAM4lXWYJWjqcZZG/ctE8BRYPuEw=" crossorigin="anonymous" />
+        
+      
+    
+  
+
+
+
+
+
+  
+    
+      <link rel="stylesheet" href="/css/fontawesome.min.80a5cf80e4ba6d1ff172b4995ad5ce996071022227860700308ed797fbd150ad.css" integrity="sha256-gKXPgOS6bR/xcrSZWtXOmWBxAiInhgcAMI7Xl/vRUK0=" crossorigin="anonymous" />
+    
+  
+
+
+
+  
+    
+      <link rel="stylesheet" href="/css/brands.9c662012d93fb448c96f67697bbee60ae06d6552398ca9487dcc79df4a032eb3.css" integrity="sha256-nGYgEtk/tEjJb2dpe77mCuBtZVI5jKlIfcx530oDLrM=" crossorigin="anonymous" />
+    
+  
+
+
+
+  
+    
+      <link rel="stylesheet" href="/css/solid.40e9c76835b2f8346bf5a2dda24f8a0ec0624a4a2232ad15dad086f44a672772.css" integrity="sha256-QOnHaDWy&#43;DRr9aLdok&#43;KDsBiSkoiMq0V2tCG9EpnJ3I=" crossorigin="anonymous" />
+    
+  
+
+
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 xl:relative">
+  <div class="container mx-auto px-4">
+    
+    <input id="menu-toggle" type="checkbox" class="peer sr-only xl:!hidden " />
+
+    
+    <div class="flex px-8 h-24 items-center justify-between">
+      
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/images/openssl_logo_library.svg" alt="OpenSSL Library logo" class="h-12 w-auto" />
+      </a>
+
+      
+      <label for="menu-toggle" class="xl:hidden p-2 cursor-pointer focus:outline-none" aria-label="Toggle main menu">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </label>
+
+      
+      <ul class="hidden xl:flex items-center space-x-4 [&>li:last-child>ul]:2xl:left-auto [&>li:last-child>ul]:2xl:right-0">
+        
+        
+          
+            
+            
+              <li>
+                <a href="/search/" class="p-2">
+                  <i class="fa-solid fa-magnifying-glass h-5 w-5"></i>
+                </a>
+              </li>
+
+              
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="/roadmap" class="inline-block py-2 px-3 text-lg hover:underline hover:decoration-dotted hover:underline-offset-4">
+                  Roadmap
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li class="relative group">
+                <a href="/community/" class="inline-flex items-center py-2 px-3 text-lg">
+                  Community
+                  <svg
+                    aria-hidden="true"
+                    class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    />
+                  </svg>
+                </a>
+
+                <ul
+                  class="absolute left-0 top-full z-50 hidden w-56 rounded-md bg-white
+                        py-2 shadow-lg translate-y-2 opacity-0 transition duration-150
+                        group-hover:block group-hover:translate-y-0 group-hover:opacity-100
+                        focus-within:block focus-within:translate-y-0 focus-within:opacity-100"
+                >
+                  
+                    <li>
+                      <a
+                        href="/community/getting-started/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Getting Started
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://openssl-communities.org/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        OpenSSL Communities
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://github.com/openssl/openssl/discussions/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        GitHub Discussions
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/community/mailinglists/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Mailing Lists
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/community/support/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Community Support
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/community/conduct/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Code Of Conduct
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/community/thanks/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Thanks
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+
+              
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="https://openssl-corporation.org/solutions/support/" class="inline-block py-2 px-3 text-lg hover:underline hover:decoration-dotted hover:underline-offset-4">
+                  Support
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="https://openssl.foundation/donate/ways-to-give" class="inline-block py-2 px-3 text-lg hover:underline hover:decoration-dotted hover:underline-offset-4">
+                  Sponsor
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li class="relative group">
+                <a href="#" class="inline-flex items-center py-2 px-3 text-lg">
+                  Policies
+                  <svg
+                    aria-hidden="true"
+                    class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    />
+                  </svg>
+                </a>
+
+                <ul
+                  class="absolute left-0 top-full z-50 hidden w-56 rounded-md bg-white
+                        py-2 shadow-lg translate-y-2 opacity-0 transition duration-150
+                        group-hover:block group-hover:translate-y-0 group-hover:opacity-100
+                        focus-within:block focus-within:translate-y-0 focus-within:opacity-100"
+                >
+                  
+                    <li>
+                      <a
+                        href="/policies/general/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        General
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/policies/technical/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Technical
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/policies/cla/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Contributor Agreements
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/policies/releasestrat"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Release Strategy
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+
+              
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="/source/" class="inline-block py-2 px-3 text-lg hover:underline hover:decoration-dotted hover:underline-offset-4">
+                  Downloads
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li class="relative group">
+                <a href="" class="inline-flex items-center py-2 px-3 text-lg">
+                  Resources
+                  <svg
+                    aria-hidden="true"
+                    class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    />
+                  </svg>
+                </a>
+
+                <ul
+                  class="absolute left-0 top-full z-50 hidden w-56 rounded-md bg-white
+                        py-2 shadow-lg translate-y-2 opacity-0 transition duration-150
+                        group-hover:block group-hover:translate-y-0 group-hover:opacity-100
+                        focus-within:block focus-within:translate-y-0 focus-within:opacity-100"
+                >
+                  
+                    <li>
+                      <a
+                        href="/news/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        News
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/blog/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Blog
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/faq/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://github.com/openssl/openssl/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        GitHub Repository
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://docs.openssl.org"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        OpenSSL Documentation
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://docs.openssl.org/3.2/man7/ossl-guide-introduction/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        OpenSSL Guide
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://docs.openssl.org/3.2/man7/ossl-guide-migration/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        OpenSSL Migration Guide
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/performance/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Performance benchmarks
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="https://graph.openssl.org/public-dashboards/2f7de83e0880458885dfd5aedbaf72c8"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        OpenSSL Issues and PRs statistics
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+
+              
+            
+          
+        
+          
+            
+            
+              <li class="relative group">
+                <a href="" class="inline-flex items-center py-2 px-3 text-lg">
+                  About
+                  <svg
+                    aria-hidden="true"
+                    class="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                    />
+                  </svg>
+                </a>
+
+                <ul
+                  class="absolute left-0 top-full z-50 hidden w-56 rounded-md bg-white
+                        py-2 shadow-lg translate-y-2 opacity-0 transition duration-150
+                        group-hover:block group-hover:translate-y-0 group-hover:opacity-100
+                        focus-within:block focus-within:translate-y-0 focus-within:opacity-100"
+                >
+                  
+                    <li>
+                      <a
+                        href="/about/contact/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Contact
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/about/management/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Management
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/about/committers/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Committers
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/about/sponsors/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        Sponsors
+                      </a>
+                    </li>
+                  
+                    <li>
+                      <a
+                        href="/about/bylaws/"
+                        class="block px-4 py-2 text-base hover:bg-gray-100 focus:bg-gray-100"
+                      >
+                        ByLaws
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+
+              
+            
+          
+        
+      </ul>
+    </div>
+
+    
+    <div class="hidden peer-checked:flex xl:!hidden flex-col space-y-1 fixed inset-x-0 top-24 border-t border-gray-200 bg-white shadow-lg z-40 overflow-y-auto max-h-screen">
+      <ul class="pt-4 pb-6 space-y-1">
+        
+          
+            
+            
+              <li class="px-4 py-2">
+                <a href="/search/" class="inline-flex items-center space-x-2">
+                  <i class="fa-solid fa-magnifying-glass h-5 w-5"></i>
+                  <span class="sr-only">Search</span>
+                </a>
+              </li>
+
+            
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="/roadmap" class="block px-4 py-2 text-base hover:bg-gray-100">
+                  Roadmap
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li>
+                <details class="group">
+                  <summary class="flex items-center justify-between px-4 py-2 text-base cursor-pointer hover:bg-gray-100">
+                    <span>Community</span>
+                    <svg
+                      class="h-4 w-4 transition-transform group-open:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      />
+                    </svg>
+                  </summary>
+
+                  <ul class="pl-6 mt-1 space-y-1">
+                    
+                      <li>
+                        <a href="/community/getting-started/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Getting Started
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://openssl-communities.org/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          OpenSSL Communities
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://github.com/openssl/openssl/discussions/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          GitHub Discussions
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/community/mailinglists/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Mailing Lists
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/community/support/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Community Support
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/community/conduct/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Code Of Conduct
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/community/thanks/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Thanks
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </details>
+              </li>
+
+            
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="https://openssl-corporation.org/solutions/support/" class="block px-4 py-2 text-base hover:bg-gray-100">
+                  Support
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="https://openssl.foundation/donate/ways-to-give" class="block px-4 py-2 text-base hover:bg-gray-100">
+                  Sponsor
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li>
+                <details class="group">
+                  <summary class="flex items-center justify-between px-4 py-2 text-base cursor-pointer hover:bg-gray-100">
+                    <span>Policies</span>
+                    <svg
+                      class="h-4 w-4 transition-transform group-open:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      />
+                    </svg>
+                  </summary>
+
+                  <ul class="pl-6 mt-1 space-y-1">
+                    
+                      <li>
+                        <a href="/policies/general/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          General
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/policies/technical/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Technical
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/policies/cla/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Contributor Agreements
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/policies/releasestrat" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Release Strategy
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </details>
+              </li>
+
+            
+            
+          
+        
+          
+            
+            
+              <li>
+                <a href="/source/" class="block px-4 py-2 text-base hover:bg-gray-100">
+                  Downloads
+                </a>
+              </li>
+            
+          
+        
+          
+            
+            
+              <li>
+                <details class="group">
+                  <summary class="flex items-center justify-between px-4 py-2 text-base cursor-pointer hover:bg-gray-100">
+                    <span>Resources</span>
+                    <svg
+                      class="h-4 w-4 transition-transform group-open:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      />
+                    </svg>
+                  </summary>
+
+                  <ul class="pl-6 mt-1 space-y-1">
+                    
+                      <li>
+                        <a href="/news/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          News
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/blog/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Blog
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/faq/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          FAQ
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://github.com/openssl/openssl/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          GitHub Repository
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://docs.openssl.org" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          OpenSSL Documentation
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://docs.openssl.org/3.2/man7/ossl-guide-introduction/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          OpenSSL Guide
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://docs.openssl.org/3.2/man7/ossl-guide-migration/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          OpenSSL Migration Guide
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/performance/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Performance benchmarks
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="https://graph.openssl.org/public-dashboards/2f7de83e0880458885dfd5aedbaf72c8" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          OpenSSL Issues and PRs statistics
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </details>
+              </li>
+
+            
+            
+          
+        
+          
+            
+            
+              <li>
+                <details class="group">
+                  <summary class="flex items-center justify-between px-4 py-2 text-base cursor-pointer hover:bg-gray-100">
+                    <span>About</span>
+                    <svg
+                      class="h-4 w-4 transition-transform group-open:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.146l3.71-3.914a.75.75 0 111.08 1.04l-4.24 4.47a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      />
+                    </svg>
+                  </summary>
+
+                  <ul class="pl-6 mt-1 space-y-1">
+                    
+                      <li>
+                        <a href="/about/contact/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Contact
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/about/management/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Management
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/about/committers/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Committers
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/about/sponsors/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          Sponsors
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/about/bylaws/" class="block px-2 py-1 text-sm rounded hover:bg-gray-100">
+                          ByLaws
+                        </a>
+                      </li>
+                    
+                  </ul>
+                </details>
+              </li>
+
+            
+            
+          
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+
+
+    <main class="flex-1 flex max-md:flex-col py-10 justify-center container px-4 mx-auto">
+      <div class="px-8 basis-8/12">
+        
+  <header>
+    <h1>Contributor Agreements</h1>
+    
+    
+    
+  </header><p>Every non-trivial contribution needs to be covered by a signed
+Contributor License Agreement (CLA) from all original authors. We have
+modelled our policy based on the practice of <a href="https://www.apache.org">the Apache Software
+Foundation</a>. You can see their CLA policy
+<a href="https://www.apache.org/licenses/#clas">here</a>. Our policy is:</p>
+<p>OpenSSL requires that all non-trivial contributors of ideas, code, or
+documentation complete, sign, and submit (via email, or postal mail)
+an <a href="openssl_icla.pdf">Individual Contributor License Agreement (ICLA)</a>.
+The purpose of this agreement is to clearly define the terms under which
+intellectual property has been contributed to OpenSSL and thereby allow
+us to defend the project should there be a legal dispute regarding the
+software at some future time.</p>
+<p>A submission is trivial if it is considered trivial under copyright law.
+Since we are not lawyers, we place the bar for trivial contributions
+very high. For example: corrections of grammatical or typographical
+errors (including misspelled function names in manual pages), simple
+whitespace changes and in some cases one-line bugfixes might be accepted
+as trivial without requiring a CLA.</p>
+<p>In practice, it is required that the author (in the git commit message)
+and all approving team members (in the pull request thread) agree that a
+change is trivial. The author has to add <code>CLA: trivial</code> in the commit
+message separated by an empty line from the rest of the message. The
+reviewers will normally post a statement to the effect of &ldquo;I agree that
+it is a trivial change.&rdquo;</p>
+<p>For a corporation that has assigned employees to work on OpenSSL, a
+<a href="openssl_ccla.pdf">Corporate Contributor License Agreement (CCLA)</a> is
+available for contributing intellectual property via the corporation,
+that may have been assigned as part of an employment agreement. Note
+that a Corporate CLA does not remove the need for every developer to
+sign their own ICLA as an individual. Please send your CCLA to the
+<a href="mailto:cla@openssl.org">cla@openssl.org</a> email address.</p>
+<p>As of June 2026, both CLAs have been updated to v1.1 to include new
+clauses to conform to the <a href="/policies/general/ai-policy/">Library&rsquo;s AI
+Policy</a>.</p>
+<p>Please enter your <strong>reachable email address</strong> in the form below.  You
+will receive a link to the CLA that you need to complete and
+sign. This does not need to be the same email address that you use
+when filling out the CLA itself.</p>
+<p><em>When filling out the CLA, make sure the email address in the “E-Mail”
+field matches the one you use as the “Author” in your Git commits.</em></p>
+<form action="https://cla.openssl.org/icla/submit/" method="post">
+    <div class="grid grid-cols-1 sm:grid-cols-6">
+        <div class="sm:col-span-4">
+            <div class="mt-3">
+                <label for="email" class="font-semibold">Email (required)</label>
+                <div class="flex items-center rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#885758]">
+                    <input id="email" type="text" name="email" required class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" />
+                </div>
+            </div>
+            <div class="mt-3">
+                <span class="font-semibold">Contribution type (required)</span>
+                <div class="mt-2 flex flex-col gap-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="is_volunteer" value="True" class="text-[#885758] focus:ring-[#885758]" required>
+                    <span class="ml-2">My contributions are personal</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="is_volunteer" value="False" class="text-[#885758] focus:ring-[#885758]">
+                    <span class="ml-2">My contributions are related to my employment</span>
+                </label>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label for="point-of-contact" class="font-semibold">Point of contact (if your contributions are related to your employment)</label>
+                <div class="flex items-center rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#885758]">
+                    <input id="point-of-contact" type="text" placeholder="user@example.com" name="point-of-contact" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" />
+                </div>
+            </div>
+            <div class="cf-turnstile flex mt-5" data-sitekey="0x4AAAAAABlyMnd91Jj1Pj8x"></div>
+        </div>
+    </div>
+    <div class="mt-3 flex items-center justify-start gap-x-6">
+        <button type="submit" class="rounded-md bg-[#560f11] px-3 py-2 text-base font-semibold text-white shadow-xs hover:bg-[#773e40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+    </div>
+</form>
+
+<p>If you prefer snail mail, send an original signed Agreement to the</p>
+<p>OpenSSL Software Foundation<br>
+40 East Main Street<br>
+Suite 744<br>
+Newark, DE 19711<br>
+United States</p>
+<p>Please read the document(s) carefully before signing and keep a copy for
+your records.</p>
+<p>Your Full name will be published unless you provide an alternative
+Public name. For example if your full name is Andrew Bernard Charles
+Dickens, but you wish to be known as Andrew Dickens, please enter the
+latter as your Public name. If you do not wish to have your name listed
+as a contributor, use <em>Anonymous</em>. We reserve the right to reject rude
+or obscene nick-names. The email address and other contact details are
+not published.</p>
+<p>You can send any inquires related to Contributor License Agreement to
+the <a href="mailto:cla@openssl.org">cla@openssl.org</a> email address.</p>
+
+
+
+      </div>
+    </main>
+
+    <footer class="bg-neutral-100 text-lg text-neutral-400 pt-2 pb-8">
+  <div class="container px-4 mx-auto flex flex-col gap-4 items-center">
+    <ul class="icons">
+    </ul>
+
+    <ul class="text-center font-light flex flex-wrap max-sm:gap-2 max-sm:flex-col *:px-4.5 sm:divide-x-1 divide-neutral-300">
+          <li><a href="https://openssl.org">OpenSSL.org</a></li>
+          <li><a href="https://openssl-library.org">Library</a></li>
+          <li><a href="https://openssl-mission.org">Mission</a></li>
+          <li><a href="https://openssl-communities.org">Communities</a></li>
+          <li><a href="https://openssl-corporation.org">Corporation</a></li>
+          <li><a href="https://openssl.foundation">Foundation</a></li>
+          <li><a href="https://openssl-projects.org">Projects</a></li>
+          <li><a href="https://openssl-conference.org">Conference</a></li>
+    </ul>
+
+    <div class="py-2 font-light">
+      © 2026 OpenSSL. All rights reserved
+    </div>
+  </div>
+</footer>
+
+
+    
+
+
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+
+
+  </body>
+</html>

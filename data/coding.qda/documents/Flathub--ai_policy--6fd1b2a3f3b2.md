@@ -1,0 +1,566 @@
+- 
+- [For app authors](/docs/category/for-app-authors)
+- Requirements
+
+On this page
+
+# Requirements
+
+The goal of these requirements is to ensure that the applications hosted on Flathub are safe to use and integrate well in the desktop experience.
+
+## Inclusion policy[​](#inclusion-policy "Direct link to Inclusion policy")
+
+tip
+
+Each application is evaluated on a case-by-case basis and if you are unsure whether it fits the guidelines, please feel free to ask via [GitHub issues](https://github.com/flathub/flathub/issues) or in the [Flathub Matrix room](https://matrix.to/#/#flathub:matrix.org).
+
+If you believe something is violating these policies, please [open an issue](https://github.com/flathub/flathub/issues).
+
+Flathub aims to provide a curated collection of high-quality, sandboxed graphical desktop applications that seamlessly integrate with the Linux desktop environment and enhance the user experience.
+
+This defines specific policies for submission and inclusion, and applies to all submissions that are (were) submitted or included after the policy was documented, for as long as they remain on Flathub.
+
+Any future update or modification made after a submission has been accepted that would have affected the review outcome may trigger a re-review or other appropriate action.
+
+Submissions are accepted at the discretion of the reviewers and are liable to be removed even after they are included, if it is found to violate any policy. They must also comply with [Flathub's Terms Of Service](https://flathub.org/terms-and-conditions).
+
+These policies may evolve over time, but new policies will not be retroactively applied to submissions predating the introduction of the policy.
+
+Exceptions may be granted in at our discretion in specific cases.
+
+### Impermissible submissions[​](#impermissible-submissions "Direct link to Impermissible submissions")
+
+Submissions must demonstrate sufficient functional scope, user-facing value, desktop integration and functionality and justify distribution.
+
+The following non-exhaustive categories of submissions will not be accepted:
+
+#### Non-functional submissions[​](#non-functional-submissions "Direct link to Non-functional submissions")
+
+Submissions that are not fully functional or have easily visible issues at the time of submission.
+
+#### Console software[​](#console-software "Direct link to Console software")
+
+Console softwares will not be accepted. Exceptions may be given to Flatpak or Flathub related tooling.
+
+#### Minimal submissions[​](#minimal-submissions "Direct link to Minimal submissions")
+
+Submissions that offer very minimal functionality consisting of simple scripts, single or simple sources and/or exists as a thin wrapper or launcher around other tools will not be accepted.
+
+Simple web wrapper applications that embed local or remote content in a web engine without providing significant polish, functionality, or meaningful desktop integration will not be accepted.
+
+#### Extensions[​](#extensions "Direct link to Extensions")
+
+Shell, window manager, desktop environment extensions will not be accepted.
+
+#### Tray-only applications[​](#tray-only-applications "Direct link to Tray-only applications")
+
+Applications that operate exclusively as tray applets will not be accepted.
+
+#### System utilities[​](#system-utilities "Direct link to System utilities")
+
+System utilities which are generally used on host will not be accepted.
+
+#### Environment-locked applications[​](#environment-locked-applications "Direct link to Environment-locked applications")
+
+Applications that function only in highly specific environments such as requiring a particular desktop environment or distribution will not be accepted. Exceptions to this can be considered on a case by case basis. An example of an exception may be a desktop settings application.
+
+#### Host-dependent applications[​](#host-dependent-applications "Direct link to Host-dependent applications")
+
+Applications that rely on host components or complicated post installation setups for core functionality will not be accepted. Exceptions to this can be considered on a case by case basis.
+
+#### Submissions incompatible or restricted by Flatpak sandbox[​](#submissions-incompatible-or-restricted-by-flatpak-sandbox "Direct link to Submissions incompatible or restricted by Flatpak sandbox")
+
+Certain types of submissions, such as development tools, file managers, terminals, IDEs with a broad scope are generally not well-suited for Flatpak due to inherent sandboxing limitations and severely degrade the user experience. Unless these applications are being officially submitted by the upstream developers and/or upstream has explicitly committed to supporting Flatpak they will not be accepted. In some cases, submissions in these categories may not be accepted at all if the trade-offs outweigh the benefits of distributing them via Flatpak.
+
+#### Duplicate submissions[​](#duplicate-submissions "Direct link to Duplicate submissions")
+
+Multiple submissions of the same application (in terms of functionality, content, visuals, or user experience) or multiple submissions where each one is built with different frameworks or toolkits will not be accepted. Multiple submissions of a forked app with minimal changes in the fork (in terms of functionality, content, visuals, or user experience) will not be accepted. Exceptions can be granted if each version already has an established userbase and there is demand from users to have multiple versions available.
+
+#### Conflicting submissions[​](#conflicting-submissions "Direct link to Conflicting submissions")
+
+If an application is provided by the upstream author or developers as a Flatpak outside of Flathub, third party submissions of it to Flathub will be rejected.
+
+#### Software using emulation or translation layers[​](#software-using-emulation-or-translation-layers "Direct link to Software using emulation or translation layers")
+
+Windows software submissions that are using Wine or any submissions that aren't native to the Linux desktop and is using some emulation or translation layer will only be accepted if they are submitted officially by upstream with the intention of maintaining it in an official capacity.
+
+### End-of-life dependency policy[​](#end-of-life-dependency-policy "Direct link to End-of-life dependency policy")
+
+Submissions using an end-of-life runtime, extension or baseapp will not be accepted.
+
+Submissions that use high-risk, end-of-life software, such as OpenSSL 1.x, Python 2, or Qt5 WebKit, and request the network or any other invasive permissions will not be accepted.
+
+Submissions where the main application is itself end-of-life will not be accepted unless the submitter can demonstrate their ability to maintain it for the foreseeable future and perform runtime upgrades.
+
+### Software design and distribution policy[​](#software-design-and-distribution-policy "Direct link to Software design and distribution policy")
+
+Applications that include insecure or harmful design choices, such as disabling or bypassing security mechanisms, using insecure cryptographic practices, exposing or accessing sensitive information, or shipping overly permissive configurations will not be accepted.
+
+Submissions that employ unethical, manipulative, or exploitative design patterns will also be rejected. Applications promoting gambling or games of chance involving real-world money are not permitted.
+
+Projects must demonstrate reasonable structure, organization, maintainability, and be distributed in a verifiable manner. Open source and source-available projects must follow established conventions of their respective ecosystem.
+
+### Insufficient development history[​](#insufficient-development-history "Direct link to Insufficient development history")
+
+Submissions must demonstrate a meaningful history of development or existence, evidence of real-world use and a clear commitment to ongoing maintenance. For source-available projects, this includes a sustained commit history and standard release practices such as tagged versions. Applications that have only existed for a very short period of time will generally not be accepted.
+
+Exceptions may be granted on a case by case basis.
+
+### Extensions or BaseApps[​](#extensions-or-baseapps "Direct link to Extensions or BaseApps")
+
+Flatpak extensions that add support for new languages, language specific tooling etc. or BaseApps will need a clear use case defined and prospective users to be accepted.
+
+BaseApps and Extensions must be built against a runtime that provides a stable ABI and performs ABI checks as part of their releases.
+
+BaseApps and Extensions must themselves maintain a stable ABI in a given branch and must not depend or use any private ABI from the runtime, for their contents. Certain things such as extensions providing themes may be exempt from this rule.
+
+### Trust and history[​](#trust-and-history "Direct link to Trust and history")
+
+Submission decisions may take a submitter's prior conduct into account.
+
+A pattern of policy violations, uncooperative behaviour, multiple abandoned or poorly maintained apps, misleading practices, or failure to address security and compliance issues may result in rejection of current or new submissions.
+
+### Monetisation policy[​](#monetisation-policy "Direct link to Monetisation policy")
+
+This policy is applicable where an application, directly requires payment from the user. This includes purchasing the application itself, unlocking features, or buying in-app items.
+
+The following are excluded from the scope of this policy:
+
+- Any voluntary, non-mandatory forms of payments such as donations.
+
+- Payments made through the application that are independent of the app itself.
+
+If the policy is applicable:
+
+- Monetisation must provide a clear and non-negligible benefit or functionality to the user and they cannot be charged multiple times for the same benefit unless operating on a subscription model.
+
+- Prices must be set reasonably and must be relative to the value and the features provided by the application. Other paid applications providing the similar features can be used as a reference point.
+
+- Any monetisation requirements or benefits must be disclosed upfront unambiguously and should be clearly visible to the users.
+
+- The prices, and the benefits provided to the users must not be altered in a way that would substantially degrade the user experience upon acceptance.
+
+- Reviewers must be able to access and test the application's full functionality during the review process if necessary.
+
+If the application is being maintained or submitted by third party unrelated to upstream, certain relaxations may be made.
+
+### Misleading, malicious or illegal submissions[​](#misleading-malicious-or-illegal-submissions "Direct link to Misleading, malicious or illegal submissions")
+
+Submissions that impersonate, engage or encourage to engage in unlawful activities; provide false, misleading information and functionality; attempt to deceive or violate any laws, trademarks and copyrights; act in a malicious manner or contains malicious code will not be accepted. In most cases these are liable to be outright rejected or removed from the store.
+
+### Generative AI policy[​](#generative-ai-policy "Direct link to Generative AI policy")
+
+Submitters must disclose any AI-generated code, documentation, packaging, or other material they know or reasonably believe is included in the application or its Flathub packaging. The disclosure must identify the affected parts and approximate extent.
+
+Flathub manifests must not contain AI-generated or AI-assisted content. Disclosure does not exempt manifests from this restriction.
+
+AI used only for research, discussion, or debugging does not need disclosure when no generated material is included in the application or its Flathub packaging. Other disclosed AI-generated material is evaluated at reviewer discretion. Reviewers may reject a submission, including without further review, based on the extent or role of generated material or concerns about its review, quality, or maintainability. Disclosure does not create a presumption of acceptance.
+
+AI tools or agents must not open or automate Flathub submission pull requests, or generate their commit messages, descriptions, review comments, or replies. Submitters must not request AI-agent reviews.
+
+Undisclosed or materially misrepresented AI-generated material, or prohibited AI-generated submission or review interactions, may result in rejection. Repeated violations may result in a permanent ban from future submissions and activities.
+
+## Application ID[​](#application-id "Direct link to Application ID")
+
+important
+
+Please choose the ID carefully and don't hesitate to ask the reviewers for help as it will determine the type of [verification method](/docs/for-app-authors/verification#what-is-verification) available, if any.
+
+If it needs to be renamed at any point, the application needs to be [resubmitted](/docs/for-app-authors/maintenance#renaming-the-flatpak-id).
+
+The application ID is a constant and unique identifier of the application consisting of the reverse-DNS format `{tld}.{vendor}.{product}`.
+
+The *components* of the ID are the substrings obtained by splitting it at each dot `.`.
+
+*Demangling* an ID or any of its component means removing any leading underscore (`_`) and converting any other underscore (`_`) to a dash (`-`).
+
+The *domain* from the ID is determined by reversing its components and demangling them to form a FQDN, which is then matched against [PSL](https://publicsuffix.org/). If a match is not found in PSL, all component except the last from the previous final form is taken as the domain.
+
+The following rules must be followed when creating application IDs.
+
+- The ID must not exceed 255 characters and must have at least 3 components. Applications must not exceed 5 components.
+
+- Each component must contain only the characters `[A-Z][a-z][0-9]_`. A dash `-` is only allowed in the last component.
+
+- The domain portion must be in lowercase and must convert dash `-` to underscore `_`. If any component has an initial digit, it needs to be prefixed with an underscore similarly.
+
+- The ID must not end in generic terms like `.desktop, .app, .linux`. It's fine to repeat the application name in such cases.
+
+- The ID must exactly match the [ID tag](/docs/for-app-authors/metainfo-guidelines#id) in Metainfo file.
+
+- Applications using code hosting IDs and hosted on `github.com, gitlab.com, codeberg.org, framagit.org` must use `io.github., io.gitlab., page.codeberg., io.frama.` prefixes respectively and must have at least 4 components.
+
+  `com.github., com.gitlab., org.codeberg., org.framagit.` prefixes are reserved for official projects of the code hosting platform.
+
+  Applications using code hosting IDs and hosted on Sourceforge can use `io.sourceforge., net.sourceforge.` prefixes.
+
+### Control over domain or repository[​](#control-over-domain-or-repository "Direct link to Control over domain or repository")
+
+- The domain must be directly related to the project or the application being submitted and the author or the developer or the project must have control over the domain. The corresponding URL must be reachable over HTTPS. In some edge cases, if it is not reachable, an exception can be granted after manually checking.
+
+  [Verification](/docs/for-app-authors/verification) may require placing a token under `https://{domain name}/.well-known/org.flathub.VerifiedApps.txt`
+
+  It's preferable to have visible proof on the webpage linking the application or the developer or the project to the domain calculated from the ID.
+
+#### Code hosting[​](#code-hosting "Direct link to Code hosting")
+
+A *repository URL* (or project URL) is calculated for code hosting IDs by using the domain and by taking the last component of the ID as-is (except when the last component starts with a leading underscore and then a digit, in which case following Appstream conventions, the leading underscore is stripped from that component).
+
+Note, that some code hosting platforms like GitLab may have case-sensitive namespaces.
+
+Please note that, the username or the repository name portion for code-hosting IDs cannot contain `.` since it serves as a delimiter for splitting the components from the ID itself.
+
+- Applications using code hosting IDs must have the repository URL reachable. In some cases, if the calculated code hosting URL doesn't match exactly, an exception can be granted after manually checking.
+
+For example, the repository URL for the ID `io.github.example_foo.bar` will be `https://github.com/example-foo/bar` and for the ID `io.sourceforge.example_foo.bar`, it will be `https://sourceforge.net/projects/example-foo/`.
+
+#### Protected ID prefixes[​](#protected-id-prefixes "Direct link to Protected ID prefixes")
+
+- `org.gnome.`: Only apps in [this list](https://gitlab.gnome.org/Teams/Releng/AppOrganization/-/blob/main/data/registered-app-ids.yml) are allowed to use it. The restriction only applies to the toplevel namespace.
+- `org.kde.`: The project must be hosted in a [group on KDE Invent](https://invent.kde.org/explore/groups?page=1).
+- `com.system76.`: The project must be hosted in the [pop-os organization on GitHub](https://github.com/pop-os).
+
+### Extensions and BaseApps[​](#extensions-and-baseapps "Direct link to Extensions and BaseApps")
+
+[BaseApps](https://docs.flatpak.org/en/latest/dependencies.html#baseapps) must have `BaseApp` as the last component of the Flatpak ID and for the rest of the ID, the above rules apply.
+
+[Flatpak extensions](https://docs.flatpak.org/en/latest/extension.html) must prefix their ID with the extension point ID, which is either defined in one of the [runtimes](/docs/for-app-authors/runtimes) or in an app. If the extension point is defined in an app, it must use the app's ID as a prefix. They are exempt from the [domain control rules](/docs/for-app-authors/requirements#control-over-domain-or-repository).
+
+## Renaming Flatpak ID[​](#renaming-flatpak-id "Direct link to Renaming Flatpak ID")
+
+[Flatpak ID renames](/docs/for-app-authors/maintenance#renaming-the-flatpak-id) are reviewed and accepted on a conservative basis provided justified reasons for the rename are provided.
+
+The following rename requests will not be accepted:
+
+- A rename that does not change the domain portion of the [Flatpak ID](#application-id).
+
+- A rename that changes the domain portion of the [Flatpak ID](#application-id) without a clear intention to [verify](/docs/for-app-authors/verification) the new ID.
+
+- A rename requested immediately after the initial submission has been accepted.
+
+- Rename requests made frequently.
+
+Exceptions may be considered on a case by case basis.
+
+## License[​](#license "Direct link to License")
+
+All content hosted on Flathub must allow legal redistribution, and the license must be correctly specified in the app's [MetaInfo file](/docs/for-app-authors/metainfo-guidelines#license).
+
+Non-redistributable sources must use [extra-data](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) source type. Note that if the submission is being opened by the upstream authors or developers, there is generally no need to use `extra-data` sources as redistribution permissions are implicitly granted in this case.
+
+Any part of the application such as the name or icon must not violate any trademarks and must be distinct.
+
+License must be correctly declared in the metainfo file and must match with license information available in its source.
+
+## License of contents in Flathub repository[​](#license-of-contents-in-flathub-repository "Direct link to License of contents in Flathub repository")
+
+The use of a specific license is not mandated or required, and including a license in the repository is optional. However, submitters and maintainers may choose to apply a license if desired. However, restrictive licenses must not be used and the general recommendation is to use permissive licenses such as MIT, 0BSD, or the Unlicense for Flatpak manifests and any other build manifests.
+
+Contributors are also encouraged to apply appropriate licenses of their choosing to any additional source code (e.g., build scripts, tooling) that are/will be included in the repository.
+
+During submission, a license file may be included in the pull request, or individual files can be annotated with a license at the top level.
+
+In the absence of an explicit license, contributors will retain their respective copyrights over the contents of the repository.
+
+## Installing license files[​](#installing-license-files "Direct link to Installing license files")
+
+Application maintainers and submitters must ensure that license files for each module in the Flatpak manifest is installed to `$FLATPAK_DEST/share/licenses/$FLATPAK_ID`.
+
+Recent versions of Flatpak builder can do this automatically for common license file names as long as the licence files are in the root of the source directory. If the licence file is not being automatically installed, it must be manually installed using:
+
+``` yaml
+  - name: my-module
+    buildsystem: simple
+    build-commands:
+      - install -Dm0644 LICENSE -t $FLATPAK_DEST/share/licenses/$FLATPAK_ID/<my-module-name>
+```
+
+or using `post-install`:
+
+``` yaml
+  - name: my-module
+    buildsystem: cmake-ninja
+    builddir: true
+    post-install:
+      - mkdir -p $FLATPAK_DEST/share/licenses/$FLATPAK_ID/<my-module-name>
+      - mv ../LICENSES/* $FLATPAK_DEST/share/licenses/$FLATPAK_ID/<my-module-name>
+```
+
+## Permissions[​](#permissions "Direct link to Permissions")
+
+[Static permissions](https://docs.flatpak.org/en/latest/sandbox-permissions.html) must be kept to an absolute minimum. Applications should rely on [XDG Portals](https://flatpak.github.io/xdg-desktop-portal/docs/) and follow established XDG standards wherever possible.
+
+When a suitable XDG portal exists, is supported across the ecosystem, and covers the application's use case, or can be implemented in the application itself — using the portal becomes mandatory instead of static permissions. Exceptions to this can be allowed on a case by case basis but note that using niche or unmaintained setups or dependencies may not count as grounds for allowing an exception.
+
+## No network access during build[​](#no-network-access-during-build "Direct link to No network access during build")
+
+All dependencies needed to build and run the application must be present in the manifest as [sources](https://docs.flatpak.org/en/latest/module-sources.html) with publicly accessible URLs or must be included as local sources in the submission pull request. Binary or precompiled files must not be present in the submission pull request.
+
+There is no network access during the build process. This means using `--share=network` inside `build-args` will not work.
+
+``` yaml
+# This will NOT work
+build-options:
+  build-args:
+    - --share=network
+```
+
+## Building from source[​](#building-from-source "Direct link to Building from source")
+
+All source available submissions must be built entirely from source code. This requirement applies to the main application component defined in the manifest, as well as any runtime dependencies included in the manifest.
+
+Exceptions may be granted to well-known vendors on a case-by-case basis, for example where the necessary tooling to perform an offline source build is not available. However, the use of niche tooling or uncommon build setups may not constitute grounds for an exception.
+
+When tooling for an offline source build is unavailable, application developers are generally encouraged (though not strictly required) to help develop, contribute, or upstream the necessary tooling for their app and for the benefit of the wider Flatpak ecosystem.
+
+## Localisation policy[​](#localisation-policy "Direct link to Localisation policy")
+
+All submissions must include a complete English localisation for their user interface, user-facing content, desktop file, metainfo and any readme or documentation. Low quality, automated or machine-generated or mixed translations cannot be used.
+
+This requirement does not apply if the submission is inherently region-specific, for example government or banking applications. Furthermore, exceptions can be made for new submissions, if the author's native language is not English and they were unable to find contributors to help in the English localisation.
+
+Any submission available only in one (or more) non-English locales should state so in their metadata using [description notes](#description-notes).
+
+## Patches[​](#patches "Direct link to Patches")
+
+Submissions must aim to distribute the application with minimal modifications and must closely follow the upstream source.
+
+If any modifications are necessary (e.g., through patching), all patches must be included in the submission along with the manifest.
+
+## Stable releases[​](#stable-releases "Direct link to Stable releases")
+
+The Flathub stable repository is dedicated to hosting only stable software. The Flathub beta repository can be used to publish beta versions of applications that have already been accepted on Flathub. New applications must first be submitted to the stable repository; after acceptance, maintainers can create a beta branch by following the [maintenance guide](/docs/for-app-authors/maintenance#creating-new-git-branches-for-publishing). Beta versions are not listed on the website, and users must be manually migrated if the application later moves to the stable repository.
+
+Nightly releases, development snapshots, or any software requiring daily updates must not be published to either repo.
+
+New application submissions will not be accepted directly into the Flathub beta repository.
+
+## Required files[​](#required-files "Direct link to Required files")
+
+important
+
+Under no circumstances should source code nor build artifacts be included in the submission. Flathub is not intended to host neither application source code nor binaries, including that of any dependencies.
+
+The following files must be included in the submission.
+
+### Manifest[​](#manifest "Direct link to Manifest")
+
+The [application manifest](https://docs.flatpak.org/en/latest/manifests.html) **must be at the top level** and named after the [application ID](#application-id) with the extension `.json`, `.yml` or `.yaml` depending on whether it is a JSON or YAML file.
+
+The [runtime(s)](https://docs.flatpak.org/en/latest/basic-concepts.html#runtimes) used in the manifest must be hosted on Flathub and must be the latest version at that time of submission.
+
+### Flatpak builder Manifest Style Guide[​](#flatpak-builder-manifest-style-guide "Direct link to Flatpak builder Manifest Style Guide")
+
+The style guide ensures manifests are readable, maintainable and has a logical meaning and flow.
+
+#### JSON manifest style[​](#json-manifest-style "Direct link to JSON manifest style")
+
+- Must be valid JSON per RFC 7159. Non-standard features such as comments should be used in `"//":` or `"x-comment":` keys or consider YAML manifests.
+- Indentation must be 4 tabs with LF line endings.
+- Encoding must be UTF-8.
+- Files must have a trailing newline.
+- Double quotes must be used for all keys and string values.
+- Trailing commas are not allowed.
+
+#### YAML manifest style[​](#yaml-manifest-style "Direct link to YAML manifest style")
+
+- Must be [valid YAML](https://yaml.org/spec/1.2.2/).
+- Indentation must be 2 spaces with LF line endings.
+- Encoding must be UTF-8.
+- Files must have a trailing newline.
+- Child elements must always be indented.
+- Blank lines should be inserted between modules.
+- Values must not be vertically aligned.
+- List items must be indented consistently.
+- Strings should remain unquoted unless quoting is required.
+- Values must not be aligned.
+
+#### Logical ordering of keys[​](#logical-ordering-of-keys "Direct link to Logical ordering of keys")
+
+Manifest properties must be ordered logically and not alphabetically.
+
+``` text
+* id or app-id
+* runtime
+* runtime-version
+* sdk
+* branch or default-branch
+* build-runtime or build-extension
+* separate-locales
+* appstream-compose
+* command
+* base
+* base-version
+* base-extensions
+* inherit-extensions
+* sdk-extensions
+* inherit-sdk-extensions
+* platform-extensions
+* add-extensions
+* add-build-extensions
+* rename-desktop-file
+* rename-appdata-file
+* rename-mime-file
+* rename-mime-icons
+* rename-icon
+* copy-icon
+* finish-args
+* cleanup
+* cleanup-commands
+* build-options
+* modules
+  * name
+  * buildsystem
+  * build-options
+  * make-args
+  * make-install-args
+  * rm-configure
+  * no-autogen
+  * no-parallel-make
+  * subdir
+  * builddir
+  * run-tests
+  * license-files
+  * only-arches or skip-arches
+  * config-opts or build-commands
+  * post-install
+  * cleanup
+  * sources
+    * type
+    * url or path or paths or commands or contents
+    * mirror-urls
+    * disable-http-decompression
+    * archive-type
+    * sha or commit or tag or (tag then commit)
+    * size
+    * dest or dest-filename or filename
+    * strip-components or disable-submodules or disable-lfs or disable-shallow-clone
+    * only-arches or skip-arches
+    * x-checker-data
+```
+
+#### Creating submanifests[​](#creating-submanifests "Direct link to Creating submanifests")
+
+Sub-manifests with sources must only be created when they are generated using an external tooling or in an automatic manner, otherwise, everything must be in the main manifest.
+
+### flathub.json[​](#flathubjson "Direct link to flathub.json")
+
+Flathub builds on both `x86_64` and `aarch64` by default. If the application is supported on only one architecture, please include a `flathub.json` file in the submission pull request with the [proper contents](/docs/for-app-authors/maintenance#limiting-the-set-of-architectures-to-build-on).
+
+The `flathub.json` file must reside in the top-level root, next to the Flatpak manifest.
+
+### Dependency manifest[​](#dependency-manifest "Direct link to Dependency manifest")
+
+There is [no network access](/docs/for-app-authors/requirements#no-network-access-during-build) during the build process so all dependencies used by the application must be supplied by specifying them in the manifest as sources with publicly accessible URLs so that they can be downloaded before the build starts.
+
+There is a [community provided set of tools](https://github.com/flatpak/flatpak-builder-tools) that can be used to generate dependency manifests for npm, yarn, cargo, pip etc.
+
+These manifests must be included in the submission.
+
+## Required metadata[​](#required-metadata "Direct link to Required metadata")
+
+Applications must provide the following metadata typically as part of their source code.
+
+important
+
+These metadata files must be integrated in the upstream project. Please do not include a copy in the submission pull request unless it is using an [extra-data source](https://docs.flatpak.org/en/latest/module-sources.html#extra-data) for the application.
+
+## Name and Icon[​](#name-and-icon "Direct link to Name and Icon")
+
+### No trademark violations[​](#no-trademark-violations "Direct link to No trademark violations")
+
+The application name and icon as presented to the Flathub website and to users must be distinct and must not violate any trademarks.
+
+Official affiliation must not be implied by using a vendor's name in the application name or icon unless the application is actually part of that vendor's project.
+
+Icons must be sufficiently distinct to convey the project's own identity and prevent any risk of user confusion.
+
+Some common examples of things to avoid include:
+
+- A Firefox fork cannot mention `Firefox` in its name or use any of the official icon, logo or artwork.
+- Third party apps, for example, a music player made for GNOME or COSMIC cannot use `GNOME` or `COSMIC` in its name or use any of the official icon, logo or artwork.
+- A WhatsApp client or wrapper cannot have `WhatsApp` in its name or use any of the official icon, logo or artwork.
+
+Vendors often have their own requirements and policies. Some are listed below. Please refer to them for further details.
+
+- GNOME: [https://wiki.gnome.org/Foundation/SoftwarePolicy](https://wiki.gnome.org/Foundation/SoftwarePolicy), [https://foundation.gnome.org/trademark-guidelines/](https://foundation.gnome.org/trademark-guidelines/)
+- COSMIC: [https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md](https://github.com/pop-os/cosmic-epoch/blob/master/TRADEMARK.md), [https://github.com/pop-os/pop/blob/master/LICENSING.md](https://github.com/pop-os/pop/blob/master/LICENSING.md)
+
+### Appstream[​](#appstream "Direct link to Appstream")
+
+All submissions must provide a [Metainfo file](/docs/for-app-authors/metainfo-guidelines#path-and-filename) that passes [validation](/docs/for-app-authors/metainfo-guidelines#validation).
+
+A Metainfo file is mandatory to appear on the Flathub website.
+
+Metainfo file is optional for runtimes, extensions and BaseApps.
+
+#### Description notes[​](#description-notes "Direct link to Description notes")
+
+If the submission is unavailable in English and only exists in a small number of select locales, a similar note **must** be added.
+
+``` xml
+<description>
+  <p>**This app is only available in LANG NAME.**</p>
+</description>
+```
+
+If the user needs to perform additional post installation steps to run the submission, they **must** be mentioned or linked.
+
+``` xml
+<description>
+  <p>**Please follow https://example.org/setup after installation.**</p>
+</description>
+```
+
+### Desktop file[​](#desktop-file "Direct link to Desktop file")
+
+All graphical applications must include a [desktop file](https://docs.flatpak.org/en/latest/conventions.html#desktop-files).
+
+### Icons[​](#icons "Direct link to Icons")
+
+Graphical applications must provide, preferably a SVG icon or at least a 256x256 PNG icon, properly [named and installed](https://docs.flatpak.org/en/latest/conventions.html#application-icons).
+
+[Edit this page](https://github.com/flathub/documentation/tree/main/docs/02-for-app-authors/02-requirements.md)
+
+Previous
+
+Why Flathub?
+
+Next
+
+MetaInfo guidelines
+
+- [Inclusion policy](#inclusion-policy)
+  - [Impermissible submissions](#impermissible-submissions)
+  - [End-of-life dependency policy](#end-of-life-dependency-policy)
+  - [Software design and distribution policy](#software-design-and-distribution-policy)
+  - [Insufficient development history](#insufficient-development-history)
+  - [Extensions or BaseApps](#extensions-or-baseapps)
+  - [Trust and history](#trust-and-history)
+  - [Monetisation policy](#monetisation-policy)
+  - [Misleading, malicious or illegal submissions](#misleading-malicious-or-illegal-submissions)
+  - [Generative AI policy](#generative-ai-policy)
+- [Application ID](#application-id)
+  - [Control over domain or repository](#control-over-domain-or-repository)
+  - [Extensions and BaseApps](#extensions-and-baseapps)
+- [Renaming Flatpak ID](#renaming-flatpak-id)
+- [License](#license)
+- [License of contents in Flathub repository](#license-of-contents-in-flathub-repository)
+- [Installing license files](#installing-license-files)
+- [Permissions](#permissions)
+- [No network access during build](#no-network-access-during-build)
+- [Building from source](#building-from-source)
+- [Localisation policy](#localisation-policy)
+- [Patches](#patches)
+- [Stable releases](#stable-releases)
+- [Required files](#required-files)
+  - [Manifest](#manifest)
+  - [Flatpak builder Manifest Style Guide](#flatpak-builder-manifest-style-guide)
+  - [flathub.json](#flathubjson)
+  - [Dependency manifest](#dependency-manifest)
+- [Required metadata](#required-metadata)
+- [Name and Icon](#name-and-icon)
+  - [No trademark violations](#no-trademark-violations)
+  - [Appstream](#appstream)
+  - [Desktop file](#desktop-file)
+  - [Icons](#icons)

@@ -1,0 +1,114 @@
+{
+  "dataset_entries": 281,
+  "original_columns": 32,
+  "original_cells_sha256": "e26eace5167b8b5826122634660ed13ab952534fbc886a97ca839a134f8980ba",
+  "documents": 307,
+  "entities_with_documents": 278,
+  "entities_without_documents": [
+    "Linux Kernel",
+    "PROJ (OSGeo)",
+    "Godot"
+  ],
+  "document_types": {
+    "contributing": 204,
+    "ai_policy": 66,
+    "other_policy": 29,
+    "agent": 8
+  },
+  "screening_counts": {
+    "no_explicit_sustainability": 268,
+    "other_explicit_sustainability": 7,
+    "environmental": 6
+  },
+  "screening_patterns": {
+    "environmental": "\\b(environmental|ecological|carbon footprint|greenhouse|climate|water use|energy consumption|energy and water|energy costs)\\b",
+    "sustainability": "\\bsustainab\\w*\\b"
+  },
+  "missing_linked_documents": [
+    {
+      "entity": "Linux Kernel",
+      "type": "ai_policy",
+      "source_cell": "https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst"
+    },
+    {
+      "entity": "OpenSSL",
+      "type": "other_policy",
+      "source_cell": "Contributor License Agreement (CLA) with AI clause:\nhttps://openssl-library.org/policies/cla/"
+    },
+    {
+      "entity": "actualbudget/actual",
+      "type": "other_policy",
+      "source_cell": "https://github.com/actualbudget/actual/blob/master/AGENTS.md\n\nhttps://github.com/actualbudget/actual/blob/master/.github/agents/pr-and-commit-rules.md"
+    },
+    {
+      "entity": "PROJ (OSGeo)",
+      "type": "ai_policy",
+      "source_cell": "https://github.com/OSGeo/PROJ/blob/master/docs/source/community/ai_tool_policy.rst"
+    },
+    {
+      "entity": "apache/pulsar",
+      "type": "other_policy",
+      "source_cell": "https://github.com/apache/pulsar/blob/8576283da4ad3f3742168fc4bf4a527f31923297/AGENTS.md\nhttps://www.apache.org/legal/generative-tooling.html"
+    },
+    {
+      "entity": "nuitka/nuitka",
+      "type": "other_policy",
+      "source_cell": "PR template: https://github.com/Nuitka/Nuitka/blob/develop/.github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "entity": "Godot",
+      "type": "ai_policy",
+      "source_cell": "https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html#ai-assisted-contributions"
+    },
+    {
+      "entity": "budibase/budibase",
+      "type": "other_policy",
+      "source_cell": "NO INFO IN THE MAIN FILE, BUT LINK TO HERE, so taking this info:\nhttps://github.com/Budibase/budibase/blob/5bcc04c35b6d3e3f95619b4c3dc37fd01be22b63/docs/CONTRIBUTING.md\nhttps://github.com/mitchellh/vouch/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "entity": "KDE (page GSoC)",
+      "type": "other_policy",
+      "source_cell": "referenced, but independent document: https://docs.google.com/document/d/1t9GcIBnNXPNO6klRQvU8pL8-uV6afzLo6JUAM299suA/edit?tab=t.0#heading=h.tgbr0z4x9eg5"
+    },
+    {
+      "entity": "Nagi-ovo/gemini-voyager",
+      "type": "other_policy",
+      "source_cell": "NOTE: TRANSLATED FILE FROM CHINESE. TRANSLATED EXTRACTS ARE COPY-PASTED"
+    }
+  ],
+  "exact_duplicate_groups": [
+    [
+      "data/281/policies/diesel-rs/diesel/other_policy.md",
+      "data/281/policies/NLnet/ai_policy.md"
+    ],
+    [
+      "data/281/policies/apache/kafka/other_policy.md",
+      "data/281/policies/Apache Software Foundation/ai_policy.md"
+    ],
+    [
+      "data/281/policies/verl-project/verl/contributing.md",
+      "data/281/policies/volcengine/verl/contributing.md"
+    ],
+    [
+      "data/281/policies/verl-project/verl/other_policy.md",
+      "data/281/policies/volcengine/verl/other_policy.md"
+    ],
+    [
+      "data/281/policies/astral-sh/uv/other_policy.md",
+      "data/281/policies/astral-sh/ruff/other_policy.md"
+    ],
+    [
+      "data/281/policies/textualize/rich/ai_policy.md",
+      "data/281/policies/textualize/textual/ai_policy.md"
+    ]
+  ],
+  "possible_bot_challenges": [
+    "data/281/policies/Forgejo/ai_policy.md"
+  ],
+  "pilot_screening_counts": {
+    "environmental": 6,
+    "other_explicit_sustainability": 7,
+    "no_explicit_sustainability": 11
+  },
+  "pilot_documents": 28
+}
