@@ -184,6 +184,10 @@ The merger verifies matching schemas and frozen project content, exact selected
 excerpts, valid character offsets, references, unique records, and SQLite
 integrity. It checks the complete candidate database against its expected result.
 Text identity and code IDs must remain stable through the coding round.
+QualCoder's native text offsets use UTF-16 units. The merger verifies selected
+text against both UTF-16 and legacy Python code-point offsets, preserving the
+stored positions unchanged. Annotation previews prefer native UTF-16 when both
+interpretations are possible, since annotations contain no selected-text field.
 
 ## Tests
 

@@ -73,6 +73,29 @@ def read_project(project):
     return snapshot
 
 
+def text_span_candidates(text, start, end):
+    """Native Qt/UTF-16 positions first, legacy Python code-point positions second.
+
+    Never rewrite persisted offsets. Text coding carries seltext, allowing its
+    convention to be verified by exact equality. Annotations have no seltext;
+    their preview uses native UTF-16 when both interpretations are valid.
+    """
+    if not isinstance(start, int) or not isinstance(end, int) or not 0 <= start < end:
+        return []
+    candidates = []
+    encoded = text.encode('utf-16-le')
+    if end <= len(encoded) // 2:
+        try:
+            candidates.append(encoded[start * 2:end * 2].decode('utf-16-le'))
+        except UnicodeDecodeError:
+            pass  # A native selection must not split a surrogate pair.
+    if end <= len(text):
+        legacy = text[start:end]
+        if legacy not in candidates:
+            candidates.append(legacy)
+    return candidates
+
+
 def validate_records(snapshot):
     data = snapshot['data']
     sources = {r['id']: r for r in data['source']}
@@ -83,13 +106,18 @@ def validate_records(snapshot):
             if source is None or source['fulltext'] is None:
                 raise MergeError(f'{table}: missing text source')
             text = source['fulltext']
-            if not isinstance(row['pos0'], int) or not isinstance(row['pos1'], int) or not 0 <= row['pos0'] < row['pos1'] <= len(text):
-                raise MergeError(f'{table}: invalid offsets in source {row["fid"]}')
+            spans = text_span_candidates(text, row['pos0'], row['pos1'])
+            record_id = row[TABLES[table][0]]
+            location = f'{table} record {record_id}, document {source["name"]}, offsets {row["pos0"]}:{row["pos1"]}'
+            if not spans:
+                raise MergeError(f'Invalid offsets: {location}')
             if not row['owner']:
                 raise MergeError(f'{table}: missing coder attribution')
             if table == 'code_text':
-                if row['cid'] not in codes or text[row['pos0']:row['pos1']] != row['seltext']:
-                    raise MergeError('Coded excerpt or code reference does not match document')
+                if row['cid'] not in codes:
+                    raise MergeError(f'Unknown code reference {row["cid"]}: {location}')
+                if row['seltext'] not in spans:
+                    raise MergeError(f'Coded excerpt does not match document in UTF-16 or code-point coordinates: {location}')
     coding_ids = {r['ctid'] for r in data['code_text']}
     for row in data.get('gr_free_text_item', []):
         for column in ('ctid', 'memo_ctid'):
@@ -158,7 +186,8 @@ def plan_merge(base, destination, submission, coder):
                           document=source_names[row['fid']], owner=row['owner'],
                           cases=sorted({case_names[r['caseid']] for r in base['data']['case_text'] if r['fid'] == row['fid']}))
             source = next(r for r in base['data']['source'] if r['id'] == row['fid'])
-            detail['excerpt'] = source['fulltext'][row['pos0']:row['pos1']]
+            detail['excerpt'] = (row['seltext'] if table == 'code_text' else
+                                 text_span_candidates(source['fulltext'], row['pos0'], row['pos1'])[0])
             if table == 'code_text':
                 detail['code'] = code_names[row['cid']]
             if content(table, ours) == content(table, theirs):

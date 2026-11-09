@@ -149,6 +149,46 @@ class MergerTests(unittest.TestCase):
         with self.assertRaisesRegex(merger.MergeError, 'excerpt'):
             self.plan()
 
+    def test_unicode_native_and_legacy_offsets_survive_merge(self):
+        text = '😀 🚀 Human review is required.'
+        for project in (self.base, self.dest, self.donor):
+            (project / 'documents/2.md').write_text(text)
+            sql(project, 'UPDATE source SET fulltext=? WHERE id=2', (text,))
+            sql(project, 'UPDATE case_text SET pos1=? WHERE fid=2', (len(text),))
+        start = text.index('review')
+        end = start + len('review')
+        native_start = len(text[:start].encode('utf-16-le')) // 2
+        native_end = len(text[:end].encode('utf-16-le')) // 2
+        for owner, a, b in [('Alice', native_start, native_end), ('Legacy', start, end)]:
+            sql(self.donor, 'INSERT INTO code_text(cid,fid,pos0,pos1,seltext,owner) VALUES (1,2,?,?,?,?)', (a,b,'review',owner))
+        # Both coordinate conventions validate without mutating either record.
+        merger.read_project(self.donor)
+        sql(self.donor, "DELETE FROM code_text WHERE owner='Legacy'")
+        report = self.plan()
+        self.assertEqual(report['changes'][0]['excerpt'], 'review')
+        output = self.root / 'unicode.qda'
+        merger.write_candidate(self.base, self.dest, self.donor, 'Alice', output, report)
+        row = next(r for r in merger.read_project(output)['data']['code_text'] if r['owner']=='Alice')
+        self.assertEqual((row['pos0'],row['pos1'],row['seltext']), (native_start,native_end,'review'))
+
+    def test_native_annotation_can_end_beyond_code_point_length(self):
+        text = '😀🚀x'
+        for project in (self.base, self.dest, self.donor):
+            (project / 'documents/2.md').write_text(text)
+            sql(project, 'UPDATE source SET fulltext=? WHERE id=2', (text,))
+            sql(project, 'UPDATE case_text SET pos1=? WHERE fid=2', (len(text),))
+        sql(self.donor, "INSERT INTO annotation(fid,pos0,pos1,owner,memo) VALUES (2,4,5,'Alice','Last character')")
+        report = self.plan()
+        self.assertEqual(report['changes'][0]['excerpt'], 'x')
+
+    def test_unicode_offsets_do_not_accept_arbitrary_wrong_excerpts(self):
+        self.assertEqual(merger.text_span_candidates('😀🚀x',4,5), ['x'])
+        self.assertEqual(merger.text_span_candidates('😀🚀x',3,5), [])
+        coding(self.donor, 'Alice')
+        sql(self.donor, "UPDATE code_text SET seltext='not the selected text' WHERE owner='Alice'")
+        with self.assertRaisesRegex(merger.MergeError, 'code_text record .*document 1.md'):
+            self.plan()
+
     def test_changed_document_file_rejected(self):
         (self.donor / 'documents/1.md').write_text('Changed')
         with self.assertRaisesRegex(merger.MergeError, 'document/media|Document copy'):
