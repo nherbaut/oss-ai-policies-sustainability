@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "id": "d85270db330f480aa87f618b728e3330",
+  "coder": "Toto",
+  "base": "da7bed30bcce3c0d00d35ae1890c93a10ca81b2b",
+  "destination": "4b5b89853e4f5f9092bd4808b36fee81f629c9c3",
+  "submission": "fc53168b34bf5fa8a0d3937dae7a284fec07f261",
+  "pr": 3,
+  "branch": "coding/toto/20261109-104947-d85270db",
+  "integrated_at": "2026-11-09T10:53:33.837026+00:00",
+  "report": {
+    "coder": "Toto",
+    "changes": [
+      {
+        "table": "code_text",
+        "identity": [
+          239,
+          7,
+          146,
+          163,
+          "Toto"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 13,
+          "cid": 7,
+          "fid": 239,
+          "seltext": "* **fixed a bug?*",
+          "pos0": 146,
+          "pos1": 163,
+          "owner": "Toto",
+          "date": "2026-11-09 11:50:23",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "Toto",
+        "cases": [
+          "9001/copyparty"
+        ],
+        "excerpt": "* **fixed a bug?*",
+        "code": "Cost efficiency",
+        "operation": "add"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "code_text:add": 1
+    },
+    "by_document": [
+      {
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "Toto",
+        "summary": {
+          "code_text:add": 1
+        }
+      }
+    ]
+  }
+}
