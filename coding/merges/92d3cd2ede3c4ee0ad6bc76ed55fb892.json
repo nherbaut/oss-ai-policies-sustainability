@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "id": "92d3cd2ede3c4ee0ad6bc76ed55fb892",
+  "coder": "NicolasH",
+  "base": "ba0353582167a19e451987a60bb9251392ba2696",
+  "destination": "da7bed30bcce3c0d00d35ae1890c93a10ca81b2b",
+  "submission": "30caf69b8c31a05809de2210fd1b10d352ee75c7",
+  "pr": 2,
+  "branch": "coding/nicolash/20261109-103048-92d3cd2e",
+  "integrated_at": "2026-11-09T10:53:05.633189+00:00",
+  "report": {
+    "coder": "NicolasH",
+    "changes": [
+      {
+        "table": "code_text",
+        "identity": [
+          239,
+          10,
+          20,
+          35,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 13,
+          "cid": 10,
+          "fid": 239,
+          "seltext": "create an issue",
+          "pos0": 20,
+          "pos1": 35,
+          "owner": "NicolasH",
+          "date": "2026-11-09 11:31:56",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "NicolasH",
+        "cases": [
+          "9001/copyparty"
+        ],
+        "excerpt": "create an issue",
+        "code": "Affordability",
+        "operation": "add"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "code_text:add": 1
+    },
+    "by_document": [
+      {
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "NicolasH",
+        "summary": {
+          "code_text:add": 1
+        }
+      }
+    ]
+  }
+}
