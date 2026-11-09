@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "id": "253858a3883c4e588475e9ebfc8fc366",
+  "coder": "NicolasH",
+  "base": "6be6135c256ae48ded942ced144f83be59b910c5",
+  "destination": "362358e652e41392fe13bd0e6dcf76ce9935574a",
+  "submission": "47f36609e630059253fcc46762963fd68a55e984",
+  "pr": 6,
+  "branch": "coding/nicolash/20261109-143641-253858a3",
+  "integrated_at": "2026-11-09T14:41:09.078287+00:00",
+  "report": {
+    "coder": "NicolasH",
+    "changes": [
+      {
+        "table": "code_text",
+        "identity": [
+          239,
+          7,
+          171,
+          191,
+          "NicolasH"
+        ],
+        "before": null,
+        "incoming": {
+          "ctid": 15,
+          "cid": 7,
+          "fid": 239,
+          "seltext": " a PR or post a patc",
+          "pos0": 171,
+          "pos1": 191,
+          "owner": "NicolasH",
+          "date": "2026-11-09 15:37:07",
+          "memo": "",
+          "avid": null,
+          "important": null
+        },
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "NicolasH",
+        "cases": [
+          "9001/copyparty"
+        ],
+        "document_path": "documents/9001__copyparty--contributing--2058a428799a.md",
+        "excerpt": " a PR or post a patc",
+        "code": "Cost efficiency",
+        "operation": "add"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "code_text:add": 1
+    },
+    "by_document": [
+      {
+        "document": "9001__copyparty--contributing--2058a428799a.md",
+        "owner": "NicolasH",
+        "path": "documents/9001__copyparty--contributing--2058a428799a.md",
+        "cases": [
+          "9001/copyparty"
+        ],
+        "summary": {
+          "code_text:add": 1
+        }
+      }
+    ]
+  }
+}
