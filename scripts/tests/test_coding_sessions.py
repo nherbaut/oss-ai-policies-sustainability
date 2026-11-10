@@ -93,6 +93,42 @@ class MergerTests(unittest.TestCase):
         self.assertEqual(len(merger.read_project(output)['data']['annotation']), 1)
         self.assertEqual(len(merger.read_project(self.base)['data']['code_text']), 1)
 
+    def test_journals_merge_with_colliding_database_ids(self):
+        sql(self.dest, "INSERT INTO journal(jid,name,jentry,owner) VALUES (1,'Bob log','Bob entry','Bob')")
+        sql(self.donor, "INSERT INTO journal(jid,name,jentry,owner) VALUES (1,'Alice log','Alice entry','Alice')")
+        report = self.plan()
+        self.assertEqual(report['summary'], {'journal:add': 1})
+        self.assertEqual(report['by_document'], [])
+        output = self.root / 'journals.qda'
+        merger.write_candidate(self.base, self.dest, self.donor, 'Alice', output, report)
+        rows = merger.read_project(output)['data']['journal']
+        self.assertEqual({r['name'] for r in rows}, {'Alice log', 'Bob log'})
+        self.assertEqual(len({r['jid'] for r in rows}), 2)
+        merged = merger.read_project(output)
+        repeat = merger.plan_merge(merger.read_project(self.base), merged,
+                                   merger.read_project(self.donor), 'Alice')
+        self.assertEqual(repeat['changes'], [])
+
+    def test_journal_name_collision_requires_resolution(self):
+        sql(self.dest, "INSERT INTO journal(name,jentry,owner) VALUES ('Same name','Bob entry','Bob')")
+        sql(self.donor, "INSERT INTO journal(name,jentry,owner) VALUES ('Same name','Alice entry','Alice')")
+        self.assertEqual(len(self.plan()['conflicts']), 1)
+
+    def test_journal_edits_deletions_and_ownership(self):
+        for project in (self.base, self.dest, self.donor):
+            sql(project, "INSERT INTO journal(name,jentry,owner) VALUES ('Log','Original','Alice')")
+        sql(self.donor, "UPDATE journal SET jentry='Edited'")
+        self.assertEqual(self.plan()['summary'], {'journal:edit': 1})
+        sql(self.dest, "UPDATE journal SET jentry='Concurrent edit'")
+        self.assertEqual(len(self.plan()['conflicts']), 1)
+        sql(self.dest, "UPDATE journal SET jentry='Original'")
+        sql(self.donor, "UPDATE journal SET owner='Bob'")
+        for coder in ('Alice', 'Bob'):
+            with self.assertRaisesRegex(merger.MergeError, 'another coder'):
+                self.plan(coder)
+        sql(self.donor, 'DELETE FROM journal')
+        self.assertEqual(self.plan()['summary'], {'journal:delete': 1})
+
     def test_one_sided_edits_and_deletions(self):
         sql(self.donor, "UPDATE code_text SET memo='Reviewed' WHERE ctid=1")
         self.assertEqual(self.plan('Baseline')['summary'], {'code_text:edit': 1})

@@ -176,6 +176,7 @@ class CodebookWorkflowTests(unittest.TestCase):
         self.assertEqual((self.repo / cs.DATABASE).read_bytes(), before)
         self.start()
         sql(self.repo / cs.PROJECT, "INSERT INTO code_name(cid,name,owner,memo) VALUES (2,'Inductive','Alice','Local definition')")
+        sql(self.repo / cs.PROJECT, "INSERT INTO journal(name,jentry,owner) VALUES ('Code organiser test','New code: Inductive','Alice')")
         coding(self.repo / cs.PROJECT, 'Alice')
         sql(self.repo / cs.PROJECT, "UPDATE code_text SET cid=2 WHERE owner='Alice'")
         with patch('builtins.input', return_value='y'):
@@ -186,6 +187,7 @@ class CodebookWorkflowTests(unittest.TestCase):
         with patch('builtins.input', return_value='y'):
             self.workflow.integrate(branch=done['branch'])
         snap = merger.read_project(self.repo / cs.PROJECT)
+        self.assertEqual(snap['data']['journal'][0]['jentry'], 'New code: Inductive')
         self.assertEqual(len(snap['data']['code_text']), 2)
         registry = json.loads((self.repo / cb.REGISTRY).read_text())
         self.assertEqual(len(registry['entities']), 3)
@@ -402,6 +404,8 @@ class CodebookWorkflowTests(unittest.TestCase):
             if target == 'coding-start':
                 sql(self.repo / cs.PROJECT,
                     "INSERT INTO code_name(cid,name,owner,supercid) VALUES (2,'Licence stuff','CLI Coder',1)")
+                sql(self.repo / cs.PROJECT,
+                    "INSERT INTO journal(name,jentry,owner) VALUES ('Code organiser test','New subcode: Licence stuff','CLI Coder')")
         state = cs.Workflow(self.repo).state
         self.assertIsNone(state['active'])
         self.assertEqual(state['completed'][-1]['codebook_version'], 1)

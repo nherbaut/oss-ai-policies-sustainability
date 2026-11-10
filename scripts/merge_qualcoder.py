@@ -19,6 +19,7 @@ import tempfile
 TABLES = {
     'code_text': ('ctid', ('fid', 'cid', 'pos0', 'pos1', 'owner')),
     'annotation': ('anid', ('fid', 'pos0', 'pos1', 'owner')),
+    'journal': ('jid', ('name',)),
 }
 UI_TABLES = {'manage_files_display', 'files_filter'}
 UI_FIELDS = {'date', 'codername', 'bookmarkfile', 'bookmarkpos', 'recently_used_codes',
@@ -103,6 +104,10 @@ def validate_records(snapshot):
     codes = {r['cid'] for r in data['code_name']}
     for table in TABLES:
         for row in data[table]:
+            if table == 'journal':
+                if not row['name'] or not row['owner']:
+                    raise MergeError('Journal entries require a name and coder attribution')
+                continue
             source = sources.get(row['fid'])
             if source is None or source['fulltext'] is None:
                 raise MergeError(f'{table}: missing text source')
@@ -179,20 +184,16 @@ def plan_merge(base, destination, submission, coder):
             if content(table, before) == content(table, theirs):
                 continue
             row = theirs or before
-            if row['owner'] != coder:
+            if any(record['owner'] != coder for record in (before, theirs) if record is not None):
                 raise MergeError(f'Submission changes another coder\'s {table}: {row["owner"]}')
             if table == 'code_text' and (row.get('avid') or next(r for r in base['data']['source'] if r['id'] == row['fid']).get('av_text_id')):
                 raise MergeError('Audio/video transcript coding is outside this merger\'s scope')
             detail = dict(table=table, identity=list(identity), before=before, incoming=theirs,
-                          document=source_names[row['fid']], owner=row['owner'],
-                          cases=sorted({case_names[r['caseid']] for r in base['data']['case_text'] if r['fid'] == row['fid']}))
-            source = next(r for r in base['data']['source'] if r['id'] == row['fid'])
-            media = source.get('mediapath') or ''
-            detail['document_path'] = 'documents/' + media[6:] if media.startswith('/docs/') else None
-            detail['excerpt'] = (row['seltext'] if table == 'code_text' else
-                                 text_span_candidates(source['fulltext'], row['pos0'], row['pos1'])[0])
-            if table == 'code_text':
-                detail['code'] = code_names[row['cid']]
+                          owner=row['owner'])
+            if table == 'journal':
+                detail['journal'] = row['name']
+            else:
+                detail.update(passage_detail(base, table, row, source_names, code_names, case_names))
             if content(table, ours) == content(table, theirs):
                 continue
             if content(table, ours) != content(table, before):
@@ -201,13 +202,14 @@ def plan_merge(base, destination, submission, coder):
                 changes.append(dict(detail, operation='delete' if theirs is None else 'add' if before is None else 'edit'))
     report = dict(coder=coder, changes=changes, conflicts=conflicts,
                   summary=dict(Counter(f'{c["table"]}:{c["operation"]}' for c in changes)))
+    passage_changes = [c for c in changes if 'document' in c]
     report['by_document'] = [
         dict(document=document, owner=owner,
-             path=next(c['document_path'] for c in changes if c['document'] == document),
-             cases=sorted({case for c in changes if c['document'] == document for case in c['cases']}),
-             summary=dict(Counter(f'{c["table"]}:{c["operation"]}' for c in changes
+             path=next(c['document_path'] for c in passage_changes if c['document'] == document),
+             cases=sorted({case for c in passage_changes if c['document'] == document for case in c['cases']}),
+             summary=dict(Counter(f'{c["table"]}:{c["operation"]}' for c in passage_changes
                                   if c['document'] == document and c['owner'] == owner)))
-        for document, owner in sorted({(c['document'], c['owner']) for c in changes})]
+        for document, owner in sorted({(c['document'], c['owner']) for c in passage_changes})]
     if destination['data'].get('gr_memo_item') and any(c['table'] == 'code_text' and c['operation'] == 'delete' for c in changes):
         raise MergeError('Review graph memo references in QualCoder before deleting coding')
     # Check references against the proposed result, including deletion of coding
@@ -215,6 +217,20 @@ def plan_merge(base, destination, submission, coder):
     projected = projected_data(destination, report)
     validate_records(dict(data=projected))
     return report
+
+
+def passage_detail(base, table, row, source_names, code_names, case_names):
+    detail = dict(
+                  document=source_names[row['fid']], owner=row['owner'],
+                  cases=sorted({case_names[r['caseid']] for r in base['data']['case_text'] if r['fid'] == row['fid']}))
+    source = next(r for r in base['data']['source'] if r['id'] == row['fid'])
+    media = source.get('mediapath') or ''
+    detail['document_path'] = 'documents/' + media[6:] if media.startswith('/docs/') else None
+    detail['excerpt'] = (row['seltext'] if table == 'code_text' else
+                         text_span_candidates(source['fulltext'], row['pos0'], row['pos1'])[0])
+    if table == 'code_text':
+        detail['code'] = code_names[row['cid']]
+    return detail
 
 
 def projected_data(destination, report):
