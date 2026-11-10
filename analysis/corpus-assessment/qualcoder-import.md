@@ -1,5 +1,7 @@
 # QualCoder document import
 
+> Historical report. The QualCoder scripts and commands described below have been retired and removed from this repository. Data, backups and reports are retained.
+
 Project: `data/coding.qda` (QualCoder 4.0, database schema v17).
 
 Imported **602 substantive documents**, grouped into **281 cases** named exactly as the dataset's project/entity labels. Each source is linked to its case over its entire text. The documents include the extracted policies, contribution/agent guidelines and supplementary official research sources.

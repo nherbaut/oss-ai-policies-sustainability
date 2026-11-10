@@ -1,5 +1,7 @@
 # Readable Markdown in QualCoder
 
+> Historical report. The QualCoder scripts and commands described below have been retired and removed from this repository. Data, backups and reports are retained.
+
 Applied on 2026-11-06: **297 documents cleaned**, **302 unchanged**, and **one
 coded document preserved** (Astropy, containing four coded passages). No
 conversion failures or unresolved HTML-remnant warnings were reported. The

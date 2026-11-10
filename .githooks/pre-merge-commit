@@ -1,4 +1,0 @@
-#!/bin/sh
-# QualCoder session guards. Also check non-fast-forward merge commits.
-common=$(git rev-parse --git-common-dir) || exit 1
-exec python3 -B "$common/qualcoder/coding_guards.py" commit

@@ -102,7 +102,7 @@ The five high-level dimensions follow the Karlskrona manifesto [@becker2015susta
 
 Source labels are retained to preserve traceability, including “Longitivity” and “Social Engineering”. The latter has divergent meanings in the source materials, which are documented in its QualCoder memo. Coding distinguishes policy requirements, stated concerns, possible effects and observed effects. Each new code or category receives a memo recording its reference and source location, or its inductive origin and supporting corpus passages.
 
-The complete exported codebook includes the live QualCoder memos, operational definitions, coding guidance and reference details. Regenerate it with `make coding-taxonomy-export`.
+The retained QualCoder codebook export includes source memos, operational definitions, coding guidance and reference details. Current codebooks are managed and exported as YAML through the collaborative coding website.
 
 
 ![Sustainability coding taxonomy. Dimensions follow the Karlskrona manifesto [@becker2015sustainability], and twenty categories follow Roy et al. [@roy2026taxonomy]. Individual-level categories are provisional.](coding/exports/taxonomy.png){width=100%}
