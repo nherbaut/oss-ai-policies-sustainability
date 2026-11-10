@@ -204,6 +204,8 @@ class Workflow(CodebookWorkflow):
         remote = fetch_master(self.repo)
         ancestor(self.repo, 'master', remote)
         git(self.repo, 'merge', '--ff-only', remote)
+        session = dict(base=git(self.repo, 'rev-parse', 'HEAD'))
+        self.codebook_start_context(session)
         snapshot = read_project(self.repo / PROJECT)
         suggested = self.state.get('preferred_coder') or snapshot['data']['project'][0]['codername']
         if not suggested or suggested.lower() == 'default':
@@ -214,9 +216,8 @@ class Workflow(CodebookWorkflow):
         slug = re.sub(r'[^a-z0-9]+', '-', unicodedata.normalize('NFKD', coder).encode('ascii', 'ignore').decode().lower()).strip('-') or 'coder'
         identity = uuid.uuid4().hex
         branch = f'coding/{slug[:40]}/{datetime.now(timezone.utc):%Y%m%d-%H%M%S}-{identity[:8]}'
-        session = dict(version=VERSION, id=identity, coder=coder, branch=branch,
-                       base=git(self.repo, 'rev-parse', 'HEAD'), project=PROJECT, started_at=now(), phase='active')
-        self.codebook_start_context(session)
+        session.update(version=VERSION, id=identity, coder=coder, branch=branch,
+                       project=PROJECT, started_at=now(), phase='active')
         # Persist recovery state before any project mutation.
         git(self.repo, 'switch', '-c', branch)
         self.state.update(active=session, preferred_coder=coder)

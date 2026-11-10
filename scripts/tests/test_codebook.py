@@ -139,6 +139,7 @@ class CodebookTests(unittest.TestCase):
 
 
 class CodebookWorkflowTests(unittest.TestCase):
+    fixed_codebook_fixture = False
     setUp = fixtures.WorkflowTests.setUp
     tearDown = fixtures.WorkflowTests.tearDown
     start = fixtures.WorkflowTests.start
@@ -379,7 +380,37 @@ class CodebookWorkflowTests(unittest.TestCase):
             result = subprocess.run(['make', target], cwd=self.repo, input=answer,
                                     text=True, capture_output=True)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            if target == 'coding-start':
+                sql(self.repo / cs.PROJECT,
+                    "INSERT INTO code_name(cid,name,owner,supercid) VALUES (2,'Licence stuff','CLI Coder',1)")
         state = cs.Workflow(self.repo).state
         self.assertIsNone(state['active'])
         self.assertEqual(state['completed'][-1]['codebook_version'], 1)
         self.assertEqual(state['completed'][-1]['coder'], 'CLI Coder')
+        proposal = state['completed'][-1]['codebook_proposals'][0]['after']
+        self.assertEqual(proposal['name'], 'Licence stuff')
+        self.assertIsNotNone(proposal['parent'])
+
+    def test_start_requires_registry_before_prompt_or_session_creation(self):
+        before = (self.repo / cs.DATABASE).read_bytes()
+        branches = command(self.repo, 'git', 'branch', '--list')
+        with patch('builtins.input') as prompt:
+            with self.assertRaisesRegex(merger.MergeError, 'make coding-codebook-init'):
+                self.workflow.start()
+            prompt.assert_not_called()
+        self.assertIsNone(self.workflow.state['active'])
+        self.assertEqual(self.workflow.branch(), 'master')
+        self.assertEqual(command(self.repo, 'git', 'branch', '--list'), branches)
+        self.assertEqual((self.repo / cs.DATABASE).read_bytes(), before)
+        result = subprocess.run(['make', 'coding-start'], cwd=self.repo, text=True, capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('coding/codebook.json is missing', result.stdout)
+
+    def test_source_taxonomy_alone_does_not_enable_codebook_sessions(self):
+        cs.save_json(self.repo / 'coding/taxonomy.json', {'version': 1})
+        command(self.repo, 'git', 'add', 'coding/taxonomy.json')
+        command(self.repo, 'git', 'commit', '-m', 'Source taxonomy')
+        command(self.repo, 'git', 'push', 'origin', 'master')
+        with self.assertRaisesRegex(merger.MergeError, 'source taxonomy'):
+            self.workflow.start()
+        self.assertIsNone(self.workflow.state['active'])

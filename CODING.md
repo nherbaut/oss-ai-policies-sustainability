@@ -137,8 +137,9 @@ text, source/document memos, cases, attributes, journals, graphs, or another cod
 records. After the codebook registry is initialized, you may also create codes and
 categories attributed to yourself and refine your own new concepts, including
 their hierarchy and definitions. Existing shared concepts are maintained through
-the theory workflow below. Before initialization, codes and categories remain
-frozen. Media/transcript coding is outside this merger's scope. Routine bookmarks, the selected coder, display settings, and filters
+the theory workflow below. New sessions require the committed shared registry `coding/codebook.json`.
+Run `make coding-codebook-init` on master and commit and push its output before
+starting. `coding/taxonomy.json` contains the source taxonomy and has a separate purpose. Media/transcript coding is outside this merger's scope. Routine bookmarks, the selected coder, display settings, and filters
 can change; integration retains the master's UI state.
 
 You may code different documents/cases or independently code the same passages.
@@ -256,8 +257,8 @@ Initialization writes only the registry; it preserves every existing coded
 passage and leaves the database unchanged. It refuses outstanding local legacy
 jobs or remote coding branches. Coordinate with other coders: a legacy active
 session in another clone cannot be discovered if it was never pushed. New
-sessions use the new protocol only after the registry has been committed and
-published. This implementation does not initialize the research project for you.
+sessions require the registry to have been committed and published. Startup
+checks this before asking for a coder name or creating a session branch. This implementation does not initialize the research project for you.
 
 ### Work inductively on a coding branch
 

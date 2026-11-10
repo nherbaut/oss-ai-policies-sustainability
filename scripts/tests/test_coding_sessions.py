@@ -303,6 +303,12 @@ class WorkflowTests(unittest.TestCase):
         command(self.repo, 'git', 'remote', 'add', 'origin', str(self.remote))
         command(self.repo, 'git', 'push', '-u', 'origin', 'master')
         self.workflow = session.Workflow(self.repo)
+        if getattr(self, 'fixed_codebook_fixture', True):
+            # Exercise completion/integration of existing fixed-codebook snapshots.
+            # Production startup now requires an initialized registry.
+            bypass = patch.object(self.workflow, 'codebook_start_context')
+            bypass.start()
+            self.addCleanup(bypass.stop)
         guards.install(self.repo)
         self.github = FakeGitHub(self.repo)
         self.workflow.gh = self.github

@@ -89,7 +89,11 @@ class CodebookWorkflow:
         cs = api()
         registry = cs.tracked_json(self.repo, session['base'], cb.REGISTRY, optional=True)
         if registry is None:
-            return
+            raise MergeError(
+                'Shared codebook is not initialized: coding/codebook.json is missing. '
+                'On master, run make coding-codebook-init, then commit and push coding/codebook.json. '
+                'Run make coding-start again after initialization. '
+                'coding/taxonomy.json is the source taxonomy, not the shared codebook registry.')
         cb.validate_book(registry)
         actual = cb.export(read_project(self.repo / cs.PROJECT), registry)
         if actual != registry:
