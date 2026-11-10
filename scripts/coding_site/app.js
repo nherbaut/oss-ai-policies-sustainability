@@ -5,7 +5,7 @@
   const $ = id => document.getElementById(id);
   const codes = new Map(data.codes.map(code => [code.id, code]));
   const state = { code: null, document: null };
-  const collator = new Intl.Collator('fr', { numeric: true, sensitivity: 'base' });
+  const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
   const sorted = items => [...items].sort((a, b) => collator.compare(a.name, b.name));
   const color = code => /^#[0-9a-f]{6}$/i.test(code?.color || '') ? code.color : '#d9e9c5';
   function element(tag, text, className) {
@@ -25,11 +25,10 @@
     for (const coding of doc.codings) counts.set(coding.code, (counts.get(coding.code) || 0) + 1);
   }
   const s = data.summary;
-  $('summary').textContent = `${s.documents} documents · ${s.codes} codes · ${s.categories} catégories · ${s.codings} passages codés · ${s.annotations} annotations`;
-  $('snapshot').textContent = data.snapshot.slice(0, 12);
+  $('summary').textContent = `${s.documents} documents · ${s.codes} codes · ${s.categories} categories · ${s.codings} coded passages · ${s.annotations} annotations`;
   const owners = new Set(data.documents.flatMap(doc => [...doc.codings, ...doc.annotations].map(item => item.owner)));
   for (const owner of [...owners].sort(collator.compare)) {
-    const option = element('option', owner || 'Sans attribution');
+    const option = element('option', owner || 'Unattributed');
     option.value = owner;
     // Empty attribution is displayed in passages but is not a distinct filter.
     if (owner) $('coder').append(option);
@@ -38,7 +37,7 @@
   function addMemo(parent, memo) {
     if (!memo) return;
     const details = element('details');
-    details.append(element('summary', 'Mémo'), element('p', memo, 'memo'));
+    details.append(element('summary', 'Memo'), element('p', memo, 'memo'));
     parent.append(details);
   }
   function codeBranch(parent, code) {
@@ -74,7 +73,7 @@
     $('document-title').textContent = doc.name;
     const selected = doc.codings.filter(matchingCoding);
     const annotations = doc.annotations.filter(matchingAnnotation);
-    $('document-info').textContent = `${selected.length} / ${doc.codings.length} passages codés · ${annotations.length} / ${doc.annotations.length} annotations`;
+    $('document-info').textContent = `${selected.length} / ${doc.codings.length} coded passages · ${annotations.length} / ${doc.annotations.length} annotations`;
     $('document-memo').textContent = [...doc.paths, doc.memo].filter(Boolean).join('\n\n');
     $('provenance').hidden = !$('document-memo').textContent;
     const items = [
@@ -88,15 +87,15 @@
       card.id = item.anchor;
       card.style.setProperty('--code-color', color(code));
       card.append(element('h4', `${code ? code.name : 'Annotation'}${item.important ? ' · Important' : ''}`));
-      card.append(element('p', `${item.owner || 'Sans attribution'} · ${item.date || 'Date non renseignée'} · Positions ${item.start}–${item.end} (UTF-16)`, 'hint'));
+      card.append(element('p', `${item.owner || 'Unattributed'} · ${item.date || 'Date unavailable'}`, 'hint'));
       card.append(element('blockquote', doc.text.slice(item.start, item.end)));
       if (item.memo) card.append(element('p', item.memo, 'memo'));
-      const back = element('a', 'Voir dans le texte');
+      const back = element('a', 'View in text');
       back.href = `#text-${item.anchor}`;
       card.append(back);
       fragment.append(card);
     }
-    if (!items.length) fragment.append(element('p', 'Aucun passage ne correspond aux filtres.', 'hint'));
+    if (!items.length) fragment.append(element('p', 'No passages match the filters.', 'hint'));
     $('passages').replaceChildren(fragment);
     renderText(doc.text, items);
   }
@@ -136,7 +135,7 @@
       if (palette.length === 1) link.style.backgroundColor = palette[0];
       if (palette.length > 1) link.style.backgroundImage = `linear-gradient(135deg, ${palette.map((c, n) => `${c} ${n * 100 / palette.length}%, ${c} ${(n + 1) * 100 / palette.length}%`).join(', ')})`;
       link.href = `#${target.anchor}`;
-      link.title = entries.map(item => `${codes.get(item.code)?.name || 'Annotation'} — ${item.owner || 'Sans attribution'}`).join('\n');
+      link.title = entries.map(item => `${codes.get(item.code)?.name || 'Annotation'} — ${item.owner || 'Unattributed'}`).join('\n');
       link.addEventListener('click', () => {
         // Mark every interpretation of a shared segment without changing their order.
         for (const card of $('passages').children) card.classList.toggle('selected', entries.some(item => item.anchor === card.id));
@@ -147,9 +146,9 @@
   }
 
   function update() {
-    const query = $('search').value.trim().toLocaleLowerCase('fr');
+    const query = $('search').value.trim().toLocaleLowerCase('en');
     const filtered = data.documents.filter(doc => {
-      if (query && ![doc.entity, doc.name, ...doc.paths, ...doc.cases, doc.text].some(text => text.toLocaleLowerCase('fr').includes(query))) return false;
+      if (query && ![doc.entity, doc.name, ...doc.paths, ...doc.cases, doc.text].some(text => text.toLocaleLowerCase('en').includes(query))) return false;
       if ($('coded-only').checked && !doc.codings.some(matchingCoding)) return false;
       if (state.code !== null && !doc.codings.some(matchingCoding)) return false;
       if ($('coder').value && !doc.codings.some(matchingCoding) && !doc.annotations.some(matchingAnnotation)) return false;
@@ -165,12 +164,12 @@
       const button = element('button', undefined, 'document-button');
       button.type = 'button';
       button.setAttribute('aria-pressed', String(doc.id === state.document));
-      button.append(element('strong', doc.entity || 'Sans projet'), element('span', doc.name));
-      button.append(element('small', `${doc.codings.filter(matchingCoding).length} passages codés · ${doc.annotations.filter(matchingAnnotation).length} annotations`));
+      button.append(element('strong', doc.entity || 'No project'), element('span', doc.name));
+      button.append(element('small', `${doc.codings.filter(matchingCoding).length} coded passages · ${doc.annotations.filter(matchingAnnotation).length} annotations`));
       button.addEventListener('click', () => { state.document = doc.id; update(); });
       fragment.append(button);
     }
-    if (!filtered.length) fragment.append(element('p', 'Aucun document ne correspond aux filtres.', 'hint'));
+    if (!filtered.length) fragment.append(element('p', 'No documents match the filters.', 'hint'));
     $('documents').replaceChildren(fragment);
     showDocument(filtered.find(doc => doc.id === state.document));
   }

@@ -401,7 +401,7 @@ make coding-site
 python3 -m http.server 8000 --directory dist/coding-site
 ```
 
-Open <http://localhost:8000>. The French interface includes searchable documents,
+Open <http://localhost:8000>. The English interface includes searchable documents,
 the code/category tree and memos, filters by code and coder, highlighted source
 text, overlapping interpretations, coding memos, importance flags, and annotations.
 Selecting a code filters that exact code; the code tree counts all coded passages

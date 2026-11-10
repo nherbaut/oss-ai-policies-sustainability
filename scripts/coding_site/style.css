@@ -45,6 +45,5 @@ a { color: var(--accent); }
 .passage blockquote { margin: .8rem 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .9rem; }
 .passage p { overflow-wrap: anywhere; }
 .empty { padding: 2rem 0; color: #58665e; }
-footer { border-top: 1px solid var(--border); padding: 1.2rem; font-size: .75rem; color: #58665e; text-align: center; }
 [hidden] { display: none !important; }
 @media (max-width: 800px) { main { grid-template-columns: 1fr; } .sidebar { border-right: 0; border-bottom: 1px solid var(--border); } .document-list { max-height: 240px; } #code-tree { max-height: 280px; overflow: auto; } }
