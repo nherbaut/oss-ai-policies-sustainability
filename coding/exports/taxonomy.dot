@@ -1,0 +1,17 @@
+digraph taxonomy {
+graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.22", ranksep="0.5"];
+node [shape=plain, fontname="Arial", fontsize=12];
+edge [color="#87939C", penwidth=1.2, arrowhead=none];
+root [label=<<B>OSS / GenAI sustainability taxonomy</B>>];
+group1 [label=<<TABLE BORDER="1" COLOR="#C7D0D7" CELLBORDER="0" CELLSPACING="0"><TR><TD BGCOLOR="#EDF5E6" CELLPADDING="12"><B>Environmental</B></TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Carbon Footprint</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Energy Consumption</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">E-waste</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Code Sustainability</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Resource management</TD></TR></TABLE>>];
+root -> group1;
+group2 [label=<<TABLE BORDER="1" COLOR="#C7D0D7" CELLBORDER="0" CELLSPACING="0"><TR><TD BGCOLOR="#E7F0FA" CELLPADDING="12"><B>Technical</B></TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Perdurability</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Longitivity</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Repairability</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Feature Bloat</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Security Concerns</TD></TR></TABLE>>];
+root -> group2;
+group3 [label=<<TABLE BORDER="1" COLOR="#C7D0D7" CELLBORDER="0" CELLSPACING="0"><TR><TD BGCOLOR="#F2EAF7" CELLPADDING="12"><B>Social</B></TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Digital Inclusivity</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Equitable Access</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Ethical Concerns</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Customer social value</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Social Engineering</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">User error protection</TD></TR></TABLE>>];
+root -> group3;
+group4 [label=<<TABLE BORDER="1" COLOR="#C7D0D7" CELLBORDER="0" CELLSPACING="0"><TR><TD BGCOLOR="#FFF1DC" CELLPADDING="12"><B>Economic</B></TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Circular Economy</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Affordability</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Cost efficiency</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Software process evolving<BR/>intellectual capital</TD></TR></TABLE>>];
+root -> group4;
+group5 [label=<<TABLE BORDER="1" COLOR="#C7D0D7" CELLBORDER="0" CELLSPACING="0"><TR><TD BGCOLOR="#E3F3F0" CELLPADDING="12"><B>Individual</B></TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Health</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Lifelong learning</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Privacy</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Safety</TD></TR><TR><TD ALIGN="LEFT" CELLPADDING="9">Agency</TD></TR></TABLE>>];
+root -> group5;
+{rank=same; group1; group2; group3; group4; group5;}
+}

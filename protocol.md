@@ -67,6 +67,47 @@ We follow the guidelines for multivocal and grey literature reviews of @garousi2
     - RQ3: distribution of dimensions and definitions across policies.
     - RQ4: classification of definitions as weak or strong, and analysis of interdependencies between dimensions.
 
+<!-- BEGIN GENERATED CODING TAXONOMY -->
+### Sustainability coding taxonomy
+
+The five high-level dimensions follow the Karlskrona manifesto [@becker2015sustainability]. The twenty categories assigned to the environmental, technical, social and economic dimensions are drawn from Roy et al. [@roy2026taxonomy]. The five individual-level categories are provisional literature-derived extensions whose original definitions require verification. Operational definitions and coding guidance are adaptations by the research team for OSS/GenAI.
+
+| Dimension | Category | Provenance |
+|---|---|---|
+| Environmental | Carbon Footprint | Roy et al. [@roy2026taxonomy] |
+| Environmental | Energy Consumption | Roy et al. [@roy2026taxonomy] |
+| Environmental | E-waste | Roy et al. [@roy2026taxonomy] |
+| Environmental | Code Sustainability | Roy et al. [@roy2026taxonomy] |
+| Environmental | Resource management | Roy et al. [@roy2026taxonomy] |
+| Technical | Perdurability | Roy et al. [@roy2026taxonomy] |
+| Technical | Longitivity | Roy et al. [@roy2026taxonomy] |
+| Technical | Repairability | Roy et al. [@roy2026taxonomy] |
+| Technical | Feature Bloat | Roy et al. [@roy2026taxonomy] |
+| Technical | Security Concerns | Roy et al. [@roy2026taxonomy] |
+| Social | Digital Inclusivity | Roy et al. [@roy2026taxonomy] |
+| Social | Equitable Access | Roy et al. [@roy2026taxonomy] |
+| Social | Ethical Concerns | Roy et al. [@roy2026taxonomy] |
+| Social | Customer social value | Roy et al. [@roy2026taxonomy] |
+| Social | Social Engineering | Roy et al. [@roy2026taxonomy] |
+| Social | User error protection | Roy et al. [@roy2026taxonomy] |
+| Economic | Circular Economy | Roy et al. [@roy2026taxonomy] |
+| Economic | Affordability | Roy et al. [@roy2026taxonomy] |
+| Economic | Cost efficiency | Roy et al. [@roy2026taxonomy] |
+| Economic | Software process evolving intellectual capital | Roy et al. [@roy2026taxonomy] |
+| Individual | Health | Provisional literature extension |
+| Individual | Lifelong learning | Provisional literature extension |
+| Individual | Privacy | Provisional literature extension |
+| Individual | Safety | Provisional literature extension |
+| Individual | Agency | Provisional literature extension |
+
+Source labels are retained to preserve traceability, including “Longitivity” and “Social Engineering”. The latter has divergent meanings in the source materials, which are documented in its QualCoder memo. Coding distinguishes policy requirements, stated concerns, possible effects and observed effects. Each new code or category receives a memo recording its reference and source location, or its inductive origin and supporting corpus passages.
+
+The complete exported codebook includes the live QualCoder memos, operational definitions, coding guidance and reference details. Regenerate it with `make coding-taxonomy-export`.
+
+
+![Sustainability coding taxonomy. Dimensions follow the Karlskrona manifesto [@becker2015sustainability], and twenty categories follow Roy et al. [@roy2026taxonomy]. Individual-level categories are provisional.](coding/exports/taxonomy.png){width=100%}
+<!-- END GENERATED CODING TAXONOMY -->
+
 ## Threats to validity
 
 - **Selection bias.** Popular projects may not represent the long tail; mitigated by explicit sampling criteria and a stratified sample.

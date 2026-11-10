@@ -392,6 +392,44 @@ text against both UTF-16 and legacy Python code-point offsets, preserving the
 stored positions unchanged. Annotation previews prefer native UTF-16 when both
 interpretations are possible, since annotations contain no selected-text field.
 
+## Sourced sustainability taxonomy
+
+`coding/taxonomy.json` records the 20 source-authored categories from Roy et al.
+(2026, DOI `10.1145/3786148.3788620`) and five **provisional** individual categories.
+Raw labels and metrics follow the source image. Workbook definitions retain their
+own labels and exact cell locations; differences and contradictions are explicit.
+Operational definitions and coding guidance for OSS/GenAI are researcher proposals,
+not quotations or empirically observed effects. The individual extension still
+needs verification against the original literature.
+
+`scripts/import_sustainability_taxonomy.py` imports five dimension categories and
+25 codes with English verbatim source excerpts and citations in their memos.
+The project memo contains excerpts defining the five sustainability dimensions.
+Researcher adaptations, coding guidance and source metrics are retained in
+`coding/taxonomy.json`.
+
+Preview is read-only:
+
+```sh
+python3 -B scripts/import_sustainability_taxonomy.py
+```
+
+For an explicitly authorized **complete reset** with QualCoder closed:
+
+```sh
+python3 -B scripts/import_sustainability_taxonomy.py --apply --reset-coded-data
+```
+
+This deletes all existing text/media coding, annotations and codebook entries.
+It preserves corpus text, document/case provenance, case links and coder records.
+It creates a complete project backup and audit report in the ignored
+`data/qualcoder-backups/`, verifies a separate candidate against every expected
+table, then replaces only the database and preserves its permissions. Analytical
+graphs or an initialized shared UUID registry require separate reconciliation;
+the reset refuses to leave those references inconsistent. The tool does not
+initialize the shared registry, modify Git guards, commit or push. Existing
+master database commit guards still apply.
+
 ## Static coding explorer
 
 Generate a standalone, read-only explorer of the current checkout's coding:
@@ -453,3 +491,27 @@ remotes, and mock all GitHub operations. They do not publish real PRs, alter the
 research database, or start a real coding session.
 The Action tests require Node.js 18+ locally and execute the exact inline workflow
 script against mocked GitHub APIs. Node.js is not needed on coders' machines.
+
+## Export the taxonomy for a paper
+
+Run `make coding-taxonomy-export` to export the current QualCoder categories,
+codes and complete memos to `coding/exports/taxonomy.md` and `taxonomy.json`,
+with a companion `refs.bib`. The command also refreshes the marked taxonomy
+section in `protocol.md`. The export reads a consistent SQLite snapshot.
+
+With QualCoder closed, `make coding-taxonomy-references` refreshes the source excerpts and citations
+in the existing taxonomy memos, saves a database backup and regenerates the
+exports. Future imports use the same excerpt format. Record a supporting
+reference and source location for each new code or category, or its inductive
+origin and supporting corpus passages. Repository instructions in `AGENTS.md`
+apply this requirement to future taxonomy work.
+
+The taxonomy exporter also produces `coding/exports/taxonomy.svg` for vector
+publication, `taxonomy.png` for previews and the protocol, and editable Graphviz
+source in `taxonomy.dot`. Graphviz (`dot`) must be installed. The figure captions cite the sources through `refs.bib` and identify the
+individual-level categories as provisional. Regenerate all formats with `make coding-taxonomy-export`.
+
+Taxonomy memos contain English verbatim source excerpts followed by citations and
+source locations. Researcher interpretations and provisional status are recorded
+in `coding/taxonomy.json`. For the five provisional individual-level codes, the
+current verified excerpts are category labels from the supplied literature survey.

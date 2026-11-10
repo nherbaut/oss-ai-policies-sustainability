@@ -1,0 +1,722 @@
+{
+  "version": 1,
+  "title": "OSS / GenAI sustainability coding taxonomy",
+  "source_archive": "handoffs/codex_oss_genai_sustainability.zip",
+  "source_archive_sha256": "42d8ab27625bc6b36f5e0d23db7695a33beadc1bd223c9484a10f092b05eccbc",
+  "paper": {
+    "authors": "Mandira Roy, Novarun Deb, Agostino Cortesi, Nabendu Chaki",
+    "year": 2026,
+    "title": "Towards a Taxonomy of Sustainability Requirements for Software Design",
+    "doi": "10.1145/3786148.3788620",
+    "scope_note": "Four dimensions in original taxonomy; individual dimension excluded explicitly on PDF page 5 (printed page 26)."
+  },
+  "sources": {
+    "sus-taxo.pdf": {
+      "archive_member": "codex_oss_genai_sustainability/sources/sus-taxo.pdf",
+      "sha256": "86e64071a1e9c8a8689eb0d34fcd1adf877218f7e8509161e7e526313b9b6258"
+    },
+    "categories and metrics.png": {
+      "archive_member": "codex_oss_genai_sustainability/sources/categories and metrics.png",
+      "sha256": "3bef5cfff6d20c1828fa8c49c15b9466c23dfad518cc87aea3934dc37c664fc7"
+    },
+    "Categories & Metrics.docx": {
+      "archive_member": "codex_oss_genai_sustainability/sources/Categories & Metrics.docx",
+      "sha256": "d317eff4666f458db81573425de6c60d904cfb7a4e87c11f213b261e5d27071f"
+    },
+    "Taxonomy_created.csv": {
+      "archive_member": "codex_oss_genai_sustainability/sources/Taxonomy_created.csv",
+      "sha256": "8dcc9b3c8c92a1cba19919b49d6cf4350acb7c4bd0b74dbf9eb2c59d7bb03a04"
+    },
+    "Sustainability Category Correlations.xlsx": {
+      "archive_member": "codex_oss_genai_sustainability/sources/Sustainability Category Correlations.xlsx",
+      "sha256": "347e3b634cbb2ab258fb16fca70ea9c0baf60011c011f3e363ff3945bdce506c"
+    },
+    "README(2).md": {
+      "archive_member": "codex_oss_genai_sustainability/sources/README(2).md",
+      "sha256": "bea6813ee67dd37482436198ca6f9679e773e97ca3a178e508678070baace295"
+    }
+  },
+  "interpretation_rules": [
+    "Dimensions and first/second/third-order effects are independent axes.",
+    "A policy mechanism is not an effect; a policy claim is not an empirically observed consequence.",
+    "Operational definitions and inclusion guidance are researcher proposals; retain their distinction from source definitions.",
+    "The correlation workbook contains proposed influences, not statistical or causal evidence.",
+    "Preserve raw source labels and document disagreements; do not force the 250 requirement rows into these categories."
+  ],
+  "categories": [
+    {
+      "id": "TAX-01",
+      "dimension": "Environmental",
+      "raw_label": "Carbon Footprint",
+      "normalized_label": "Carbon Footprint",
+      "status": "source_authored",
+      "operational_definition": "Émissions de gaz à effet de serre associées au cycle de vie, à la production ou à l’usage de la GenAI et du logiciel.",
+      "coding_guidance": "Coder les mentions d’émissions, de CO2 ou d’empreinte carbone ; ne pas convertir automatiquement une économie de temps de revue en réduction carbone.",
+      "source_definition": "This is a measure of the total greenhouse gas (GHG) emissions caused directly and indirectly by an individual, organization, event, or product. It is expressed in terms of the amount of carbon dioxide (CO2) or its equivalent of other GHGs. The carbon footprint considers the entire life cycle of a product or activity, from the extraction of raw materials to its final disposal.",
+      "source_definition_label": "Carbon Footprint",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A2",
+      "category_location": "categories and metrics.png, Environmental / Carbon Footprint",
+      "source_metrics": "Software Carbon Intensity",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This is a measure of the total greenhouse gas (GHG) emissions caused directly and indirectly by an individual, organization, event, or product. It is expressed in terms of the amount of carbon dioxide (CO2) or its equivalent of other GHGs. The carbon footprint considers the entire life cycle of a product or activity, from the extraction of raw materials to its final disposal.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A2, entry “Carbon Footprint”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-02",
+      "dimension": "Environmental",
+      "raw_label": "Energy Consumption",
+      "normalized_label": "Energy Consumption",
+      "status": "source_authored",
+      "operational_definition": "Consommation et efficacité énergétiques des systèmes, de leur développement et de leur usage.",
+      "coding_guidance": "Inclure les liens explicites à l’énergie ; ne pas déduire une consommation énergétique mesurée d’une simple mention de performance.",
+      "source_definition": "This refers to the total amount of energy utilized in a particular process or by a specific entity, such as a household or a business. It is a critical component of the environmental impact, as energy production, particularly from fossil fuels, is a major source of greenhouse gas emissions. The concept is intrinsically linked to energy efficiency, where higher consumption indicates lower efficiency.",
+      "source_definition_label": "Energy Consumption",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A4",
+      "category_location": "categories and metrics.png, Environmental / Energy Consumption",
+      "source_metrics": "Energy efficiency; Runtime efficiency; CPU-intensity; memory usage; peripheral intensity; idleness; Algorithmic efficiency",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This refers to the total amount of energy utilized in a particular process or by a specific entity, such as a household or a business. It is a critical component of the environmental impact, as energy production, particularly from fossil fuels, is a major source of greenhouse gas emissions. The concept is intrinsically linked to energy efficiency, where higher consumption indicates lower efficiency.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A4, entry “Energy Consumption”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-03",
+      "dimension": "Environmental",
+      "raw_label": "E-waste",
+      "normalized_label": "E-waste",
+      "status": "source_authored",
+      "operational_definition": "Déchets électroniques, renouvellement matériel, réemploi et fin de vie des équipements.",
+      "coding_guidance": "Distinguer déchets matériels et code supprimé. La métrique source « non-reusable modules » est ambiguë et ne suffit pas à assimiler du code à un déchet électronique.",
+      "source_definition": "Short for electronic waste, this term describes discarded electrical or electronic devices. It encompasses a wide array of products, from household appliances to computers and mobile phones, that are no longer considered useful due to malfunction or obsolescence. E-waste is a growing global concern due to the volume of its generation and the presence of toxic materials that can harm human health and the environment if not managed properly.",
+      "source_definition_label": "E-waste",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A6",
+      "category_location": "categories and metrics.png, Environmental / E-waste",
+      "source_metrics": "Amount of non-reusable modules",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "Short for electronic waste, this term describes discarded electrical or electronic devices. It encompasses a wide array of products, from household appliances to computers and mobile phones, that are no longer considered useful due to malfunction or obsolescence. E-waste is a growing global concern due to the volume of its generation and the presence of toxic materials that can harm human health and the environment if not managed properly.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A6, entry “E-waste”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-04",
+      "dimension": "Environmental",
+      "raw_label": "Code Sustainability",
+      "normalized_label": "Code Sustainability",
+      "status": "source_authored",
+      "operational_definition": "Caractéristiques du code abordées sous l’angle de leur empreinte environnementale.",
+      "coding_guidance": "Documenter le lien environnemental. Les affirmations générales de qualité ou maintenabilité relèvent aussi potentiellement de Technical, sans reclassement automatique.",
+      "source_definition": "This concept involves the development of software with a minimal environmental impact. It emphasizes writing efficient code that consumes less energy and optimizing the use of resources throughout the software's lifecycle. The goal is to create software that is not only functional and reliable but also environmentally conscious. This can include practices like code optimization and choosing energy-efficient data centers.",
+      "source_definition_label": "Code Sustainability",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A8",
+      "category_location": "categories and metrics.png, Environmental / Code Sustainability",
+      "source_metrics": "CPU usage; Memory usage; Code smells",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This concept involves the development of software with a minimal environmental impact. It emphasizes writing efficient code that consumes less energy and optimizing the use of resources throughout the software's lifecycle. The goal is to create software that is not only functional and reliable but also environmentally conscious. This can include practices like code optimization and choosing energy-efficient data centers.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A8, entry “Code Sustainability”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-05",
+      "dimension": "Environmental",
+      "raw_label": "Resource management",
+      "normalized_label": "Resource management",
+      "status": "source_authored",
+      "operational_definition": "Gestion et consommation des ressources physiques et informatiques, notamment eau, stockage et calcul.",
+      "coding_guidance": "Préciser la ressource affectée. Le temps humain relève plutôt de Individual ou Economic selon le passage ; ne pas l’assimiler automatiquement à une ressource environnementale.",
+      "source_definition": "This is the practice of using resources in the most effective way possible while minimizing waste and environmental impact. It involves maximizing the output from a given amount of resources, be it materials, energy, or water. Resource efficiency is a key strategy for achieving sustainable development, as it helps to conserve natural resources and reduce pollution.",
+      "source_definition_label": "Resource Efficiency",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A10",
+      "category_location": "categories and metrics.png, Environmental / Resource management",
+      "source_metrics": "Energy efficient data management; Water footprint",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This is the practice of using resources in the most effective way possible while minimizing waste and environmental impact. It involves maximizing the output from a given amount of resources, be it materials, energy, or water. Resource efficiency is a key strategy for achieving sustainable development, as it helps to conserve natural resources and reduce pollution.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A10, entry “Resource Efficiency”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-06",
+      "dimension": "Technical",
+      "raw_label": "Perdurability",
+      "normalized_label": "Perdurability",
+      "status": "source_authored",
+      "operational_definition": "Capacité du logiciel à rester utilisable et à évoluer malgré des changements techniques et fonctionnels.",
+      "coding_guidance": "Inclure adaptation et évolution durable ; distinguer la durée de vie seule (Longitivity). Ne pas transformer les métriques en sous-codes sans décision de recherche.",
+      "source_definition": "In the context of software, perdurability refers to the ability of a system to persist and remain effective over a long period, despite changes in its environment or requirements. It is closely related to the concepts of durability and long-term viability.",
+      "source_definition_label": "Perdurability",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A12",
+      "category_location": "categories and metrics.png, Technical / Perdurability",
+      "source_metrics": "Technical evolution; functional evolution",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "In the context of software, perdurability refers to the ability of a system to persist and remain effective over a long period, despite changes in its environment or requirements. It is closely related to the concepts of durability and long-term viability.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A12, entry “Perdurability”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-07",
+      "dimension": "Technical",
+      "raw_label": "Longitivity",
+      "normalized_label": "Longevity",
+      "status": "source_authored",
+      "operational_definition": "Durée de vie utile, continuité et maintien en fonctionnement du logiciel.",
+      "coding_guidance": "Conserver « Longitivity » comme libellé source ; « Longevity » est une normalisation distincte. La fiabilité peut contribuer à la longévité mais ne lui est pas équivalente.",
+      "source_definition": "This term emphasizes the lifespan of a product or system. In software, it refers to the length of time a system remains useful and operational before it becomes obsolete or needs to be replaced. Designing for longevity involves creating systems that are adaptable and can evolve with changing needs.",
+      "source_definition_label": "Longevity",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A14",
+      "category_location": "categories and metrics.png, Technical / Longitivity",
+      "source_metrics": "Mean time between failures; Aveage life span in usage hours per year",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This term emphasizes the lifespan of a product or system. In software, it refers to the length of time a system remains useful and operational before it becomes obsolete or needs to be replaced. Designing for longevity involves creating systems that are adaptable and can evolve with changing needs.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A14, entry “Longevity”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-08",
+      "dimension": "Technical",
+      "raw_label": "Repairability",
+      "normalized_label": "Repairability",
+      "status": "source_authored",
+      "operational_definition": "Facilité de diagnostic, de correction et de maintenance, soutenue notamment par la modularité et la documentation.",
+      "coding_guidance": "Inclure les préoccupations de débogage et d’entretien attribuées au code généré. Une obligation de revue seule est un mécanisme et ne prouve pas une dégradation de réparabilité.",
+      "source_definition": "This is the ease with which a product or system can be repaired or maintained. For hardware, it means designing products with accessible components that can be easily replaced. In software, it translates to writing clean, modular, and well-documented code that is easy to debug and modify.",
+      "source_definition_label": "Repairability",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A16",
+      "category_location": "categories and metrics.png, Technical / Repairability",
+      "source_metrics": "Degree of Cohesion and coupling; Degree of traceability documentation",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This is the ease with which a product or system can be repaired or maintained. For hardware, it means designing products with accessible components that can be easily replaced. In software, it translates to writing clean, modular, and well-documented code that is easy to debug and modify.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A16, entry “Repairability”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-09",
+      "dimension": "Technical",
+      "raw_label": "Feature Bloat",
+      "normalized_label": "Feature Bloat",
+      "status": "source_authored",
+      "operational_definition": "Accumulation de fonctionnalités superflues et complexité qu’elle entraîne.",
+      "coding_guidance": "Inclure fonctionnalités inutiles, surproduction et complexité explicitement liées ; ne pas qualifier tout ajout de fonctionnalité de bloat.",
+      "source_definition": "This occurs when a product or software becomes overloaded with excessive features, many of which may be unnecessary for the user. Feature bloat can lead to a more complex and difficult-to-use product, increased resource consumption, and a shorter lifespan as the system becomes unwieldy.",
+      "source_definition_label": "Feature Bloat",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A18",
+      "category_location": "categories and metrics.png, Technical / Feature Bloat",
+      "source_metrics": "Percentage of user engagement with each feature",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This occurs when a product or software becomes overloaded with excessive features, many of which may be unnecessary for the user. Feature bloat can lead to a more complex and difficult-to-use product, increased resource consumption, and a shorter lifespan as the system becomes unwieldy.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A18, entry “Feature Bloat”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-10",
+      "dimension": "Technical",
+      "raw_label": "Security Concerns",
+      "normalized_label": "Security Concerns",
+      "status": "source_authored",
+      "operational_definition": "Protection durable du logiciel et de ses utilisateurs face aux vulnérabilités et attaques.",
+      "coding_guidance": "Inclure menaces, vulnérabilités et risques de sécurité explicités. Ne pas assimiler toute règle de confidentialité à une vulnérabilité technique avérée.",
+      "source_definition": "This category encompasses the measures taken to protect a system and its users from threats and vulnerabilities. In a sustainability context, a secure system is one that is resilient to attacks and can be trusted by its users over the long term, thus contributing to its overall viability.",
+      "source_definition_label": "Security Concerns",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A20",
+      "category_location": "categories and metrics.png, Technical / Security Concerns",
+      "source_metrics": "Number of known vulnerabilities",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This category encompasses the measures taken to protect a system and its users from threats and vulnerabilities. In a sustainability context, a secure system is one that is resilient to attacks and can be trusted by its users over the long term, thus contributing to its overall viability.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A20, entry “Security Concerns”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-11",
+      "dimension": "Social",
+      "raw_label": "Digital Inclusivity",
+      "normalized_label": "Digital Inclusivity",
+      "status": "source_authored",
+      "operational_definition": "Participation et usage des technologies par des personnes de profils, langues et capacités divers.",
+      "coding_guidance": "Inclure obstacles à l’inclusion et diversité des participants ; distinguer les conditions de répartition équitable de l’accès, tout en autorisant un double codage justifié.",
+      "source_definition": "This refers to ensuring that everyone, regardless of their background, ability, or socioeconomic status, has access to and can effectively use digital technologies. It is about bridging the digital divide and creating a more equitable digital society.",
+      "source_definition_label": "Digital Inclusivity",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A23",
+      "category_location": "categories and metrics.png, Social / Digital Inclusivity",
+      "source_metrics": "Number of supported language, demographics",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This refers to ensuring that everyone, regardless of their background, ability, or socioeconomic status, has access to and can effectively use digital technologies. It is about bridging the digital divide and creating a more equitable digital society.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A23, entry “Digital Inclusivity”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-12",
+      "dimension": "Social",
+      "raw_label": "Equitable Access",
+      "normalized_label": "Equitable Access",
+      "status": "source_authored",
+      "operational_definition": "Répartition équitable de l’accès aux technologies, données et bénéfices.",
+      "coding_guidance": "Inclure inégalités d’accès et distribution des bénéfices ; ne pas supposer que disponibilité technique signifie équité.",
+      "source_definition": "This concept is closely related to digital inclusivity and focuses on the fair distribution of access to technology and its benefits. It addresses the barriers that can prevent certain groups from accessing and benefiting from digital resources.",
+      "source_definition_label": "Equitable Access",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A25",
+      "category_location": "categories and metrics.png, Social / Equitable Access",
+      "source_metrics": "End-user data availability; horizontal and vertical equity",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This concept is closely related to digital inclusivity and focuses on the fair distribution of access to technology and its benefits. It addresses the barriers that can prevent certain groups from accessing and benefiting from digital resources.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A25, entry “Equitable Access”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-13",
+      "dimension": "Social",
+      "raw_label": "Ethical Concerns",
+      "normalized_label": "Ethical Concerns",
+      "status": "source_authored",
+      "operational_definition": "Préoccupations morales relatives aux usages du logiciel : biais, équité, pratiques responsables et risques pour les personnes.",
+      "coding_guidance": "Expliciter le problème éthique mentionné. Ne pas utiliser ce code comme catégorie générale pour tout désaccord sur la GenAI.",
+      "source_definition": "This broad category covers the moral implications of technology and its use. It includes issues such as data privacy, algorithmic bias, and the potential for technology to be used for malicious purposes. Addressing ethical concerns is crucial for building trust and ensuring that technology serves humanity in a positive way.",
+      "source_definition_label": "Ethical Concerns",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A27",
+      "category_location": "categories and metrics.png, Social / Ethical Concerns",
+      "source_metrics": "Degree of bias",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This broad category covers the moral implications of technology and its use. It includes issues such as data privacy, algorithmic bias, and the potential for technology to be used for malicious purposes. Addressing ethical concerns is crucial for building trust and ensuring that technology serves humanity in a positive way.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A27, entry “Ethical Concerns”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-14",
+      "dimension": "Social",
+      "raw_label": "Customer social value",
+      "normalized_label": "Customer social value",
+      "status": "source_authored",
+      "operational_definition": "Valeur et effets sociaux du logiciel pour ses utilisateurs et les communautés concernées.",
+      "coding_guidance": "Distinguer satisfaction, feedback et effet social établi ; documenter qui bénéficie de la valeur évoquée.",
+      "source_definition": "This refers to the positive social impact that a product or service creates for its customers and the wider community. It goes beyond the direct functional benefits to consider how the product contributes to social well-being and addresses societal needs.",
+      "source_definition_label": "Customer Social Value",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A29",
+      "category_location": "categories and metrics.png, Social / Customer social value",
+      "source_metrics": "Amount of positive feedbacks",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This refers to the positive social impact that a product or service creates for its customers and the wider community. It goes beyond the direct functional benefits to consider how the product contributes to social well-being and addresses societal needs.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A29, entry “Customer Social Value”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-15",
+      "dimension": "Social",
+      "raw_label": "Social Engineering",
+      "normalized_label": "Social Engineering",
+      "status": "source_authored",
+      "operational_definition": "Catégorie documentaire dont le sens diverge entre les pièces : bien-être dans la figure, manipulation et tromperie dans le classeur.",
+      "coding_guidance": "Ne pas choisir silencieusement un sens. Dans le mémo du passage, préciser la source et le sens retenus ; une préoccupation de bien-être peut également relever de Health, extension individuelle provisoire.",
+      "source_definition": "In the context of information security, this is the use of deception to manipulate individuals into divulging confidential or personal information that may be used for fraudulent purposes. From a broader social sustainability perspective, it highlights the vulnerability of individuals in the digital realm and the need for education and protection.",
+      "source_definition_label": "Social Engineering",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A31",
+      "category_location": "categories and metrics.png, Social / Social Engineering",
+      "source_metrics": "Well Being",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "In the context of information security, this is the use of deception to manipulate individuals into divulging confidential or personal information that may be used for fraudulent purposes. From a broader social sustainability perspective, it highlights the vulnerability of individuals in the digital realm and the need for education and protection.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A31, entry “Social Engineering”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-16",
+      "dimension": "Social",
+      "raw_label": "User error protection",
+      "normalized_label": "User error protection",
+      "status": "source_authored",
+      "operational_definition": "Prévention des erreurs d’usage et possibilité de récupération après une erreur.",
+      "coding_guidance": "Inclure protections, assistance et récupération pour les utilisateurs ; distinguer erreurs d’usage et erreurs de programmation sans lien explicité.",
+      "source_definition": "This involves designing systems and interfaces that minimize the likelihood of users making errors and that provide clear and helpful guidance when errors do occur. It is about creating a more user-friendly and forgiving digital environment, which contributes to a more positive and less stressful user experience.",
+      "source_definition_label": "User Error Protection",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A33",
+      "category_location": "categories and metrics.png, Social / User error protection",
+      "source_metrics": "Recovery Time",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This involves designing systems and interfaces that minimize the likelihood of users making errors and that provide clear and helpful guidance when errors do occur. It is about creating a more user-friendly and forgiving digital environment, which contributes to a more positive and less stressful user experience.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A33, entry “User Error Protection”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-17",
+      "dimension": "Economic",
+      "raw_label": "Circular Economy",
+      "normalized_label": "Circular Economy",
+      "status": "source_authored",
+      "operational_definition": "Réemploi, réparation, recyclage et circulation des ressources pour réduire leur mise au rebut.",
+      "coding_guidance": "Identifier si le passage traite de matériel, de services ou de code ; ne pas assimiler automatiquement toute réutilisation à un bénéfice économique ou environnemental établi.",
+      "source_definition": "This is an economic model that aims to eliminate waste and promote the continual use of resources. In a circular economy, products are designed to be durable, repairable, and recyclable, so that their materials can be returned to the production cycle at the end of their life.",
+      "source_definition_label": "Circular Economy",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A35",
+      "category_location": "categories and metrics.png, Economic / Circular Economy",
+      "source_metrics": "Percentage of reused code or services; Amount of shared infrastructure",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This is an economic model that aims to eliminate waste and promote the continual use of resources. In a circular economy, products are designed to be durable, repairable, and recyclable, so that their materials can be returned to the production cycle at the end of their life.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A35, entry “Circular Economy”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-18",
+      "dimension": "Economic",
+      "raw_label": "Affordability",
+      "normalized_label": "Affordability",
+      "status": "source_authored",
+      "operational_definition": "Accessibilité financière des outils, infrastructures et services pour les acteurs concernés.",
+      "coding_guidance": "Préciser qui supporte le coût et pour qui l’accès devient possible ou impossible ; distinguer accessibilité financière et simple baisse des coûts internes.",
+      "source_definition": "This refers to the ability of individuals and organizations to purchase a product or service without undue financial hardship. In a sustainability context, affordability is about ensuring that sustainable choices are accessible to everyone, not just a privileged few.",
+      "source_definition_label": "Affordability",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A37",
+      "category_location": "categories and metrics.png, Economic / Affordability",
+      "source_metrics": "Access Cost",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This refers to the ability of individuals and organizations to purchase a product or service without undue financial hardship. In a sustainability context, affordability is about ensuring that sustainable choices are accessible to everyone, not just a privileged few.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A37, entry “Affordability”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-19",
+      "dimension": "Economic",
+      "raw_label": "Cost efficiency",
+      "normalized_label": "Cost efficiency",
+      "status": "source_authored",
+      "operational_definition": "Rapport entre ressources engagées et valeur produite, notamment coûts de développement, temps et effort.",
+      "coding_guidance": "Inclure arbitrages sur l’effort et les ressources ; distinguer efficacité économique, épuisement individuel et efficacité énergétique, avec double codage seulement si justifié.",
+      "source_definition": "This is about maximizing the value derived from a given amount of resources. In software development, it involves optimizing development processes and resource allocation to create high-quality software in a cost-effective manner. Cost efficiency contributes to the economic viability of a project and its long-term sustainability.",
+      "source_definition_label": "Cost Efficiency",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A39",
+      "category_location": "categories and metrics.png, Economic / Cost efficiency",
+      "source_metrics": "Development cost- number of workers; amount of time and effort",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This is about maximizing the value derived from a given amount of resources. In software development, it involves optimizing development processes and resource allocation to create high-quality software in a cost-effective manner. Cost efficiency contributes to the economic viability of a project and its long-term sustainability.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A39, entry “Cost Efficiency”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-20",
+      "dimension": "Economic",
+      "raw_label": "Software process evolving intellectual capital",
+      "normalized_label": "Software process evolving intellectual capital",
+      "status": "source_authored",
+      "operational_definition": "Capital intellectuel et valeur issus de l’évolution des processus logiciels, des connaissances et de la capacité d’innovation.",
+      "coding_guidance": "Préserver le libellé et les métriques de la figure. La définition « Software Process Evolution » du classeur est apparentée mais n’est pas une preuve d’équivalence terminologique.",
+      "source_definition": "This refers to the continuous improvement and adaptation of the processes used to develop and maintain software. It involves learning from experience, adopting new technologies and methodologies, and evolving processes to meet changing needs and challenges. A commitment to process evolution is essential for long-term economic sustainability in the fast-paced world of software development.",
+      "source_definition_label": "Software Process Evolution",
+      "definition_location": "Sustainability Category Correlations.xlsx, Definitions!A41",
+      "category_location": "categories and metrics.png, Economic / Software process evolving intellectual capital",
+      "source_metrics": "Customer capital value; Market requirements value; innovation value; maintainance value",
+      "reference_keys": [
+        "roy2026taxonomy"
+      ],
+      "memo_excerpts": [
+        {
+          "text": "This refers to the continuous improvement and adaptation of the processes used to develop and maintain software. It involves learning from experience, adopting new technologies and methodologies, and evolving processes to meet changing needs and challenges. A commitment to process evolution is essential for long-term economic sustainability in the fast-paced world of software development.",
+          "source": "Sustainability Category Correlations.xlsx, Definitions!A41, entry “Software Process Evolution”. Associated taxonomy: Roy et al. (2026), [@roy2026taxonomy], DOI 10.1145/3786148.3788620."
+        }
+      ]
+    },
+    {
+      "id": "TAX-21",
+      "dimension": "Individual",
+      "raw_label": "Health",
+      "normalized_label": "Health",
+      "status": "provisional_literature_extension",
+      "operational_definition": "Santé physique ou mentale et bien-être des personnes, notamment fatigue, stress et épuisement.",
+      "coding_guidance": "Inclure les préoccupations individuelles explicitement mentionnées ; une charge de revue seule ne démontre pas un burnout.",
+      "source_definition": null,
+      "source_definition_label": null,
+      "definition_location": "No original-paper definition verified; researcher operational proposal only",
+      "category_location": "Categories & Metrics.docx, table 1, rows 18 and 19, Individual list",
+      "source_metrics": null,
+      "literature_to_verify": [
+        {
+          "title": "Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow",
+          "year": 2020,
+          "doi": "10.1007/s00766-020-00336-y"
+        },
+        {
+          "title": "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering",
+          "year": 2019
+        }
+      ],
+      "reference_keys": [],
+      "memo_excerpts": [
+        {
+          "text": "Health",
+          "source": "Categories & Metrics.docx, table 1, Individual lists in the entries “Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow” (2020) and “Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering” (2019)."
+        }
+      ]
+    },
+    {
+      "id": "TAX-22",
+      "dimension": "Individual",
+      "raw_label": "Lifelong learning",
+      "normalized_label": "Lifelong learning",
+      "status": "provisional_literature_extension",
+      "operational_definition": "Apprentissage continu, développement et préservation des compétences et connaissances individuelles.",
+      "coding_guidance": "Inclure occasions d’apprentissage, transmission et crainte de perte de compétences ; une obligation de comprendre le code ne prouve pas une perte de compétences.",
+      "source_definition": null,
+      "source_definition_label": null,
+      "definition_location": "No original-paper definition verified; researcher operational proposal only",
+      "category_location": "Categories & Metrics.docx, table 1, rows 18 and 19, Individual list",
+      "source_metrics": null,
+      "literature_to_verify": [
+        {
+          "title": "Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow",
+          "year": 2020,
+          "doi": "10.1007/s00766-020-00336-y"
+        },
+        {
+          "title": "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering",
+          "year": 2019
+        }
+      ],
+      "reference_keys": [],
+      "memo_excerpts": [
+        {
+          "text": "Lifelong learning",
+          "source": "Categories & Metrics.docx, table 1, Individual lists in the entries “Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow” (2020) and “Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering” (2019)."
+        }
+      ]
+    },
+    {
+      "id": "TAX-23",
+      "dimension": "Individual",
+      "raw_label": "Privacy",
+      "normalized_label": "Privacy",
+      "status": "provisional_literature_extension",
+      "operational_definition": "Vie privée et maîtrise des informations personnelles concernant une personne.",
+      "coding_guidance": "Identifier les données personnelles et personnes affectées ; distinguer vie privée individuelle, secret organisationnel et licence du code.",
+      "source_definition": null,
+      "source_definition_label": null,
+      "definition_location": "No original-paper definition verified; researcher operational proposal only",
+      "category_location": "Categories & Metrics.docx, table 1, rows 18 and 19, Individual list",
+      "source_metrics": null,
+      "literature_to_verify": [
+        {
+          "title": "Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow",
+          "year": 2020,
+          "doi": "10.1007/s00766-020-00336-y"
+        },
+        {
+          "title": "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering",
+          "year": 2019
+        }
+      ],
+      "reference_keys": [],
+      "memo_excerpts": [
+        {
+          "text": "Privacy",
+          "source": "Categories & Metrics.docx, table 1, Individual lists in the entries “Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow” (2020) and “Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering” (2019)."
+        }
+      ]
+    },
+    {
+      "id": "TAX-24",
+      "dimension": "Individual",
+      "raw_label": "Safety",
+      "normalized_label": "Safety",
+      "status": "provisional_literature_extension",
+      "operational_definition": "Protection des personnes contre des atteintes ou dangers pour leur intégrité et leurs conditions d’usage.",
+      "coding_guidance": "Préciser le danger et les personnes concernées ; ne pas confondre sans justification sécurité des personnes et vulnérabilité du logiciel (Security Concerns).",
+      "source_definition": null,
+      "source_definition_label": null,
+      "definition_location": "No original-paper definition verified; researcher operational proposal only",
+      "category_location": "Categories & Metrics.docx, table 1, rows 18 and 19, Individual list",
+      "source_metrics": null,
+      "literature_to_verify": [
+        {
+          "title": "Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow",
+          "year": 2020,
+          "doi": "10.1007/s00766-020-00336-y"
+        },
+        {
+          "title": "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering",
+          "year": 2019
+        }
+      ],
+      "reference_keys": [],
+      "memo_excerpts": [
+        {
+          "text": "Safety",
+          "source": "Categories & Metrics.docx, table 1, Individual lists in the entries “Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow” (2020) and “Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering” (2019)."
+        }
+      ]
+    },
+    {
+      "id": "TAX-25",
+      "dimension": "Individual",
+      "raw_label": "Agency",
+      "normalized_label": "Agency",
+      "status": "provisional_literature_extension",
+      "operational_definition": "Capacité des personnes à comprendre, choisir, décider et conserver une maîtrise de leurs actions.",
+      "coding_guidance": "Inclure autonomie, consentement, capacité de contestation et contrôle humain ; une clause de responsabilité n’établit pas à elle seule une perte ou un gain d’autonomie.",
+      "source_definition": null,
+      "source_definition_label": null,
+      "definition_location": "No original-paper definition verified; researcher operational proposal only",
+      "category_location": "Categories & Metrics.docx, table 1, rows 18 and 19, Individual list",
+      "source_metrics": null,
+      "literature_to_verify": [
+        {
+          "title": "Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow",
+          "year": 2020,
+          "doi": "10.1007/s00766-020-00336-y"
+        },
+        {
+          "title": "Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering",
+          "year": 2019
+        }
+      ],
+      "reference_keys": [],
+      "memo_excerpts": [
+        {
+          "text": "Agency",
+          "source": "Categories & Metrics.docx, table 1, Individual lists in the entries “Requirements engineering for sustainability: an awareness framework for designing software systems for a better tomorrow” (2020) and “Do we really know what we are building? Raising awareness of potential Sustainability Effects of Software Systems in Requirements Engineering” (2019)."
+        }
+      ]
+    }
+  ],
+  "references": {
+    "becker2015sustainability": "Becker, Christoph, Ruzanna Chitchyan, Leticia Duboc, Steve Easterbrook, Birgit Penzenstadler, Norbert Seyff, and Colin C. Venters. \"Sustainability design and software: The Karlskrona manifesto.\" In 2015 IEEE/ACM 37th IEEE International Conference on Software Engineering, vol. 2, pp. 467–476. IEEE, 2015.",
+    "roy2026taxonomy": "Roy, Mandira, Novarun Deb, Agostino Cortesi, and Nabendu Chaki. \"Towards a Taxonomy of Sustainability Requirements for Software Design.\" In Proceedings of the IEEE/ACM 10th International Workshop on Green and Sustainable Software, pp. 22–27. 2026. DOI 10.1145/3786148.3788620."
+  },
+  "dimension_references": {
+    "Environmental": [
+      "becker2015sustainability"
+    ],
+    "Technical": [
+      "becker2015sustainability"
+    ],
+    "Social": [
+      "becker2015sustainability"
+    ],
+    "Economic": [
+      "becker2015sustainability"
+    ],
+    "Individual": [
+      "becker2015sustainability"
+    ]
+  },
+  "dimension_excerpts": {
+    "Environmental": [
+      {
+        "text": "effects of human activities on natural systems",
+        "source": "Becker et al. (2015), [@becker2015sustainability], Section II, PDF page 4. https://www.cs.toronto.edu/~sme/papers/2015/Beckeretal-ICSE2015.pdf"
+      }
+    ],
+    "Social": [
+      {
+        "text": "societal communities",
+        "source": "Becker et al. (2015), [@becker2015sustainability], Section II, PDF page 4. https://www.cs.toronto.edu/~sme/papers/2015/Beckeretal-ICSE2015.pdf"
+      }
+    ],
+    "Economic": [
+      {
+        "text": "assets, capital and added value",
+        "source": "Becker et al. (2015), [@becker2015sustainability], Section II, PDF page 4. https://www.cs.toronto.edu/~sme/papers/2015/Beckeretal-ICSE2015.pdf"
+      }
+    ],
+    "Technical": [
+      {
+        "text": "longevity of information, systems, and infrastructure",
+        "source": "Becker et al. (2015), [@becker2015sustainability], Section II, PDF page 4. https://www.cs.toronto.edu/~sme/papers/2015/Beckeretal-ICSE2015.pdf"
+      }
+    ],
+    "Individual": [
+      {
+        "text": "well-being of humans",
+        "source": "Becker et al. (2015), [@becker2015sustainability], Section II, PDF page 5. https://www.cs.toronto.edu/~sme/papers/2015/Beckeretal-ICSE2015.pdf"
+      }
+    ]
+  },
+  "memo_style": "English verbatim reference excerpts with source citations"
+}

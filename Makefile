@@ -74,3 +74,11 @@ coding-site:
 .PHONY: all clean coding coding-start coding-setup coding-protect coding-finish coding-request-merge coding-status coding-integrate coding-test
 
 .PHONY: coding-sync coding-codebook-init coding-codebook-register coding-theory-publish
+
+coding-taxonomy-export:
+	python3 -B scripts/export_coding_taxonomy.py --update-protocol
+
+coding-taxonomy-references:
+	python3 -B scripts/export_coding_taxonomy.py --update-reference-memos --update-protocol
+
+.PHONY: coding-taxonomy-export coding-taxonomy-references
