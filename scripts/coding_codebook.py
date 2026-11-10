@@ -72,13 +72,6 @@ class CodebookWorkflow:
             raise MergeError('Update master to origin/master before initializing the codebook')
         if (self.repo / cb.REGISTRY).exists():
             raise MergeError('Codebook registry already initialized')
-        # A deliberate clean boundary, including jobs created in other clones.
-        refs = cs.git(self.repo, 'ls-remote', '--heads', 'origin', 'refs/heads/coding/*')
-        if refs:
-            raise MergeError('Integrate outstanding sessions and remove remote coding branches before initialization')
-        for job in self.state.get('completed', []):
-            if not cs.tracked_json(self.repo, remote, f'coding/merges/{job["id"]}.json', optional=True):
-                raise MergeError('Integrate outstanding legacy sessions before initialization')
         snapshot = read_project(self.repo / cs.PROJECT)
         registry = cb.export(snapshot, origin=remote)
         cb.normalize(snapshot, registry, registry)

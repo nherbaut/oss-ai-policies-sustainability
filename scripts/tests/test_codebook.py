@@ -192,6 +192,25 @@ class CodebookWorkflowTests(unittest.TestCase):
         self.assertEqual(cb.export(snap, registry), registry)
         self.assertFalse((self.repo / cs.DATABASE).stat().st_mode & 0o222)
 
+    def test_init_allows_remote_branches_and_completed_session_records(self):
+        branch = 'coding/alice/test-session'
+        command(self.repo, 'git', 'push', 'origin', 'HEAD:refs/heads/' + branch)
+        self.workflow.state['completed'] = [{'id': 'test-session', 'branch': branch}]
+        self.workflow.save()
+        before_state = deepcopy(self.workflow.state)
+        before_database = (self.repo / cs.DATABASE).read_bytes()
+        before_refs = command(self.repo, 'git', 'ls-remote', '--heads', 'origin')
+
+        result = subprocess.run(['make', 'coding-codebook-init'], cwd=self.repo,
+                                text=True, capture_output=True)
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(cs.Workflow(self.repo).state, before_state)
+        self.assertEqual((self.repo / cs.DATABASE).read_bytes(), before_database)
+        self.assertEqual(command(self.repo, 'git', 'ls-remote', '--heads', 'origin'), before_refs)
+        registry = json.loads((self.repo / cb.REGISTRY).read_text())
+        self.assertEqual(cb.export(merger.read_project(self.repo / cs.PROJECT), registry), registry)
+
     def test_sync_requires_new_theory_remaps_local_ids_and_retains_coding(self):
         self.initialize()
         self.start()

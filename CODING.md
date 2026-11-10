@@ -239,11 +239,9 @@ across branches; synchronization and integration translate them by UUID, includi
 code/category references in coding and graphs. The SQLite schema and native
 UTF-16 passage offsets stay unchanged. Names never establish identity on their own.
 
-### Enable once at a clean boundary
+### Initialize the shared codebook
 
-First finish and integrate outstanding legacy sessions in every clone. Remove
-published coding branches from the remote after integration. From a clean master
-matching origin/master, with no active session:
+Run the following from a clean master matching origin/master, with no active session.
 
 ```sh
 make coding-setup
@@ -253,12 +251,10 @@ git commit -m "Initialize shared codebook identities"
 git push origin master
 ```
 
-Initialization writes only the registry; it preserves every existing coded
-passage and leaves the database unchanged. It refuses outstanding local legacy
-jobs or remote coding branches. Coordinate with other coders: a legacy active
-session in another clone cannot be discovered if it was never pushed. New
-sessions require the registry to have been committed and published. Startup
-checks this before asking for a coder name or creating a session branch. This implementation does not initialize the research project for you.
+Initialization writes the registry from master's current database. Remote coding
+branches and completed session records can remain present. New sessions require
+the registry to have been committed and published. Startup checks this before
+asking for a coder name or creating a session branch.
 
 ### Work inductively on a coding branch
 
