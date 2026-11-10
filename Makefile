@@ -71,6 +71,19 @@ coding-site:
 
 .PHONY: coding-site
 
+PREFILTER_PYTHON ?= python3
+
+prefilter-duplicates:
+	$(PREFILTER_PYTHON) -B scripts/detect_document_duplicates.py
+
+prefilter-similarity:
+	$(PREFILTER_PYTHON) -B scripts/compute_rq_similarity.py
+
+prefilter-test:
+	$(PREFILTER_PYTHON) -B -m unittest discover -s scripts/tests -p 'test_prefilter*.py' -v
+
+.PHONY: prefilter-duplicates prefilter-similarity prefilter-test
+
 .PHONY: all clean coding coding-start coding-setup coding-protect coding-finish coding-request-merge coding-status coding-integrate coding-test
 
 .PHONY: coding-sync coding-codebook-init coding-codebook-register coding-theory-publish

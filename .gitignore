@@ -7,3 +7,5 @@ data/*.qda/data.qda-journal
 data/*_BKUP_*.qda/
 data/qualcoder-backups/
 dist/coding-site/
+analysis/prefilter/
+.venv-prefilter/

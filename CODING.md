@@ -430,6 +430,12 @@ the reset refuses to leave those references inconsistent. The tool does not
 initialize the shared registry, modify Git guards, commit or push. Existing
 master database commit guards still apply.
 
+## Prefiltering before coding
+
+See [PREFILTER.md](PREFILTER.md) for exact duplicate detection and local embedding
+similarity rankings against the research questions. These read-only tools help
+prioritize manual review without excluding sources or changing the coding.
+
 ## Static coding explorer
 
 Generate a standalone, read-only explorer of the current checkout's coding:
