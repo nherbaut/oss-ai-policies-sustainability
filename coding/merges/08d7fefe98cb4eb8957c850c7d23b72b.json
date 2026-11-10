@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "id": "08d7fefe98cb4eb8957c850c7d23b72b",
+  "coder": "NicolasH",
+  "base": "5c4ac3a5a2d142ddf27798c3dd7cd51378bc842f",
+  "destination": "5c4ac3a5a2d142ddf27798c3dd7cd51378bc842f",
+  "submission": "920d4076954e28270a3841f42451f6a067863e9f",
+  "pr": null,
+  "branch": "coding/nicolash/20261110-020014-08d7fefe",
+  "integrated_at": "2026-11-10T02:02:39.250840+00:00",
+  "report": {
+    "coder": "NicolasH",
+    "changes": [
+      {
+        "table": "journal",
+        "identity": [
+          "Code organiser 2026-11-10 03:00:57"
+        ],
+        "before": null,
+        "incoming": {
+          "jid": 1,
+          "name": "Code organiser 2026-11-10 03:00:57",
+          "jentry": "Code organiser - applied changes:\nNew code: 'license stuff' (sub-code of 'Ethical Concerns')",
+          "date": "2026-11-10 03:00:57",
+          "owner": "NicolasH"
+        },
+        "owner": "NicolasH",
+        "journal": "Code organiser 2026-11-10 03:00:57",
+        "operation": "add"
+      }
+    ],
+    "conflicts": [],
+    "summary": {
+      "journal:add": 1
+    },
+    "by_document": [],
+    "codebook_changes": [
+      {
+        "id": "c4eb675a-13ab-5d8b-acfc-317e62b8fc37",
+        "before": null,
+        "after": {
+          "name": "license stuff",
+          "memo": "",
+          "owner": "NicolasH",
+          "date": "2026-11-10 03:00:53",
+          "color": "#A8A8A8",
+          "kind": "code",
+          "id": 26,
+          "parent": "c4e3d82e-d332-5366-a7c5-aeffdd0f9ea1",
+          "category": null
+        }
+      }
+    ],
+    "late_theory": {
+      "changes": [],
+      "affected_passages": []
+    }
+  }
+}

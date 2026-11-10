@@ -312,6 +312,17 @@
       "parent": null,
       "category": "67e0eae7-1cf9-5557-ad48-c9880d751625"
     },
+    "c4eb675a-13ab-5d8b-acfc-317e62b8fc37": {
+      "name": "license stuff",
+      "memo": "",
+      "owner": "NicolasH",
+      "date": "2026-11-10 03:00:53",
+      "color": "#A8A8A8",
+      "kind": "code",
+      "id": 26,
+      "parent": "c4e3d82e-d332-5366-a7c5-aeffdd0f9ea1",
+      "category": null
+    },
     "de42f54c-aca6-5f88-b7c0-88efa72af3c7": {
       "name": "Technical",
       "owner": "NicolasH",
@@ -322,5 +333,5 @@
       "parent": null
     }
   },
-  "revision": "00fe7ae9f014f6f90d5c5610f12b36defea3bfd05f253658ba6adb221782581a"
+  "revision": "c08face9209c7c825a5acc7bccdbb625738d760bd8157d5701204ea7edc0ca5d"
 }
