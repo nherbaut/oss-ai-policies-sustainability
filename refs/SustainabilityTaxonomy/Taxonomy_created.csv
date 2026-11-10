@@ -1,0 +1,253 @@
+Requirement ID,Requirement,Dimension,Issue
+REQ-001,Optimizing for resource efficiency to reduce operational costs over the long term.,Economic,Longeitivity
+REQ-002,Ensuring systems promote fair market practices.,Economic,Affordability
+REQ-003,Optimize energy consumption in home and city systems using predictive and adaptive control algorithms.,Economic,Cost Effectiveness
+REQ-004,The system should provide an affordable solution for home automation.,Economic,Affordability
+REQ-005,The system should be a low-cost solution for home automation.,Economic,Affordability
+REQ-006,The system should address the challenges of connecting inhabitants to technology in developing economies particularly concerning system costs.,Economic,Affordability
+REQ-007,The system should offer cost savings to users.,Economic,Cost-Effectiveness
+REQ-008,The system should have low costs to enable wider diffusion of smart home technologies.,Economic,Affordability
+REQ-009,Ensure compatibility with evolving real-time pricing models and smart grid standards.,Economic,Cost effectiveness
+REQ-010,System must support development of economically accurate energy models.,Economic,Cost effectiveness
+REQ-011,The system must minimize operational energy costs through dynamic optimization strategies.,Economic,Cost effectiveness
+REQ-012,The system must perform intelligent energy trading with the grid to generate additional revenue.,Economic,Cost effectiveness
+REQ-013,The system must achieve a high return on investment (e.g. 39.2% annually).,Economic,Cost effectiveness
+REQ-014,The system must implement predictive maintenance to reduce equipment downtime and cost.,Economic,Cost effectiveness
+REQ-015,The system must optimize battery charging/discharging to reduce reliance on costly grid energy.,Economic,Cost effectiveness
+REQ-016,The system should increase affordability of services,Economic,Affordability
+REQ-017,Determine means to sustainably expedite broad-based development implying stable and sufficient energy supply (including grid electricity) to cater to growing demand.,Economic,Cost effectiveness
+REQ-018,System must ensure sustainable growth and development through data-informed planning,Economic,Cost effectiveness
+REQ-019,Identify energy-intensive appliances and peak demand periods.,Environemntal,Resource Management
+REQ-020,Collect and transmit real-time electricity consumption data.,Environemntal,Energy Efficiency
+REQ-021,System must optimize energy consumption to ensure IoT devices and systems operate with minimal energy waste.,Environemntal,Energy Efficiency
+REQ-022,An appropriate low-energy color scheme should be chosen based on the monitor technology,Environmental,Energy Consumption
+REQ-023,Excessive use of computer graphics processing units should be avoided,Environmental,Energy Consumption
+REQ-024,Low energy-consuming states of graphics processing units should be used,Environmental,Energy Consumption
+REQ-025,Screen changes during the performance of tasks should be reduced,Environmental,Energy Consumption
+REQ-026,Every in-efficient code patterns should be resolved,Environmental,Carbon Footprint
+REQ-027,Software systems should be designed to reduce energy consumption during their operation. This includes considering the energy used by hardware running the software and data centers and network communication.,Environmental,Energy Consumption
+REQ-028,Energy management systems should minimize COâ‚‚ emissions and optimize energy use,Environmental,Carbon Footprint
+REQ-029,Energy management systems should minimize COâ‚‚ emissions and optimize energy use,Environmental,Energy Consumption
+REQ-030,Systems must support renewable energy integration including solar and wind and bioenergy,Environmental,Energy Efficiency
+REQ-031,System must enable cities to use their smart resources to be environmentally amicable.,Environmental,Resource Management
+REQ-032,System must support the reduction of carbon emissions from nonrenewable energy resources.,Environmental,Carbon Footprint
+REQ-033,System must facilitate the prevention of energy waste in homes and organizations.,Environmental,Energy Consumption
+REQ-034,Enable precise environmental monitoring.,Environmental,Carbon Footprint
+REQ-035,Minimize computational demands via federated learning.,Environmental,Resource Management
+REQ-036,Smart home systems should consider the environmental impact of their entire lifecycle.,Environmental,Carbon Footprint
+REQ-037,The system should provide tips for the optimization of resource consumption.,Environmental,Resource Management
+REQ-038,The system should contribute to reducing electricity consumption.,Environmental,Resource Management
+REQ-039,The system should consider the disposal of its components at the end of their life cycle.,Environmental,E-waste management
+REQ-040,Optimize resources throughout the energy value chain.,Environmental,Carbon Footprint
+REQ-041,Ensure balance between energy supply and demand.,Environmental,Resource Management
+REQ-042,The system can provide real-time data and actionable recommendations that enables users to make informed decisions that lead to significant energy savings and reduced carbon footprint,Environmental,Carbon Footprint
+REQ-043,Provide tools and metrics for monitoring and verifying emission reductions.,Environmental,Carbon Footprint
+REQ-044,Ensure the energy system has adequate power generation capacity and a diverse mix of sources for more reliability.,Environmental,Energy Efficiency
+REQ-045,The system must reduce grid energy consumption and optimize the use of renewable sources (e.g. solar).,Environmental,Energy efficiency
+REQ-046,The system must maintain indoor air quality within acceptable COâ‚‚ and pollutant levels.,Environmental,Carbon Footprint
+REQ-047,The system must monitor and control lighting levels to reduce unnecessary energy usage.,Environmental,Energy efficiency
+REQ-048,The system must balance HVAC operations to reduce energy use while preserving comfort.,Environmental,Energy efficiency
+REQ-049,The system must integrate weather data to adjust building systems for minimizing environmental impact.,Environmental,Context-awareness
+REQ-050,Determine means to sustainably expedite broad-based development implying stable and sufficient energy supply (including grid electricity) to cater to growing demand.,Environmental,Resource Management
+REQ-051,Achieve optimal performance while conserving energy.,Environmental,Energy Efficiency
+REQ-052,Optimize energy consumption and communication delay and and network lifetime in energy-constrained IoT environments.,Environmental,Energy efficiency
+REQ-053,System must ensure sustainable growth and development through data-informed planning,Social,Inclusitivity
+REQ-054,Identify the most effective way to be sustainable over alternative options at different levels to ensure the most sustainable choice is being made.,Social,Inclusivity
+REQ-055,System must achieve pragmatic goals,Social,Trust and fairness
+REQ-056,System must ensure confidence in the organization,Social,Trust and fairness
+REQ-057,System must be equal and honest,Social,Trust and fairness
+REQ-058,System must mitigate potential risk to people,Social,Freedom from risk
+REQ-059,Appropriate tones should be chosen in a color gradient that depends on the particular technology of the monitor,Social,User Profiling
+REQ-060,Information shown in the GUI should be divided with thematic icons to reduce interaction complexity and allow for quick information retrieval,Social,User Profiling
+REQ-061,Autocomplete functionality with at least three initial letters should be developed to quickly write complex names,Social,Access to Information
+REQ-062,Designing systems that do not negatively impact users' physical or mental health,Social,Well being
+REQ-063,Minimizing unnecessary cognitive load on users.,Social,Well Being
+REQ-064,Ensuring software systems do not perpetuate or exacerbate social inequalities.,Social,Digital Divide
+REQ-065,Smart cities must ensure secure and private data handling for sustainable development.,Social,Data Privacy
+REQ-066,IoT-based smart cities should allow equitable access to services and public resources.,Social,Equitable access
+REQ-067,System must enhance transparency in public services,Social,Ethical Concerns
+REQ-068,The system should provide personalized home care services for individuals based on their needs,Social,Inclusitivity
+REQ-069,Smart home systems should enhance the quality of life for residents.,Social,Well Being
+REQ-070,Smart home systems should be inclusive catering to the needs of diverse users including the elderly and those with disabilities.,Social,Inclusitivity
+REQ-071,Smart home systems should support independent living for residents.,Social,Autonomy
+REQ-072,The system should not require technical knowledge for users to operate.,Social,Equitable access
+REQ-073,The system should address user uncertainty about the advantages of smart home systems.,Social,Acceptability
+REQ-074,Promote equitable access to modern and reliable and sustainable energy services,Social,Equitable access
+REQ-075,Provide a user-friendly interface for residents to monitor their energy usage and receive energy-saving recommendations.,Social,User experience
+REQ-076,Enable better information exchange among stakeholders.,Social,Transparency
+REQ-077,The system must balance prediction accuracy with human-understandable explanations.,Social,Explainability
+REQ-078,The system must provide customers with greater control over energy distribution and usage.,Social,Autonomy
+REQ-079,The system must deliver detailed insights into energy consumption patterns and consumer behavior.,Social,Access to Information
+REQ-080,The system must ensure proper ethical and regulatory considerations.,Social,Ethical Concerns
+REQ-081,System must create publicly accessible data collection institutions and data websites.,Social,Access to information
+REQ-082,The system must respond to occupant behavior and preferences for comfort optimization.,Social,Well Being
+REQ-083,The system should support trust and transparency and communication among stakeholders.,Social,Trust and communication
+REQ-084,The system must enable participation and community building (e.g. through collaboration platforms).,Social,Community engagement
+REQ-085,The system must enhance access to lifelong learning opportunities.,Social,Access to Information
+REQ-086,The system should avoid marginalizing less technically versed users.,Social,Digital inclusivity
+REQ-087,System must ensure equitable access to smart grid benefits especially in underserved communities.,Social,Equitable Access
+REQ-088,Enable efficient real-time data streaming and processing at the edge for healthcare.,Social,Access to Information
+REQ-089,Achieve optimal performance while conserving energy.,Technical,Performance
+REQ-090,Enable efficient real-time data streaming and processing at the edge for healthcare.,Technical,Data management
+REQ-091,Assessing software over a long term and consider decisions with this in mind.,Technical,Longeitivity
+REQ-092,System components can be separated and recombined,Technical,Modularity
+REQ-093,Changes can be incorporated effectively,Technical,Modularity
+REQ-094,System must support tasks effectively,Technical,Functional Suitability
+REQ-095,The number of progress bars and animations and especially scrollbars used should be reduced.,Technical,Feature Bloat
+REQ-096,Menus should present as few choices as possible to reduce the human cognitive process of decision-making in line with Hick-Hyman Law,Technical,Feature Bloat
+REQ-097,Systems must be interpretable and adaptable to changing goals and dynamic data and unexpected failures and security threats,Technical,Durability
+REQ-098,Smart city infrastructure should be resilient and scalable and interoperable,Technical,Resilence
+REQ-099,System must enable sustainable data acquisition and transmission and big-data management.,Technical,Data management
+REQ-100,Minimize data volume sent over network.,Technical,Data management
+REQ-101,The system should manage data related to individuals including symptoms and health status and location.,Technical,Data management
+REQ-102,The system should be adaptive and responsive to evolving pandemic situations and individual health needs.,Technical,Adaptability
+REQ-103,Smart home systems should be able to integrate various devices and services.,Technical,Interoperability
+REQ-104,Smart home systems should be adaptable to different user preferences and scenarios.,Technical,Adaptability
+REQ-105,Users should be well-informed about the system's health and load.,Technical,Transparency
+REQ-106,Users should be able to manage each smart home feature separately.,Technical,Modularity
+REQ-107,No program should run in the system background independently without user knowledge or control.,Technical,Transparency
+REQ-108,The system should enable intelligent control of home appliances.,Technical,Interoperability
+REQ-109,The system should be integrated into existing infrastructure.,Technical,Compatability
+REQ-110,The system should utilize enabling technologies for its functionalities.,Technical,Technology Utilization
+REQ-111,The system should be accessible from anywhere with an internet connection.,Technical,Accessibility
+REQ-112,The system should have a long lifespan for its components (durability).,Technical,Longeitivity
+REQ-113,The system should overcome limitations of device and manufacturer incompatibility allowing communication between different products and operating systems.,Technical,Interoperability
+REQ-114,The system should be able to be implemented in small steps due to its modular design.,Technical,Modularity
+REQ-115,The system should address technological risk.,Technical,Risk management
+REQ-116,Protect critical assets and guarantee continuity and safety of energy supply.,Technical,Durability 
+REQ-117,Encourage development of resilient infrastructure,Technical,Longitivity
+REQ-118,Reduce latency and improve real-time decision-making.,Technical,Connectivity
+REQ-119,Promote deployment of energy-efficient systems through policy.,Technical,Policy adoption
+REQ-120,The system must provide clear price signals and energy cost information to consumers.,Technical,Transparency
+REQ-121,The system must ensure transparency of transactions.,Technical,Transparency
+REQ-122,The system must establish standardized protocols and ensure compatibility between IoT devices and platforms.,Technical,Compatability
+REQ-123,The system must ensure early fault detection and isolation for improved system performance and safety.,Technical,Modularity
+REQ-124,The system must aid in anomaly detection and system behavior reproduction through sensor-based time series analysis.,Technical,Correctness
+REQ-125,Conduct future consumption patterns precisely especially for non-linear data.,Technical,Longitivity
+REQ-126,System must incorporate location-specific climate data (solar radiation and wind speed) to improve output.,Technical,Accuracy
+REQ-127,The system must adaptively learn optimal control policies for diverse building conditions using deep Reinforcement Learning.,Technical,Adaptability
+REQ-128,The system must generalize its performance across seasonal variations and unpredictable scenarios.,Technical,Longitivity
+REQ-129,The system must maintain high prediction accuracy for energy forecasting (e.g. 94.8%).,Technical,Accuracy
+REQ-130,The system must employ real-time sensor data processing and feedback for decision making.,Technical,Accuracy
+REQ-131,The system must be modular and scalable for multi-building and district-level deployments.,Technical,Modularity
+REQ-132,Analytical models estimating the environmental impact of an IoT deployment must be developed.,Technical,Technical Efficiency
+REQ-133,Edge computing must be integrated to bring enhanced learning capabilities to IoT networks.,Technical,Technical Efficiency
+REQ-134,Federated Learning in IoT networks must optimize transmission power to achieve minimum energy consumption.,Technical,Technical Efficiency
+REQ-135,IoT nodes must achieve long-term sustainability with reduced carbon footprinting.,Technical,Technical Efficiency
+REQ-136,Intelligent green IoT networking solutions must include service usage habit prediction through AI applications.,Technical,Technical Efficiency
+REQ-137,Machine learning algorithms must predict energy use to achieve cost reduction.,Technical,Technical Efficiency
+REQ-138,AI algorithms must exploit renewable energy sources through dynamic IoT environments.,Technical,Technical Efficiency
+REQ-139,Self-conscious IoT-extended systems must dynamically reallocate energy resources.,Technical,Technical Efficiency
+REQ-140,The system must be maintainable and adaptable to evolving stakeholder needs.,Technical,Longitivity
+REQ-141,System must support re-modeling of digital twins to ensure continued accuracy in changing physical environments.,Technical,Adaptability
+REQ-142,System must enable re-calibration of simulation models using real-time operational data.,Technical,Model fidelity
+REQ-143,System must manage re-collection and reconciliation of new data for evolving analytical needs.,Technical,Adaptability
+REQ-144,System must leverage predictive maintenance to reduce system downtime and maintenance costs.,Technical,Maintainability
+REQ-145,System must support edge and fog computing to enable distributed intelligence and real-time decision-making.,Technical,Technical Efficiency
+REQ-146,Software must support the implementation and operation of DPPs (Digital Product Passports) as mandated by regulations like the Ecodesign for Sustainable Products Regulation (ESPR).,Legal or Technical,Regulatory Mandate
+REQ-147,"Specifically for the battery industry, software must be able to manage a DBP (Digital Battery Passport) for certain batteries by February 2027. This includes handling over 100 static and dynamic data points to track, monitor, and manage batteries throughout their lifecycle.",Legal or Technical,Regulatory Mandate
+REQ-148,"Software used for reporting must be accurate to prevent flawed reports, which can lead to penalties for the company and legal liability for its management.",Legal or Technical,Regulatory Mandate
+REQ-149,"Software systems need to enforce transparency in carbon footprint reporting and manage due diligence obligations for sourcing raw materials like lithium and cobalt, as required by the EU Battery Regulation.",Legal or Technical,Regulatory Mandate
+REQ-150,"Software should collect and analyze environmental data, such as energy consumption and emissions, across a product's entire lifecycle",Environemntal,Energy Consumption
+REQ-151,"Development should use techniques like Dynamic Power Management (DPM) for mobile systems and avoid ""software bloat"" that increases energy use.",Environemntal,Energy Consumption
+REQ-152,Software should be designed to support a circular economy by promoting the reuse of products and resources. This includes improving recycling efficiency and enabling second-life applications for products like batteries,Environemntal,Digital Waste
+REQ-153,"Development practices should avoid unnecessary features, referred to as ""software waste,"" and promote the reuse of both software and data. Improved software maintainability is also key, as it extends the application's longevity and reduces overall resource consumption.",Technical,"Feature Bloat, Longietivity"
+REQ-154,Green Software Engineering can reduce IT costs through resource-efficient architectures like cloud computing. Using open-source software can lower licensing costs,Economic,Affordability
+REQ-155,Software should be designed inclusively and promote equality and health.,Social,Inclusitivity
+REQ-156,Software can be designed to foster a sense of community and participation. Features that enhance communication can strengthen customer relationships and positively influence the broader community.,Social,Well Being
+REQ-157,"The system should not have issues after updates, such as unwanted changes to permissions or settings.",Technical,Maintainability
+REQ-158,"There must be clear plans and policies for data management, privacy, security, and compliance with e-health laws and standards.",Legal or Technical,Regulatory Mandate
+REQ-159,"All relevant stakeholders (e.g., physicians, nurses, pharmacists) must be involved in the planning and selection process to ensure the chosen system meets their needs",Social,Inclusitivity
+REQ-160,"The organization's underlying infrastructure (e.g., networks, servers, equipment) must be ready and capable of operating the e-health solution effectively.",Technical,Longitivity
+REQ-161,"The organization must be able to cover all expenses, including not just the initial purchase but also operational costs and potential upgrades",Economic,Affordability
+REQ-162,"Widgets shall use as much screen area as possible to be hit easily, in accordance with Fitts Law, which states that the time to reach a target depends on its distance and size",Environemntal,Energy Consumption
+REQ-163,Widgets that are meant to be clicked sequentially shall be placed close to each other.,Environemntal,Energy Consumption
+REQ-164,Frequently-executed I/O-intensive workloads shall be reduced.,Environemntal,Energy Consumption
+REQ-165,"Buffer management shall be applied using batch replacement policies to make use of sequential I/O and improve the performance of graphic databases (e.g., a news wall that requires constant refreshing).",Environemntal,Energy Consumption
+REQ-166,Fields with a known number of characters (like phone numbers or dates) shall use automatic jumping of the cursor to the next item,Environemntal,Energy Consumption
+REQ-167,User interaction shall be simplified to improve the latency caused by human interfacing.,Environemntal,Energy Consumption
+REQ-168,A tradeoff shall be achieved between the number of navigation levels and the number of elements on each level.,Environemntal,Energy Consumption
+REQ-169,Fine patterns and textures shall be minimized to reduce switching activity.,Environemntal,Energy Consumption
+REQ-170,"Systems must be able to interconnect through ""open"" interfaces and facilitate the exchange of health-related information.",Technical,Interoperability
+REQ-171,"Systems must not only exchange data but also understand it, which requires a ""common language"" achieved through standardized coding and data representation.",Technical,Interoperability
+REQ-172,"Systems must be transparent, private, and secure. Any innovation must be reliable in protecting patient privacy and upholding ethical standards",Technical,Security
+REQ-173,Sustainable healthcare organizations require effective knowledge management systems to support performance and innovation. This includes building a proper infrastructure to support Evidence-Based Medicine.,Technical,Longitivity
+REQ-174,"The application must have an authentication procedure , allowing users to choose whether to be authenticated and to log in via credentials or social media.",Technical,Security
+REQ-175,"Users should be able to manage their personal health record, which includes the ability to edit, add, remove, share, import, export, and back up their health data.",Social,Well Being
+REQ-176,The app must promote interaction among users through social networks or online health forums.,Social,Well Being
+REQ-177,It should be available in multiple languages and allow users to switch between them easily,Social,Inclusitivity
+REQ-178,The app shall help reduce transportation by allowing users to find nearby healthcare centers.,"Social, Environmental","Well Being, Carbon Footprint"
+REQ-179,"Users must be able to edit data offline, and the app must save these changes locally",Technical,Perdurability
+REQ-180,The app must easily adapt to future operating system (OS) changes by respecting mobile OS development guidelines,Technical,Perdurability
+REQ-181,"Establish maximum energy consumption levels for each transaction or operation, guided by industry benchmarks.",Environemntal,Energy Consumption
+REQ-182," Define acceptable thresholds for CPU, memory, and storage usage to promote efficient hardware utilization.",Environmental,Resource Management
+REQ-183," Set objectives for the software's maintainability, modularity, and code complexity to ensure its long-term adaptability and efficiency.",Technical,Longitivity
+REQ-184,Develop algorithms that optimize motion planning and task scheduling to reduce power usage.,Technical,Modularity
+REQ-185," The software should enable and control low-power or
+ idle states for the robot. This allows the robot to
+ automatically enter a power-saving mode when not actively performing a task.",Environmental,Energy Consumption
+REQ-186, Design cloud applications to be loosely coupled and efficient to reduce resource consumption.,Environmental,Resource Management
+REQ-187,"Schedule workloads in a way that minimizes heat generation and avoids hotspots, reducing the load on cooling systems.",Environmental,Resource Management
+REQ-188,"Use virtualization technologies (like VM migration, consolidation, and load balancing) to reduce the number of active physical machines, thus saving energy.",Environmental,Resource Management
+REQ-189,"The system must operate reliably without on-site personnel, automatically handling anomalies and failures to prevent outages and equipment damage.",Technical,Fault Tolerance
+REQ-190, The system must efficiently manage and share resources across distributed sites to handle fluctuating demand and improve overall resource utilization.,Environmental,Resource Management
+REQ-191,"The system must be able to utilize diverse energy sources (renewable and grid), varied pricing, and different cooling technologies to optimize for both cost and energy consumption.",Environemntal,Energy Consumption
+REQ-192,"The infrastructure should intelligently interact with the smart grid, using stored energy during peak price hours and charging during off-peak times to reduce operational costs.",Environmental,Resource Management
+REQ-193," Infrastructure, particularly cooling systems, must be compact to fit into space-constrained urban environments.",Social,Inclusitivity
+REQ-194,"Provide comprehensive and transparent sustainability reports to stakeholders, validated by third-party verification.",Legal or Technical,Regulatory Mandate
+REQ-195,Implement real-time environmental performance monitoring to enable continuous optimization.,Legal or Technical,Regulatory Mandate
+REQ-196,Provide firmware and software updates to enhance the functionality and extend the competitive lifespan of older devices.,Technical,Longitivity
+REQ-197,The system should be generic enough to minimize the need for extensive customization for different nationalities.,Social,Inclusitivity
+REQ-198,"The e-learning system must be relevant to the different social, cultural, and ethical backgrounds of its global users.",Social,Equitable Access
+REQ-199,User autonomy to configure resource-saving settings.,Environmental,Resource Management
+REQ-200,Backward compatibility when releasing new versions.,Technical,Longitivity
+REQ-201,The system should not impede the social relationships and community values that are part of traditional education.,Social,Inclusitivity
+REQ-202,"he system must be sensitive to and accommodate social customs, especially regarding privacy and virtual participation.",Social,Inclusitivity
+REQ-203,The system must account for students' varying abilities to self-teach and not place the entire burden of learning on them and their parents.,Social,Inclusitivity
+REQ-204,"The system must ensure equal rights of access and quality of education, regardless of geographic location, ICT readiness, or economic status.",Social,Equitable Access
+REQ-205,"The system must be designed with an understanding of diverse family economic situations, parental literacy, and the availability of support and equipment.",Social,Equitable Access
+REQ-206,"The implementation should be guided by various governance theories, including adaptive, network, collaborative, and accountable governance.",Legal,Regulatory Mandate
+REQ-207,"Enterpreneurship education training system should be inclusive and specifically target low-income individuals, women/girls, minorities, migrants, and victims of conflict to advance SDGs related to poverty and inequality (SDGs 1, 5, 10).",Social,Inclusitivity
+REQ-208, Enterpreneurship education training system should focus on building a socially and ecologically aware mindset among learners and teachers.,Social,Inclusitivity
+REQ-209,"Optimized thermal, acoustic, and lighting performances.",Environmental,Energy Consumption
+REQ-210,Minimization of negative social impacts related to materials used and human rights.,Social,Equitable Access
+REQ-211,Minimization of economic impacts during the design phase.,Economic,Cost Efficiency
+REQ-212,"The software design process must intentionally and explicitly account for a diverse range of users, abilities, and cultural contexts to avoid unintentional exclusion.",Social,Inclusitivity
+REQ-213,"Evaluating the environmental impact, such as energy consumption, as a key factor in determining software quality.",Environmental,Energy Consumption
+REQ-214,Leveraging open-source software to reduce the need for new development through reuse and modification.,Technical,Modularity
+REQ-215,"Ensuring software is accessible and usable for all users, including those with disabilities, and respecting user privacy through ethical data practices.",Social,Ethical Concerns
+REQ-216,Applications must have energy use requirements.,Environmental,Energy Consumption
+REQ-217,The system shall communicate to the user as much information about resource consumption as possible.,Environemntal,Resource Management
+REQ-218,"When a user's resource consumption is approaching the maximum target for that resource, a notification will be sent to the user.",Environemntal,Resource Management
+REQ-219,The system shall display the average and minimum amounts for each type of resource consumed by previous users.,Environemntal,Resource Management
+REQ-220,The system shall provide a form of incentive to encourage the user to reduce their resource consumption.,Environemntal,Resource Management
+REQ-221,The system shall keep track of a user's/business's consumption of the specified resources.,Environemntal,Resource Management
+REQ-222,The system shall only track resources in situations specified by the user.,Environemntal,Resource Management
+REQ-223,The system shall test for accuracy of recorded resources on a monthly basis.,Environemntal,Resource Management
+REQ-224," The system must account for uncertainties such as customer preferences and behaviors, market dynamics, and rebound effects.",Social,Equitable Access
+REQ-225,"Software execution must conserve resources by minimizing I/O calls and memory access, using concurrent models, reducing data size, and using offloading.",Environmental,Energy Consumption
+REQ-226,"Reduce page load times through efficient resource usage, lightweight frameworks, and media optimization.",Environmental,Resource Management
+REQ-227,Use system fonts to eliminate additional downloads.,Environmental,Resource Management
+REQ-228,Optimize media assets through compression and incorporate user settings for lower data consumption.,Environmental,Resource Management
+REQ-229,Minimize the use of external libraries and hard-code web pages where possible to reduce server load.,Environmental,Resource Management
+REQ-230,Optimize database queries.,Environmental,Resource Management
+REQ-231,"Use of advanced, sustainable architectures like evolutionary Service-Oriented Architecture (SOA).",Technical,Longitivity
+REQ-232,"The software must be a safe long-term investment, with minimized economic risks.",Economic,Cost effectiveness
+REQ-233,"The software should maintain social capital, preserve community unity, and allow for participation and interaction",Social,Inclusitivity
+REQ-234,"The software must be usable for a long time, even with changing requirements, and be easy to customize, reuse, adapt, and modify.",Technical,Repairability
+REQ-235,Provide timely feedback to users and follow regulatory standards.,Social,Inclusitivity
+REQ-236,"Design easy-to-learn, user-friendly software that enhances users' ICT literacy.",Social,Inclusitivity
+REQ-237,Design software that helps users achieve their goals while reducing stress and frustration.,Social,Well Being
+REQ-238,Mitigate the negative impacts of the software on society and a person's sense of belonging.,Social,Well Being
+REQ-239,Ensure sensitive data protection and compliance with privacy regulations.,Legal,Regulatory Mandate
+REQ-240,Provide information about community facilities to help users make informed decisions about where to live.,Social,Well Being
+REQ-241,Develop features that enable technology sharing with other municipalities.,Social,Well Being
+REQ-242,Ensure compatibility with assistive technologies like screen readers.,Social,Well Being
+REQ-243,Take into account the projected service time of the software and plan for it to run on older hardware to prevent the disposal of existing equipment.,Technical,Longitivity
+REQ-244,Steer clear of screens with bright colors or colors that could be harmful to the user's eyes.,Social,Well Being
+REQ-245,Focus on minimizing waste throughout all software processes and the product life cycle.,Environmental,Resource Management
+REQ-246,"Robotic software must support at least three energy modes (Normal, Eco, Low-power) and report mode with timestamp.",Environmental,Energy Consumption
+REQ-247,"System reports estimated operational cost per mission (energy, consumables, maintenance amortized) and alerts if cost  is greater than budget threshold.",Economic,Cost Effectiveness
+REQ-248,"GUI/teleoperation must meet basic accessibility (keyboard-only control, screen-reader labels) and pass WCAG-level checks for operator screens.",Social,Inclusitivity
+REQ-249,System organized into modules with clear interfaces; each module has automated unit and integration tests,technical,Modularity
+REQ-250,Issues raised by users must be traceable to a ticket with status,Social,Well Being
