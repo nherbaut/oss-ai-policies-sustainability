@@ -1,0 +1,3 @@
+# Optional: the duplicate detector uses only Python's standard library.
+sentence-transformers==5.1.2
+numpy>=1.26,<3

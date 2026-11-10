@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "model": "intfloat/multilingual-e5-base",
+  "revision": "835193815a3936a24a0ee7dc9e3d48c1fbb19c55",
+  "query_prefix": "query: ",
+  "document_prefix": "passage: ",
+  "rqs": [
+    {
+      "id": "RQ1",
+      "queries": [
+        {"id": "general", "text": "How does the stated mission of an open source project address sustainability and long-term well-being?"},
+        {"id": "individual", "text": "How does an open source project's mission support people's well-being, learning, skills, autonomy and equitable access?"},
+        {"id": "social", "text": "How does an open source project's stated purpose support inclusive communities, collaboration, trust and social equity?"},
+        {"id": "economic", "text": "How does an open source project's mission address sustainable livelihoods, funding, affordability and long-term economic viability?"},
+        {"id": "environmental", "text": "How does an open source project's stated purpose address ecological protection, energy use, resource consumption or climate impacts?"},
+        {"id": "technical", "text": "How does an open source project's mission support software longevity, maintainability, resilience and preservation of knowledge?"}
+      ]
+    },
+    {
+      "id": "RQ2",
+      "queries": [
+        {"id": "general", "text": "How do an open source project's rules for AI-generated contributions or AI tool use address sustainability and long-term consequences?"},
+        {"id": "individual", "text": "How do rules for AI-generated contributions protect maintainers' time, reviewer capacity, well-being, skills and ability to learn?"},
+        {"id": "social", "text": "How do rules for AI use in open source protect community trust, collaboration, inclusion, fairness and human relationships?"},
+        {"id": "economic", "text": "How do rules for AI-generated contributions address financial costs, funding, livelihoods and allocation of scarce project resources?"},
+        {"id": "environmental", "text": "How do open source AI policies address energy consumption, water use, computing resources, carbon emissions or other environmental impacts?"},
+        {"id": "technical", "text": "How do rules for AI-generated contributions protect long-term code quality, maintainability, security, reliability and project continuity?"}
+      ]
+    },
+    {
+      "id": "RQ3",
+      "queries": [
+        {"id": "general", "text": "What meanings, dimensions and characteristics of sustainability are described in open source policies on AI use and AI-generated contributions?"},
+        {"id": "individual", "text": "How does an open source AI policy describe individual sustainability through well-being, burnout, workload, learning, skills or autonomy?"},
+        {"id": "social", "text": "How does an open source AI policy describe social sustainability through trust, inclusion, fairness, shared knowledge or community relationships?"},
+        {"id": "economic", "text": "How does an open source AI policy describe economic sustainability through funding, livelihoods, costs, incentives or resource distribution?"},
+        {"id": "environmental", "text": "How does an open source AI policy describe environmental sustainability through energy, emissions, water, material resources or ecosystem impacts?"},
+        {"id": "technical", "text": "How does an open source AI policy describe technical sustainability through software longevity, maintainability, reliability, security or adaptability?"}
+      ]
+    },
+    {
+      "id": "RQ4",
+      "queries": [
+        {"id": "general", "text": "What framework does an open source AI policy provide for preserving critical natural capital and addressing strong or weak sustainability?"},
+        {"id": "limits", "text": "Does an open source AI policy recognise ecological thresholds, planetary boundaries or environmental resources that must be preserved?"},
+        {"id": "substitutability", "text": "How does an open source AI policy address whether natural resources and environmental losses can or cannot be replaced by financial gains or technical improvements?"},
+        {"id": "tradeoffs", "text": "How does an open source AI policy address trade-offs and dependencies between ecological protection, economic gains, human well-being and technical efficiency?"}
+      ]
+    }
+  ]
+}
